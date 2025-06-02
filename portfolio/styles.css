@@ -837,6 +837,14 @@ footer {
   object-fit: cover;
 }
 
+#museum-thumbnail {
+  transition: opacity 0.3s ease;
+}
+
+#museum-thumbnail.fade-out {
+  opacity: 0;
+}
+
 .project-gallery figcaption {
   padding: var(--spacing-sm) 0;
   color: var(--medium-gray);
