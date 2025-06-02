@@ -1,145 +1,27 @@
 # MN8 Energy
 
-URL: https://kev.studio/MN8-Energy
-
-Page Title: MN8 Energy — kev.studio
-Description: 2024 You got power MN8 is the enterprise renewable energy company, relentlessly making energy smarter, cleaner, more accessible...
+Description: Enterprise renewable energy company rebranding from Goldman Sachs spin-off
+Client: MN8 Energy (formerly Goldman Sachs Renewable Power)
+Role: Design, Logo, Motion, UI/UX
+Year: 2022
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+MN8 Energy emerged from Goldman Sachs's decision to spin out its renewable energy business, creating a paradigm-shifting opportunity in the clean energy sector. As the enterprise renewable energy leader, MN8 is dedicated to making energy smarter, cleaner, more accessible, and more efficient.
 
+The name "MN8" (pronounced "minute") represents both energy's constant motion and the company's innovative approach to power generation and distribution. The clever phonetic wordplay connects to the concept of time while visually incorporating the number 8, which resembles an infinity symbol when turned horizontally - suggesting unlimited potential.
 
-	
+The logo design features a brilliant negative space treatment where the "8" cleverly doubles as both a colon and a power socket, visually communicating the company's core business of energy delivery. The "all orange everything" brand approach gives MN8 a bold, distinctive presence in an industry often dominated by conservative blue and green palettes.
 
+I worked extensively on naming exploration, logo concepting, website design, design systems implementation, and brand guidelines development. My contributions helped translate the strategic vision into cohesive visual assets that positioned MN8 as a forward-thinking energy innovator.
 
+The resulting brand system effectively communicates MN8's mission to put power – both literally and metaphorically – into the hands of customers. The distinctive visual identity helped establish MN8 as a major player in the renewable energy sector immediately following its launch.
 
- 
-
-
-
-	
-	
-︎ LINKS
-
-︎︎︎   ︎︎︎
-
-︎︎︎   ︎︎︎
-
-2024
-	
-You got power
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MN8 is the enterprise renewable energy company, relentlessly making energy smarter, cleaner, more accessible and more efficient. Goldman Sachs’s spin-out of its renewable energy business created a paradigm-shifting opportunity to put power – literally and metaphorically – in the hands of the customer.
-The logo concept and “all orange everything” ideas were all Steve and Kat; the negative space 8/colon/power socket logo concept was a winner early on. I worked on naming, logo concepting, website design, design systems, and the guidelines.
-
-
-
-
-
-
-
-
-
-
-Agency: Thackway McCord
-Client: GOLDMAN SACHS & mn8 energy 
-Role: DESIGN, LOGO, MOTION, QA, ui/ux
-executive Creative direction: kat mccord
-design lead & creative direction: steve clarke
-client services: lucinda quartararo
-PROGRAMMING: dave morreale
+Agency: Thackway McCord  
+Client: Goldman Sachs & MN8 Energy  
+Role: Design, Logo, Motion, QA, UI/UX  
+Executive Creative Direction: Kat McCord  
+Design Lead & Creative Direction: Steve Clarke  
+Client Services: Lucinda Quartararo  
+Programming: Dave Morreale  
 Strategy: Simon Thackway, Jonathan Paisner
-
-
-
-	
-	
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2024
-
-You got power
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-

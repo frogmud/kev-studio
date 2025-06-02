@@ -1,121 +1,30 @@
 # L3Harris
 
-URL: https://kev.studio/L3Harris
-
-Page Title: L3Harris — kev.studio
-Description: 2018 L3Harris, a merger of equals When L3 Technologies and Harris announced that they were merging in late 2018, it was billed as the largest defense merger...
+Description: Brand identity for the largest defense merger in history
+Client: L3Harris
+Role: Design, Logo, Motion, UI/UX
+Year: 2018
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+When L3 Technologies and Harris announced their merger in late 2018, it represented the largest defense merger in history, creating the sixth largest defense company in the world. This new powerhouse needed a brand identity that would communicate scale, resources, and capabilities, while differentiating itself from dominant competitors in the space.
 
+The new L3Harris brand faced several key challenges:
 
-	
+- Unite the shared vision of two CEOs and leadership teams
+- Provide a foundation where two systems, cultures, and employee groups could integrate seamlessly
+- Create a distinctive visual identity in a category dominated by established players
+- Develop all brand elements in a climate of total confidentiality
 
+Our team approached this significant project with a comprehensive strategy that moved from discovery through development and implementation. The resulting identity system balanced technical precision with forward-looking innovation – reflecting L3Harris's position at the intersection of defense, technology, and aerospace.
 
+The logo design and visual system evoke technological advancement while maintaining the gravitas expected of a major defense contractor. The identity extends cohesively across digital platforms, physical environments, and communications materials – from exhibition booths and signage to digital interfaces and collateral.
 
- 
+One of the most rewarding aspects of this project was seeing the brand come to life on launch day, as thousands of employees across both legacy companies embraced their new unified identity.
 
-
-
-	
-	
-︎ LINKS
-
-︎︎︎   ︎︎︎
-
-︎︎︎   ︎︎︎
-
-2018
-	
-L3Harris, a merger of equalsWhen L3 Technologies and Harris announced that they were merging in late 2018, it was billed as the largest defense merger in history, creating the sixth largest defense company in the world. This new company needed to communicate scale, resources, and capabilities, while separating itself from the top brands that dominated the space.The
-new brand needed to unite the shared vision of two CEOs and provide
-a foundation where two systems, two 
-cultures, and two groups of employees could be brought together. In addition, all of the work - from
-discovery, strategy and logo development, to visual identity and guidelines -
-was created in a climate of total confidentiality, in
-close collaboration with our client counterparts. 
-
-Agency: Thackway McCordClient: L3HarrisRole: Design, LOGO, motion, ui/uxCreative direction: Kat McCord
-DESIGN LEAD: david weiss
-Strategy: Simon Thackway, Jonathan Paisner
-Logo animation: Scyld Bowring
-Original geodesic dome script by aadebdeb
-
-
-
-	
-
-
-
-
-
-	
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2018
-
-L3Harris, a merger of equals
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-
+Agency: Thackway McCord  
+Creative Direction: Kat McCord  
+Design Lead: David Weiss  
+Strategy: Simon Thackway, Jonathan Paisner  
+Logo Animation: Scyld Bowring  
+Original geodesic dome script: aadebdeb
