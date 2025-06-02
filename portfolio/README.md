@@ -26,7 +26,7 @@ A clean, modern portfolio site has been created to showcase Kevin's work:
 - `styles.css` - Centralized styling for all pages
 - `images/` - Portfolio images and animations
 - `projects/` - Project detail pages and source information
-- `project-template.html` - Template for project pages
+- `project-template-updated.html` - Universal template for project pages
 - `generate-project-pages.js` - Script to generate all project pages
 
 ## How to View & Update

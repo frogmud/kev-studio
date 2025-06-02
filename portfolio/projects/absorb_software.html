@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
     <title>Absorb Software | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Additional page-specific styles */
+        /* Timeline styles for project pages */
         .project-timeline {
             margin: var(--spacing-xl) 0;
             position: relative;
@@ -95,7 +94,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
+            <img src="../images/../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
         </div>
 
         <div class="project-content">
@@ -103,7 +102,7 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2023</p>
+                        <p>2024</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
@@ -111,41 +110,22 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Design Lead, Branding, Website</p>
+                        <p>Design</p>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Absorb Software is a leading provider of learning management systems (LMS) and e-learning solutions. The company approached us to refresh their brand identity and website to better reflect their innovative approach to learning technology.</p>
-                
-                <p>The project involved developing a complete brand overhaul, including a new visual identity centered around a 3D prism concept that represents the multifaceted nature of learning and knowledge absorption. The animated prism became a key element in the brand's visual language, symbolizing how Absorb's platform transforms raw information into meaningful learning experiences.</p>
-                
-                <p>For the website, we created a clean, modern design with intuitive navigation that highlights Absorb's product features and benefits. The site incorporates the new brand elements seamlessly, with interactive animations and transitions that engage visitors and communicate the brand's forward-thinking approach to learning technology.</p>
+                <p>More details coming soon.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Discovery & Research</h3>
-                        <p>Analyzed the LMS market and gathered insights from existing users to identify opportunities for differentiation.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Brand Identity Development</h3>
-                        <p>Created the 3D prism concept to symbolize multi-faceted learning and established a vibrant visual language.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Website Redesign</h3>
-                        <p>Implemented a user-friendly site showcasing product benefits through concise copy and engaging animations.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Implementation & Launch</h3>
-                        <p>Rolled out brand guidelines and launched the new website, positioning Absorb as an innovative leader.</p>
-                    </div>
+                    {{PROJECT_TIMELINE}}
                 </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="abra.html" class="nav-link prev">
+            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
@@ -182,7 +162,6 @@
         </div>
     </footer>
 
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Theme toggle functionality
@@ -220,11 +199,10 @@
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
-                    window.location.href = '../index.html?filter=' + filter;
+                    window.location.href = `../index.html?filter=${filter}`;
                 });
             });
         });
     </script>
-
 </body>
 </html>
