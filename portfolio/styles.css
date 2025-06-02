@@ -186,11 +186,11 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
+  grid-auto-rows: 1fr; /* Make all rows the same height */
   grid-auto-flow: dense;
   gap: var(--spacing-md);
   margin-top: var(--spacing-xl);
-  max-width: 1200px;
+  max-width: 1800px; /* Increased by 50% from 1200px */
   margin-left: auto;
   margin-right: auto;
 }
@@ -316,6 +316,7 @@ h3 {
   height: 0;
   padding-bottom: 75%; /* 4:3 aspect ratio */
   position: relative;
+  width: 100%;
 }
 
 /* All images use 4:3 ratio regardless of orientation */
@@ -818,6 +819,7 @@ footer {
   .project-grid {
     grid-template-columns: 1fr 1fr; /* Maintain 2 columns */
     max-width: 100%;
+    grid-auto-rows: 1fr; /* Ensure equal height rows */
   }
   
   .list-view .project-card {
@@ -855,6 +857,15 @@ footer {
   
   .project-grid {
     grid-template-columns: 1fr; /* Single column on mobile */
+    grid-auto-rows: 1fr; /* Maintain equal height rows */
+  }
+  
+  .project-card {
+    height: auto; /* Allow cards to size based on content */
+  }
+  
+  .project-card .project-image {
+    padding-bottom: 75%; /* Maintain 4:3 aspect ratio */
   }
   
   .project-metadata {
