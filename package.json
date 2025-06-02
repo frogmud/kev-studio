@@ -2,19 +2,21 @@
   "name": "kev-studio-portfolio-downloader",
   "version": "1.1.0",
   "description": "Download and organize assets and content from kev.studio portfolio",
-  "main": "scripts/download-portfolio.js",
+  "main": "tools/download-portfolio.js",
   "scripts": {
-    "start": "node scripts/download-portfolio.js",
-    "download": "node scripts/download-portfolio.js",
-    "organize": "node scripts/organize-portfolio.js",
-    "analyze": "node scripts/analyze-and-download.js",
-    "direct": "node scripts/download-direct.js",
-    "kev-studio": "node scripts/download-kev-studio.js",
-    "generate-pages": "node kev-portfolio-organized/generate-project-pages.js"
+    "start": "node tools/download-portfolio.js",
+    "download": "node tools/download-portfolio.js",
+    "organize": "node tools/organize-portfolio.js",
+    "analyze": "node tools/analyze-and-download.js",
+    "direct": "node tools/download-direct.js",
+    "kev-studio": "node tools/download-kev-studio.js",
+    "generate-pages": "node portfolio/generate-project-pages.js",
+    "optimize-images": "node tools/optimize-images.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
-    "superagent": "^8.1.2"
+    "superagent": "^8.1.2",
+    "sharp": "^0.33.2"
   },
   "author": "Kevin Grzejka",
   "license": "MIT"
