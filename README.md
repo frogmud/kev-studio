@@ -8,13 +8,11 @@ This repository contains the complete portfolio website and tools for Kevin Grze
   - Clean, responsive design showcasing projects
   - Dedicated project pages with detailed information
   - Resume and contact information
-  
 - **scripts/**: Utility scripts for managing the portfolio
   - `download-portfolio.js`: Download content from kev.studio
   - `organize-portfolio.js`: Organize downloaded content
   - `analyze-and-download.js`: Analyze and download portfolio content
   - And more utility scripts
-  
 - **archive/**: Archived files in compressed format
   - Raw assets from kev.studio
   - Original project images and information
@@ -34,6 +32,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 - `npm run direct`: Direct download
 - `npm run kev-studio`: Download from kev.studio
 - `npm run generate-pages`: Generate project pages
+- `npm run optimize-images`: Convert images to optimized WebP versions
 
 ## License
 

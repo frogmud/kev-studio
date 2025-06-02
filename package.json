@@ -10,11 +10,13 @@
     "analyze": "node scripts/analyze-and-download.js",
     "direct": "node scripts/download-direct.js",
     "kev-studio": "node scripts/download-kev-studio.js",
-    "generate-pages": "node kev-portfolio-organized/generate-project-pages.js"
+    "generate-pages": "node kev-portfolio-organized/generate-project-pages.js",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
-    "superagent": "^8.1.2"
+    "superagent": "^8.1.2",
+    "sharp": "^0.33.2"
   },
   "author": "Kevin Grzejka",
   "license": "MIT"
