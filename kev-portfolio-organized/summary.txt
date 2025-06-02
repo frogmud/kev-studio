@@ -1,0 +1,47 @@
+# KEVIN GRZEJKA PORTFOLIO
+
+## PORTFOLIO ORGANIZATION
+
+We've organized content from kev.studio into a clean, accessible portfolio website:
+
+1. SITE STRUCTURE
+   - index.html - Main portfolio page with featured projects and project grid
+   - resume.html - Professional resume with downloadable PDF version
+   - styles.css - Centralized CSS styling for consistent look and feel
+   - project-template.html - Template for detailed project pages
+   - generate-project-pages.js - Script to automatically generate all project pages
+
+2. IMPROVED NAVIGATION & DESIGN
+   - Clean, minimalist design that focuses on the work
+   - Mobile-responsive layout for all devices
+   - Clear visual hierarchy and reduced visual clutter
+   - Dedicated project pages with detailed information
+   - Intuitive navigation between projects
+
+3. PROJECT DETAIL PAGES
+   - Each project has a dedicated page at /projects/{project_name}.html
+   - Large hero images showcase the work prominently
+   - Detailed project information and descriptions
+   - Consistent metadata (year, client, role)
+   - Easy navigation between projects
+
+4. KEY PROJECTS
+   - Absorb Software: Website & rebrand for learning tech company
+   - MN8 Energy: Website & guidelines for GS spin-off
+   - Abra: Website & rebrand
+   - Lifepoint Health: Branding a national healthcare network
+   - Onity: Storyboarding, direction for logo animation
+   - Sylvamo: Branding for International Paper spinoff
+   - Finseca: Branding for merger
+   - LREI: Viewbook
+   - Amrop: Brand refresh & website
+   - L3Harris: Branding for merger
+
+## HOW TO UPDATE
+1. Edit project info in /projects/{project_name}/info.md
+2. Run `npm run generate-pages` to regenerate all project pages
+3. Modify styles.css to change the visual appearance
+
+CONTACT: grzejkakevin@gmail.com
+
+Last updated: June 2, 2025

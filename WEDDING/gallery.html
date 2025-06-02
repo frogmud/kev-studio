@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery - Leela & Kevin's Wedding</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">L&K</div>
+        <div class="navbar-menu">
+          <a href="index.html#home" class="navbar-item">Home</a>
+          <a href="index.html#venue" class="navbar-item">Venue</a>
+          <a href="index.html#accommodation" class="navbar-item">Accommodation</a>
+          <a href="qa.html" class="navbar-item">Q&A</a>
+          <a href="gallery.html" class="navbar-item active">Gallery</a>
+        </div>
+        <div class="navbar-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="toggle theme">
+            <span class="theme-toggle-icon light">☀️</span>
+            <span class="theme-toggle-icon dark">🌙</span>
+          </button>
+          <button class="navbar-toggle" aria-label="toggle navigation">
+            <span class="navbar-toggle-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="gallery-page section">
+    <div class="container">
+      <h1>Photo Gallery</h1>
+      
+      <div class="gallery-filters">
+        <button class="gallery-filter active" data-filter="all">All Photos</button>
+        <button class="gallery-filter" data-filter="proposal">Proposal</button>
+        <button class="gallery-filter" data-filter="life">Life Together</button>
+        <!-- Wedding tab hidden until we have photos -->
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Proposal Photos -->
+        <div class="gallery-item proposal">
+          <img src="images/proposal/IMG_6849.jpeg" alt="Proposal moment" class="img-fluid">
+        </div>
+        <div class="gallery-item proposal">
+          <img src="images/proposal/IMG_6863.jpeg" alt="Proposal moment" class="img-fluid">
+        </div>
+        <div class="gallery-item proposal">
+          <img src="images/proposal/IMG_6914.jpeg" alt="Proposal moment" class="img-fluid">
+        </div>
+        <div class="gallery-item proposal">
+          <img src="images/proposal/IMG_6939.jpeg" alt="Proposal moment" class="img-fluid">
+        </div>
+        
+        <!-- Life Photos -->
+        <div class="gallery-item life">
+          <img src="images/life/IMG_5537.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_3169.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_1707.JPG" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_6225.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_7168.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_0424.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_6698.jpeg" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_8034.JPG" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_6710.JPG" alt="Life together" class="img-fluid">
+        </div>
+        <div class="gallery-item life">
+          <img src="images/life/IMG_1124.JPG" alt="Life together" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Leela & Kevin's Wedding | <a href="https://leekev.com" class="domain-link">leekev.com</a></p>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#venue">Venue</a>
+        <a href="index.html#accommodation">Accommodation</a>
+        <a href="qa.html">Q&A</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

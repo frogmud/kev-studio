@@ -1,0 +1,13 @@
+{
+  "name": "kev-studio-image-downloader",
+  "version": "1.0.0",
+  "description": "Download all images from kev.studio",
+  "main": "download-kev-studio-images.js",
+  "scripts": {
+    "start": "node download-kev-studio-images.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "superagent": "^8.0.9"
+  }
+}
