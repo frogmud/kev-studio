@@ -55,6 +55,7 @@ All main project images have been downloaded from kev.studio and are available i
 2. **Enhance Existing Pages:**
    - Consider adding more detailed project descriptions where applicable
    - Add secondary images for projects with multiple artifacts
+   - Implement lazy-loading on all project images for faster page loads
 
 3. **Navigation Improvements:**
    - Update the main index.html page to include all projects
