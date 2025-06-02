@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0",
-    "superagent": "^8.1.2",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.5",
+    "superagent": "^8.1.2"
   },
   "author": "Kevin Grzejka",
   "license": "MIT"
