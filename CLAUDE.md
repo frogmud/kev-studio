@@ -3,8 +3,8 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Structure
-- `kev-portfolio-organized/`: Main portfolio website files
-- `scripts/`: Utility scripts for managing and updating the portfolio
+- `portfolio/`: Main portfolio website files
+- `tools/`: Utility scripts for managing and updating the portfolio
 - `archive/`: Archived files (compressed in tar.gz format)
 
 ## Commands
@@ -37,5 +37,5 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Other Instructions
 - Always print full code blocks
 - When modifying HTML templates, maintain consistent styling
-- Keep scripts in the scripts/ directory
+- Keep scripts in the tools/ directory
 - Archive unused files instead of deleting them
