@@ -6,6 +6,61 @@
     <title>MN8 Energy | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Additional page-specific styles */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -75,6 +130,25 @@
                     <li>Programming: Dave Morreale</li>
                     <li>Strategy: Simon Thackway, Jonathan Paisner</li>
                 </ul>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                        <h3>Research & Naming</h3>
+                        <p>Explored the renewable energy landscape and crafted the name "MN8" to represent an infinite energy loop.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Visual Identity Exploration</h3>
+                        <p>Developed the negative space 8/power socket logo and established a bold orange palette.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Design System</h3>
+                        <p>Built comprehensive guidelines for web and print to maintain consistency across all touchpoints.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Launch & Growth</h3>
+                        <p>Rolled out the brand alongside the Goldman Sachs spinoff announcement, positioning MN8 as a leader in renewables.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
