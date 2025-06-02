@@ -80,7 +80,11 @@ async function generateUnifiedProjectPages() {
         // Extract content
         let projectContent = '';
         if (infoContent.includes('--- CONTENT ---')) {
-          const contentSection = infoContent.split('--- CONTENT ---')[1].trim();
+          let contentSection = infoContent.split('--- CONTENT ---')[1];
+          if (contentSection.includes('--- TIMELINE ---')) {
+            contentSection = contentSection.split('--- TIMELINE ---')[0];
+          }
+          contentSection = contentSection.trim();
           const paragraphs = contentSection
             .split('\n\n')
             .filter(p => p.trim() && !p.includes('©2025') && !p.includes('grzejkakevin@gmail.com'))
