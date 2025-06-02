@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
     <title>Absorb Software | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Additional page-specific styles */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -38,7 +94,7 @@
         </div>
         
         <div class="project-hero">
-            <img src="../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
+            <img loading="lazy" src="../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
         </div>
 
         <div class="project-content">
@@ -65,6 +121,25 @@
                 <p>The project involved developing a complete brand overhaul, including a new visual identity centered around a 3D prism concept that represents the multifaceted nature of learning and knowledge absorption. The animated prism became a key element in the brand's visual language, symbolizing how Absorb's platform transforms raw information into meaningful learning experiences.</p>
                 
                 <p>For the website, we created a clean, modern design with intuitive navigation that highlights Absorb's product features and benefits. The site incorporates the new brand elements seamlessly, with interactive animations and transitions that engage visitors and communicate the brand's forward-thinking approach to learning technology.</p>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                        <h3>Discovery & Research</h3>
+                        <p>Analyzed the LMS market and gathered insights from existing users to identify opportunities for differentiation.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Brand Identity Development</h3>
+                        <p>Created the 3D prism concept to symbolize multi-faceted learning and established a vibrant visual language.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Website Redesign</h3>
+                        <p>Implemented a user-friendly site showcasing product benefits through concise copy and engaging animations.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Implementation & Launch</h3>
+                        <p>Rolled out brand guidelines and launched the new website, positioning Absorb as an innovative leader.</p>
+                    </div>
+                </div>
             </div>
         </div>
 

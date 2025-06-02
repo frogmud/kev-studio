@@ -240,8 +240,9 @@ h3 {
 /* Project Grid Styles */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: auto;
+  grid-auto-flow: dense;
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
   max-width: 1600px;
@@ -295,7 +296,6 @@ h3 {
   margin-bottom: var(--spacing-md);
   background-color: var(--light-gray);
   border-radius: 4px;
-  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -310,11 +310,9 @@ h3 {
 
 .project-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   transition: var(--transition);
-  object-fit: cover;
-  aspect-ratio: 16/9;
 }
 
 .list-view .project-image img {
@@ -338,7 +336,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
   background-color: var(--light-gray);
 }
 
@@ -824,7 +821,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   
   .list-view .project-card {

@@ -3,82 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sylvamo | Kevin Grzejka Portfolio</title>
+    <title>Eyes Above | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
         /* Additional page-specific styles */
-        .project-timeline {
-            margin: var(--spacing-xl) 0;
-            position: relative;
-            padding-left: 50px;
-        }
-        
-        .project-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background-color: #e2e8f0;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -50px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #e2e8f0;
-        }
-        
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .timeline-item p {
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .image-grid {
+        .illustration-gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: var(--spacing-md);
-            margin-top: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
         }
         
-        .image-grid img {
+        .illustration-gallery img {
             width: 100%;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            transition: var(--transition);
+            transition: transform 0.3s ease;
         }
         
-        .image-grid img:hover {
+        .illustration-gallery img:hover {
             transform: scale(1.02);
         }
         
+        .story-link {
+            display: inline-block;
+            margin: var(--spacing-md) 0;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .story-link:hover {
+            background-color: var(--accent-color-dark);
+        }
+        
+        .credits {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
-            .project-timeline {
-                padding-left: 30px;
+            .illustration-gallery {
+                grid-template-columns: 1fr 1fr;
             }
-            
-            .timeline-item::before {
-                left: -30px;
-            }
-            
-            .image-grid {
+        }
+        
+        @media (max-width: 480px) {
+            .illustration-gallery {
                 grid-template-columns: 1fr;
             }
         }
@@ -114,7 +92,7 @@
 
     <main class="container project-detail">
         <div class="project-hero">
-            <img src="../images/sylvamo_casestudy_logoanimationshort.gif" alt="Sylvamo Logo Animation">
+            <img loading="lazy" src="../images/04_eyesabove_cards_yg21_grzejka.png" alt="Eyes Above Character Cards">
         </div>
 
         <div class="project-content">
@@ -126,60 +104,51 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>Sylvamo (International Paper spinoff)</p>
+                        <p>Personal Project</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Branding, Logo Design, Animation</p>
-                    </div>
-                    <div class="metadata-item">
-                        <h3>Agency</h3>
-                        <p>Thackway McCord</p>
+                        <p>Direction, Illustration, Design, Motion, Game Design</p>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Sylvamo is a spinoff from International Paper focused on the world's paper needs. The name comes from the Latin words "silva" (forest) and "amo" (love), embodying the company's commitment to sustainable forestry and paper production.</p>
+                <p>A short story written by my brother based on five years of D&D campaigns led to a deep dive into character animation. Scalability as priority drove the style of bright, saturated colors and thick outlines. Ultimately, the goal is to build a video game demo with a full color animation intro.</p>
                 
-                <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Discovery Phase</h3>
-                        <p>We began with extensive research into the paper industry, sustainability practices, and International Paper's existing brand equity. The goal was to create a distinct identity while honoring the parent company's heritage.</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Brand Strategy Development</h3>
-                        <p>Working closely with stakeholders, we developed a brand strategy centered around sustainability, innovation, and global reach. The name "Sylvamo" was selected to reflect the company's dedication to responsible forestry.</p>
-                        <div class="image-grid">
-                            <img src="../images/sylvamo_casestudy_logoanimationshort.gif" alt="Sylvamo Logo Animation">
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Visual Identity Creation</h3>
-                        <p>The visual identity features a dynamic logo that represents growth and sustainability. The color palette incorporates natural greens and blues, symbolizing forests and sustainability. The animated version brings the concept of growth and transformation to life.</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Implementation & Launch</h3>
-                        <p>We created comprehensive brand guidelines and assets for global implementation. The brand launched successfully with the spinoff announcement, establishing Sylvamo as a distinct entity in the paper industry with a focus on sustainability.</p>
-                    </div>
+                <p>As everyone warned me, hand-drawn animation takes forever. Drawing non-stop for around 9 months, the only character animations were black and white sprites. Still wanting to send this in my Young Guns 21 entry, I tried to make it feel as finished as possible (was not shortlisted ☹️).</p>
+                
+                <p>It's been hard to pick this project back up since. My hands were always ache-y from drawing at night after designing during the day...</p>
+                
+                <div class="illustration-gallery">
+                    <img loading="lazy" src="../images/04_eyesabove_cards_yg21_grzejka.png" alt="Eyes Above Character Cards">
                 </div>
                 
-                <h3>Results</h3>
-                <p>The Sylvamo brand successfully differentiated the company from International Paper while maintaining appropriate connections to its heritage. The new identity has been well-received by stakeholders and has helped position Sylvamo as a forward-thinking, sustainable paper company.</p>
+                <h3>The Story</h3>
+                <p>The narrative follows characters through a world filled with supernatural elements, bringing the tabletop gaming experience into a visual medium. The story spans multiple chapters and features a diverse cast of characters, each with their own unique abilities and backstories.</p>
+                
+                <a href="https://eyesabove.info" target="_blank" class="story-link">Read the full story</a>
+                
+                <h3>Animation Process</h3>
+                <p>The animation process began with character sketches and storyboards, followed by keyframe animation. Each frame was meticulously hand-drawn to maintain the distinctive style. The process was labor-intensive but allowed for complete creative control over the movement and expression of each character.</p>
+                
+                <h3>Future Plans</h3>
+                <p>While progress has slowed, the ultimate vision for this project remains a playable game demo with animated sequences. The existing assets provide a solid foundation for future development when time permits.</p>
+                
+                <div class="credits">
+                    <p><strong>Special Thanks To:</strong> Brian Appleby, Keith Hagins, Chris Stratton, Ryan Hawk, & James Grzejka</p>
+                </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="hum.html" class="nav-link prev">
+            <a href="thackway_mccord_pets.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Previous Project
             </a>
-            <a href="abra.html" class="nav-link next">
+            <a href="hum.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

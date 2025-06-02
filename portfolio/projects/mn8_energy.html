@@ -3,54 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abra | Kevin Grzejka Portfolio</title>
+    <title>MN8 Energy | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
         /* Additional page-specific styles */
-        .two-column-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-xl);
-        }
-        
-        .image-column img {
-            width: 100%;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .text-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .quote {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            color: var(--accent-color);
-            font-style: italic;
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
             position: relative;
-            padding: var(--spacing-lg) 0;
-            margin: var(--spacing-lg) 0;
-            border-top: 1px solid #edf2f7;
-            border-bottom: 1px solid #edf2f7;
+            padding-left: 50px;
         }
-        
-        .quote::before {
-            content: '"';
-            font-size: 3rem;
+
+        .project-timeline::before {
+            content: '';
             position: absolute;
-            top: -0.5rem;
-            left: -1rem;
-            opacity: 0.2;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
         }
-        
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
         @media (max-width: 768px) {
-            .two-column-layout {
-                grid-template-columns: 1fr;
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
             }
         }
     </style>
@@ -85,7 +92,7 @@
 
     <main class="container project-detail">
         <div class="project-hero">
-            <img src="../images/abra_plane_8k.png" alt="Abra Plane">
+            <img loading="lazy" src="../images/10a_mn8_laptop_4x3_white.png" alt="MN8 Energy">
         </div>
 
         <div class="project-content">
@@ -93,52 +100,66 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2023</p>
+                        <p>2024</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>Abra</p>
+                        <p>Goldman Sachs & MN8 Energy</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Design Lead, Branding, Website</p>
+                        <p>Design, Logo, Motion, QA, UI/UX</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Agency</h3>
+                        <p>Thackway McCord</p>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Abra is a cryptocurrency investment platform that aims to make digital asset investing accessible to everyone. The company approached us to refresh their brand identity and website to better position them in the competitive crypto market.</p>
+                <p>MN8 is the enterprise renewable energy company, relentlessly making energy smarter, cleaner, more accessible and more efficient. Goldman Sachs's spin-out of its renewable energy business created a paradigm-shifting opportunity to put power – literally and metaphorically – in the hands of the customer.</p>
                 
-                <div class="two-column-layout">
-                    <div class="text-column">
-                        <h3>The Challenge</h3>
-                        <p>Abra needed a visual identity that conveyed trust and innovation while making cryptocurrency concepts approachable to mainstream investors. The brand needed to stand out in a crowded market while avoiding the typical crypto clichés.</p>
-                        
-                        <div class="quote">
-                            We created a visual system that balances technical sophistication with approachable design, reflecting Abra's mission to simplify crypto investing.
-                        </div>
-                        
-                        <h3>The Solution</h3>
-                        <p>We developed a clean, modern brand identity centered around the concept of transformation and accessibility. The paper plane motif symbolizes the journey of investment and the freedom that financial literacy provides.</p>
+                <p>The logo concept and "all orange everything" ideas were all Steve and Kat; the negative space 8/colon/power socket logo concept was a winner early on. I worked on naming, logo concepting, website design, design systems, and the guidelines.</p>
+                
+                <p>This project was a collaborative effort with a talented team:</p>
+                <ul>
+                    <li>Executive Creative Direction: Kat McCord</li>
+                    <li>Design Lead & Creative Direction: Steve Clarke</li>
+                    <li>Client Services: Lucinda Quartararo</li>
+                    <li>Programming: Dave Morreale</li>
+                    <li>Strategy: Simon Thackway, Jonathan Paisner</li>
+                </ul>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                        <h3>Research & Naming</h3>
+                        <p>Explored the renewable energy landscape and crafted the name "MN8" to represent an infinite energy loop.</p>
                     </div>
-                    <div class="image-column">
-                        <img src="../images/abra_plane_8k.png" alt="Abra Brand Identity">
+                    <div class="timeline-item">
+                        <h3>Visual Identity Exploration</h3>
+                        <p>Developed the negative space 8/power socket logo and established a bold orange palette.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Design System</h3>
+                        <p>Built comprehensive guidelines for web and print to maintain consistency across all touchpoints.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Launch & Growth</h3>
+                        <p>Rolled out the brand alongside the Goldman Sachs spinoff announcement, positioning MN8 as a leader in renewables.</p>
                     </div>
                 </div>
-                
-                <h3>Results</h3>
-                <p>The new brand identity and website helped Abra increase user engagement and platform signups. The refreshed visual language provided a foundation for consistent marketing communications across all channels, strengthening brand recognition in the market.</p>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="sylvamo.html" class="nav-link prev">
+            <a href="absorb_software.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Previous Project
             </a>
-            <a href="absorb_software.html" class="nav-link next">
+            <a href="lifepoint_health.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
