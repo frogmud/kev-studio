@@ -19,9 +19,9 @@
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
   --spacing-xxl: 6rem;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-heading: 'PP Migra', 'Inter', Georgia, serif;
-  --font-emoji: 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --font-emoji: 'Inter', sans-serif;
   --font-size-base: 16px;
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
@@ -41,61 +41,6 @@
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../WEDDING/fonts/sans/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../WEDDING/fonts/sans/Inter-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../WEDDING/fonts/sans/Inter-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../WEDDING/fonts/sans/Inter-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PP Migra';
-  src: url('../WEDDING/fonts/serifs/PPMigra-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PP Migra';
-  src: url('../WEDDING/fonts/serifs/PPMigra-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Apoc Normal';
-  src: url('../WEDDING/fonts/serifs/ApocNormal-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Apoc Normal';
-  src: url('../WEDDING/fonts/serifs/ApocNormal-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
 
 html {
   box-sizing: border-box;
@@ -107,7 +52,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-base);
   line-height: 1.5;
   color: var(--text-color);
@@ -138,7 +83,7 @@ header {
 }
 
 h1 {
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h1);
   margin-bottom: var(--spacing-md);
   line-height: 1.1;
@@ -148,7 +93,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h2);
   margin-bottom: var(--spacing-sm);
   line-height: 1.2;
@@ -156,7 +101,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h3);
   margin-bottom: var(--spacing-sm);
   line-height: 1.3;
@@ -389,7 +334,7 @@ h3 {
 
 .project-card h3 {
   margin-top: 0;
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h3);
   margin-bottom: var(--spacing-xs);
   color: var(--primary-color);
@@ -600,7 +545,7 @@ footer {
 }
 
 .project-header h1 {
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h2);
   margin-bottom: var(--spacing-sm);
   text-align: center;
@@ -660,7 +605,7 @@ footer {
 .metadata-item h3 {
   margin-top: 0;
   margin-bottom: var(--spacing-xs);
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   color: var(--medium-gray);
   font-weight: 500;
@@ -686,7 +631,7 @@ footer {
 .project-description h3 {
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-sm);
-  font-family: var(--font-heading), var(--font-emoji);
+  font-family: 'Inter', sans-serif;
   font-size: var(--font-size-h3);
   color: var(--primary-color);
   font-weight: 600;
@@ -981,7 +926,7 @@ footer {
 
 /* Generic icon style for emoji and symbol characters */
 .icon {
-  font-family: var(--font-emoji);
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hidden state for filtering */
