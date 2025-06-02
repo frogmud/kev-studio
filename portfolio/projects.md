@@ -80,3 +80,6 @@ Viewbook
 ## Tryitout with Major League Wiffleball
 [View Project Details](./projects/tryitout_with_major_league_wiffleball/info.md)
 
+## Tryitout
+[View Project Details](./projects/tryitout/info.md)
+
