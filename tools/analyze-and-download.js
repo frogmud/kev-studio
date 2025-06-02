@@ -370,6 +370,7 @@ async function createHtmlGallery(images, projects) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2d3748;
@@ -382,7 +383,7 @@ async function createHtmlGallery(images, projects) {
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--primary-color);
             background-color: #fff;
