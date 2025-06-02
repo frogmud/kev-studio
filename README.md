@@ -34,6 +34,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 - `npm run direct`: Direct download
 - `npm run kev-studio`: Download from kev.studio
 - `npm run generate-pages`: Generate project pages
+- `npm run optimize-images`: Convert images to optimized WebP versions
 
 ## License
 
