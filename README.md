@@ -9,15 +9,18 @@ This repository contains the complete portfolio website and tools for Kevin Grze
   - Dedicated project pages with detailed information
   - Resume and contact information
   
-- **kev-studio-assets/**: Raw assets downloaded from kev.studio
-  - Original project images and information
-  - HTML templates
-  
-- **Scripts**: Utility scripts for managing the portfolio
+- **scripts/**: Utility scripts for managing the portfolio
   - `download-portfolio.js`: Download content from kev.studio
   - `organize-portfolio.js`: Organize downloaded content
-  - `generate-project-pages.js`: Generate project pages from templates
+  - `analyze-and-download.js`: Analyze and download portfolio content
+  - And more utility scripts
   
+- **archive/**: Archived files in compressed format
+  - Raw assets from kev.studio
+  - Original project images and information
+  - Reference files and resources
+  - Wedding site files
+
 ## Getting Started
 
 1. Clone this repository

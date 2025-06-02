@@ -2,14 +2,14 @@
   "name": "kev-studio-portfolio-downloader",
   "version": "1.1.0",
   "description": "Download and organize assets and content from kev.studio portfolio",
-  "main": "download-portfolio.js",
+  "main": "scripts/download-portfolio.js",
   "scripts": {
-    "start": "node download-portfolio.js",
-    "download": "node download-portfolio.js",
-    "organize": "node organize-portfolio.js",
-    "analyze": "node analyze-and-download.js",
-    "direct": "node download-direct.js",
-    "kev-studio": "node download-kev-studio.js",
+    "start": "node scripts/download-portfolio.js",
+    "download": "node scripts/download-portfolio.js",
+    "organize": "node scripts/organize-portfolio.js",
+    "analyze": "node scripts/analyze-and-download.js",
+    "direct": "node scripts/download-direct.js",
+    "kev-studio": "node scripts/download-kev-studio.js",
     "generate-pages": "node kev-portfolio-organized/generate-project-pages.js"
   },
   "dependencies": {
