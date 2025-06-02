@@ -7,6 +7,7 @@ const path = require('path');
 const projectDirs = [
   'abra',
   'absorb_software',
+  'absorb',
   'aiga',
   'american_social',
   'amrop',
@@ -27,6 +28,7 @@ const projectDirs = [
 // Project order for navigation
 const projectOrder = [
   'absorb_software',
+  'absorb',
   'mn8_energy',
   'abra',
   'lifepoint_health',

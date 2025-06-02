@@ -8,6 +8,11 @@ Website & rebrand for learning tech company
 
 [View Project Details](./projects/absorb_software/info.md)
 
+## Absorb
+Website & rebrand for learning tech company
+
+[View Project Details](./projects/absorb/info.md)
+
 ## AIGA
 [View Project Details](./projects/aiga/info.md)
 
