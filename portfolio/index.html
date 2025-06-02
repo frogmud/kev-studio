@@ -325,6 +325,24 @@
             const projectCards = document.querySelectorAll('.project-card');
             const projectGrid = document.querySelector('.project-grid');
             const viewToggle = document.getElementById('view-toggle');
+
+            // Apply a dense masonry-like grid with random spans
+            function applyDenseGrid() {
+                projectGrid.classList.add('dense');
+                projectCards.forEach(card => {
+                    const span = Math.random() < 0.3 ? 2 : 1;
+                    card.style.gridColumnEnd = 'span ' + span;
+                    card.style.gridRowEnd = 'span ' + span;
+                });
+            }
+
+            function resetDenseGrid() {
+                projectGrid.classList.remove('dense');
+                projectCards.forEach(card => {
+                    card.style.gridColumnEnd = '';
+                    card.style.gridRowEnd = '';
+                });
+            }
             
             // Function to filter projects
             function filterProjects(filter) {
@@ -355,6 +373,10 @@
                         }
                     }
                 });
+
+                if (!projectGrid.classList.contains('list-view')) {
+                    applyDenseGrid();
+                }
             }
             
             // Check URL for parameters
@@ -367,6 +389,8 @@
             if (viewParam === 'list' || savedViewMode === 'list') {
                 projectGrid.classList.add('list-view');
                 viewToggle.classList.add('list');
+            } else {
+                applyDenseGrid();
             }
             
             // Apply filter if in URL
@@ -389,8 +413,15 @@
             
             // Toggle view between grid and list
             viewToggle.addEventListener('click', function() {
+                const switchingToList = !projectGrid.classList.contains('list-view');
                 projectGrid.classList.toggle('list-view');
                 this.classList.toggle('list');
+
+                if (switchingToList) {
+                    resetDenseGrid();
+                } else {
+                    applyDenseGrid();
+                }
                 
                 // Save preference to localStorage
                 const isListView = projectGrid.classList.contains('list-view');
