@@ -19,7 +19,6 @@ This repository contains the complete portfolio website and tools for Kevin Grze
   - Raw assets from kev.studio
   - Original project images and information
   - Reference files and resources
-  - Wedding site files
 
 ## Getting Started
 
