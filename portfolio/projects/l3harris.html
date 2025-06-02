@@ -6,9 +6,63 @@
     <title>L3Harris | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
     <!-- Sticky navigation with filter categories -->
     <nav class="sticky-nav visible">
         <div class="container">
@@ -34,10 +88,12 @@
 
     <main class="container project-detail">
         <div class="project-header">
-
-    <main class="container project-detail">
+            <h1>L3Harris</h1>
+            <p class="tagline">2018 L3Harris, a merger of equals When L3 Technologies and Harris announced that they were merging in late 2018, it was billed as the largest defense merger...</p>
+        </div>
+        
         <div class="project-hero">
-            <img loading="lazy" src="../images/processed/l3h_sign_cover_4x3.jpg" alt="L3Harris Sign">
+            <img src="../images/../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="L3Harris">
         </div>
 
         <div class="project-content">
@@ -49,42 +105,56 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>L3Harris</p>
+                        <p>L3HarrisRole: Design, LOGO, motion, ui/uxCreative direction: Kat McCord</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Design, Logo, Motion, UI/UX</p>
+                        <p>Design, LOGO, motion, ui/uxCreative direction: Kat McCord</p>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <h2>L3Harris, a merger of equals</h2>
-                
-                <p>When L3 Technologies and Harris announced that they were merging in late 2018, it was billed as the largest defense merger in history, creating the sixth largest defense company in the world. This new company needed to communicate scale, resources, and capabilities, while separating itself from the top brands that dominated the space.</p>
-                
-                <p>The new brand needed to unite the shared vision of two CEOs and provide a foundation where two systems, two cultures, and two groups of employees could be brought together. In addition, all of the work - from discovery, strategy and logo development, to visual identity and guidelines - was created in a climate of total confidentiality, in close collaboration with our client counterparts.</p>
-                
-                <h3>Credits</h3>
-                <ul>
-                    <li>Agency: Thackway McCord</li>
-                    <li>Creative Direction: Kat McCord</li>
-                    <li>Design Lead: David Weiss</li>
-                    <li>Strategy: Simon Thackway, Jonathan Paisner</li>
-                    <li>Logo Animation: Scyld Bowring</li>
-                    <li>Original geodesic dome script by aadebdeb</li>
-                </ul>
+                <p>kevin grzejkais a designer from new jersey</p>
+<p>︎ LINKS</p>
+<p>︎︎︎   ︎︎︎</p>
+<p>︎︎︎   ︎︎︎</p>
+<p>2018
+	
+L3Harris, a merger of equalsWhen L3 Technologies and Harris announced that they were merging in late 2018, it was billed as the largest defense merger in history, creating the sixth largest defense company in the world. This new company needed to communicate scale, resources, and capabilities, while separating itself from the top brands that dominated the space.The
+new brand needed to unite the shared vision of two CEOs and provide
+a foundation where two systems, two 
+cultures, and two groups of employees could be brought together. In addition, all of the work - from
+discovery, strategy and logo development, to visual identity and guidelines -
+was created in a climate of total confidentiality, in
+close collaboration with our client counterparts.</p>
+<p>Agency: Thackway McCordClient: L3HarrisRole: Design, LOGO, motion, ui/uxCreative direction: Kat McCord
+DESIGN LEAD: david weiss
+Strategy: Simon Thackway, Jonathan Paisner
+Logo animation: Scyld Bowring
+Original geodesic dome script by aadebdeb</p>
+<p>Mark</p>
+<p>2018</p>
+<p>L3Harris, a merger of equals</p>
+<p>︎   @k gosh
+︎   @kevingrz</p>
+<p>︎   museum
+︎   links</p>
+
+                <div class="project-timeline">
+                    {{PROJECT_TIMELINE}}
+                </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="finseca.html" class="nav-link prev">
+            <a href="fiserv.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Previous Project
             </a>
-            <a href="lrei.html" class="nav-link next">
+            <a href="thackway_mccord_pets.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -96,8 +166,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>© 2025 Kevin Grzejka. All rights reserved.</p>
-                <p>Contact: <a href="mailto:grzejkakevin@gmail.com">grzejkakevin@gmail.com</a></p>
+                <div class="footer-info">
+                    <p>© 2025 Kevin Grzejka. All rights reserved.</p>
+                    <p>Contact: <a href="mailto:grzejkakevin@gmail.com">grzejkakevin@gmail.com</a></p>
+                </div>
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -150,11 +222,10 @@
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
-                    window.location.href = '../index.html?filter=' + filter;
+                    window.location.href = `../index.html?filter=${filter}`;
                 });
             });
         });
     </script>
-
 </body>
 </html>

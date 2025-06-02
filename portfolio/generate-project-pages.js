@@ -65,7 +65,7 @@ function getNavLinks(currentProject) {
 // Read project template
 async function readTemplate() {
   try {
-    const templatePath = path.join(__dirname, 'project-template.html');
+    const templatePath = path.join(__dirname, 'project-template-updated.html');
     const template = await fs.readFile(templatePath, 'utf8');
     return template;
   } catch (error) {
