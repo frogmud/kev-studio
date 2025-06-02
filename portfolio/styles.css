@@ -185,12 +185,12 @@ h3 {
 /* Project Grid Styles */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-auto-flow: dense;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   margin-top: var(--spacing-xl);
-  max-width: 1600px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -230,6 +230,7 @@ h3 {
   cursor: pointer;
   margin-bottom: var(--spacing-md);
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .list-view .project-card {
@@ -238,6 +239,7 @@ h3 {
   height: 200px; /* Fixed height for all list cards */
   grid-column: span 1;
   grid-row: span 1;
+  margin-bottom: var(--spacing-lg);
 }
 
 .list-view .project-card p,
@@ -258,8 +260,8 @@ h3 {
 .project-image {
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--spacing-md);
-  background-color: var(--light-gray);
+  margin-bottom: var(--spacing-xs);
+  /* background-color: var(--light-gray); */
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -271,19 +273,28 @@ h3 {
   margin-bottom: 0;
   height: 100%; /* Full height of the card */
   overflow: hidden; /* Crop overflowing images */
+  position: relative;
+  padding-bottom: 0;
 }
 
 .project-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: var(--transition);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .list-view .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Use cover to ensure the image fills the container */
+  position: static;
 }
 
 /* Overlay for project info in grid view */
@@ -301,7 +312,15 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray);
+  /* background-color: var(--light-gray); */
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  position: relative;
+}
+
+/* All images use 4:3 ratio regardless of orientation */
+.project-card.landscape .project-image {
+  padding-bottom: 75%; /* 4:3 aspect ratio */
 }
 
 .project-card:hover .project-image img {
@@ -344,6 +363,7 @@ h3 {
   pointer-events: none; /* Allow clicks to pass through to the card */
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 4px;
+  text-align: center;
 }
 
 .project-grid:not(.list-view) .project-card:hover .project-content {
@@ -673,15 +693,25 @@ footer {
   gap: var(--spacing-lg);
 }
 
+@media (min-width: 1200px) {
+  .project-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .project-gallery figure {
   margin: 0;
   overflow: hidden;
   transition: var(--transition);
+  border-radius: 4px;
+  background-color: var(--light-gray);
 }
 
 .project-gallery img {
   width: 100%;
   display: block;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 
 .project-gallery figcaption {
@@ -786,7 +816,8 @@ footer {
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .project-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr; /* Maintain 2 columns */
+    max-width: 100%;
   }
   
   .list-view .project-card {
@@ -820,6 +851,10 @@ footer {
   
   h2 {
     font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
   }
   
   .project-metadata {
@@ -877,6 +912,10 @@ footer {
   
   .project-grid, .gallery {
     grid-template-columns: 1fr;
+  }
+  
+  .project-card .project-image {
+    padding-bottom: 75%; /* Maintain 4:3 even on small screens */
   }
   
   .project-metadata {
