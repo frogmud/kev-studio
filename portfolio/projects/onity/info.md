@@ -18,3 +18,6 @@ Sketched early ideas and built a storyboard for the motion.
 
 ### Animation
 Animated the logo in After Effects and refined timing with the client.
+
+### Early Concepts
+Created styleframes and animation tests to explore motion before finalizing.
