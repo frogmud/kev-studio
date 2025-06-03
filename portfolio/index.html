@@ -277,12 +277,7 @@
 
                 <div class="project-card" data-categories="print">
                     <div class="project-image">
-                        <div class="gallery-preview">
-                            <img loading="lazy" src="images/museum/painting0001.jpg" alt="Museum Painting" class="gallery-item">
-                            <img loading="lazy" src="images/museum/painting0036.jpg" alt="Museum Painting" class="gallery-item">
-                            <img loading="lazy" src="images/museum/painting0003.jpg" alt="Museum Painting" class="gallery-item">
-                            <img loading="lazy" src="images/museum/painting0047.jpg" alt="Museum Painting" class="gallery-item">
-                        </div>
+                        <img id="museum-thumbnail" loading="lazy" src="images/museum/painting0001.jpg" alt="Museum Painting">
                     </div>
                     <div class="project-content">
                         <h3>Museum</h3>
@@ -530,7 +525,29 @@
             }
           }
         });
-        
+
+        // Cycle through museum thumbnail images
+        const museumThumb = document.getElementById('museum-thumbnail');
+        if (museumThumb) {
+          const museumImages = [
+            'images/museum/painting0001.jpg',
+            'images/museum/painting0003.jpg',
+            'images/museum/painting0005.jpg',
+            'images/museum/painting0007.jpg',
+            'images/museum/painting0036.jpg',
+            'images/museum/painting0047.jpg'
+          ];
+          let museumIndex = 0;
+          setInterval(() => {
+            museumThumb.classList.add('fade-out');
+            setTimeout(() => {
+              museumIndex = (museumIndex + 1) % museumImages.length;
+              museumThumb.src = museumImages[museumIndex];
+              museumThumb.classList.remove('fade-out');
+            }, 300);
+          }, 2500);
+        }
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
