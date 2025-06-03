@@ -199,6 +199,16 @@ h3 {
   margin-right: auto;
 }
 
+/* Consistent spacing for grid view */
+.project-grid:not(.list-view) .project-card {
+  margin-bottom: 0;
+}
+
+.project-grid:not(.list-view) .project-image {
+  margin-bottom: 0;
+  padding-bottom: 75%;
+}
+
 /* Project grid styles (grid and list views) */
 
 .project-grid.list-view {
