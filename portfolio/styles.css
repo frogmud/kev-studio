@@ -199,25 +199,7 @@ h3 {
   margin-right: auto;
 }
 
-/* Denser masonry-style grid for the home screen */
-.project-grid.dense {
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: var(--spacing-md);
-}
-
-.project-grid.dense .project-image {
-  height: 200px;
-}
-
-.project-grid.dense .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-grid.dense .project-content {
-  display: none;
-}
+/* Project grid styles (grid and list views) */
 
 .project-grid.list-view {
   display: flex;

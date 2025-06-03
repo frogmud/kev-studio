@@ -25,7 +25,6 @@
 - `codex/upgrade-*-project-page` (various client page improvements)
 - `codex/add-brand-color-#00ffff-to-palette`
 - `codex/clean-up-homepage-thumbnails-layout`
-- `codex/create-dense-image-grid-layout`
 
 ## Completed Tasks (Previous)
 - Updated MN8 Energy project info.md with improved content
@@ -101,6 +100,12 @@
    - Prepare for deployment to hosting platform
    - Set up proper redirects if needed
    - Consider adding analytics tracking
+
+5. **Codebase Cleanup**
+   - ✓ Remove unused "dense" grid styles from CSS
+   - ✓ Delete leftover case-study directories with irrelevant content
+   - ✓ Update generate-project-pages.js to use unified template
+   - ✓ Remove references to obsolete dense grid experiment
 
 ## Next Steps
 1. ✓ Update all remaining project pages to use the info toggle feature
