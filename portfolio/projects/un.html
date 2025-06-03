@@ -77,9 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,11 +95,11 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/un/UN_1.png" alt="United Nations Morning Minga">
+            <img loading="lazy" src="../images/optimized/un/UN_1.png" alt="United Nations Morning Minga">
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -136,11 +139,11 @@
                 
                 <div class="project-gallery">
                     <figure>
-                        <img src="../images/un/UN_PGA_CaseStudy_Slide8.png" alt="UN Morning Minga Brand Guidelines">
+                        <img src="../images/optimized/un/UN_PGA_CaseStudy_Slide8.png" alt="UN Morning Minga Brand Guidelines">
                         <figcaption>Brand guidelines showing color system and applications</figcaption>
                     </figure>
                     <figure>
-                        <img src="../images/un/UNPGA73_TransformAwards_Sequence_03.png" alt="UN Morning Minga Logo Development">
+                        <img src="../images/optimized/un/UNPGA73_TransformAwards_Sequence_03.png" alt="UN Morning Minga Logo Development">
                         <figcaption>Logo development and animation sequence</figcaption>
                     </figure>
                     <figure>
@@ -152,11 +155,11 @@
                         <figcaption>Logo implementation in the United Nations building</figcaption>
                     </figure>
                     <figure>
-                        <img src="../images/un/UN_3.png" alt="Morning Minga Applications">
+                        <img src="../images/optimized/un/UN_3.png" alt="Morning Minga Applications">
                         <figcaption>Brand applications including signage, pins, and tote bags</figcaption>
                     </figure>
                     <figure>
-                        <img src="../images/un/UN_4.png" alt="Morning Minga Printed Materials">
+                        <img src="../images/optimized/un/UN_4.png" alt="Morning Minga Printed Materials">
                         <figcaption>Branded materials including pins, publications, and scarves</figcaption>
                     </figure>
                 </div>
@@ -187,7 +190,7 @@
         </div>
 
         <div class="project-navigation">
-            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
+            <a href="tryitout.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
@@ -269,7 +272,7 @@
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-            
+
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -279,6 +282,19 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    const isHidden = projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
+                });
+            }
         });
     </script>
 </body>

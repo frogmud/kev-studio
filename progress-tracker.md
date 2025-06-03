@@ -1,5 +1,32 @@
 # Portfolio Update Progress Tracker
 
+## Current Status (June 3, 2025)
+- Currently in detached HEAD state at: `origin/codex/integrate-info-button-into-unified-layout`
+- Last commit: "Add info toggle to project pages"
+
+## Pending Changes
+- Modified resume files:
+  - `portfolio/resume/kevin-grzejka-resume-062025.pdf`
+  - `portfolio/resume/kevin-grzejka-resume-062025.png`
+  - `portfolio/resume/kevin-grzejka-resume-062025@2x.png`
+
+## Untracked Directories
+- `all_images_backup/`
+- `kev-logo/`
+- `kev-portfolio-organized/`
+- `kev-studio-backup-manual/`
+- `portfolio/images/chocolates/`
+- `portfolio/images/hum/`
+- `temp_backup/`
+
+## Notable Feature Branches
+- `codex/integrate-info-button-into-unified-layout`
+- `codex/create-project-page-for-*` (multiple client pages)
+- `codex/upgrade-*-project-page` (various client page improvements)
+- `codex/add-brand-color-#00ffff-to-palette`
+- `codex/clean-up-homepage-thumbnails-layout`
+- `codex/create-dense-image-grid-layout`
+
 ## Completed Tasks (Previous)
 - Updated MN8 Energy project info.md with improved content
 - Updated L3Harris project info.md with improved content
@@ -19,7 +46,19 @@
 
 ## Completed Tasks (Current - June 2025)
 
-1. **UN Project Page Setup**
+1. **Info Toggle Implementation and Improvements (Latest)**
+   - Added an "i" button to project pages to toggle project metadata
+   - Updated project-template-unified.html with toggle functionality
+   - Modified styles.css to support the new info toggle feature
+   - Project info is now hidden by default and toggles on button click
+   - Applied changes to Abra, TryItOut, and UN project pages
+   - Added ARIA attributes for accessibility
+   - Implemented smooth CSS transitions for toggling
+   - Fixed broken image path in TryItOut project
+   - Restored detailed content in the UN project page
+   - Improved mobile layout with grouped toggle buttons
+
+2. **UN Project Page Setup**
    - Created UN project page using unified template
    - Added detailed content from info.md file
    - Added project images and timeline
@@ -64,9 +103,24 @@
    - Consider adding analytics tracking
 
 ## Next Steps
-1. Run a complete site check to verify all links and images
-2. Commit changes to git repository
-3. Consider implementing a build process for future updates
+1. ✓ Update all remaining project pages to use the info toggle feature
+   - All active project pages have the info toggle implementation
+   - Updated project-template.html to include the info toggle feature for future projects
+
+2. ✓ Address PR #30 review feedback:
+   - ✓ Add ARIA attributes to the info toggle button for accessibility
+   - ✓ Implement a smooth transition effect when toggling project info
+   - ✓ Fix broken image path in tryitout.html
+   - ✓ Restore UN project page content
+   - ✓ Check mobile layout for potential issues with the added toggle button
+
+3. Verify info toggle functionality across all project pages
+
+4. Run a complete site check to verify all links and images
+
+5. Commit changes to git repository
+
+6. Consider implementing a build process for future updates
 
 ## All Requirements Met
 - Navigation now consistently shows "Kevin Grzejka" instead of "kev.studio"
@@ -77,3 +131,5 @@
 - All project pages use the unified template
 - All HTML files have been regenerated with current content
 - Homepage index.html has been updated with all current projects
+- Info toggle button added to all project pages
+- Project metadata is hidden by default and toggles with the info button

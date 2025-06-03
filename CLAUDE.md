@@ -14,10 +14,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Install dependencies: `npm install`
 - Direct download: `npm run direct`
 - Download from kev.studio: `npm run kev-studio`
-- Generate project pages: `npm run generate-pages`
+- Generate project pages: `node portfolio/unified-project-generator.js`
 - Optimize images: `npm run optimize-images`
 - Update index page: `node portfolio/update-index-page.js`
-- Generate unified project pages: `node portfolio/unified-project-generator.js`
+- Fix duplicate tags: `node portfolio/fix-duplicate-tags.js`
 
 ## Code Style Guidelines
 - Use strict mode (`"use strict"`) at the top of each file
@@ -35,7 +35,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Log operations with meaningful messages for debugging
 - Validate input data before processing
 - Add JSDoc comments for function documentation
-- Use defensive programming techniques to handle edge cases
 
 ## HTML/CSS Guidelines
 - Use modern-normalize for CSS reset
@@ -44,9 +43,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Use CSS variables for consistent theming (light/dark modes)
 - Support both grid and list views for project displays
 - Maintain consistent styling across all project pages
+- Avoid duplicate data-tags attributes in project cards
+
+## Project Page Creation
+- Update taxonomy.json when adding new projects
+- Create project info.md with standardized metadata
+- Generate HTML using unified-project-generator.js
+- Update index.html with proper project entries
+- Ensure images are properly referenced and optimized
 
 ## Other Instructions
 - Always print full code blocks
 - Keep scripts in the tools/ directory
 - Archive unused files instead of deleting them
 - When adding projects, update the taxonomy.json data file
+- Run fix-duplicate-tags.js if duplicate data-tags appear in HTML

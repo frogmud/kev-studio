@@ -13,6 +13,7 @@
   --border-radius: 0px;
   --container-width: 1280px;
   --container-padding: 32px;
+  --card-aspect-ratio: 4 / 3;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -185,12 +186,12 @@ h3 {
 /* Project Grid Styles */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 1fr; /* Make all rows the same height */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 1fr;
   grid-auto-flow: dense;
-  gap: var(--spacing-lg); /* Increased gap from md to lg */
+  gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
-  max-width: 1800px; /* Increased by 50% from 1200px */
+  max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -234,11 +235,11 @@ h3 {
 }
 
 .list-view .project-card {
-  flex-direction: row-reverse; /* Image on the right */
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
   gap: var(--spacing-lg);
-  height: 240px; /* Increased height for list cards */
-  grid-column: span 1;
-  grid-row: span 1;
+  height: auto;
   margin-bottom: var(--spacing-xl);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: var(--spacing-lg);
@@ -271,10 +272,10 @@ h3 {
 }
 
 .list-view .project-image {
-  flex: 0 0 380px; /* Increased width */
+  width: 240px;
   margin-bottom: 0;
-  height: 100%; /* Full height of the card */
-  overflow: hidden; /* Crop overflowing images */
+  height: 100%;
+  overflow: hidden;
   position: relative;
   padding-bottom: 0;
 }
@@ -315,22 +316,24 @@ h3 {
 }
 
 /* Let images maintain their natural aspect ratios */
+
 .project-card .project-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: var(--light-gray); */
-  height: 0;
-  padding-bottom: 75%; /* 4:3 aspect ratio */
   position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 0;
+  aspect-ratio: var(--card-aspect-ratio);
 }
 
-/* All images use 4:3 ratio regardless of orientation */
+/* Orientation specific aspect ratios */
 .project-card.landscape .project-image {
-  padding-bottom: 75%; /* 4:3 aspect ratio */
+  aspect-ratio: 4 / 3;
+}
+.project-card.portrait .project-image {
+  aspect-ratio: 3 / 4;
 }
 
 .project-card:hover .project-image img {
@@ -643,6 +646,17 @@ footer {
 
 .project-info {
   margin-bottom: var(--spacing-lg);
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.project-info.hidden {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+  pointer-events: none;
 }
 
 .project-metadata {
@@ -837,6 +851,14 @@ footer {
   object-fit: cover;
 }
 
+#museum-thumbnail {
+  transition: opacity 0.3s ease;
+}
+
+#museum-thumbnail.fade-out {
+  opacity: 0;
+}
+
 .project-gallery figcaption {
   padding: var(--spacing-sm) 0;
   color: var(--medium-gray);
@@ -880,7 +902,7 @@ footer {
   align-items: center;
 }
 
-.theme-toggle, .view-toggle {
+.theme-toggle, .view-toggle, .info-toggle {
   width: 44px;
   height: 24px;
   background-color: var(--light-gray);
@@ -889,6 +911,11 @@ footer {
   cursor: pointer;
   transition: var(--transition);
   border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .theme-toggle::before, .view-toggle::before {
@@ -909,6 +936,11 @@ footer {
 
 .view-toggle.list::before {
   left: calc(100% - 20px);
+}
+
+.info-toggle.open {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .theme-toggle .sun,
@@ -964,7 +996,13 @@ footer {
   }
   
   .sticky-nav .theme-toggle {
-    margin-left: auto;
+    margin-left: 8px;
+  }
+  
+  /* Create toggle group to keep them together */
+  .view-toggles {
+    display: flex;
+    gap: 8px;
   }
 }
 

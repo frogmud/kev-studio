@@ -3,168 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Project Name] | Kevin Grzejka Portfolio</title>
+    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
+    <title>Autonomy Capital | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Project-specific styles */
-        .project-gallery {
-            margin-top: var(--spacing-xl);
-        }
-        
-        .process-section {
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .process-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-        }
-        
-        .process-step {
-            margin-bottom: var(--spacing-lg);
-        }
-        
-        .process-step-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            background-color: var(--accent-color);
-            color: white;
-            border-radius: 50%;
-            margin-bottom: var(--spacing-sm);
-            font-weight: 600;
-        }
-        
-        .process-step h4 {
-            font-size: 1.1rem;
-            margin-bottom: var(--spacing-sm);
-        }
-        
-        .project-results {
-            background-color: var(--light-gray);
-            padding: var(--spacing-lg);
-            border-radius: var(--border-radius);
-            margin-top: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-        }
-        
-        .project-results h3 {
-            font-size: 1.5rem;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .testimonial {
-            font-style: italic;
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-left: 3px solid var(--accent-color);
-            margin: var(--spacing-lg) 0;
-            background-color: var(--light-gray);
-        }
-        
-        .testimonial-author {
-            margin-top: var(--spacing-sm);
-            font-weight: 500;
-            font-style: normal;
-        }
-        
-        .project-specs {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-xl);
-            padding-top: var(--spacing-lg);
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .spec-category h4 {
-            font-size: 1rem;
-            margin-bottom: var(--spacing-sm);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--medium-gray);
-        }
-        
-        .spec-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .spec-list li {
-            margin-bottom: var(--spacing-xs);
-        }
-        
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-        }
-        
-        .image-grid figure {
-            margin: 0;
-            overflow: hidden;
-        }
-        
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .image-grid figure:hover img {
-            transform: scale(1.02);
-        }
-        
-        .image-grid figcaption {
-            padding: var(--spacing-sm) 0;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-        }
-        
-        .full-width-image {
+        /* Timeline styles for project pages */
+        .project-timeline {
             margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
         }
-        
-        .full-width-image img {
-            width: 100%;
-            height: auto;
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
         }
-        
-        .full-width-image figcaption {
-            padding: var(--spacing-sm) 0;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            text-align: center;
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
         }
-        
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
         @media (max-width: 768px) {
-            .image-grid {
-                grid-template-columns: 1fr;
+            .project-timeline {
+                padding-left: 30px;
             }
-            
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-specs {
-                grid-template-columns: 1fr;
+
+            .timeline-item::before {
+                left: -30px;
             }
         }
     </style>
 </head>
 <body>
-    
     <!-- Sticky navigation with filter categories -->
     <nav class="sticky-nav visible">
         <div class="container">
@@ -173,11 +72,11 @@
                     <a href="../index.html">Kevin Grzejka</a>
                 </div>
                 <ul class="filter-categories">
+                    <!-- Categories will be primary filters -->
                     <li class="filter-category" data-filter="all" data-filter-type="category">All</li>
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="info-toggle" id="info-toggle">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -188,145 +87,57 @@
 
     <main class="container project-detail">
         <div class="project-header">
-
-    <main class="container project-detail">
-        <!-- Hero Image -->
+            <h1>Autonomy Capital</h1>
+            <p class="tagline">Brand identity and website for a forward-thinking investment firm</p>
+        </div>
+        
         <div class="project-hero">
-            <img loading="lazy" src="../images/[image-path]" alt="[Project Name]">
+            <img loading="lazy" src="../images/background_alpha.png" alt="Autonomy Capital">
         </div>
 
-        <!-- Project Overview -->
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>[Year]</p>
+                        <p>2025</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>[Client Name]</p>
+                        <p>Autonomy Capital</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>[Your Role]</p>
+                        <p>Design, Web, Strategy</p>
                     </div>
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
                         <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                        <span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>[Overview paragraph 1]</p>
-                <p>[Overview paragraph 2]</p>
-            </div>
-        </div>
+                <p>Autonomy Capital approached our team to craft a modern identity that reflects their innovative investment philosophy. We developed a flexible visual system and responsive website that communicate trust and long‑term vision.</p>
+<p>The clean typography and restrained color palette emphasize the firm's commitment to clarity and transparency, while subtle motion graphics add a sense of momentum.</p>
 
-        <!-- Challenge Section -->
-        <div class="process-section">
-            <h3>The Challenge</h3>
-            <p>[Description of the challenge or problem the client faced]</p>
-            <p>[Additional context about challenges or requirements]</p>
-        </div>
-
-        <!-- Process Section -->
-        <div class="process-section">
-            <h3>The Process</h3>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="process-step-number">1</div>
-                    <h4>[Step 1 Title]</h4>
-                    <p>[Description of step 1]</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-number">2</div>
-                    <h4>[Step 2 Title]</h4>
-                    <p>[Description of step 2]</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-number">3</div>
-                    <h4>[Step 3 Title]</h4>
-                    <p>[Description of step 3]</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-step-number">4</div>
-                    <h4>[Step 4 Title]</h4>
-                    <p>[Description of step 4]</p>
+                <div class="project-timeline">
+                    
                 </div>
             </div>
         </div>
 
-        <!-- Process Images -->
-        <div class="image-grid">
-            <figure>
-                <img loading="lazy" src="../images/[process-image-1]" alt="[Process Image 1 Alt Text]">
-                <figcaption>[Process Image 1 Caption]</figcaption>
-            </figure>
-            <figure>
-                <img loading="lazy" src="../images/[process-image-2]" alt="[Process Image 2 Alt Text]">
-                <figcaption>[Process Image 2 Caption]</figcaption>
-            </figure>
-        </div>
-
-        <!-- Results Section -->
-        <div class="project-results">
-            <h3>The Results</h3>
-            <p>[Description of project outcomes]</p>
-            <p>[Impact and metrics if available]</p>
-        </div>
-
-        <!-- Testimonial (if available) -->
-        <blockquote class="testimonial">
-            "[Client testimonial quote]"
-            <div class="testimonial-author">— [Client Name], [Client Position]</div>
-        </blockquote>
-
-        <!-- Full Width Final Image -->
-        <figure class="full-width-image">
-            <img loading="lazy" src="../images/[final-image]" alt="[Final Image Alt Text]">
-            <figcaption>[Final Image Caption]</figcaption>
-        </figure>
-
-        <!-- Technical Specifications -->
-        <div class="project-specs">
-            <div class="spec-category">
-                <h4>Software Used</h4>
-                <ul class="spec-list">
-                    <li>[Software 1]</li>
-                    <li>[Software 2]</li>
-                    <li>[Software 3]</li>
-                </ul>
-            </div>
-            <div class="spec-category">
-                <h4>Deliverables</h4>
-                <ul class="spec-list">
-                    <li>[Deliverable 1]</li>
-                    <li>[Deliverable 2]</li>
-                    <li>[Deliverable 3]</li>
-                </ul>
-            </div>
-            <div class="spec-category">
-                <h4>Timeline</h4>
-                <ul class="spec-list">
-                    <li>[Timeline information]</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Project Navigation -->
         <div class="project-navigation">
-            <a href="[previous-project].html" class="nav-link prev">
+            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Previous Project
             </a>
-            <a href="[next-project].html" class="nav-link next">
+            <a href="un.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -400,7 +211,7 @@
                 localStorage.setItem('theme', theme);
             });
             
-            // Filter category links to main page
+            // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
             
             filterCategories.forEach(category => {
@@ -412,19 +223,7 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
-            
-            // Info button toggle for project details
-            const infoToggle = document.getElementById('info-toggle');
-            const projectInfo = document.querySelector('.project-info');
-
-            if (infoToggle && projectInfo) {
-                infoToggle.addEventListener('click', function() {
-                    projectInfo.classList.toggle('hidden');
-                    infoToggle.classList.toggle('open');
-                });
-            }
         });
     </script>
-
 </body>
 </html>
