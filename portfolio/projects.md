@@ -52,8 +52,6 @@ Keywords:
 ## Lifepoint-Health
 [View Project Details](./projects/lifepoint_health/info.md)
 
-## Lifepoint
-[View Project Details](./projects/lifepoint/info.md)
 
 ## LREI
 Viewbook
