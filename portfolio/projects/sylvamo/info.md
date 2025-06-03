@@ -2,132 +2,32 @@
 
 URL: https://kev.studio/Sylvamo
 
-Page Title: Sylvamo — kev.studio
-Description: 2021 Sylvamo, the ‘World’s Paper Company’ Sylvamo is the world's paper company, honoring the promise of paper to educate, communicate and...
+Page Title: Sylvamo | Kevin Grzejka Portfolio
+Description: 2021 Sylvamo, the 'World's Paper Company' - Brand identity for the world's largest pure play paper company.
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+Sylvamo is the world's paper company, honoring the promise of paper to educate, communicate and entertain – sustainably. The name was created by Thackway McCord when the business spun off from International Paper, forming the world's largest pure play paper producer.
 
+The brand combines the Latin words for forest, *silva*, and love, *amo*, expressing a deep respect for sustainable forestry. A paper plane icon symbolizes aspiration while a vibrant purple palette sets the identity apart in a sea of green.
 
-	
+- **Agency:** Thackway McCord
+- **Client:** Sylvamo / International Paper
+- **Role:** Design lead, logo, motion, print
+- **Executive Creative Director:** Kat McCord
+- **Creative Director:** Steve Clarke
+- **Strategy:** Simon Thackway, Jonathan Paisner
+- **3D Work:** Scyld Bowring
 
+**Awards:** Indigo Design Awards 2022 (Gold – Branding), 12th Wolda Design Awards (Gold – The Americas), LogoLounge Book 13.
 
+--- TIMELINE ---
 
- 
+## Challenge
+Create a distinctive identity for the spin‑off that emphasized sustainability while feeling established.
 
+## Approach
+Developed a name and visual system inspired by forests and growth, pairing a paper plane icon with a bold purple brand color.
 
-
-	
-	
-︎ LINKS
-
-︎︎︎   ︎︎︎
-
-︎︎︎   ︎︎︎
-
-2021
-	
-Sylvamo, the ‘World’s Paper Company’
-
-
-
-
-
-
-
-
-
-
-
-Sylvamo is the world's paper company, honoring the promise of paper to educate, communicate and entertain – sustainably. Thackway McCord created the name Sylvamo when the company spun off from International Paper creating the worlds largest pure play paper production business. 
-Sylvamo, reflecting the company's role as a steward of sustainable forests, combines the Latin words for forest, “silva,” and love, “amo” creating “love of forests.” The paper plane icon is a symbol of aspiration and business focus, the warm purple color connotes both love and stability and is unique in a marketplace of green and the paper wave supergraphic suggest opportunity and progress.
-
-
-
-Agency: Thackway McCord
-ClientS: Sylvamo, INTERNATIONAL PAPER
-Role: design lead, logo, MOTION, print
-exec Creative director: kat mccord
-Creative director: steve clarke
-Strategy: Simon Thackway, Jonathan Paisner
-3d work: Scyld Bowring
-
-🏆🏆🏆 AWARDS: 
-INDIGO DESIGN AWARDS 2022 (GOLD – BRANDING)12TH WOLDA DESIGN AWARDS (GOLD – THE AMERICAS)logolounge (book 13)
-
-	
-
-
-
-
-
-	
-
-	
-
-
-
-
-	
-
-
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-
-
-	
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2021
-
-Sylvamo, the ‘World’s Paper Company’
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-
+## Results
+The launch garnered multiple design awards and positioned Sylvamo as a leader in responsible paper production.
