@@ -137,53 +137,96 @@ async function generateUnifiedProjectPages() {
         
         // Map specific projects to their optimized images
         const imageMap = {
-          'absorb_software': '../images/optimized/02-absorb-guidelines-wide-blue.png',
-          'mn8_energy': '../images/optimized/10a-mn8-laptop-4x3-white.png',
+          'absorb_software': '../images/optimized/absorb/02-absorb-guidelines-wide-blue.png',
+          'mn8_energy': '../images/optimized/mn8/10a-mn8-laptop-4x3-white.png',
           'l3harris': '../images/optimized/l3h-sign-cover-4x3.jpg',
-          'lifepoint_health': '../images/optimized/Lifepoint_HQSign.png',
-          'amrop': '../images/optimized/amrop_logo_rgb.svg',
-          'thackway_mccord_pets': '../images/optimized/chocolate-hero-v2.jpg',
-          'american_social': '../images/optimized/01_amso_splash.png',
+          'lifepoint_health': '../images/optimized/lifepoint/Lifepoint_HQSign.png',
+          'amrop': '../images/optimized/amrop/amrop_logo_rgb.svg',
+          'thackway_mccord_pets': '../images/optimized/chocolates/chocolate-hero-v2.jpg',
+          'american_social': '../images/optimized/american_social/01_amso_splash.png',
         };
         
         // Check if we have a mapped image for this project
         if (imageMap[projectData.id]) {
           projectImage = imageMap[projectData.id];
         } else {
-          // Check optimized images folder first
+          // Check for project-specific folder in optimized images
           try {
-            const optimizedImageFiles = await fs.readdir(path.join(__dirname, 'images', 'optimized'));
-            
-            // Try to find an optimized image that matches the project name
-            const optimizedImageFile = optimizedImageFiles.find(file => 
-              file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
-              file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())
-            );
-            
-            if (optimizedImageFile) {
-              projectImage = `../images/optimized/${optimizedImageFile}`;
+            const optimizedProjectDir = path.join(__dirname, 'images', 'optimized', projectData.id);
+            try {
+              await fs.access(optimizedProjectDir);
+              // Folder exists, find first image with proper extension
+              const files = await fs.readdir(optimizedProjectDir);
+              const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'];
+              
+              const imageFile = files.find(file => {
+                const ext = path.extname(file).toLowerCase();
+                return validExtensions.includes(ext);
+              });
+              
+              if (imageFile) {
+                projectImage = `../images/optimized/${projectData.id}/${imageFile}`;
+              }
+            } catch (error) {
+              // Project folder doesn't exist in optimized, check general optimized folder
+              const optimizedDir = path.join(__dirname, 'images', 'optimized');
+              const files = await fs.readdir(optimizedDir);
+              
+              const imageFile = files.find(file => {
+                return (file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
+                       file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())) &&
+                       /\.(jpg|jpeg|png|gif|svg|webp)$/i.test(file);
+              });
+              
+              if (imageFile) {
+                projectImage = `../images/optimized/${imageFile}`;
+              }
             }
           } catch (error) {
-            // Optimized folder might not exist or be inaccessible
-            console.log(`No optimized image found for ${projectData.id}`);
+            console.log(`Error checking optimized images for ${projectData.id}: ${error.message}`);
           }
           
-          // If no optimized image found, check regular images
+          // If still no image, check regular images folder
           if (!projectImage) {
-            const imageFiles = await fs.readdir(path.join(__dirname, 'images'));
-            
-            // Try to find an image that matches the project name
-            const projectImageFile = imageFiles.find(file => 
-              file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
-              file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())
-            );
-            
-            if (projectImageFile) {
-              projectImage = `../images/${projectImageFile}`;
-            } else {
-              // Default image
-              projectImage = '../images/optimized/background_alpha.png';
+            try {
+              // Check for project-specific folder in regular images
+              const projectDir = path.join(__dirname, 'images', projectData.id);
+              try {
+                await fs.access(projectDir);
+                const files = await fs.readdir(projectDir);
+                const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'];
+                
+                const imageFile = files.find(file => {
+                  const ext = path.extname(file).toLowerCase();
+                  return validExtensions.includes(ext);
+                });
+                
+                if (imageFile) {
+                  projectImage = `../images/${projectData.id}/${imageFile}`;
+                }
+              } catch (error) {
+                // Project folder doesn't exist, check general images folder
+                const imagesDir = path.join(__dirname, 'images');
+                const files = await fs.readdir(imagesDir);
+                
+                const imageFile = files.find(file => {
+                  return (file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
+                         file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())) &&
+                         /\.(jpg|jpeg|png|gif|svg|webp)$/i.test(file);
+                });
+                
+                if (imageFile) {
+                  projectImage = `../images/${imageFile}`;
+                }
+              }
+            } catch (error) {
+              console.log(`Error checking regular images for ${projectData.id}: ${error.message}`);
             }
+          }
+          
+          // If still no image found, use default
+          if (!projectImage) {
+            projectImage = '../images/optimized/background_alpha.png';
           }
         }
         
