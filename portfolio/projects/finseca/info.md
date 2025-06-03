@@ -1,114 +1,31 @@
 # Finseca
 
 Description: Branding for merger
-URL: https://kev.studio/Finseca
-
-Page Title: Finseca — kev.studio
-Description: 2020 Financial security for all The merger of AALU and GAMA in September 2020 was a merger formed with the goal of uniting the life insurance industry. The...
+Year: 2020
+Client: Finseca
+Role: Design Lead, Motion, UI/UX
+Categories: Digital
+Tags: Branding
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+Finseca emerged from the merger of two long-standing industry groups, AALU and GAMA. The new organization champions financial security professionals and seeks to elevate the profession. The shield icon underscores protection while the double-F mark represents the two groups coming together. A purple palette places the DC-based group in a politically neutral position.
 
-
-	
-
-
-
- 
-
-
-
-	
-	
-︎ LINKS
-
-︎︎︎   ︎︎︎
-
-︎︎︎   ︎︎︎
-
-2020
-	
-Financial security for allThe merger of AALU and GAMA in September 2020 was a merger formed with the goal of uniting the life insurance industry. The broader and more profound commitment they unified under was to elevate the profession.At the core of the brief is financial security, leading to the acro-name and shield motif. The two F’s in the logo represent the two equals coming together, while the purple color scheme stakes the DC-based organization as politically ‘neutral’, both red and blue.
 Agency: Thackway McCord
-Client: Finseca
-Role: DESIGN LEAD, motion, ui/ux
-Creative direction: Kat McCorddesign: fuchen kuang
+Creative Direction: Kat McCord
+Design: Fuchen Kuang
 Strategy: Simon Thackway, Jonathan Paisner
 Website: WDG
-3d work: Scyld Bowring
-🏆🏆🏆 AWARDS: indigo design awards 2021 branding (silver)Wolda 2020 logo (gold)best brand awards 2021 (silver)
+3D Work: Scyld Bowring
+Awards: Indigo Design Awards 2021 (Silver), Wolda 2020 (Gold)
 
+--- TIMELINE ---
 
-	
+### Merger Announced
+AALU and GAMA announce plans to unite as a single voice for the profession.
 
+### Brand Development
+Our team crafts the name, strategy, and visual identity highlighting "financial security for all."
 
-
-
-
-	
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-
-	
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2020
-
-Financial security for all
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-
+### Launch
+Finseca publicly launches with a new website and brand rollout.
