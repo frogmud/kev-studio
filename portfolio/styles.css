@@ -15,7 +15,6 @@
   --border-radius: 0px;
   --container-width: 1280px;
   --container-padding: 32px;
-  --card-aspect-ratio: 4 / 3;
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -286,15 +285,10 @@ h3 {
 
 .project-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
   transition: var(--transition);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   filter: brightness(0.95);
   margin: 0;
   padding: 0;
@@ -329,15 +323,6 @@ h3 {
   width: 100%;
   overflow: hidden;
   border-radius: 0;
-  aspect-ratio: var(--card-aspect-ratio);
-}
-
-/* Orientation specific aspect ratios */
-.project-card.landscape .project-image {
-  aspect-ratio: 4 / 3;
-}
-.project-card.portrait .project-image {
-  aspect-ratio: 3 / 4;
 }
 
 .project-card:hover .project-image img {
@@ -742,98 +727,6 @@ footer {
   aspect-ratio: 16/9;
 }
 
-/* New styles for video wrappers */
-.video-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: var(--background-color);
-}
-
-.video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SVG object styles */
-.svg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-color);
-}
-
-.svg-object {
-  width: 75%;
-  height: 75%;
-}
-
-/* Animation with background styles */
-.animated-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.animated-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.animated-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 2;
-}
-
-/* Simple Media Container */
-.media-container {
-  width: 100%;
-  height: 0;
-  padding-bottom: 75%; /* Maintains 4:3 aspect ratio */
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--border-radius);
-  background-color: var(--image-background);
-}
-
-.media-container img, 
-.media-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.media-container:hover img,
-.media-container:hover video {
-  transform: scale(1.03);
-  filter: brightness(0.9);
-}
 
 /* Gallery preview grid */
 .gallery-preview {
