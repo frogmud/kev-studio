@@ -298,8 +298,10 @@ async function scrapePortfolio() {
       readmeContent += "This directory contains a downloaded copy of Kevin Grzejka's portfolio from kev.studio.\n\n";
       readmeContent += "## Projects\n\n";
       
-      // Find all project sections
-      $('.project, article, .work-item, .portfolio-item').each(async (i, el) => {
+      // Find all project sections - converting to an async loop that properly awaits each iteration
+      const projectElements = $('.project, article, .work-item, .portfolio-item').toArray();
+      
+      for (const el of projectElements) {
         try {
           const projectData = await extractProjectData($, $(el));
           
@@ -314,9 +316,9 @@ async function scrapePortfolio() {
         } catch (error) {
           console.error(`Error processing project: ${error.message}`);
         }
-      });
+      }
       
-      // Save README
+      // Save README after all projects are processed
       await writeFile(path.join(config.outputDir, 'README.md'), readmeContent);
       console.log('Created README.md with project index');
     }

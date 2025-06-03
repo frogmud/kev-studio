@@ -364,7 +364,21 @@
         const projectGrid = document.querySelector('.project-grid');
         const viewToggle = document.getElementById('view-toggle');
         
-        // Function to filter projects
+        // Function to show a card with animation
+        function showCard(card) {
+          card.classList.remove('hidden');
+          setTimeout(() => {
+            card.classList.add('animate-in');
+          }, 10);
+        }
+        
+        // Function to hide a card
+        function hideCard(card) {
+          card.classList.add('hidden');
+          card.classList.remove('animate-in');
+        }
+        
+        // Function to filter projects (optimized version)
         function filterProjects(filter, filterType = 'category') {
           // Remove active class from all categories
           filterCategories.forEach(c => c.classList.remove('active'));
@@ -375,43 +389,36 @@
             targetFilter.classList.add('active');
           }
           
+          // Create a DocumentFragment to batch DOM operations
+          const fragment = document.createDocumentFragment();
+          const showCards = [];
+          const hideCards = [];
+          
           // Filter projects
           projectCards.forEach(card => {
+            let shouldShow = false;
+            
             if (filter === 'all') {
-              card.classList.remove('hidden');
-              setTimeout(() => {
-                card.classList.add('animate-in');
-              }, 10);
+              shouldShow = true;
+            } else if (filterType === 'category') {
+              const categories = card.getAttribute('data-categories').split(',');
+              shouldShow = categories.includes(filter);
+            } else if (filterType === 'tag') {
+              const tags = card.getAttribute('data-tags');
+              shouldShow = tags && tags.split(',').includes(filter);
+            }
+            
+            // Collect cards to show/hide for batch processing
+            if (shouldShow) {
+              showCards.push(card);
             } else {
-              // For category filtering, check data-categories attribute
-              if (filterType === 'category') {
-                const categories = card.getAttribute('data-categories').split(',');
-                
-                if (categories.includes(filter)) {
-                  card.classList.remove('hidden');
-                  setTimeout(() => {
-                    card.classList.add('animate-in');
-                  }, 10);
-                } else {
-                  card.classList.add('hidden');
-                  card.classList.remove('animate-in');
-                }
-              }
-              // For tag filtering, check data-tags attribute (if it exists)
-              else if (filterType === 'tag') {
-                const tags = card.getAttribute('data-tags');
-                if (tags && tags.split(',').includes(filter)) {
-                  card.classList.remove('hidden');
-                  setTimeout(() => {
-                    card.classList.add('animate-in');
-                  }, 10);
-                } else {
-                  card.classList.add('hidden');
-                  card.classList.remove('animate-in');
-                }
-              }
+              hideCards.push(card);
             }
           });
+          
+          // Apply changes in batches
+          hideCards.forEach(hideCard);
+          showCards.forEach(showCard);
         }
         
         // Check URL for parameters

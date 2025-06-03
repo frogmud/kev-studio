@@ -74,6 +74,16 @@ async function readTemplate() {
   }
 }
 
+// Read image directory once at startup and cache the result
+let cachedImageFiles = null;
+
+async function getImageFiles() {
+  if (!cachedImageFiles) {
+    cachedImageFiles = await fs.readdir(path.join(__dirname, 'images'));
+  }
+  return cachedImageFiles;
+}
+
 // Process each project
 async function processProject(projectDir, template) {
   try {
@@ -128,9 +138,9 @@ async function processProject(projectDir, template) {
       projectContent = '<p>More details coming soon.</p>';
     }
     
-    // Get image path
+    // Get image path - using the cached image files
     let projectImage = '';
-    const imageFiles = await fs.readdir(path.join(__dirname, 'images'));
+    const imageFiles = await getImageFiles();
     
     // Try to find an image that matches the project name
     const projectImageFile = imageFiles.find(file => 
