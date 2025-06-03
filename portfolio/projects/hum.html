@@ -77,10 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="info-toggle" id="info-toggle">i</div>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,8 +256,10 @@ Strategy: Simon Thackway, Jonathan Paisnerprogramming: dave morreale
 
             if (infoToggle && projectInfo) {
                 infoToggle.addEventListener('click', function() {
-                    projectInfo.classList.toggle('hidden');
+                    const isHidden = projectInfo.classList.toggle('hidden');
                     infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
                 });
             }
         });

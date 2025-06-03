@@ -77,10 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="info-toggle" id="info-toggle">i</div>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,7 +95,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/abra_plane_8k.png" alt="Abra plane graphic">
+            <img loading="lazy" src="../images/optimized/abra_plane_8k.png" alt="Abra">
         </div>
 
         <div class="project-content">
@@ -111,13 +113,12 @@
                         <h3>Role</h3>
                         <p>Design and development</p>
                     </div>
-
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
                         <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                        <span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
                     </div>
                 </div>
             </div>
@@ -125,30 +126,8 @@
             <div class="project-description">
                 <p>Abra's redesign introduced a bold visual identity paired with a flexible web design system. Modular layouts showcase key product features while maintaining clarity across devices. Interactive prototypes guided animation and transitions, resulting in a dynamic user experience that reflects Abra's innovative approach to digital finance.</p>
 
-                <div class="project-gallery">
-                    <figure>
-                        <img loading="lazy" src="../images/optimized/abra_plane_8k.png" alt="Abra brand system with airplane visual">
-                        <figcaption>Core visual for the refreshed Abra identity</figcaption>
-                    </figure>
-                </div>
-
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Challenge</h3>
-                        <p>Reimagine the brand and create a responsive site for a growing global payments company.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Approach</h3>
-                        <p>Developed a modular design system and interactive prototypes to define animation and transitions.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Deliverables</h3>
-                        <p>Brand guidelines, design system and full website build.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Results</h3>
-                        <p>Unified identity and improved user experience across devices.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -253,8 +232,10 @@
 
             if (infoToggle && projectInfo) {
                 infoToggle.addEventListener('click', function() {
-                    projectInfo.classList.toggle('hidden');
+                    const isHidden = projectInfo.classList.toggle('hidden');
                     infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
                 });
             }
         });

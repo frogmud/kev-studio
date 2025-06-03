@@ -61,34 +61,6 @@
                 left: -30px;
             }
         }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-xl);
-        }
-
-        .image-grid figure {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .image-grid figure:hover img {
-            transform: scale(1.02);
-        }
-
-        .image-grid figcaption {
-            padding: var(--spacing-sm) 0;
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-        }
     </style>
 </head>
 <body>
@@ -105,10 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="info-toggle" id="info-toggle">i</div>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,9 +95,7 @@
         </div>
         
         <div class="project-hero">
-            <div class="media-container">
-                <img loading="lazy" src="../images/optimized/00-mn8-solar-field-wide.jpg" alt="MN8 Energy solar installation">
-            </div>
+            <img loading="lazy" src="../images/optimized/10a-mn8-laptop-4x3-white.png" alt="MN8 Energy">
         </div>
 
         <div class="project-content">
@@ -166,42 +138,8 @@ Client Services: Lucinda Quartararo
 Programming: Dave Morreale  
 Strategy: Simon Thackway, Jonathan Paisner</p>
 
-                <div class="image-grid">
-                    <figure>
-                        <img loading="lazy" src="../images/optimized/00-mn8-solar-field-wide.jpg" alt="MN8 Energy solar installation">
-                        <figcaption>Large-scale solar array powering communities</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" src="../images/optimized/02-mn8-naming-gif-good.gif" alt="Naming exploration animation">
-                        <figcaption>Naming exploration demonstrating brand motion</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" src="../images/optimized/06a-mn8-logo-4x3.png" alt="Final MN8 Energy logo">
-                        <figcaption>Final logo featuring negative space power socket</figcaption>
-                    </figure>
-                    <figure>
-                        <img loading="lazy" src="../images/optimized/10a-mn8-laptop-4x3-white.png" alt="MN8 Energy website mockup">
-                        <figcaption>Responsive website showcasing the new identity</figcaption>
-                    </figure>
-                </div>
-
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Challenge</h3>
-                        <p>Rebrand Goldman Sachs Renewable Power as a standalone leader in clean energy.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Approach</h3>
-                        <p>Explored naming, crafted a bold visual identity and implemented a responsive design system.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Deliverables</h3>
-                        <p>Naming strategy, logo design, website, design system and comprehensive brand guidelines.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Results</h3>
-                        <p>Established MN8 as an innovative energy brand recognized immediately after launch.</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -306,8 +244,10 @@ Strategy: Simon Thackway, Jonathan Paisner</p>
 
             if (infoToggle && projectInfo) {
                 infoToggle.addEventListener('click', function() {
-                    projectInfo.classList.toggle('hidden');
+                    const isHidden = projectInfo.classList.toggle('hidden');
                     infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
                 });
             }
         });

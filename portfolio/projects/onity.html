@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Onity visual identity and animation by Kevin Grzejka. Brand exploration, animation and digital locking system visual identity.">
-    <title>Onity Visual Identity | Kevin Grzejka Portfolio</title>
+    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
+    <title>Onity | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
@@ -77,10 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="info-toggle" id="info-toggle">i</div>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,7 +91,7 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>Onity</h1>
-            <p class="tagline">Visual identity system and animation for digital locking solutions</p>
+            <p class="tagline">Storyboarding and direction for the Onity logo animation</p>
         </div>
         
         <div class="project-hero">
@@ -109,75 +111,29 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Visual Identity & Animation</p>
+                        <p>Animation & Storyboarding</p>
                     </div>
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
                         <span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                        <span class="project-tag" data-tag="visual-identity" onclick="window.location.href='../index.html?filter=visual-identity&filterType=tag'">Visual Identity</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Onity provides digital locking systems for hotels and businesses worldwide. This project involved creating a comprehensive visual identity system and animated brand elements that communicate security, technology, and reliability. The identity needed to work across physical products, digital interfaces, and marketing materials.</p>
+                <p>Onity provides digital locking systems for hotels and businesses. For this project I created a short logo animation exploring energy flow and simplicity.</p>
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                        <h3>Brand Strategy</h3>
-                        <p>Developed key brand attributes and positioning to guide the visual identity system.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Visual Exploration</h3>
-                        <p>Created multiple directions for the identity system, exploring typography, color, and graphical elements.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Animation Development</h3>
-                        <p>Designed motion principles and animated brand elements to enhance digital touchpoints.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>System Documentation</h3>
-                        <p>Created comprehensive guidelines for consistent application across all brand touchpoints.</p>
-                    </div>
-                </div>
-                
-                <div class="project-gallery gallery-3">
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-comp-01.png" alt="Onity visual identity exploration">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-comp-02.gif" alt="Onity animation comp">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00001.png" alt="Onity visual identity comps">
-                    </div>
-                </div>
-                
-                <div class="project-gallery gallery-2">
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00002.png" alt="Onity brand exploration">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00003.png" alt="Onity visual identity system">
-                    </div>
-                </div>
-                
-                <div class="project-gallery gallery-4">
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00004.png" alt="Onity visual identity">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00005.png" alt="Onity brand guidelines">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00006.png" alt="Onity brand applications">
-                    </div>
-                    <div class="gallery-item">
-                        <img loading="lazy" src="../images/onity/onity-visid-00007.png" alt="Onity packaging design">
-                    </div>
+                <h3>Concept Development</h3>
+                <p>Sketched early ideas and built a storyboard for the motion.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Animation</h3>
+                <p>Animated the logo in After Effects and refined timing with the client.</p>
+              </div>
                 </div>
             </div>
         </div>
@@ -282,8 +238,10 @@
 
             if (infoToggle && projectInfo) {
                 infoToggle.addEventListener('click', function() {
-                    projectInfo.classList.toggle('hidden');
+                    const isHidden = projectInfo.classList.toggle('hidden');
                     infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
                 });
             }
         });
