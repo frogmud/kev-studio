@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
-    <title>Amrop | Kevin Grzejka Portfolio</title>
+    <title>Autonomy Capital | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
@@ -77,12 +77,9 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="view-toggles">
-                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
-                    <div class="theme-toggle" id="theme-toggle">
-                        <span class="sun">☀️</span>
-                        <span class="moon">🌙</span>
-                    </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
                 </div>
             </div>
         </div>
@@ -90,18 +87,16 @@
 
     <main class="container project-detail">
         <div class="project-header">
-            <h1>Amrop</h1>
-            <p class="tagline">Brand refresh & website</p>
+            <h1>Autonomy Capital</h1>
+            <p class="tagline">Brand identity and website for a forward-thinking investment firm</p>
         </div>
         
         <div class="project-hero">
-            <div class="media-container">
-            <img loading="lazy" src="../images/optimized/amrop_logo_rgb.svg" alt="Amrop">
-            </div>
+            <img loading="lazy" src="../images/background_alpha.png" alt="Autonomy Capital">
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -109,11 +104,11 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>Amrop</p>
+                        <p>Autonomy Capital</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Design</p>
+                        <p>Design, Web, Strategy</p>
                     </div>
                 </div>
                 <div class="project-tags-container">
@@ -126,30 +121,8 @@
             </div>
             
             <div class="project-description">
-                <p>Amrop is a global partnership of executive search and leadership advisory firms with a presence in over 65 countries worldwide. This project involved a careful brand refresh that honored the company's heritage while bringing a modern sophistication to their visual identity system.</p>
-                
-                <p>As a leading executive search organization, Amrop needed a brand presence that reflected their premium positioning while remaining approachable and trustworthy to their client base of C-suite executives and board members. The brand refresh focused on:</p>
-                
-                <ul>
-                    <li>Refining the existing logo for better digital application</li>
-                    <li>Developing a comprehensive visual identity system</li>
-                    <li>Creating guidelines for global consistency</li>
-                    <li>Designing website templates and digital touchpoints</li>
-                    <li>Modernizing presentation materials and collateral</li>
-                </ul>
-                
-                <div class="project-gallery">
-                    <figure>
-                        <img src="../images/optimized/amrop_logo_rgb.svg" alt="Amrop Logo">
-                        <figcaption>Refined logo with improved balance and digital optimization</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/amrop/amrop-thumb.svg" alt="Amrop Brand System">
-                        <figcaption>Brand system components showing typography and color palette</figcaption>
-                    </figure>
-                </div>
-                
-                <p>The refreshed brand identity maintains the distinctive blue coloring that Amrop is known for while introducing a more refined typography system and layout structure. The digital application of the brand was carefully considered to ensure it translated well across various screen sizes and platforms, supporting the firm's global digital presence.</p>
+                <p>Autonomy Capital approached our team to craft a modern identity that reflects their innovative investment philosophy. We developed a flexible visual system and responsive website that communicate trust and long‑term vision.</p>
+<p>The clean typography and restrained color palette emphasize the firm's commitment to clarity and transparency, while subtle motion graphics add a sense of momentum.</p>
 
                 <div class="project-timeline">
                     
@@ -158,13 +131,13 @@
         </div>
 
         <div class="project-navigation">
-            <a href="lrei.html" class="nav-link prev">
+            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Previous Project
             </a>
-            <a href="aiga.html" class="nav-link next">
+            <a href="un.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -240,7 +213,7 @@
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-
+            
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -250,19 +223,6 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
-
-            // Info button toggle for project details
-            const infoToggle = document.getElementById('info-toggle');
-            const projectInfo = document.querySelector('.project-info');
-
-            if (infoToggle && projectInfo) {
-                infoToggle.addEventListener('click', function() {
-                    const isHidden = projectInfo.classList.toggle('hidden');
-                    infoToggle.classList.toggle('open');
-                    // Update ARIA attributes for accessibility
-                    infoToggle.setAttribute('aria-pressed', !isHidden);
-                });
-            }
         });
     </script>
 </body>

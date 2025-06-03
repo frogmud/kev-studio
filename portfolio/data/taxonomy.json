@@ -101,7 +101,7 @@
     },
     {
       "id": "lrei",
-      "title": "LREI",
+      "title": "LREI Viewbook",
       "categories": ["print"],
       "tags": ["print"]
     },
@@ -146,12 +146,24 @@
       "title": "Try It Out with Major League Wiffleball",
       "categories": ["digital"],
       "tags": ["web"]
-    }
-    ,{
+    },
+    {
+      "id": "museum",
+      "title": "Museum",
+      "categories": ["print"],
+      "tags": ["print"]
+    },
+    {
       "id": "tryitout",
       "title": "Tryitout",
       "categories": ["digital"],
       "tags": ["web"]
+    },
+    {
+      "id": "autonomy_capital",
+      "title": "Autonomy Capital",
+      "categories": ["digital"],
+      "tags": ["branding", "web"]
     }
   ]
 }
