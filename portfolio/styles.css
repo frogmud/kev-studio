@@ -190,7 +190,7 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-auto-rows: 1fr;
+  grid-auto-rows: auto;
   grid-auto-flow: dense;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
@@ -206,7 +206,7 @@ h3 {
 
 .project-grid:not(.list-view) .project-image {
   margin-bottom: 0;
-  padding-bottom: 75%;
+  height: 240px;
 }
 
 /* Project grid styles (grid and list views) */
@@ -306,7 +306,6 @@ h3 {
 }
 
 /* Let images maintain their natural aspect ratios */
-
 .project-card .project-image {
   display: flex;
   justify-content: center;
@@ -315,6 +314,15 @@ h3 {
   width: 100%;
   overflow: hidden;
   border-radius: 0;
+  height: 240px; /* Fixed height for landscape orientation */
+}
+
+.project-card.landscape .project-image {
+  height: 240px;
+}
+
+.project-card.portrait .project-image {
+  height: 320px;
 }
 
 .project-card:hover .project-image img {
@@ -738,6 +746,16 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Placeholder image */
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-gray);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #museum-thumbnail {
