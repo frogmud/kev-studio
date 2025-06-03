@@ -152,12 +152,18 @@
       "title": "Museum",
       "categories": ["print"],
       "tags": ["print"]
-    }
-    ,{
+    },
+    {
       "id": "tryitout",
       "title": "Tryitout",
       "categories": ["digital"],
       "tags": ["web"]
+    },
+    {
+      "id": "autonomy_capital",
+      "title": "Autonomy Capital",
+      "categories": ["digital"],
+      "tags": ["branding", "web"]
     }
   ]
 }
