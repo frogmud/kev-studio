@@ -54,13 +54,22 @@ async function generateUnifiedProjectPages() {
         
         // Get description
         let projectDescription = '';
-        if (infoContent.includes('Description:')) {
-          projectDescription = infoContent.split('Description:')[1].split('\n')[0].trim();
+        const descMatch = infoContent.match(/Description:\s*(.+)/);
+        if (descMatch) {
+          projectDescription = descMatch[1].trim();
+        } else if (infoContent.includes('--- CONTENT ---')) {
+          const firstParagraph = infoContent
+            .split('--- CONTENT ---')[1]
+            .trimStart()
+            .split('\n\n')[0]
+            .replace(/\n/g, ' ')
+            .trim();
+          projectDescription = firstParagraph;
         }
         
         // Get year
-        let projectYear = '2025';
-        const yearMatch = infoContent.match(/Year:\s*(20\d\d)/);
+        let projectYear = '';
+        const yearMatch = infoContent.match(/Year:\s*(\d{4})/);
         if (yearMatch) {
           projectYear = yearMatch[1];
         }
@@ -144,6 +153,12 @@ async function generateUnifiedProjectPages() {
           'amrop': '../images/optimized/amrop_logo_rgb.svg',
           'thackway_mccord_pets': '../images/optimized/chocolate-hero-v2.jpg',
           'american_social': '../images/optimized/01_amso_splash.png',
+          'lrei': '../images/optimized/lrei_1_bookflipcut_1.gif',
+          'aiga': '../images/aiga/aiga_window-2.gif',
+          'fiserv': '../images/fiserv/DOL_0_Ipad_v4.gif',
+          'museum': '../images/museum/painting0001.jpg',
+          'tryitout': '../images/optimized/tryitout/Tryitout_0_aniweb_4x3_v3.gif',
+          'un': '../images/un/UN_Cover.gif',
         };
         
         // Check if we have a mapped image for this project
@@ -152,10 +167,13 @@ async function generateUnifiedProjectPages() {
         } else {
           // Check optimized images folder first
           try {
-            const optimizedImageFiles = await fs.readdir(path.join(__dirname, 'images', 'optimized'));
-            
+            const optimizedDir = path.join(__dirname, 'images', 'optimized');
+            const optimizedImageFiles = (await fs.readdir(optimizedDir, { withFileTypes: true }))
+              .filter(d => d.isFile())
+              .map(d => d.name);
+
             // Try to find an optimized image that matches the project name
-            const optimizedImageFile = optimizedImageFiles.find(file => 
+            const optimizedImageFile = optimizedImageFiles.find(file =>
               file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
               file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())
             );
@@ -170,10 +188,13 @@ async function generateUnifiedProjectPages() {
           
           // If no optimized image found, check regular images
           if (!projectImage) {
-            const imageFiles = await fs.readdir(path.join(__dirname, 'images'));
-            
+            const imagesDir = path.join(__dirname, 'images');
+            const imageFiles = (await fs.readdir(imagesDir, { withFileTypes: true }))
+              .filter(d => d.isFile())
+              .map(d => d.name);
+
             // Try to find an image that matches the project name
-            const projectImageFile = imageFiles.find(file => 
+            const projectImageFile = imageFiles.find(file =>
               file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
               file.toLowerCase().includes(projectTitle.replace(/-/g, '').toLowerCase())
             );
