@@ -1,145 +1,24 @@
-# Thackway McCord pets
+# Thackway McCord Pets
 
 URL: https://kev.studio/thackwaymccord
 
-Page Title: thackwaymccord — kev.studio
-Description: 2022 Making QR codes fun! Every holiday season, Thackway McCord partners with an artist to create a series of chocolate bars to send as gifts. For...
+Page Title: Making QR Codes Fun! — kev.studio
+Description: Custom QR code illustrations and playful stickers for holiday chocolate bars.
+Year: 2022
+Client: Thackway McCord
+Role: Art Direction, Design, Illustration, Motion, Programming, Packaging, Promo
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+Every holiday season, Thackway McCord partners with an artist to create a series of chocolate bars for clients. In 2021 I pitched drawing custom QR codes linking to fun, branded URLs. The pandemic made the codes ubiquitous, but mostly utilitarian, so we set out to make them playful. What began as abstract drawings evolved into portraits of pets accompanied by 8‑bit style gifs and stickers. Monotype loved the mix of Cotford with the glitchy codes, and the gifs even gained traction on Giphy. Most importantly, my cat Bean starred in the case study next to his illustration.
 
+--- TIMELINE ---
 
-	
+### Concept & Pitch
+Presented the idea of illustrated QR codes and companion stickers.
 
+### Production
+Illustrated pets and designed packaging for the chocolate bar series.
 
-
- 
-
-
-
-	
-	
-︎ LINKS
-
-︎︎︎   ︎︎︎
-
-︎︎︎   ︎︎︎
-
-2022
-	
-Making QR codes fun!
-
-
-
-
-
-
-
-
-
-
-
-Every holiday season, Thackway McCord partners with an artist to create a series of chocolate bars to send as gifts. For 2021, I pitched the idea of drawing custom QR codes linking to some fun, TM-branded url. The pandemic had made the codes ubiqutous, but their most common use cases for a no-contact-on-demand-service felt like a missed opportunity. What began as abstract drawings of QR codes (see 01, 02, 03 for examples) ended up as portraits of animals coupled with 8-bit style gifs and stickers with individual phrases and personalities that we were workshopping. Monotype liked how we used Cotford against the glitchy, erratic look of the codes and sprite art. And then our silly gifs started getting popular on giphy  by getting posted as stickers on instagram. 
-And finally, and most importantly, my cat starred in the case study alongside his illustration.
-
-Agency: Thackway McCord
-
-Role: ART DIRECTION, DESIGN lead, illustration, MOTION, PROGRAMMING, packaging, PROMO
-LINK: thackwaymccord.fun 
-models: bean & rosie
-creative direction: KAT MCCORD
-
-🏆🏆🏆 AWARDS: 
-COMMARTS ILLUSTRATION 2022 (SHORTLISTED)HIIIBRAND ILLUSTRATION 2022 (FINALIST)indigo awards 2022 digital (gold)
-
-
-	
-
-
-
-
-
-	
-
-
-
-	
-
-
-	
-
-	
-
-
-	
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-
-
-	
-	
-	
-
-
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2022
-
-Making QR codes fun!
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-
+### Launch
+Shared gifs and stickers on social platforms and mailed chocolate bars to clients.
