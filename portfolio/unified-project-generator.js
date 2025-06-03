@@ -80,7 +80,11 @@ async function generateUnifiedProjectPages() {
         // Extract content
         let projectContent = '';
         if (infoContent.includes('--- CONTENT ---')) {
-          const contentSection = infoContent.split('--- CONTENT ---')[1].trim();
+          let contentSection = infoContent.split('--- CONTENT ---')[1];
+          if (contentSection.includes('--- TIMELINE ---')) {
+            contentSection = contentSection.split('--- TIMELINE ---')[0];
+          }
+          contentSection = contentSection.trim();
           const paragraphs = contentSection
             .split('\n\n')
             .filter(p => p.trim() && !p.includes('©2025') && !p.includes('grzejkakevin@gmail.com'))
@@ -139,6 +143,7 @@ async function generateUnifiedProjectPages() {
           'lifepoint_health': '../images/optimized/Lifepoint_HQSign.png',
           'amrop': '../images/optimized/amrop_logo_rgb.svg',
           'thackway_mccord_pets': '../images/optimized/chocolate-hero-v2.jpg',
+          'american_social': '../images/optimized/01_amso_splash.png',
         };
         
         // Check if we have a mapped image for this project
