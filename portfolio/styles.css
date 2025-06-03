@@ -643,10 +643,17 @@ footer {
 
 .project-info {
   margin-bottom: var(--spacing-lg);
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  opacity: 1;
+  max-height: 1000px;
+  overflow: hidden;
 }
 
 .project-info.hidden {
-  display: none;
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+  pointer-events: none;
 }
 
 .project-metadata {
@@ -986,7 +993,13 @@ footer {
   }
   
   .sticky-nav .theme-toggle {
-    margin-left: auto;
+    margin-left: 8px;
+  }
+  
+  /* Create toggle group to keep them together */
+  .view-toggles {
+    display: flex;
+    gap: 8px;
   }
 }
 
