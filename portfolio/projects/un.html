@@ -77,6 +77,7 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
+                <div class="info-toggle" id="info-toggle">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -88,15 +89,15 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>United Nations</h1>
-            <p class="tagline">In 2018, the United Nations President of the General Assembly (PGA) initiated a new diplomatic dialogue format called "Morning Minga" to foster more collaborative and informal exchanges between UN representatives.</p>
+            <p class="tagline"></p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/un/UN_1.png" alt="United Nations Morning Minga">
+            <img loading="lazy" src="../images/optimized/background_alpha.png" alt="United Nations">
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -115,79 +116,21 @@
                     <h3>Tags</h3>
                     <div class="project-tags">
                         <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                        <span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>In 2018, the United Nations President of the General Assembly (PGA) initiated a new diplomatic dialogue format called "Morning Minga" to foster more collaborative and informal exchanges between UN representatives. This innovative project required a comprehensive brand identity that would honor the UN's diplomatic gravitas while introducing a fresh, approachable visual language for this new initiative.</p>
-                
-                <p>The Morning Minga dialogues represented a significant shift in diplomatic communication at the UN, creating spaces where ambassadors and representatives could engage in more personal, candid discussions about pressing global issues outside the formal assembly structure. Our team was tasked with developing a complete brand identity package that would:</p>
-                
-                <ul>
-                    <li>Create a distinctive visual identity that balanced UN heritage with a fresh, contemporary approach</li>
-                    <li>Design flexible branding elements that could be implemented across physical and digital touchpoints</li>
-                    <li>Develop a system that would appeal to diplomats from diverse cultural backgrounds</li>
-                    <li>Establish brand guidelines that could be consistently applied by the UN's internal team</li>
-                </ul>
-                
-                <p>The resulting identity system centered on a vibrant, multi-colored logo that symbolized dialogue and diversity, while maintaining clear connections to UN visual traditions. The name "Minga" itself, referring to a South American tradition of community gatherings, perfectly captured the initiative's collaborative spirit.</p>
-                
-                <div class="project-gallery">
-                    <figure>
-                        <img src="../images/un/UN_PGA_CaseStudy_Slide8.png" alt="UN Morning Minga Brand Guidelines">
-                        <figcaption>Brand guidelines showing color system and applications</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/un/UNPGA73_TransformAwards_Sequence_03.png" alt="UN Morning Minga Logo Development">
-                        <figcaption>Logo development and animation sequence</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/un/additional/UN_PGA73_MorningMinga_LogoAnimation.gif" alt="UN Morning Minga Logo Animation">
-                        <figcaption>Logo animation showcasing the dynamic identity system</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/un/additional/MoningMinga.jpg" alt="Morning Minga Logo on Wall">
-                        <figcaption>Logo implementation in the United Nations building</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/un/UN_3.png" alt="Morning Minga Applications">
-                        <figcaption>Brand applications including signage, pins, and tote bags</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../images/un/UN_4.png" alt="Morning Minga Printed Materials">
-                        <figcaption>Branded materials including pins, publications, and scarves</figcaption>
-                    </figure>
-                </div>
-                
-                <p>This project represented a unique opportunity to evolve the visual language of international diplomacy while respecting the gravitas and significance of the United Nations. The Morning Minga identity successfully helped launch this new diplomatic initiative, creating a welcoming and distinctive visual presence that encouraged participation from representatives across the global community.</p>
-                
-                <p>The multi-colored identity system was implemented across a wide range of touchpoints, from environmental graphics within the UN headquarters to digital platforms and printed materials. Each application maintained the balance between diplomatic formality and the more conversational, approachable tone that characterized the Morning Minga initiative.</p>
+                <p>More details coming soon.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Challenge</h3>
-                        <p>Create a brand identity for a new UN diplomatic dialogue initiative</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Approach</h3>
-                        <p>Develop a visual system that balances UN heritage with a fresh, approachable aesthetic</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Deliverables</h3>
-                        <p>Logo design, print materials, digital assets, environmental graphics, brand guidelines</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Results</h3>
-                        <p>Successfully launched the Morning Minga initiative with a distinctive visual presence</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
+            <a href="tryitout.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
@@ -269,7 +212,7 @@
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-            
+
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -279,6 +222,17 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                });
+            }
         });
     </script>
 </body>

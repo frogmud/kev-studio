@@ -77,6 +77,7 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
+                <div class="info-toggle" id="info-toggle">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -96,7 +97,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -114,8 +115,8 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">Print</span>
-                        <span class="project-tag" data-tag="strategy" onclick="window.location.href='../index.html?filter=strategy&filterType=tag'">Strategy</span>
+                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">print</span>
+<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
                     </div>
                 </div>
             </div>
@@ -125,17 +126,17 @@
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                        <h3>Concept & Pitch</h3>
-                        <p>Presented the idea of illustrated QR codes and companion stickers.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Production</h3>
-                        <p>Illustrated pets and designed packaging for the chocolate bar series.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Launch</h3>
-                        <p>Shared gifs and stickers on social platforms and mailed chocolate bars to clients.</p>
-                    </div>
+                <h3>Concept & Pitch</h3>
+                <p>Presented the idea of illustrated QR codes and companion stickers.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Production</h3>
+                <p>Illustrated pets and designed packaging for the chocolate bar series.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Launch</h3>
+                <p>Shared gifs and stickers on social platforms and mailed chocolate bars to clients.</p>
+              </div>
                 </div>
             </div>
         </div>
@@ -223,7 +224,7 @@
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-            
+
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -233,6 +234,17 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                });
+            }
         });
     </script>
 </body>
