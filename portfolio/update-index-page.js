@@ -262,16 +262,23 @@ async function updateIndexPage() {
     taxonomyData.projects.forEach(project => {
       if (project.tags && project.tags.length > 0) {
         const tagsString = project.tags.join(',');
-        // Find the project card and add data-tags attribute
+        // Find the project card and add or update data-tags attribute
         const projectCardRegex = new RegExp(`<div class="project-card"[^>]*data-categories="[^"]*"[^>]*>\\s*<div class="project-image">\\s*<img[^>]*${project.id}[^>]*>`, 'i');
-        
+
         if (projectCardRegex.test(indexContent)) {
           indexContent = indexContent.replace(
             projectCardRegex,
-            match => match.replace(
-              /data-categories="([^"]*)"/,
-              `data-categories="$1" data-tags="${tagsString}"`
-            )
+            match => {
+              if (/data-tags="[^"]*"/i.test(match)) {
+                // Replace existing data-tags
+                return match.replace(/data-tags="[^"]*"/i, `data-tags="${tagsString}"`);
+              }
+              // Insert new data-tags attribute after data-categories
+              return match.replace(
+                /data-categories="([^"]*)"/,
+                `data-categories="$1" data-tags="${tagsString}"`
+              );
+            }
           );
         }
         
