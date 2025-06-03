@@ -143,6 +143,7 @@ async function generateUnifiedProjectPages() {
           'lifepoint_health': '../images/optimized/Lifepoint_HQSign.png',
           'amrop': '../images/optimized/amrop_logo_rgb.svg',
           'thackway_mccord_pets': '../images/optimized/chocolate-hero-v2.jpg',
+          'american_social': '../images/optimized/01_amso_splash.png',
         };
         
         // Check if we have a mapped image for this project
