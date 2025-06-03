@@ -182,7 +182,7 @@ async function generateUnifiedProjectPages() {
               projectImage = `../images/${projectImageFile}`;
             } else {
               // Default image
-              projectImage = '../images/background_alpha.png';
+              projectImage = '../images/optimized/background_alpha.png';
             }
           }
         }

@@ -105,6 +105,7 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
+                <div class="info-toggle" id="info-toggle">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -126,7 +127,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -162,7 +163,7 @@ Role: Design, Logo, Motion, QA, UI/UX
 Executive Creative Direction: Kat McCord  
 Design Lead & Creative Direction: Steve Clarke  
 Client Services: Lucinda Quartararo  
-Programming: Dave Morreale
+Programming: Dave Morreale  
 Strategy: Simon Thackway, Jonathan Paisner</p>
 
                 <div class="image-grid">
@@ -288,7 +289,7 @@ Strategy: Simon Thackway, Jonathan Paisner</p>
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-            
+
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -298,6 +299,17 @@ Strategy: Simon Thackway, Jonathan Paisner</p>
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                });
+            }
         });
     </script>
 </body>

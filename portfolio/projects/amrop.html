@@ -77,9 +77,12 @@
                     <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
                     <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
                 </ul>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,12 +96,12 @@
         
         <div class="project-hero">
             <div class="media-container">
-                <img loading="lazy" src="../images/amrop/amrop_logo_rgb.svg" alt="Amrop">
+            <img loading="lazy" src="../images/optimized/amrop_logo_rgb.svg" alt="Amrop">
             </div>
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -137,7 +140,7 @@
                 
                 <div class="project-gallery">
                     <figure>
-                        <img src="../images/amrop/amrop_logo_rgb.svg" alt="Amrop Logo">
+                        <img src="../images/optimized/amrop_logo_rgb.svg" alt="Amrop Logo">
                         <figcaption>Refined logo with improved balance and digital optimization</figcaption>
                     </figure>
                     <figure>
@@ -149,22 +152,7 @@
                 <p>The refreshed brand identity maintains the distinctive blue coloring that Amrop is known for while introducing a more refined typography system and layout structure. The digital application of the brand was carefully considered to ensure it translated well across various screen sizes and platforms, supporting the firm's global digital presence.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Challenge</h3>
-                        <p>Refresh a global brand while maintaining brand equity and recognition</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Approach</h3>
-                        <p>Evolve visual identity with focus on digital applications and global consistency</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Deliverables</h3>
-                        <p>Logo refinement, visual identity system, web templates, brand guidelines</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>Results</h3>
-                        <p>Successfully deployed across 65+ country operations with improved brand consistency</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -252,7 +240,7 @@
             
             // Filter category links to main page with proper filter type
             const filterCategories = document.querySelectorAll('.filter-category');
-            
+
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
@@ -262,6 +250,19 @@
                     window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
                 });
             });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    const isHidden = projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
+                });
+            }
         });
     </script>
 </body>
