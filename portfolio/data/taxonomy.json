@@ -147,5 +147,11 @@
       "categories": ["digital"],
       "tags": ["web"]
     }
+    ,{
+      "id": "tryitout",
+      "title": "Tryitout",
+      "categories": ["digital"],
+      "tags": ["web"]
+    }
   ]
 }
