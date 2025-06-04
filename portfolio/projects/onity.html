@@ -95,7 +95,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/onity/onity-comp-01.png" alt="Onity">
+            <img loading="lazy" src="../images/onity" alt="Onity">
         </div>
 
         <div class="project-content">
@@ -117,27 +117,23 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
+                        {{PROJECT_TAGS}}
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
                 <p>Onity provides digital locking systems for hotels and businesses. For this project I created a short logo animation exploring energy flow and simplicity.</p>
+<p>--- TIMELINE ---
+### Concept Development
+Sketched early ideas and built a storyboard for the motion.</p>
+<p>### Animation
+Animated the logo in After Effects and refined timing with the client.</p>
+<p>### Early Concepts
+Created styleframes and animation tests to explore motion before finalizing.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                <h3>Concept Development</h3>
-                <p>Sketched early ideas and built a storyboard for the motion.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Animation</h3>
-                <p>Animated the logo in After Effects and refined timing with the client.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Early Concepts</h3>
-                <p>Created styleframes and animation tests to explore motion before finalizing.</p>
-              </div>
+                    {{PROJECT_TIMELINE}}
                 </div>
             </div>
         </div>
@@ -149,7 +145,7 @@
                 </svg>
                 Previous Project
             </a>
-            <a href="sylvamo.html" class="nav-link next">
+            <a href="eyes_above.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
