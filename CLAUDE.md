@@ -22,19 +22,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Code Style Guidelines
 - Use strict mode (`"use strict"`) at the top of each file
 - Follow ES6+ conventions: prefer `const`/`let` over `var`
-- Use 2-space indentation
-- Use semicolons at the end of statements
+- Use CommonJS require() imports with built-in modules first
+- Use 2-space indentation and semicolons
 - Use single quotes for strings (except where template literals needed)
 - Use async/await for asynchronous operations
-- Handle errors with try/catch blocks for file operations and data parsing
-- Use descriptive variable/function names with camelCase (e.g., `downloadImage`)
-- Name files with kebab-case (e.g., `download-portfolio.js`)
+- Use try/catch blocks for error handling with detailed logging
+- Use camelCase for variables/functions, kebab-case for filenames
 - Break complex operations into focused helper functions
-- Extract configuration into separate objects
-- Use Node.js built-in modules (fs, path) with promises (fs.promises)
-- Log operations with meaningful messages for debugging
+- Use descriptive variable names indicating type and purpose
+- Use JSDoc comments for documenting function parameters/returns
+- Use Node.js built-in modules (fs, path) with promises API
 - Validate input data before processing
-- Add JSDoc comments for function documentation
 
 ## HTML/CSS Guidelines
 - Use modern-normalize for CSS reset

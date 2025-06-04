@@ -7,6 +7,61 @@
     <title>Onity | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -40,7 +95,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/onity" alt="Onity">
+            <img loading="lazy" src="../images/optimized/onity/onity-comp-01.png" alt="Onity">
         </div>
 
         <div class="project-content">
@@ -62,7 +117,7 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        {{PROJECT_TAGS}}
+                        <span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
                     </div>
                 </div>
             </div>
@@ -71,16 +126,18 @@
                 <p>Onity provides digital locking systems for hotels and businesses. For this project I created a short logo animation exploring energy flow and simplicity.</p>
 
                 <div class="project-timeline">
-                    <ul>
-                        <li>Concept development</li>
-                        <li>Animation production</li>
-                        <li>Early styleframes</li>
-                        <li>Final delivery &amp; approval</li>
-                    </ul>
-                    <div class="project-image">
-                        <img loading="lazy" src="../images/onity/onity-logo-animation.gif" alt="Onity animation">
-                        <img loading="lazy" src="../images/onity/onity-visid-00005.png" alt="Onity styleframe">
-                    </div>
+                    <div class="timeline-item">
+                <h3>Concept Development</h3>
+                <p>Sketched early ideas and built a storyboard for the motion.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Animation</h3>
+                <p>Animated the logo in After Effects and refined timing with the client.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Early Concepts</h3>
+                <p>Created styleframes and animation tests to explore motion before finalizing.</p>
+              </div>
                 </div>
             </div>
         </div>
@@ -92,7 +149,7 @@
                 </svg>
                 Previous Project
             </a>
-            <a href="eyes_above.html" class="nav-link next">
+            <a href="sylvamo.html" class="nav-link next">
                 Next Project
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

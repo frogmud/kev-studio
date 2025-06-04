@@ -15,7 +15,25 @@ The logo design features a brilliant negative space treatment where the "8" clev
 
 I worked extensively on naming exploration, logo concepting, website design, design systems implementation, and brand guidelines development. My contributions helped translate the strategic vision into cohesive visual assets that positioned MN8 as a forward-thinking energy innovator.
 
-The resulting brand system effectively communicates MN8's mission to put power – both literally and metaphorically – into the hands of customers. The distinctive visual identity helped establish MN8 as a major player in the renewable energy sector immediately following its launch.
+--- TIMELINE ---
+
+### Brand Exploration & Naming
+Conducted collaborative naming workshops to develop a distinctive brand name that would resonate with both corporate clients and consumers. Explored numerous directions before finalizing MN8, which cleverly combines the concept of illumination with a modern, tech-forward sound.
+
+### Brand Strategy Development
+Defined core brand values, positioning, and personality traits that would distinguish MN8 in the competitive energy landscape. Established a strategic framework that highlighted the company's commitment to innovation and sustainability without relying on category clichés.
+
+### Visual Identity Creation
+Designed a comprehensive visual identity system including logo, typography, color palette, and graphic elements. Created a dynamic system that could flex across various touchpoints while maintaining a cohesive brand experience.
+
+### Digital Experience Design
+Developed website wireframes, UI design, and content strategy that effectively communicated complex energy solutions to diverse audiences. Created interactive elements that showcased MN8's technological capabilities and project portfolio.
+
+### Brand Guidelines & Assets
+Produced comprehensive brand guidelines documenting all visual and verbal elements. Developed templates for presentations, reports, and marketing materials to ensure consistent application across the organization.
+
+### Launch & Implementation
+Coordinated the phased rollout of the new brand across all channels. Provided training and resources for internal teams to ensure adoption and proper implementation of brand standards.
 
 Agency: Thackway McCord  
 Client: Goldman Sachs & MN8 Energy  

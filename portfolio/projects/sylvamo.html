@@ -7,6 +7,61 @@
     <title>Sylvamo | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -36,11 +91,11 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>Sylvamo</h1>
-            <p class="tagline">2021 Sylvamo, the 'World's Paper Company' - Brand identity for the world's largest pure play paper company.</p>
+            <p class="tagline">Brand identity for the world's largest pure play paper company</p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/sylvamo" alt="Sylvamo">
+            <img loading="lazy" src="../images/optimized/sylvamo/Sylvamo_IndigoAwards21_02.gif" alt="Sylvamo">
         </div>
 
         <div class="project-content">
@@ -52,17 +107,18 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
-                        <p>** Sylvamo / International Paper</p>
+                        <p>Sylvamo / International Paper</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>** Design lead, logo, motion, print</p>
+                        <p>Design Lead, Logo, Motion, Print</p>
                     </div>
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        {{PROJECT_TAGS}}
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
                     </div>
                 </div>
             </div>
@@ -70,31 +126,51 @@
             <div class="project-description">
                 <p>Sylvamo is the world's paper company, honoring the promise of paper to educate, communicate and entertain – sustainably. The name was created by Thackway McCord when the business spun off from International Paper, forming the world's largest pure play paper producer.</p>
 <p>The brand combines the Latin words for forest, *silva*, and love, *amo*, expressing a deep respect for sustainable forestry. A paper plane icon symbolizes aspiration while a vibrant purple palette sets the identity apart in a sea of green.</p>
-<p>- **Agency:** Thackway McCord
-- **Client:** Sylvamo / International Paper
-- **Role:** Design lead, logo, motion, print
-- **Executive Creative Director:** Kat McCord
-- **Creative Director:** Steve Clarke
-- **Strategy:** Simon Thackway, Jonathan Paisner
-- **3D Work:** Scyld Bowring</p>
-<p>**Awards:** Indigo Design Awards 2022 (Gold – Branding), 12th Wolda Design Awards (Gold – The Americas), LogoLounge Book 13.</p>
+
                 <div class="project-timeline">
-                    <ul>
-                        <li>Challenge: create a sustainable spin‑off identity</li>
-                        <li>Approach: paper plane icon and vibrant purple system</li>
-                        <li>Results: award-winning launch and industry recognition</li>
-                        <li>Global rollout success</li>
-                    </ul>
-                    <div class="project-image">
-                        <img loading="lazy" src="../images/sylvamo/Sylvamo_IndigoAwards21_02.gif" alt="Sylvamo branding">
-                        <img loading="lazy" src="../images/sylvamo/Sylvamo_IndigoAwards21_05.png" alt="Sylvamo signage">
-                    </div>
+                    <div class="timeline-item">
+                <h3>Strategic Opportunity Assessment</h3>
+                <p>Analyzed the paper industry landscape to identify positioning opportunities for the spin-off. Conducted stakeholder interviews to understand the vision for the new company and differentiation from the parent organization.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Naming & Verbal Identity</h3>
+                <p>Created the distinctive "Sylvamo" name through an extensive development process. Explored numerous linguistic directions before developing the Latin-derived name that elegantly expressed the company's relationship with forests.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Visual Identity Development</h3>
+                <p>Designed a comprehensive visual system including the distinctive paper plane logo, typography, color palette, and graphic elements. Created a system that balanced professionalism with accessibility and avoided category clichés.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Brand Guidelines Creation</h3>
+                <p>Developed comprehensive brand guidelines documenting all identity elements and applications. Created detailed specifications for consistent implementation across global markets and diverse touchpoints.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Launch Planning & Implementation</h3>
+                <p>Coordinated with International Paper and Sylvamo leadership on phased implementation. Developed launch materials including website, videos, social media, and investor relations materials.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Environmental & Experiential Design</h3>
+                <p>Created environmental applications for Sylvamo headquarters and production facilities. Designed trade show materials, signage systems, and experiential brand elements for global implementation.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Agency: Thackway McCord  </h3>
+                <p>Client: Sylvamo / International Paper  
+Role: Design lead, logo, motion, print  
+Executive Creative Director: Kat McCord  
+Creative Director: Steve Clarke  
+Strategy: Simon Thackway, Jonathan Paisner  
+3D Work: Scyld Bowring</p>
+              </div>
+<div class="timeline-item">
+                <h3>Awards: Indigo Design Awards 2022 (Gold – Branding), 12th Wolda Design Awards (Gold – The Americas), LogoLounge Book 13.</h3>
+                <p></p>
+              </div>
                 </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="hum.html" class="nav-link prev">
+            <a href="onity.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>

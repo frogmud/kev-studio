@@ -61,67 +61,6 @@
                 left: -30px;
             }
         }
-        
-        /* Project gallery grid */
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-            margin-top: var(--spacing-xl);
-        }
-        
-        .project-gallery img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-            border-radius: 4px;
-        }
-        
-        .project-gallery img:hover {
-            transform: scale(1.02);
-        }
-        
-        @media (min-width: 1024px) {
-            .project-gallery {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .project-gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Feature section */
-        .feature-section {
-            margin: var(--spacing-xl) 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-lg);
-            align-items: center;
-        }
-        
-        .feature-section .feature-content {
-            padding: var(--spacing-md);
-        }
-        
-        .feature-section .feature-image {
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        
-        .feature-section img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        @media (max-width: 768px) {
-            .feature-section {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -152,11 +91,11 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>Absorb Software</h1>
-            <p class="tagline">Transformative rebrand for leading learning management system</p>
+            <p class="tagline">Website & rebrand for learning tech company</p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software prism animation">
+            <img loading="lazy" src="../images/optimized/absorb/02-absorb-guidelines-wide-blue.png" alt="Absorb Software">
         </div>
 
         <div class="project-content">
@@ -164,7 +103,7 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2024</p>
+                        <p>2025</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
@@ -172,84 +111,30 @@
                     </div>
                     <div class="metadata-item">
                         <h3>Role</h3>
-                        <p>Design Lead, Brand Identity, UI/UX, Motion</p>
+                        <p>Design</p>
                     </div>
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        {{PROJECT_TAGS}}
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Absorb Software has revolutionized the learning management system (LMS) landscape with their intuitive, engaging platform that serves millions of users worldwide. Their rebrand needed to reflect their innovative approach while maintaining the trusted foundation they've built with enterprise clients.</p>
-                
-                <p>The core of the new identity centers around a dynamic prism motif that represents how Absorb transforms complex learning challenges into clear, accessible experiences. This visual metaphor of refraction and clarity became the foundation for a comprehensive design system spanning digital platforms, marketing materials, and product interfaces.</p>
-                
-                <div class="feature-section">
-                    <div class="feature-image">
-                        <img loading="lazy" src="../images/absorb/00-absorb-3d-prism-wide.png" alt="Absorb 3D prism logo concept">
-                    </div>
-                    <div class="feature-content">
-                        <h3>Identity System</h3>
-                        <p>The prism concept was expanded into a flexible, modular design system that could adapt across various touchpoints while maintaining visual consistency. The geometric foundation allowed for endless creative applications while ensuring brand recognition.</p>
-                    </div>
-                </div>
+                <p>More details coming soon.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                        <h3>Discovery & Research</h3>
-                        <p>Conducted extensive user research to understand both client and learner needs across various industries. Analyzed competitor landscape to identify opportunities for differentiation in the LMS market.</p>
-                    </div>
                     
-                    <div class="timeline-item">
-                        <h3>Brand Strategy Development</h3>
-                        <p>Defined core brand attributes centered around clarity, transformation, and accessibility. Developed brand positioning that would resonate with both procurement teams and end users.</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Visual Identity Creation</h3>
-                        <p>Crafted the prism motif through iterative design explorations. Developed comprehensive color system, typography, and design elements that would function across digital and print environments.</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Digital Experience Design</h3>
-                        <p>Designed responsive website and product interfaces that embodied the new brand while enhancing usability. Created motion guidelines for consistent animations throughout the digital ecosystem.</p>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Implementation & Launch</h3>
-                        <p>Developed detailed brand guidelines and asset library. Coordinated phased rollout across multiple channels and touchpoints to maximize impact.</p>
-                    </div>
                 </div>
-                
-                <div class="project-gallery">
-                    <img loading="lazy" src="../images/absorb/03a-absorb-accepted-wide-v3.gif" alt="Absorb animation concepts">
-                    <img loading="lazy" src="../images/absorb/07-absorb-icons.png" alt="Absorb icon system">
-                    <img loading="lazy" src="../images/all_images_backup/_to_sort/02-absorb-guidelines-wide-blue.png" alt="Absorb brand guidelines">
-                    <img loading="lazy" src="../images/all_images_backup/_to_sort/09-absorb-laptop-cycle.gif" alt="Absorb laptop animation">
-                    <img loading="lazy" src="../images/all_images_backup/_to_sort/10-absorb-mobile-wide-blue.png" alt="Absorb mobile design">
-                    <img loading="lazy" src="../images/all_images_backup/_to_sort/12a-absorb-ebooks-wide-purp.png" alt="Absorb digital publications">
-                </div>
-                
-                <div class="feature-section">
-                    <div class="feature-content">
-                        <h3>Digital Experience</h3>
-                        <p>The website and product interface redesign prioritized intuitive navigation and engaging visuals without sacrificing functionality. Special attention was paid to accessibility standards to ensure the platform served all users equally well.</p>
-                    </div>
-                    <div class="feature-image">
-                        <img loading="lazy" src="../images/all_images_backup/_to_sort/11-absorb-laptop-wide-gray.png" alt="Absorb website on laptop">
-                    </div>
-                </div>
-                
-                <p>The rebranding initiative resulted in significant increases in user engagement metrics and helped position Absorb as a thought leader in the learning technology space. The flexible design system continues to evolve as the company expands into new markets and develops new product offerings.</p>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
+            <a href="un.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>

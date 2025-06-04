@@ -7,6 +7,61 @@
     <title>Lifepoint Health | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -40,7 +95,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/z001_lifepoint_01_heart.gif" alt="Lifepoint Health">
+            <img loading="lazy" src="../images/optimized/lifepoint/Lifepoint_HQSign.png" alt="Lifepoint Health">
         </div>
 
         <div class="project-content">
@@ -62,31 +117,47 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        {{PROJECT_TAGS}}
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
                 <p>Lifepoint is a national for-profit healthcare provider, operating in 89 communities across the United States. The network is deeply connected to the towns it serves, where hospitals are as vital to local infrastructure as roads and schools.</p>
-<p>The heart motif created the foundation for a flexible identity system applied through a palette of clean white and vibrant colors. A rigorously developed library of crop configurations originates from the dot motif.</p>
-<p>Agency: Thackway McCord
-Creative Direction: Kat McCord
-Design: Bianca Seong, Fuchen Kuang
-Strategy: Simon Thackway, Jonathan Paisner</p>
+<p>The heart motif created the foundation for a flexible identity system applied through a palette of clean white and vibrant colors. A rigorously developed library of crop configurations originates from the dot motif. The identity system needed to be immediately recognizable while also accommodating diverse healthcare facilities across the country.</p>
 
                 <div class="project-timeline">
-                    <ul>
-                        <li>Community research</li>
-                        <li>Brand system development</li>
-                        <li>Signage &amp; collateral</li>
-                        <li>Nationwide launch</li>
-                        <li>Ongoing campaign updates</li>
-                    </ul>
-                    <div class="project-image">
-                        <img loading="lazy" src="../images/lifepoint/10_Lifepoint_HQSign_YG21_Grzejka-copy.png" alt="Lifepoint signage">
-                        <img loading="lazy" src="../images/lifepoint/Lifepoint_HospitalWall.jpg" alt="Lifepoint interior"> 
-                    </div>
+                    <div class="timeline-item">
+                <h3>Discovery & Analysis</h3>
+                <p>Conducted extensive research across stakeholders, patients, and healthcare professionals to understand perceptions and opportunities. Audited existing brand assets across numerous facilities to assess challenges and inconsistencies in the current system.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Brand Strategy Development</h3>
+                <p>Crafted a unified brand platform that accommodated both corporate and local market needs. Developed messaging hierarchies and tone of voice guidelines that supported Lifepoint's positioning as a leader in community healthcare.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Visual Identity System</h3>
+                <p>Designed a comprehensive visual identity including logo, typography, color palette, and supportive graphic elements. Created a flexible system that could be implemented across diverse facilities while maintaining brand cohesion.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Digital Experience Design</h3>
+                <p>Redesigned the corporate website and digital touchpoints to reflect the new brand identity. Developed user-friendly digital tools that enhanced patient experience while showcasing Lifepoint's services and expertise.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Environmental Application</h3>
+                <p>Created signage systems, wayfinding, and environmental graphics for hospitals and healthcare facilities. Developed a cohesive approach to physical spaces that improved navigation while reinforcing brand recognition.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Implementation & Rollout</h3>
+                <p>Developed comprehensive guidelines and asset management systems. Coordinated phased implementation across multiple facilities, providing training and support for marketing teams throughout the network.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Agency: Thackway McCord</h3>
+                <p>Creative Direction: Kat McCord
+Design: Bianca Seong, Fuchen Kuang
+Strategy: Simon Thackway, Jonathan Paisner</p>
+              </div>
                 </div>
             </div>
         </div>

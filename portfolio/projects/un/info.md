@@ -1,13 +1,11 @@
 # United Nations
 
-## Metadata
-Year: 2018-2019
+Description: Visual identity for the 73rd President of the General Assembly
 Client: United Nations, Office of the President of the General Assembly (PGA)
 Role: Design, Logo, Digital, Print
-Categories: Digital, Print
-Tags: Branding
+Year: 2018
 
-## Description
+--- CONTENT ---
 
 In 2018, the United Nations President of the General Assembly (PGA) initiated a new diplomatic dialogue format called "Morning Minga" to foster more collaborative and informal exchanges between UN representatives. This innovative project required a comprehensive brand identity that would honor the UN's diplomatic gravitas while introducing a fresh, approachable visual language for this new initiative.
 
@@ -20,29 +18,26 @@ The Morning Minga dialogues represented a significant shift in diplomatic commun
 
 The resulting identity system centered on a vibrant, multi-colored logo that symbolized dialogue and diversity, while maintaining clear connections to UN visual traditions. The name "Minga" itself, referring to a South American tradition of community gatherings, perfectly captured the initiative's collaborative spirit.
 
-Our work extended across multiple applications, including:
+--- TIMELINE ---
 
-- Logo design with comprehensive color variations
-- Print materials including banners, pins, informational leaflets, and social media cards
-- Digital assets for website, email communications, and social media
-- Environmental graphics for the UN headquarters
-- Brand guidelines for consistent implementation
+### Strategic Briefing
+Collaborated closely with the Office of the President of the General Assembly to understand diplomatic protocols, session priorities, and communication needs. Conducted research into past presidential identities to identify opportunities for distinction while respecting UN traditions.
 
-This project represented a unique opportunity to evolve the visual language of international diplomacy while respecting the gravitas and significance of the United Nations. The Morning Minga identity successfully helped launch this new diplomatic initiative, creating a welcoming and distinctive visual presence that encouraged participation from representatives across the global community.
+### Conceptual Development
+Created multiple identity concepts that reflected the President's vision for the 73rd session. Explored visual metaphors for dialogue, cooperation, and global participation—key themes of the President's agenda.
 
-## Timeline
-- **Challenge**: Create a brand identity for a new UN diplomatic dialogue initiative
-- **Approach**: Develop a visual system that balances UN heritage with a fresh, approachable aesthetic
-- **Deliverables**: Logo design, print materials, digital assets, environmental graphics, brand guidelines
-- **Results**: Successfully launched the Morning Minga initiative with a distinctive visual presence
+### Identity System Design
+Designed a comprehensive visual identity including logo, color system, typography, and graphic elements. Developed applications for both digital and physical environments, from social media to the General Assembly Hall.
 
-## Images
-- ![UN Pins](/images/optimized/un-pins.png)
-- ![UN Notebooks](/images/optimized/un-notebooks.png)
-- ![UN Transform Awards](/images/un/UNPGA73_TransformAwards_Sequence_03.png)
-- ![UN Case Study](/images/un/UN_PGA_CaseStudy_Slide8.png)
+### Protocol Materials
+Created a suite of high-profile diplomatic materials including credentials, invitations, and ceremonial items. Designed with meticulous attention to diplomatic protocols while introducing contemporary design elements.
 
-## Credits
+### Environmental Applications
+Developed environmental graphics, signage, and exhibition designs for UN Headquarters and related venues. Created immersive brand experiences for high-level meetings and events throughout the session.
+
+### Digital Implementation
+Designed website templates, social media assets, and digital presentations. Created a cohesive digital presence that enhanced the President's communications while adhering to UN digital guidelines.
+
 Agency: Thackway McCord  
 Creative Direction: Kat McCord  
 Design Lead: Kevin Grzejka  

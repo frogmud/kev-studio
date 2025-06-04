@@ -7,6 +7,61 @@
     <title>Finseca | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -36,11 +91,11 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>Finseca</h1>
-            <p class="tagline">Branding for merger</p>
+            <p class="tagline">Financial security association rebranding from industry merger</p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/finseca" alt="Finseca">
+            <img loading="lazy" src="../images/optimized/finseca/Finseca_Banners.png" alt="Finseca">
         </div>
 
         <div class="project-content">
@@ -62,31 +117,49 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        {{PROJECT_TAGS}}
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
                 <p>Finseca emerged from the merger of two long-standing industry groups, AALU and GAMA. The new organization champions financial security professionals and seeks to elevate the profession. The shield icon underscores protection while the double-F mark represents the two groups coming together. A purple palette places the DC-based group in a politically neutral position.</p>
-<p>Agency: Thackway McCord
-Creative Direction: Kat McCord
+<p>The brand identity needed to represent a unified voice for the financial security profession while establishing a distinctive presence in Washington DC's advocacy landscape. The design approach balanced professionalism with accessibility, creating a system that would resonate with both industry veterans and newcomers to the profession.</p>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                <h3>Strategic Discovery</h3>
+                <p>Conducted stakeholder interviews, competitive analysis, and member research to identify key opportunities for the merged organization. Explored the evolving landscape of financial security advocacy to position Finseca effectively.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Naming & Brand Development</h3>
+                <p>Created the distinctive "Finseca" name through a collaborative process with leadership from both legacy organizations. Developed a comprehensive brand strategy centered around the concept of "financial security for all."</p>
+              </div>
+<div class="timeline-item">
+                <h3>Visual Identity Creation</h3>
+                <p>Designed the shield-based logo with integrated double-F symbolism, representing both protection and the merger of two organizations. Developed a strategic color system with politically neutral purple as the primary brand color.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Digital Experience Design</h3>
+                <p>Designed website architecture, user interface, and content strategy to effectively communicate Finseca's mission and services. Created dynamic digital templates for ongoing content development.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Motion & 3D Development</h3>
+                <p>Created distinctive 3D animations of the shield mark for video content and digital applications. Developed motion guidelines for consistent animation across platforms.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Launch Campaign</h3>
+                <p>Designed comprehensive launch materials including announcement videos, digital marketing assets, and member communications. Coordinated rollout across multiple channels to effectively introduce the new organization.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Agency: Thackway McCord</h3>
+                <p>Creative Direction: Kat McCord
 Design: Fuchen Kuang
 Strategy: Simon Thackway, Jonathan Paisner
 Website: WDG
 3D Work: Scyld Bowring
 Awards: Indigo Design Awards 2021 (Silver), Wolda 2020 (Gold)</p>
-                <div class="project-timeline">
-                    <ul>
-                        <li>Merger announced</li>
-                        <li>Brand development</li>
-                        <li>Launch with new website</li>
-                        <li>Membership growth milestone</li>
-                    </ul>
-                    <div class="project-image">
-                        <img loading="lazy" src="../images/finseca/Finseca_Banners.png" alt="Finseca banners">
-                        <img loading="lazy" src="../images/finseca/Finseca_Magazine.png" alt="Finseca magazine spread">
-                    </div>
+              </div>
                 </div>
             </div>
         </div>

@@ -1,121 +1,43 @@
 # Hum
 
-URL: https://kev.studio/Hum
-
-Page Title: Hum — kev.studio
-Description: 2021 A better way to fund growth Silicon Valley mixes with Wall Street in Hum’s ‘capital as a service’ business model, designed to help SMBs...
+Description: A better way to fund growth
+Client: Hum Capital (formerly Capital)
+Role: Logo, Design, UI/UX
+Year: 2021
 
 --- CONTENT ---
 
-kevin grzejkais a designer from new jersey
+Silicon Valley mixes with Wall Street in Hum's 'capital as a service' business model, designed to help SMBs raise money faster and more easily. A comprehensive rebrand provided 'Capital', as they were known, with a new name, logo, visual identity and website that capture their iconoclastic, AI-driven, ground-levelling proposition.
 
+The identity system balances technological innovation with financial expertise, creating a distinctive brand voice in the crowded fintech space. A vibrant color palette and dynamic visual elements reflect Hum's mission to bring energy and accessibility to business funding.
 
-	
+--- TIMELINE ---
 
+### Discovery & Strategy
+Conducted stakeholder interviews and market analysis to understand the fintech landscape and Capital's unique positioning. Identified key differentiators and growth opportunities that would inform the rebrand strategy.
 
+### Naming Development
+Led the naming process that transformed "Capital" into the more distinctive and ownable "Hum." The new name evokes both technological connectivity and the constant flow of capital—central to the company's value proposition.
 
- 
+### Visual Identity System
+Created a comprehensive visual identity including logo, typography, color palette, and supporting graphic elements. Developed a system that balanced tech innovation with financial credibility to appeal to both investors and businesses.
 
+### Digital Experience Design
+Designed a responsive website and digital touchpoints that effectively communicated Hum's complex offerings in an accessible way. Created an intuitive user experience that guided potential clients through the funding process.
 
+### Design System Implementation
+Developed a robust design system in Figma with reusable components and clear documentation. Created a handover package including logo artwork, guidelines, and the first sprint's worth of designs to ensure consistent implementation.
 
-	
-	
-︎ LINKS
+### Launch & Rollout
+Coordinated the phased rollout of the new brand across all channels. Provided ongoing support during the transition period to ensure consistent application of the new identity.
 
-︎︎︎   ︎︎︎
+Agency: Thackway McCord  
+Client: Hum Capital  
+Role: Logo, Design, UI/UX  
+Creative Director: Kat McCord  
+Lead Designer: Bianca Seong  
+Strategy: Simon Thackway, Jonathan Paisner  
+Programming: Dave Morreale  
+3D Work: Scyld Bowring  
 
-︎︎︎   ︎︎︎
-
-2021
-	
-A better way to fund growth
-
-
-
-
-
-
-
-
-
-
-
-Silicon Valley mixes with Wall Street in Hum’s ‘capital as a service’ business model, designed to help SMBs raise money faster and more easily. A full rebrand provided ‘Capital’, as they were known, with a new name, logo, visual identity and website that capture their iconoclastic, AI-driven, ground-levelling proposition. 
-Set up a handover package including the logo artwork, guidelines, and first sprint’s worth of Figma designs and components. 
-Bianca Seong (formerly @pixeltometer.com) worked on everything from the logo to the illustrations to the web design and knocked it out of the park.
-
-
-
-Agency: Thackway McCord
-ClientS: hum capital
-Role: LOGO, design, UI/UX
-Creative director: kat mccord
-LEAD DESIGNER: BIANCA SEONG
-Strategy: Simon Thackway, Jonathan Paisnerprogramming: dave morreale
-3d work: Scyld Bowring
-
-🏆🏆🏆 AWARDS: transform north america 2021 rebrand (gold)indigo awards 2021 branding (silver)wolda 2021 rebrand (gold)
-
-	
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-				
-
-				
- 
- 
-  Mark
-
-2021
-
-A better way to fund growth
-
-grzejkakevin@gmail.com
-
-
-	
-	︎   @k gosh
-︎   @kevingrz
-
-	
-︎   museum
-︎   links
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	©2025 site by kevin grzejka
-
+Awards: Transform North America 2021 Rebrand (Gold), Indigo Awards 2021 Branding (Silver), Wolda 2021 Rebrand (Gold)

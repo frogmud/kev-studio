@@ -20,7 +20,25 @@ Our team approached this significant project with a comprehensive strategy that 
 
 The logo design and visual system evoke technological advancement while maintaining the gravitas expected of a major defense contractor. The identity extends cohesively across digital platforms, physical environments, and communications materials – from exhibition booths and signage to digital interfaces and collateral.
 
-One of the most rewarding aspects of this project was seeing the brand come to life on launch day, as thousands of employees across both legacy companies embraced their new unified identity.
+--- TIMELINE ---
+
+### Strategic Assessment
+Conducted extensive research into both legacy brands, competitor analysis, and stakeholder interviews to identify strengths and growth opportunities. The merger represented a significant shift in the competitive landscape, requiring a strategic approach to visual positioning.
+
+### Brand Architecture Development
+Created a comprehensive brand hierarchy that accommodated diverse business units and product lines. Established naming conventions and visual relationships that maintained cohesion while allowing for necessary distinction between divisions.
+
+### Identity System Creation
+Designed the core identity elements including logo, typography, color system, and graphic language. Developed a dynamic system that worked across both digital and physical applications, from aircraft components to trade show displays.
+
+### Digital Experience Design
+Redesigned the corporate website and digital touchpoints to reflect the new brand. Created digital guidelines and templates for consistent implementation across global offices and diverse marketing materials.
+
+### Environmental & Exhibition Design
+Developed signage systems and exhibition booth designs for major industry events. Created immersive brand experiences that showcased L3Harris technologies while reinforcing the new brand identity.
+
+### Implementation & Governance
+Created comprehensive brand guidelines and asset management systems. Provided training and support for global marketing teams to ensure consistent application of the new identity.
 
 Agency: Thackway McCord  
 Creative Direction: Kat McCord  

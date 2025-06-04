@@ -7,6 +7,61 @@
     <title>United Nations | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -36,7 +91,7 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>United Nations</h1>
-            <p class="tagline"></p>
+            <p class="tagline">Visual identity for the 73rd President of the General Assembly</p>
         </div>
         
         <div class="project-hero">
@@ -68,20 +123,46 @@
             </div>
             
             <div class="project-description">
-                <p>The United Nations launched the Morning Minga initiative to foster informal diplomatic dialogue. Our team created the complete brand identity.</p>
+                <p>In 2018, the United Nations President of the General Assembly (PGA) initiated a new diplomatic dialogue format called "Morning Minga" to foster more collaborative and informal exchanges between UN representatives. This innovative project required a comprehensive brand identity that would honor the UN's diplomatic gravitas while introducing a fresh, approachable visual language for this new initiative.</p>
+<p>The Morning Minga dialogues represented a significant shift in diplomatic communication at the UN, creating spaces where ambassadors and representatives could engage in more personal, candid discussions about pressing global issues outside the formal assembly structure. Our team was tasked with developing a complete brand identity package that would:</p>
+<p>- Create a distinctive visual identity that balanced UN heritage with a fresh, contemporary approach
+- Design flexible branding elements that could be implemented across physical and digital touchpoints
+- Develop a system that would appeal to diplomats from diverse cultural backgrounds
+- Establish brand guidelines that could be consistently applied by the UN's internal team</p>
+<p>The resulting identity system centered on a vibrant, multi-colored logo that symbolized dialogue and diversity, while maintaining clear connections to UN visual traditions. The name "Minga" itself, referring to a South American tradition of community gatherings, perfectly captured the initiative's collaborative spirit.</p>
 
                 <div class="project-timeline">
-                    <ul>
-                        <li>Challenge: brand new diplomatic dialogue initiative</li>
-                        <li>Approach: merge UN heritage with fresh look</li>
-                        <li>Deliverables: logo, print &amp; digital assets</li>
-                        <li>Results: successful launch of Morning Minga</li>
-                        <li>Ongoing diplomacy sessions</li>
-                    </ul>
-                    <div class="project-image">
-                        <img loading="lazy" src="../images/un/UN_Cover.gif" alt="UN Morning Minga">
-                        <img loading="lazy" src="../images/un/UN_PGA_CaseStudy_Slide8.png" alt="UN case study slide">
-                    </div>
+                    <div class="timeline-item">
+                <h3>Strategic Briefing</h3>
+                <p>Collaborated closely with the Office of the President of the General Assembly to understand diplomatic protocols, session priorities, and communication needs. Conducted research into past presidential identities to identify opportunities for distinction while respecting UN traditions.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Conceptual Development</h3>
+                <p>Created multiple identity concepts that reflected the President's vision for the 73rd session. Explored visual metaphors for dialogue, cooperation, and global participation—key themes of the President's agenda.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Identity System Design</h3>
+                <p>Designed a comprehensive visual identity including logo, color system, typography, and graphic elements. Developed applications for both digital and physical environments, from social media to the General Assembly Hall.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Protocol Materials</h3>
+                <p>Created a suite of high-profile diplomatic materials including credentials, invitations, and ceremonial items. Designed with meticulous attention to diplomatic protocols while introducing contemporary design elements.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Environmental Applications</h3>
+                <p>Developed environmental graphics, signage, and exhibition designs for UN Headquarters and related venues. Created immersive brand experiences for high-level meetings and events throughout the session.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Digital Implementation</h3>
+                <p>Designed website templates, social media assets, and digital presentations. Created a cohesive digital presence that enhanced the President's communications while adhering to UN digital guidelines.</p>
+              </div>
+<div class="timeline-item">
+                <h3>Agency: Thackway McCord  </h3>
+                <p>Creative Direction: Kat McCord  
+Design Lead: Kevin Grzejka  
+Strategy: Simon Thackway  
+Brand Implementation: Maria Fernanda Espinosa Garces, President of the UN General Assembly</p>
+              </div>
                 </div>
             </div>
         </div>
