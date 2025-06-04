@@ -37,7 +37,7 @@ For each project page:
 | L3Harris | ✅ Complete | Added timeline images, improved formatting |
 | Lifepoint Health | ✅ Complete | Added timeline images, improved formatting, added mobile section |
 | Eyes Above | ✅ Complete | Added timeline sections with images, improved formatting, enhanced link styling |
-| Sylvamo | 🔄 Pending | |
+| Sylvamo | ✅ Complete | Added timeline images, improved formatting of credits and awards sections |
 | AIGA | 🔄 Pending | |
 | Finseca | 🔄 Pending | |
 | Amrop | 🔄 Pending | |
