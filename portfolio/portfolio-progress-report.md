@@ -25,7 +25,7 @@ This report summarizes the content progress for the Kevin Grzejka portfolio site
 | Thackway McCord Pets | ✅ | ✅ | Complete | ❌ | None |
 | Try It Out | ✅ | ✅ | Complete | ❌ | None |
 | Museum | ✅ | ✅ | Complete | ❌ | None |
-| United Nations | ✅ | ✅ | Complete | ❌ | None |
+| United Nations | ✅ | ✅ | Complete | ✅ | None |
 | Autonomy Capital | ✅ | ✅ | Complete | ❌ | None |
 
 ## Enhanced Page Status
@@ -40,6 +40,7 @@ The following project pages have received enhanced UI updates with timeline feat
 7. **AIGA** - Holiday wrapping paper design with QR codes
 8. **L3Harris** - Brand identity for defense merger
 9. **Abra** - Brand identity for global payments company
+10. **United Nations** - Visual identity for UN General Assembly President
 
 These enhanced pages have been tagged with `<!-- ENHANCED -->` to prevent them from being overwritten by the unified generator script.
 
@@ -47,9 +48,9 @@ These enhanced pages have been tagged with `<!-- ENHANCED -->` to prevent them f
 The following projects should be prioritized for enhancement:
 
 1. **Onity** - Access system branding
-2. **United Nations** - Major political identity
-3. **Autonomy Capital** - Financial branding
-4. **Hum** - Smart car device branding
+2. **Autonomy Capital** - Financial branding
+3. **Hum** - Smart car device branding
+4. **Thackway McCord Pets** - QR code chocolate packaging
 
 ## Recommendations
 

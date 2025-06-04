@@ -10,13 +10,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 - Run portfolio downloader: `npm start` or `npm run download`
 - Organize downloaded content: `npm run organize`
-- Analyze and download portfolio: `npm run analyze`
-- Install dependencies: `npm install`
 - Generate project pages: `node portfolio/unified-project-generator.js`
-- Optimize images: `npm run optimize-images`
-- Extract static frames: `node tools/extract-first-frames.js`
-- Custom resize: `node tools/resize-abra-images.js`
 - Update index page: `node portfolio/update-index-page.js`
+- Optimize images: `npm run optimize-images`
 - Fix duplicate tags: `node portfolio/fix-duplicate-tags.js`
 
 ## Code Style Guidelines
@@ -24,11 +20,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Follow ES6+ conventions: prefer `const`/`let` over `var`
 - Use CommonJS require() with built-in modules first
 - Use 2-space indentation and semicolons
-- Use single quotes for strings (template literals when needed)
+- Use single quotes for strings, template literals when needed
 - Use async/await with try/catch for error handling
 - Use camelCase for variables/functions, kebab-case for filenames
-- Use descriptive variable names and JSDoc comments
-- Use Node.js built-in modules with promises API (fs.promises)
+- Use Node.js fs.promises API for file operations
 - Validate input data before processing
 
 ## HTML/CSS Guidelines
