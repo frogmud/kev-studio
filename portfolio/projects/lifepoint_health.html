@@ -7,61 +7,6 @@
     <title>Lifepoint Health | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        /* Timeline styles for project pages */
-        .project-timeline {
-            margin: var(--spacing-xl) 0;
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .project-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background-color: #e2e8f0;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -50px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #e2e8f0;
-        }
-
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .timeline-item p {
-            margin-bottom: var(--spacing-md);
-        }
-
-        @media (max-width: 768px) {
-            .project-timeline {
-                padding-left: 30px;
-            }
-
-            .timeline-item::before {
-                left: -30px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -95,7 +40,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/lifepoint/Lifepoint_HQSign.png" alt="Lifepoint Health">
+            <img loading="lazy" src="../images/01_absorb_3d_prism_howto_wide_v2.gif" alt="Lifepoint Health">
         </div>
 
         <div class="project-content">
@@ -117,8 +62,7 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
+                        {{PROJECT_TAGS}}
                     </div>
                 </div>
             </div>
@@ -132,7 +76,7 @@ Design: Bianca Seong, Fuchen Kuang
 Strategy: Simon Thackway, Jonathan Paisner</p>
 
                 <div class="project-timeline">
-                    
+                    {{PROJECT_TIMELINE}}
                 </div>
             </div>
         </div>

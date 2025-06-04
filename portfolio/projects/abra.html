@@ -7,61 +7,6 @@
     <title>Abra | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        /* Timeline styles for project pages */
-        .project-timeline {
-            margin: var(--spacing-xl) 0;
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .project-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background-color: #e2e8f0;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -50px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #e2e8f0;
-        }
-
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .timeline-item p {
-            margin-bottom: var(--spacing-md);
-        }
-
-        @media (max-width: 768px) {
-            .project-timeline {
-                padding-left: 30px;
-            }
-
-            .timeline-item::before {
-                left: -30px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -95,7 +40,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/abra/01_Abra_Logo_YG21_Grzejka.png" alt="Abra">
+            <img loading="lazy" src="../images/abra" alt="Abra">
         </div>
 
         <div class="project-content">
@@ -117,8 +62,7 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+                        {{PROJECT_TAGS}}
                     </div>
                 </div>
             </div>
@@ -127,13 +71,13 @@
                 <p>Abra's redesign introduced a bold visual identity paired with a flexible web design system. Modular layouts showcase key product features while maintaining clarity across devices. Interactive prototypes guided animation and transitions, resulting in a dynamic user experience that reflects Abra's innovative approach to digital finance.</p>
 
                 <div class="project-timeline">
-                    
+                    {{PROJECT_TIMELINE}}
                 </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="eyes_above.html" class="nav-link prev">
+            <a href="mn8_energy.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>

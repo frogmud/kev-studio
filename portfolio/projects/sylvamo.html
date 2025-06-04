@@ -7,61 +7,6 @@
     <title>Sylvamo | Kevin Grzejka Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        /* Timeline styles for project pages */
-        .project-timeline {
-            margin: var(--spacing-xl) 0;
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .project-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            width: 2px;
-            background-color: #e2e8f0;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -50px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #e2e8f0;
-        }
-
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .timeline-item p {
-            margin-bottom: var(--spacing-md);
-        }
-
-        @media (max-width: 768px) {
-            .project-timeline {
-                padding-left: 30px;
-            }
-
-            .timeline-item::before {
-                left: -30px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -95,7 +40,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/sylvamo/Sylvamo_IndigoAwards21_02.gif" alt="Sylvamo">
+            <img loading="lazy" src="../images/sylvamo" alt="Sylvamo">
         </div>
 
         <div class="project-content">
@@ -103,7 +48,7 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2025</p>
+                        <p>2021</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
@@ -117,8 +62,7 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
+                        {{PROJECT_TAGS}}
                     </div>
                 </div>
             </div>
@@ -134,26 +78,22 @@
 - **Strategy:** Simon Thackway, Jonathan Paisner
 - **3D Work:** Scyld Bowring</p>
 <p>**Awards:** Indigo Design Awards 2022 (Gold – Branding), 12th Wolda Design Awards (Gold – The Americas), LogoLounge Book 13.</p>
+<p>--- TIMELINE ---</p>
+<p>## Challenge
+Create a distinctive identity for the spin‑off that emphasized sustainability while feeling established.</p>
+<p>## Approach
+Developed a name and visual system inspired by forests and growth, pairing a paper plane icon with a bold purple brand color.</p>
+<p>## Results
+The launch garnered multiple design awards and positioned Sylvamo as a leader in responsible paper production.</p>
 
                 <div class="project-timeline">
-                    <div class="timeline-item">
-                <h3>## Challenge</h3>
-                <p>Create a distinctive identity for the spin‑off that emphasized sustainability while feeling established.</p>
-              </div>
-<div class="timeline-item">
-                <h3>## Approach</h3>
-                <p>Developed a name and visual system inspired by forests and growth, pairing a paper plane icon with a bold purple brand color.</p>
-              </div>
-<div class="timeline-item">
-                <h3>## Results</h3>
-                <p>The launch garnered multiple design awards and positioned Sylvamo as a leader in responsible paper production.</p>
-              </div>
+                    {{PROJECT_TIMELINE}}
                 </div>
             </div>
         </div>
 
         <div class="project-navigation">
-            <a href="onity.html" class="nav-link prev">
+            <a href="hum.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
