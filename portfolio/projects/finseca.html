@@ -52,6 +52,74 @@
             margin-bottom: var(--spacing-md);
         }
 
+        .timeline-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: var(--spacing-md) 0;
+            border-radius: 4px;
+        }
+
+        /* Feature section */
+        .feature-section {
+            margin: var(--spacing-xl) 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .feature-section .feature-content {
+            padding: var(--spacing-md);
+        }
+
+        .feature-section .feature-image {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .feature-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Project gallery grid */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .project-timeline {
                 padding-left: 30px;
@@ -126,40 +194,81 @@
                 <p>Finseca emerged from the merger of two long-standing industry groups, AALU and GAMA. The new organization champions financial security professionals and seeks to elevate the profession. The shield icon underscores protection while the double-F mark represents the two groups coming together. A purple palette places the DC-based group in a politically neutral position.</p>
 <p>The brand identity needed to represent a unified voice for the financial security profession while establishing a distinctive presence in Washington DC's advocacy landscape. The design approach balanced professionalism with accessibility, creating a system that would resonate with both industry veterans and newcomers to the profession.</p>
 
+                <div class="feature-section">
+                    <div class="feature-image">
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_3dShield.png" alt="Finseca 3D Shield">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Shield of Protection</h3>
+                        <p>The shield icon was crafted to symbolize the protective nature of financial security professionals. It features a subtle double-F mark that represents the merger of the two founding organizations while creating a distinctive, ownable symbol that stands out in the financial services landscape.</p>
+                        <p>The 3D rendering of the shield creates depth and dimension, allowing the mark to be used effectively across digital platforms while maintaining its symbolism of strength and protection.</p>
+                    </div>
+                </div>
+
                 <div class="project-timeline">
                     <div class="timeline-item">
-                <h3>Strategic Discovery</h3>
-                <p>Conducted stakeholder interviews, competitive analysis, and member research to identify key opportunities for the merged organization. Explored the evolving landscape of financial security advocacy to position Finseca effectively.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Naming & Brand Development</h3>
-                <p>Created the distinctive "Finseca" name through a collaborative process with leadership from both legacy organizations. Developed a comprehensive brand strategy centered around the concept of "financial security for all."</p>
-              </div>
-<div class="timeline-item">
-                <h3>Visual Identity Creation</h3>
-                <p>Designed the shield-based logo with integrated double-F symbolism, representing both protection and the merger of two organizations. Developed a strategic color system with politically neutral purple as the primary brand color.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Digital Experience Design</h3>
-                <p>Designed website architecture, user interface, and content strategy to effectively communicate Finseca's mission and services. Created dynamic digital templates for ongoing content development.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Motion & 3D Development</h3>
-                <p>Created distinctive 3D animations of the shield mark for video content and digital applications. Developed motion guidelines for consistent animation across platforms.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Launch Campaign</h3>
-                <p>Designed comprehensive launch materials including announcement videos, digital marketing assets, and member communications. Coordinated rollout across multiple channels to effectively introduce the new organization.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Agency: Thackway McCord</h3>
-                <p>Creative Direction: Kat McCord
-Design: Fuchen Kuang
-Strategy: Simon Thackway, Jonathan Paisner
-Website: WDG
-3D Work: Scyld Bowring
-Awards: Indigo Design Awards 2021 (Silver), Wolda 2020 (Gold)</p>
-              </div>
+                        <h3>Strategic Discovery</h3>
+                        <p>Conducted stakeholder interviews, competitive analysis, and member research to identify key opportunities for the merged organization. Explored the evolving landscape of financial security advocacy to position Finseca effectively.</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_LogoDevelopment.png" alt="Finseca logo development process" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Naming & Brand Development</h3>
+                        <p>Created the distinctive "Finseca" name through a collaborative process with leadership from both legacy organizations. Developed a comprehensive brand strategy centered around the concept of "financial security for all."</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_Logo.png" alt="Finseca logo variations" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Visual Identity Creation</h3>
+                        <p>Designed the shield-based logo with integrated double-F symbolism, representing both protection and the merger of two organizations. Developed a strategic color system with politically neutral purple as the primary brand color.</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_Guidelines.png" alt="Finseca visual identity guidelines" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Digital Experience Design</h3>
+                        <p>Designed website architecture, user interface, and content strategy to effectively communicate Finseca's mission and services. Created dynamic digital templates for ongoing content development.</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_Website.png" alt="Finseca website design" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Motion & 3D Development</h3>
+                        <p>Created distinctive 3D animations of the shield mark for video content and digital applications. Developed motion guidelines for consistent animation across platforms.</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_RenderBoomerang.gif" alt="Finseca 3D animation" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Launch Campaign</h3>
+                        <p>Designed comprehensive launch materials including announcement videos, digital marketing assets, and member communications. Coordinated rollout across multiple channels to effectively introduce the new organization.</p>
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_Convention.png" alt="Finseca convention materials" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Agency: Thackway McCord</h3>
+                        <p>Creative Direction: Kat McCord<br>
+                        Design: Fuchen Kuang<br>
+                        Strategy: Simon Thackway, Jonathan Paisner<br>
+                        Website: WDG<br>
+                        3D Work: Scyld Bowring<br>
+                        Awards: Indigo Design Awards 2021 (Silver), Wolda 2020 (Gold)</p>
+                    </div>
+                </div>
+                
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3>Political Neutrality by Design</h3>
+                        <p>As a Washington DC-based advocacy organization, Finseca needed to maintain political neutrality while establishing a strong visual presence. The strategic selection of purple as the primary brand color achieves this goal, sitting at the intersection of red and blue to visually represent the organization's bipartisan approach.</p>
+                        <p>This color choice extends beyond symbolism to practical applications, helping Finseca navigate the complex political landscape while maintaining effective relationships across the political spectrum.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img loading="lazy" src="../images/optimized/finseca/Finseca_Signage.png" alt="Finseca signage and environmental applications">
+                    </div>
+                </div>
+                
+                <h2>Gallery</h2>
+                <div class="project-gallery">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_3dShield.png" alt="Finseca 3D shield">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_RenderBoomerang.gif" alt="Finseca animation">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Logo.png" alt="Finseca logo variations">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Convention.png" alt="Finseca convention materials">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Magazine.png" alt="Finseca magazine">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Guidelines.png" alt="Finseca brand guidelines">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Website.png" alt="Finseca website design">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_Insta.png" alt="Finseca social media">
+                    <img loading="lazy" src="../images/optimized/finseca/Finseca_LinkedIn.png" alt="Finseca LinkedIn">
                 </div>
             </div>
         </div>

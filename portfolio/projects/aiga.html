@@ -52,6 +52,89 @@
             margin-bottom: var(--spacing-md);
         }
 
+        .timeline-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: var(--spacing-md) 0;
+            border-radius: 4px;
+        }
+
+        /* Dark mode note */
+        .dark-mode-note {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: var(--spacing-sm);
+            border-radius: 4px;
+            text-align: center;
+            margin: var(--spacing-md) 0;
+        }
+        
+        [data-theme="dark"] .dark-mode-note {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Feature section */
+        .feature-section {
+            margin: var(--spacing-xl) 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .feature-section .feature-content {
+            padding: var(--spacing-md);
+        }
+
+        .feature-section .feature-image {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .feature-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .feature-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Project gallery grid */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .project-gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .project-gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 1024px) {
+            .project-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .project-timeline {
                 padding-left: 30px;
@@ -126,38 +209,76 @@
             <div class="project-description">
                 <p>For the 2021 holiday season, AIGA New York commissioned a festive wrapping paper design centered around the theme of 'joy.' The project presented an opportunity to blend traditional print design with interactive digital experiences through cleverly integrated QR codes.</p>
 <p>We secured the memorable domain joyjoyjoyjoyjoy.com and built a series of scannable QR codes that maintained their functionality while being visually transformed into festive holiday motifs. Each QR code linked to a custom-built animation that extended the visual language of the wrapping paper into the digital realm.</p>
+<p class="dark-mode-note"><em>✨ Dark mode recommended for optimal viewing of this project.</em></p>
+
+                <div class="feature-section">
+                    <div class="feature-image">
+                        <img loading="lazy" src="../images/optimized/aiga/big_wrapping_paper.png" alt="AIGA Joy wrapping paper pattern">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Functional Art with QR Codes</h3>
+                        <p>The challenge of this project was creating QR codes that could be visually integrated into festive patterns while maintaining their core functionality. We pushed the boundaries of QR code customization, discovering exactly how much visual alteration was possible while ensuring reliable scanning across various devices.</p>
+                        <p>Each code underwent extensive testing to ensure it would function perfectly in real-world scenarios, from different phone models to various lighting conditions, guaranteeing a seamless experience for everyone who received the wrapping paper.</p>
+                    </div>
+                </div>
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                <h3>Concept Development</h3>
-                <p>Explored the intersection of functional QR technology with decorative holiday motifs. Developed multiple approaches to create scannable yet visually cohesive patterns that embodied the joy theme.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Technical Exploration</h3>
-                <p>Tested various QR code modifications to determine the threshold of visual alteration while maintaining functionality. Developed a system that ensured all codes would scan reliably across different devices.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Animation Production</h3>
-                <p>Created lightweight Lottie animations that would autoplay immediately after scanning, providing a seamless transition from physical to digital experience. Optimized for mobile performance to ensure quick loading.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Pattern Design</h3>
-                <p>Developed repeating patterns using the festive QR codes as the primary motif. Created variations that worked visually while maintaining the interactive functionality of each code in the pattern.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Print Production</h3>
-                <p>Prepared specifications for high-quality wrapping paper production. Collaborated with manufacturers to ensure print quality preserved the scannable functionality of the embedded codes.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Digital Implementation</h3>
-                <p>Built a responsive landing page at joyjoyjoyjoyjoy.com to host the animations. Created a streamlined user experience that worked instantly after scanning the QR codes from the wrapping paper.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Agency: Thackway McCord  </h3>
-                <p>Creative Direction: Kat McCord  
-Role: Design, Programming, Motion, Print  
-QR Link: joyjoyjoyjoyjoy.com</p>
-              </div>
+                        <h3>Concept Development</h3>
+                        <p>Explored the intersection of functional QR technology with decorative holiday motifs. Developed multiple approaches to create scannable yet visually cohesive patterns that embodied the joy theme.</p>
+                        <img loading="lazy" src="../images/optimized/aiga/background.png" alt="AIGA Joy concept development" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Technical Exploration</h3>
+                        <p>Tested various QR code modifications to determine the threshold of visual alteration while maintaining functionality. Developed a system that ensured all codes would scan reliably across different devices.</p>
+                        <img loading="lazy" src="../images/optimized/aiga/background_alpha.png" alt="AIGA QR code technical exploration" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Animation Production</h3>
+                        <p>Created lightweight Lottie animations that would autoplay immediately after scanning, providing a seamless transition from physical to digital experience. Optimized for mobile performance to ensure quick loading.</p>
+                        <img loading="lazy" src="../images/optimized/aiga/aiga_window-2.gif" alt="AIGA Joy animation production" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Pattern Design</h3>
+                        <p>Developed repeating patterns using the festive QR codes as the primary motif. Created variations that worked visually while maintaining the interactive functionality of each code in the pattern.</p>
+                        <img loading="lazy" src="../images/optimized/aiga/big_wrapping_paper.png" alt="AIGA Joy pattern design" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Print Production</h3>
+                        <p>Prepared specifications for high-quality wrapping paper production. Collaborated with manufacturers to ensure print quality preserved the scannable functionality of the embedded codes.</p>
+                        <img loading="lazy" src="../images/optimized/aiga/Frame_madness2.jpg" alt="AIGA Joy print production" class="timeline-image">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Digital Implementation</h3>
+                        <p>Built a responsive landing page at joyjoyjoyjoyjoy.com to host the animations. Created a streamlined user experience that worked instantly after scanning the QR codes from the wrapping paper.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Agency: Thackway McCord</h3>
+                        <p>Creative Direction: Kat McCord<br>
+                        Role: Design, Programming, Motion, Print<br>
+                        QR Link: joyjoyjoyjoyjoy.com</p>
+                    </div>
+                </div>
+                
+                <div class="feature-section">
+                    <div class="feature-content">
+                        <h3>Interactive Digital Experience</h3>
+                        <p>The holiday wrapping paper was just the beginning of the experience. When recipients scanned the QR codes, they were directed to a custom website at joyjoyjoyjoyjoy.com where they were greeted with delightful animations that complemented the physical wrapping paper.</p>
+                        <p>Each animation was crafted to surprise and delight, creating a multi-layered festive experience that merged the tactile joy of unwrapping gifts with the playful nature of digital interactions.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img loading="lazy" src="../images/optimized/aiga/aiga_window-2.gif" alt="AIGA Joy animation">
+                    </div>
+                </div>
+                
+                <h2>Gallery</h2>
+                <div class="project-gallery">
+                    <img loading="lazy" src="../images/optimized/aiga/background_alpha.png" alt="AIGA QR code exploration">
+                    <img loading="lazy" src="../images/optimized/aiga/Frame_madness1.jpg" alt="AIGA Joy wrapping paper">
+                    <img loading="lazy" src="../images/optimized/aiga/Frame_madness2.jpg" alt="AIGA Joy wrapping paper detail">
+                    <img loading="lazy" src="../images/optimized/aiga/big_wrapping_paper.png" alt="AIGA Joy wrapping paper pattern">
+                    <img loading="lazy" src="../images/optimized/aiga/aiga_window-2.gif" alt="AIGA Joy animation">
+                    <img loading="lazy" src="../images/optimized/aiga/background.png" alt="AIGA Joy concept">
                 </div>
             </div>
         </div>
