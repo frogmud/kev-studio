@@ -17,7 +17,6 @@ This report summarizes the content progress for the Kevin Grzejka portfolio site
 | American Social | ✅ | ✅ | Complete | ❌ | None |
 | Finseca | ✅ | ✅ | Complete | ✅ | None |
 | LREI | ✅ | ✅ | Complete | ❌ | None |
-| Amrop | ✅ | ✅ | Complete | ❌ | None |
 | AIGA | ✅ | ✅ | Complete | ✅ | None |
 | Fiserv | ✅ | ✅ | Complete | ❌ | None |
 | L3Harris | ✅ | ✅ | Complete | ✅ | None |
@@ -26,7 +25,6 @@ This report summarizes the content progress for the Kevin Grzejka portfolio site
 | Try It Out | ✅ | ✅ | Complete | ❌ | None |
 | Museum | ✅ | ✅ | Complete | ❌ | None |
 | United Nations | ✅ | ✅ | Complete | ✅ | None |
-| Autonomy Capital | ✅ | ✅ | Complete | ❌ | None |
 
 ## Enhanced Page Status
 The following project pages have received enhanced UI updates with timeline features, galleries, or advanced styling:
@@ -48,9 +46,8 @@ These enhanced pages have been tagged with `<!-- ENHANCED -->` to prevent them f
 ## Next Candidates for Enhancement
 The following projects should be prioritized for enhancement:
 
-1. **Autonomy Capital** - Financial branding
-2. **Hum** - Smart car device branding
-3. **Thackway McCord Pets** - QR code chocolate packaging
+1. **Hum** - Smart car device branding
+2. **Thackway McCord Pets** - QR code chocolate packaging
 
 ## Recommendations
 
