@@ -14,6 +14,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Install dependencies: `npm install`
 - Generate project pages: `node portfolio/unified-project-generator.js`
 - Optimize images: `npm run optimize-images`
+- Extract static frames: `node tools/extract-first-frames.js`
+- Custom resize: `node tools/resize-abra-images.js`
 - Update index page: `node portfolio/update-index-page.js`
 - Fix duplicate tags: `node portfolio/fix-duplicate-tags.js`
 

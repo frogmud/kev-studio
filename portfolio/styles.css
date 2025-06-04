@@ -1137,3 +1137,23 @@ footer {
     left: -30px;
   }
 }
+
+.timeline-figure {
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.timeline-figure figcaption {
+  font-size: 0.85rem;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.timeline-figure figcaption a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.timeline-figure figcaption a:hover {
+  text-decoration: underline;
+}

@@ -3,6 +3,19 @@
 const fs = require('fs').promises;
 const path = require('path');
 
+// List of projects to skip (enhanced projects that shouldn't be overwritten)
+const PROTECTED_PROJECTS = [
+  'absorb_software',
+  'mn8_energy', 
+  'eyes_above',
+  'lifepoint_health',
+  'sylvamo',
+  'finseca',
+  'aiga',
+  'l3harris',
+  'abra'
+];
+
 // Main function
 async function generateUnifiedProjectPages() {
   try {
@@ -31,6 +44,12 @@ async function generateUnifiedProjectPages() {
     // Process each project
     for (const projectData of taxonomyData.projects) {
       try {
+        // Skip if in protected list
+        if (PROTECTED_PROJECTS.includes(projectData.id)) {
+          console.log(`Skipping protected project: ${projectData.id}`);
+          continue;
+        }
+        
         // Skip if no project directory exists
         const projectDirPath = path.join(__dirname, 'projects', projectData.id);
         try {
@@ -38,6 +57,18 @@ async function generateUnifiedProjectPages() {
         } catch (error) {
           console.log(`Skipping ${projectData.id}: Directory not found`);
           continue;
+        }
+        
+        // Check if the output file already exists and contains <!-- ENHANCED -->
+        const outputPath = path.join(__dirname, 'projects', `${projectData.id}.html`);
+        try {
+          const existingContent = await fs.readFile(outputPath, 'utf8');
+          if (existingContent.includes('<!-- ENHANCED -->')) {
+            console.log(`Skipping ${projectData.id}: File contains ENHANCED marker`);
+            continue;
+          }
+        } catch (error) {
+          // File doesn't exist, we can proceed with generation
         }
         
         // Read project info file if it exists
@@ -254,7 +285,6 @@ async function generateUnifiedProjectPages() {
           .replace(/{{NEXT_PROJECT_LINK}}/g, `${nextProject.id}.html`);
         
         // Write to file
-        const outputPath = path.join(__dirname, 'projects', `${projectData.id}.html`);
         await fs.writeFile(outputPath, projectHTML);
         console.log(`Generated: ${outputPath}`);
         
