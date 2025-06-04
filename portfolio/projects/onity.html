@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ENHANCED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,6 +53,49 @@
             margin-bottom: var(--spacing-md);
         }
 
+        .timeline-figure {
+            margin: var(--spacing-md) 0;
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .timeline-image {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-figure figcaption {
+            margin-top: var(--spacing-xs);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .timeline-figure figcaption a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .timeline-figure figcaption a:hover {
+            text-decoration: underline;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .image-grid .timeline-figure {
+            margin: 0;
+        }
+
         @media (max-width: 768px) {
             .project-timeline {
                 padding-left: 30px;
@@ -59,6 +103,10 @@
 
             .timeline-item::before {
                 left: -30px;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -95,7 +143,7 @@
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/onity/onity-comp-01.png" alt="Onity">
+            <img loading="lazy" src="../images/optimized/onity/onity-comp-01.png" alt="Onity logo animation showcase">
         </div>
 
         <div class="project-content">
@@ -118,26 +166,83 @@
                     <h3>Tags</h3>
                     <div class="project-tags">
                         <span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+                        <span class="project-tag" data-tag="motion" onclick="window.location.href='../index.html?filter=motion&filterType=tag'">Motion</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>Onity provides digital locking systems for hotels and businesses. For this project I created a short logo animation exploring energy flow and simplicity.</p>
+                <p>Onity provides digital locking systems and secure access solutions for hotels, businesses, and educational institutions worldwide. As a trusted leader in electronic locks and mobile credentials, they needed a logo animation that would convey security, innovation, and seamless functionality.</p>
+                
+                <p>I worked with Onity to create a short logo animation that explores energy flow and simplicity, focusing on motion that reinforces their brand attributes of reliability and cutting-edge technology.</p>
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                <h3>Concept Development</h3>
-                <p>Sketched early ideas and built a storyboard for the motion.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Animation</h3>
-                <p>Animated the logo in After Effects and refined timing with the client.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Early Concepts</h3>
-                <p>Created styleframes and animation tests to explore motion before finalizing.</p>
-              </div>
+                        <h3>Logo Animation</h3>
+                        <p>The final animation brings energy and motion to the Onity wordmark. The circular motion element represents the secure, continuous flow of access control systems, while the clean reveal of the logotype reinforces the brand's modern, technological positioning.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/onity/onity-comp-02.gif" alt="Onity logo animation" class="timeline-image">
+                            <figcaption>Final logo animation with motion elements</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Storyboarding Process</h3>
+                        <p>I created detailed storyboards to map out the animation sequence, focusing on the circular reveal and energy flow that would become signature elements of the brand's motion language. These storyboards helped communicate the concept to stakeholders before moving into production.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/onity/onity-visid-00001.png" alt="Onity animation storyboard" class="timeline-image">
+                            <figcaption>Storyboard frames showing the animation progression</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Visual Identity Exploration</h3>
+                        <p>The animation was developed as part of a broader visual identity system. We explored how the animated elements could extend beyond the logo into other brand touchpoints, creating a cohesive motion language.</p>
+                        <div class="image-grid">
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00002.png" alt="Onity visual identity exploration" class="timeline-image">
+                            </figure>
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00003.png" alt="Onity visual identity applications" class="timeline-image">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Brand Applications</h3>
+                        <p>The animated logo was implemented across various digital touchpoints, including the company website, digital presentations, trade show displays, and product interfaces. We created guidelines to ensure consistent application of motion principles.</p>
+                        <div class="image-grid">
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00004.png" alt="Onity brand applications" class="timeline-image">
+                            </figure>
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00005.png" alt="Onity digital applications" class="timeline-image">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Animation Technique</h3>
+                        <p>The animation was created using After Effects, with special attention to timing and easing to create a premium feel. I incorporated subtle energy elements that reference the electronic nature of Onity's products while maintaining a clean, professional aesthetic.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/onity/onity-logo-animation.gif" alt="Onity animation technique showcase" class="timeline-image">
+                            <figcaption>Refined animation with polished timing and easing</figcaption>
+                        </figure>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Extended Identity System</h3>
+                        <p>Beyond the logo animation, we developed a complete motion system that could be applied across various brand touchpoints. This included animated UI elements, transitions for digital presentations, and video guidelines.</p>
+                        <div class="image-grid">
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00006.png" alt="Onity extended identity system" class="timeline-image">
+                            </figure>
+                            <figure class="timeline-figure">
+                                <img loading="lazy" src="../images/optimized/onity/onity-visid-00007.png" alt="Onity motion system applications" class="timeline-image">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
