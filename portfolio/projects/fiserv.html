@@ -52,6 +52,25 @@
         .timeline-item p {
             margin-bottom: var(--spacing-md);
         }
+        
+        .timeline-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid img {
+            margin-bottom: 0;
+        }
 
         @media (max-width: 768px) {
             .project-timeline {
@@ -139,6 +158,10 @@
                     <div class="timeline-item">
                         <h3>Regulatory Research & Analysis</h3>
                         <p>The first phase involved an extensive analysis of the Department of Labor's new fiduciary rule and its implications for financial reporting. Working closely with legal and compliance teams, we translated complex regulatory requirements into actionable design and functionality specifications. This foundation was critical for ensuring that our solution would satisfy both legal requirements and user needs.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/fiserv/DOL_7_SketchV2.png" alt="Early sketch of DOL report structure" class="timeline-image">
+                            <figcaption>Early conceptual sketch mapping regulatory requirements to report sections</figcaption>
+                        </figure>
                     </div>
                     
                     <div class="timeline-item">
@@ -162,16 +185,34 @@
                     <div class="timeline-item">
                         <h3>Development & Programming</h3>
                         <p>Implementation required creating new functions in APL to extract and process the required data points from financial systems. I worked on both the programming side—writing code to generate the reports—and the design side, creating templates that would be populated dynamically. The development process involved close collaboration with data architects to ensure we were capturing and presenting the right information.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/fiserv/DOL_2_APLSample.png" alt="APL code sample for DOL report generation" class="timeline-image">
+                            <figcaption>Sample APL code snippet for processing financial data in the DOL reports</figcaption>
+                        </figure>
                     </div>
                     
                     <div class="timeline-item">
                         <h3>Testing & Quality Assurance</h3>
                         <p>Given the high-stakes nature of financial reporting and regulatory compliance, our QA process was rigorous. I developed test scenarios and conducted extensive testing across various data conditions and edge cases. We performed load testing to ensure the system could handle the volume of reports needed for nationwide deployment, and verified compliance with the detailed requirements of the DOL rule.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/fiserv/DOL_1_Ipad.png" alt="DOL report iPad preview during testing" class="timeline-image">
+                            <figcaption>Testing DOL compliance reports on various devices to ensure responsiveness</figcaption>
+                        </figure>
                     </div>
                     
                     <div class="timeline-item">
                         <h3>Client Preparation & Sales Support</h3>
                         <p>As the product neared completion, we created sales and marketing materials to help Fiserv's account teams prepare their financial institution clients for the new regulatory environment. This included developing demonstration materials, implementation guides, and training resources for client-facing staff. Our goal was to position this solution as not just a compliance requirement but as a tool for building greater trust with consumers.</p>
+                        <div class="image-grid">
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/fiserv/DOL_x_Page.png" alt="DOL report sample page" class="timeline-image">
+                                <figcaption>Sample page from the DOL disclosure documentation</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/fiserv/DOL_x_Page2.png" alt="DOL report explanation page" class="timeline-image">
+                                <figcaption>Client-friendly explanation of regulatory requirements</figcaption>
+                            </figure>
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
@@ -180,8 +221,31 @@
                     </div>
                     
                     <div class="timeline-item">
+                        <h3>Design Process Documentation</h3>
+                        <p>Throughout the project, we maintained extensive documentation of our design thinking and development process. These sketches, wireframes, and notes proved valuable not just for the DOL project but as foundational assets for future financial reporting initiatives. The documentation showed how we approached the challenge of translating regulatory requirements into user-centered designs.</p>
+                        <div class="image-grid">
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/fiserv/scan_20220401_14463758.png" alt="DOL compliance project documentation" class="timeline-image">
+                                <figcaption>Planning documentation showing user flow for advisors</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/fiserv/scan_20220401_14475782.png" alt="DOL compliance wireframes" class="timeline-image">
+                                <figcaption>Early wireframes for the DOL compliance reporting tool</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/fiserv/scan_20220401_14491679.png" alt="DOL compliance user flow sketches" class="timeline-image">
+                                <figcaption>Documentation of user scenarios and edge cases</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
                         <h3>Lessons & Impact</h3>
                         <p>This project demonstrated the challenges of developing solutions in a rapidly changing regulatory environment. Despite the rule being ultimately withdrawn, the work advanced Fiserv's capabilities in creating transparent financial reporting systems and prepared the company for future regulatory changes in the financial industry. The experience provided valuable insights into balancing regulatory compliance with user-centered design—a tension that continues to define financial technology development.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/fiserv/DOL_x_Page3.png" alt="Financial data visualization" class="timeline-image">
+                            <figcaption>Data visualization approach that was later adopted for other Fiserv reporting products</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
