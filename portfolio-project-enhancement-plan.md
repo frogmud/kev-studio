@@ -38,7 +38,7 @@ For each project page:
 | Lifepoint Health | ✅ Complete | Added timeline images, improved formatting, added mobile section |
 | Eyes Above | ✅ Complete | Added timeline sections with images, improved formatting, enhanced link styling |
 | Sylvamo | ✅ Complete | Added timeline images, improved formatting of credits and awards sections |
-| AIGA | 🔄 Pending | |
+| AIGA | ✅ Complete | Added timeline images, improved formatting of credits section, enhanced link styling |
 | Finseca | 🔄 Pending | |
 | Amrop | 🔄 Pending | |
 | Abra | 🔄 Pending | |
