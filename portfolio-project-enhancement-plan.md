@@ -35,8 +35,8 @@ For each project page:
 | Absorb Software | ✅ Complete | Used as initial template |
 | MN8 Energy | ✅ Complete | Enhanced with timeline images |
 | L3Harris | ✅ Complete | Added timeline images, improved formatting |
-| Lifepoint Health | 🔄 Pending | |
-| Eyes Above | 🔄 Pending | |
+| Lifepoint Health | ✅ Complete | Added timeline images, improved formatting, added mobile section |
+| Eyes Above | ✅ Complete | Added timeline sections with images, improved formatting, enhanced link styling |
 | Sylvamo | 🔄 Pending | |
 | AIGA | 🔄 Pending | |
 | Finseca | 🔄 Pending | |
