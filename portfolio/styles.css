@@ -186,6 +186,13 @@ h3 {
   font-weight: 600;
 }
 
+
+.project-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-md);
+}
 /* Project Grid Styles */
 .project-grid {
   display: grid;
