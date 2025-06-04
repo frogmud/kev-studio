@@ -1177,6 +1177,14 @@ footer {
   margin-bottom: var(--spacing-md);
 }
 
+.timeline-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
   .project-timeline {
     padding-left: 30px;
