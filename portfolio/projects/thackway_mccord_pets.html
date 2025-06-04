@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ENHANCED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,6 +53,42 @@
             margin-bottom: var(--spacing-md);
         }
 
+        .timeline-figure {
+            margin: var(--spacing-md) 0;
+        }
+
+        .timeline-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: var(--spacing-xs);
+            font-style: italic;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .image-grid.three-columns {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         @media (max-width: 768px) {
             .project-timeline {
                 padding-left: 30px;
@@ -59,6 +96,10 @@
 
             .timeline-item::before {
                 left: -30px;
+            }
+            
+            .image-grid, .image-grid.three-columns {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -90,12 +131,12 @@
 
     <main class="container project-detail">
         <div class="project-header">
-            <h1>Making QR codes fun!</h1>
+            <h1>Making QR Codes Fun!</h1>
             <p class="tagline">Custom QR code illustrations and playful stickers for holiday chocolate bars.</p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/chocolates/chocolate-hero-v2.jpg" alt="Making QR codes fun!">
+            <img loading="lazy" src="../images/optimized/chocolates/chocolate-hero-v2.jpg" alt="Holiday chocolate bars with custom illustrated QR codes">
         </div>
 
         <div class="project-content">
@@ -103,7 +144,7 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2022</p>
+                        <p>2021</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
@@ -117,8 +158,9 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
-                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">print</span>
-<span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">Print</span>
+                        <span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
                     </div>
                 </div>
             </div>
@@ -128,17 +170,71 @@
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                <h3>Concept & Pitch</h3>
-                <p>Presented the idea of illustrated QR codes and companion stickers.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Production</h3>
-                <p>Illustrated pets and designed packaging for the chocolate bar series.</p>
-              </div>
-<div class="timeline-item">
-                <h3>Launch</h3>
-                <p>Shared gifs and stickers on social platforms and mailed chocolate bars to clients.</p>
-              </div>
+                        <h3>Concept Development & Creative Direction</h3>
+                        <p>The challenge was to transform the ubiquitous QR code—something that had become a utilitarian necessity during the pandemic—into something delightful and unexpected. The concept was to create hand-drawn QR codes that were also pet portraits, turning a functional element into a central design feature that would spark joy and curiosity.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_01.gif" alt="QR code concept exploration animation" class="timeline-image">
+                            <figcaption>QR code concept exploration showing the evolution from standard to illustrated designs</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>QR Code Illustration & Development</h3>
+                        <p>Each QR code was hand-illustrated to create a portrait of a pet while maintaining scannability. This required careful consideration of the error correction capabilities of QR codes, allowing for creative manipulation without losing functionality. The designs balanced visual interest with technical requirements.</p>
+                        <div class="image-grid">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_03.png" alt="Pet QR code illustration process" class="timeline-image">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_04.png" alt="QR code technical development" class="timeline-image">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Packaging Design & Typography</h3>
+                        <p>The chocolate bar packaging was designed to showcase the illustrated QR codes, with a clean typographic approach using Monotype's Cotford typeface. The contrast between the elegant typography and the playful, glitchy QR code illustrations created a distinctive look that reflected the design agency's aesthetic values.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/02_TM_Chocolates_YG21_Grzejka.jpg" alt="Chocolate bar packaging design" class="timeline-image">
+                            <figcaption>Final chocolate bar packaging showcasing the illustrated QR codes</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Animation & Digital Experience</h3>
+                        <p>To extend the experience beyond the physical chocolate bars, each QR code linked to a dedicated landing page featuring an 8-bit style animation of the pet. These animations were designed to surprise and delight recipients when they scanned the code, creating a seamless bridge between physical and digital touchpoints.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_02.gif" alt="8-bit style pet animation" class="timeline-image">
+                            <figcaption>8-bit style animation that appeared when scanning the QR code</figcaption>
+                        </figure>
+                        <div class="image-grid">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_05.png" alt="Digital landing page design" class="timeline-image">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_07.png" alt="Mobile experience design" class="timeline-image">
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Companion Stickers & Physical Assets</h3>
+                        <p>Complementing the chocolate bars, a series of stickers were designed featuring the pet illustrations. These stickers extended the campaign's life beyond the chocolate consumption, giving recipients a lasting memento and additional way to engage with the creative concept.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_08.png" alt="Companion stickers design" class="timeline-image">
+                            <figcaption>Companion stickers featuring the illustrated pets</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Social Media & Campaign Extension</h3>
+                        <p>The project gained additional traction through social media, with the animations being shared on Giphy and other platforms. This organic spread extended the reach of the campaign beyond the immediate recipients of the chocolate bars, showcasing the agency's innovative approach to design and technology.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_09.gif" alt="Social media animation" class="timeline-image">
+                            <figcaption>GIF animations that gained traction on social media platforms</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Results & Recognition</h3>
+                        <p>The project was a success on multiple levels: it delighted clients, demonstrated innovative thinking in merging art and technology, and received industry recognition including an Indigo Design Award in 2021. Most importantly, it transformed a utilitarian element—the QR code—into an opportunity for creativity and connection.</p>
+                        <figure class="timeline-figure">
+                            <img loading="lazy" src="../images/optimized/chocolates/TM_IndigoAwards21_06.jpg" alt="Award recognition and project outcome" class="timeline-image">
+                            <figcaption>The completed project collection showing all chocolate bar designs</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
