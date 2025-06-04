@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ENHANCED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,6 +52,25 @@
         .timeline-item p {
             margin-bottom: var(--spacing-md);
         }
+        
+        .timeline-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid img {
+            margin-bottom: 0;
+        }
 
         @media (max-width: 768px) {
             .project-timeline {
@@ -91,11 +111,11 @@
     <main class="container project-detail">
         <div class="project-header">
             <h1>Try It Out with Major League Wiffleball</h1>
-            <p class="tagline"></p>
+            <p class="tagline">Crafting a bold brand identity for a recreational sports league</p>
         </div>
         
         <div class="project-hero">
-            <img loading="lazy" src="../images/optimized/background_alpha.png" alt="Try It Out with Major League Wiffleball">
+            <img loading="lazy" src="../images/optimized/tryitout/Tryitout_0_aniweb_4x3_v3.gif" alt="Try It Out with Major League Wiffleball animated logo">
         </div>
 
         <div class="project-content">
@@ -103,7 +123,7 @@
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
-                        <p>2018</p>
+                        <p>2018-2019</p>
                     </div>
                     <div class="metadata-item">
                         <h3>Client</h3>
@@ -113,20 +133,111 @@
                         <h3>Role</h3>
                         <p>Art direction, brand design, print, motion, ace pitcher</p>
                     </div>
+                    <div class="metadata-item">
+                        <h3>Team</h3>
+                        <p>Photography: Dennis Yasar<br>Team Management: Kevin Lates, Leela Scott</p>
+                    </div>
                 </div>
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">Print</span>
                         <span class="project-tag" data-tag="web" onclick="window.location.href='../index.html?filter=web&filterType=tag'">Web Design</span>
+                        <span class="project-tag" data-tag="motion" onclick="window.location.href='../index.html?filter=motion&filterType=tag'">Motion</span>
                     </div>
                 </div>
             </div>
             
             <div class="project-description">
-                <p>More details coming soon.</p>
+                <p>Try It Out is a semi-professional wiffleball league formed by a group of friends in Brooklyn who transformed a casual weekend activity into an organized competitive venture with its own distinctive visual identity. The brand development embraced both the DIY spirit of the league and the nostalgic connection to classic sports card collecting, creating a cohesive system that worked across physical and digital touchpoints.</p>
+                
+                <p>The core challenge was balancing the playful, grassroots nature of the sport with a professional-looking identity system that would elevate the experience for participants and spectators alike.</p>
 
                 <div class="project-timeline">
+                    <div class="timeline-item">
+                        <h3>Brand Identity Development</h3>
+                        <p>The visual identity process began with exploring typography that could convey both athleticism and a sense of community. The resulting logo system features bold, condensed lettering with a distinctive angle that suggests forward momentum—a key attribute for a sports brand. The typography system was complemented by a color palette dominated by bold primary colors reminiscent of classic baseball design language.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/tryitout/tryitout_05_logoevol-03.gif" alt="Try It Out logo evolution animation" class="timeline-image">
+                            <figcaption>Animation showing the evolution of the Try It Out logo development process</figcaption>
+                        </figure>
+                    </div>
                     
+                    <div class="timeline-item">
+                        <h3>Trading Card System</h3>
+                        <p>The most distinctive aspect of the Try It Out brand was the player trading card system. Each league participant received their own personalized trading card featuring portrait photography against a vibrant background and custom stats. The cards served multiple purposes: they reinforced team identity, created collectible memorabilia, and provided a novel way to introduce players to one another at events.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/tryitout/tryitout-10-cards-600x.jpg" alt="Try It Out player trading cards" class="timeline-image">
+                            <figcaption>Selection of player trading cards featuring custom photography and statistics</figcaption>
+                        </figure>
+                        <div class="image-grid">
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/card_animation_1_kevin.gif" alt="Kevin's player card animation" class="timeline-image">
+                                <figcaption>Animated player card: Kevin</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/card_animation_2_dennis.gif" alt="Dennis's player card animation" class="timeline-image">
+                                <figcaption>Animated player card: Dennis</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/card_animation_3_lats.gif" alt="Lates's player card animation" class="timeline-image">
+                                <figcaption>Animated player card: Lates</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/card_animation_4_leela.gif" alt="Leela's player card animation" class="timeline-image">
+                                <figcaption>Animated player card: Leela</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Apparel & Merchandise</h3>
+                        <p>To further establish the league's identity, a limited run of merchandise was created, including jerseys and t-shirts. The apparel featured the Try It Out logo prominently and used the established color palette consistently. These items weren't just promotional materials—they helped create a sense of community and team spirit among participants while increasing visibility in public spaces.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/tryitout/Tryitout_2_Shirt.jpg" alt="Try It Out t-shirt design" class="timeline-image">
+                            <figcaption>T-shirt design featuring the Try It Out logo and team colors</figcaption>
+                        </figure>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Digital Media & Promotion</h3>
+                        <p>The league established a digital presence through social media and a simple website to announce game schedules, share results, and showcase player profiles. The digital content maintained the brand's visual language established in the physical assets, creating a consistent experience across all touchpoints. Short promotional videos were created for social sharing, featuring highlights from games and player interviews.</p>
+                        <div class="image-grid">
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/youtube_screens1.jpg" alt="Try It Out YouTube channel screenshot" class="timeline-image">
+                                <figcaption>YouTube channel featuring highlights and player interviews</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/youtube_screens2.jpg" alt="Try It Out digital content" class="timeline-image">
+                                <figcaption>Digital content created for social media promotion</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Game Day Experience</h3>
+                        <p>The brand identity extended to the in-person experience at games, where branded scorecards, signage, and other game-day materials helped create an immersive atmosphere. These elements transformed what could have been a casual park gathering into a more structured sporting event, enhancing the experience for both players and spectators.</p>
+                        <div class="image-grid">
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/Tryitout_10_Groupshot2.jpg" alt="Try It Out team group photo" class="timeline-image">
+                                <figcaption>Team photo from one of the league's tournament days</figcaption>
+                            </figure>
+                            <figure>
+                                <img loading="lazy" src="../images/optimized/tryitout/Tryitout_11_Game1.jpg" alt="Try It Out game in progress" class="timeline-image">
+                                <figcaption>Action shot from a Try It Out league game</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Impact & Community Building</h3>
+                        <p>What began as a casual weekend activity evolved into a recognizable brand with its own community. The Try It Out league demonstrates how thoughtful design can elevate even grassroots recreational activities into meaningful experiences. The project showcases the power of branding to transform simple gatherings into organized communities with shared identity and purpose.</p>
+                        <figure>
+                            <img loading="lazy" src="../images/optimized/tryitout/youtube_screens3.jpg" alt="Try It Out community impact" class="timeline-image">
+                            <figcaption>League participants gathered after a tournament, showing the community-building aspect of the brand</figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
