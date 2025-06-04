@@ -4,9 +4,9 @@ const fs = require('fs').promises;
 const path = require('path');
 const sharp = require('sharp');
 
-const sourceDir = path.join(__dirname, '../portfolio/images/abra');
-const optimizedDir = path.join(__dirname, '../portfolio/images/optimized/abra');
-const webpDir = path.join(__dirname, '../portfolio/images/webp/abra');
+const sourceDir = path.join(__dirname, '../portfolio/images/american_social');
+const optimizedDir = path.join(__dirname, '../portfolio/images/optimized/american_social');
+const webpDir = path.join(__dirname, '../portfolio/images/webp/american_social');
 
 // Make sure target directories exist
 async function ensureDirExists(dir) {
@@ -18,7 +18,7 @@ async function ensureDirExists(dir) {
 }
 
 async function resizeAndOptimize() {
-  console.log('Starting Abra image optimization with resizing...');
+  console.log('Starting American Social image optimization with resizing...');
   
   // Ensure directories exist
   await ensureDirExists(optimizedDir);
@@ -148,7 +148,7 @@ async function resizeAndOptimize() {
     }
   }
   
-  console.log('Abra image optimization completed!');
+  console.log('American Social image optimization completed!');
 }
 
 // Run the script

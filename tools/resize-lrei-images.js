@@ -4,9 +4,9 @@ const fs = require('fs').promises;
 const path = require('path');
 const sharp = require('sharp');
 
-const sourceDir = path.join(__dirname, '../portfolio/images/abra');
-const optimizedDir = path.join(__dirname, '../portfolio/images/optimized/abra');
-const webpDir = path.join(__dirname, '../portfolio/images/webp/abra');
+const sourceDir = path.join(__dirname, '../portfolio/images/lrei');
+const optimizedDir = path.join(__dirname, '../portfolio/images/optimized/lrei');
+const webpDir = path.join(__dirname, '../portfolio/images/webp/lrei');
 
 // Make sure target directories exist
 async function ensureDirExists(dir) {
@@ -18,7 +18,7 @@ async function ensureDirExists(dir) {
 }
 
 async function resizeAndOptimize() {
-  console.log('Starting Abra image optimization with resizing...');
+  console.log('Starting LREI image optimization with resizing...');
   
   // Ensure directories exist
   await ensureDirExists(optimizedDir);
@@ -27,11 +27,39 @@ async function resizeAndOptimize() {
   // Get list of all files in the source directory
   const files = await fs.readdir(sourceDir);
   
+  // Also check for any 'additional' subdirectory
+  const additionalDir = path.join(sourceDir, 'additional');
+  let additionalFiles = [];
+  try {
+    const additionalDirExists = await fs.access(additionalDir).then(() => true).catch(() => false);
+    if (additionalDirExists) {
+      additionalFiles = (await fs.readdir(additionalDir)).map(file => path.join('additional', file));
+      console.log(`Found ${additionalFiles.length} files in additional directory`);
+    }
+  } catch (error) {
+    console.log('No additional directory found or error accessing it:', error);
+  }
+  
+  // Combine all files
+  const allFiles = [...files, ...additionalFiles];
+  
   // Process each file
-  for (const file of files) {
+  for (const file of allFiles) {
     const sourcePath = path.join(sourceDir, file);
     const optimizedPath = path.join(optimizedDir, file);
-    const webpPath = path.join(webpDir, path.parse(file).name + '.webp');
+    const webpPath = path.join(webpDir, 
+      file.includes('/') 
+        ? path.join(path.dirname(file), path.parse(file).name + '.webp')
+        : path.parse(file).name + '.webp'
+    );
+    
+    // Ensure parent directory exists for nested files
+    if (file.includes('/')) {
+      const optimizedParentDir = path.dirname(optimizedPath);
+      const webpParentDir = path.dirname(webpPath);
+      await ensureDirExists(optimizedParentDir);
+      await ensureDirExists(webpParentDir);
+    }
     
     // Get file stats
     const stats = await fs.stat(sourcePath);
@@ -148,7 +176,7 @@ async function resizeAndOptimize() {
     }
   }
   
-  console.log('Abra image optimization completed!');
+  console.log('LREI image optimization completed!');
 }
 
 // Run the script

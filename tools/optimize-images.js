@@ -64,9 +64,15 @@ async function walk(dir) {
         if (ext !== '.gif') {
           pendingTasks.push(
             sharp(full)
-              .webp({ quality: 80 })
+              .resize({
+                width: 800,
+                height: 800,
+                fit: 'inside',
+                withoutEnlargement: true
+              })
+              .webp({ quality: 70 })
               .toFile(webpOut)
-              .then(() => console.log(`WebP: ${item}`))
+              .then(() => console.log(`Created WebP (max 800px): ${item}`))
               .catch(err => console.error(`Failed WebP ${item}:`, err))
           );
         } else {
@@ -84,30 +90,74 @@ async function walk(dir) {
           }
         }
         
-        // For GIFs, just copy them as we can't process with sharp
+        // For GIFs, try to resize them with sharp
         if (ext === '.gif') {
           pendingTasks.push(
-            copyFileAsync(full, optimizedOut)
-              .then(() => console.log(`Copied: ${item}`))
-              .catch(err => console.error(`Failed to copy GIF ${item}:`, err))
+            (async () => {
+              try {
+                // First check the dimensions
+                const metadata = await sharp(full, { animated: true }).metadata();
+                
+                // Resize if larger than 800px on any dimension
+                if (metadata.width > 800 || metadata.height > 800) {
+                  await sharp(full, { animated: true })
+                    .resize({
+                      width: 800,
+                      height: 800,
+                      fit: 'inside',
+                      withoutEnlargement: true
+                    })
+                    .toFile(optimizedOut);
+                  console.log(`Resized GIF: ${item} to max 800px`);
+                  
+                  // Try to create a WebP version
+                  const webpAnimated = path.join(webpDir, path.join(relativePath, path.parse(item).name + '.webp'));
+                  await sharp(optimizedOut, { animated: true })
+                    .webp({ quality: 70 })
+                    .toFile(webpAnimated);
+                  console.log(`Created animated WebP: ${path.parse(item).name}.webp`);
+                } else {
+                  // If already small, just copy
+                  await copyFileAsync(full, optimizedOut);
+                  console.log(`Copied GIF (already small): ${item}`);
+                }
+              } catch (err) {
+                // Fallback to copying if sharp can't process
+                console.error(`Failed to resize GIF ${item}, copying original instead:`, err);
+                await copyFileAsync(full, optimizedOut);
+                console.log(`Copied GIF (couldn't resize): ${item}`);
+              }
+            })()
           );
         } else {
           // Use appropriate optimization based on file type
           if (ext === '.png') {
             pendingTasks.push(
               sharp(full)
-                .png({ quality: 85, compressionLevel: 9 })
+                .resize({
+                  width: 800,
+                  height: 800,
+                  fit: 'inside',
+                  withoutEnlargement: true
+                })
+                .png({ quality: 70, compressionLevel: 9 })
                 .toFile(optimizedOut)
-                .then(() => console.log(`Optimized PNG: ${item}`))
+                .then(() => console.log(`Optimized PNG (max 800px): ${item}`))
                 .catch(err => console.error(`Failed PNG ${item}:`, err))
             );
           } else {
             // For JPG/JPEG
             pendingTasks.push(
               sharp(full)
-                .jpeg({ quality: 85, mozjpeg: true })
+                .resize({
+                  width: 800,
+                  height: 800,
+                  fit: 'inside',
+                  withoutEnlargement: true
+                })
+                .jpeg({ quality: 70, mozjpeg: true })
                 .toFile(optimizedOut)
-                .then(() => console.log(`Optimized JPEG: ${item}`))
+                .then(() => console.log(`Optimized JPEG (max 800px): ${item}`))
                 .catch(err => console.error(`Failed JPEG ${item}:`, err))
             );
           }
