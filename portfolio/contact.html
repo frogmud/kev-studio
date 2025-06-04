@@ -238,9 +238,9 @@
                     <span>Kevin Grzejka</span>
                 </div>
                 <ul class="filter-categories">
-                    <li class="filter-category" data-filter="portfolio"><a href="index.html">Portfolio</a></li>
-                    <li class="filter-category" data-filter="resume"><a href="resume.html">Resume</a></li>
-                    <li class="filter-category active" data-filter="contact"><a href="contact.html">Contact</a></li>
+                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Portfolio</li>
+                    <li class="filter-category" data-filter="resume" data-filter-type="category">Resume</li>
+                    <li class="filter-category active" data-filter="contact" data-filter-type="category">Contact</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -345,6 +345,26 @@
     </footer>
 
     <script>
+        // Navigation links functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterCategories = document.querySelectorAll('.filter-category');
+            
+            filterCategories.forEach(category => {
+              category.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Handle navigation based on data-filter value
+                if (filter === 'portfolio') {
+                  window.location.href = 'index.html';
+                } else if (filter === 'resume') {
+                  window.location.href = 'resume.html';
+                } else if (filter === 'contact') {
+                  window.location.href = 'contact.html';
+                }
+              });
+            });
+        });
+        
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
