@@ -9,6 +9,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .timeline-figure {
+            margin: var(--spacing-md) 0;
+        }
+
+        .timeline-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: var(--spacing-xs);
+            font-style: italic;
+        }
+
         .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -24,10 +86,18 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 30px;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+            
             .image-grid, .image-grid.three-columns {
                 grid-template-columns: 1fr;
             }
@@ -37,25 +107,27 @@
 <body>
     <!-- Sticky navigation with filter categories -->
     <nav class="sticky-nav visible">
-    <div class="container">
-        <div class="sticky-nav-content">
-            <div class="sticky-nav-logo">
-                <a href="../index.html">Kevin Grzejka</a>
-            </div>
-            <ul class="filter-categories">
-                <li class="filter-category" data-filter="portfolio" data-filter-type="category">Portfolio</li>
-                <li class="filter-category" data-filter="resume" data-filter-type="category">Resume</li>
-                <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
-            </ul>
-            <div class="view-toggles">
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+        <div class="container">
+            <div class="sticky-nav-content">
+                <div class="sticky-nav-logo">
+                    <a href="../index.html">Kevin Grzejka</a>
+                </div>
+                <ul class="filter-categories">
+                    <!-- Categories will be primary filters -->
+                    <li class="filter-category" data-filter="all" data-filter-type="category">All</li>
+                    <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
+                    <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
+                </ul>
+                <div class="view-toggles">
+                    <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main class="container project-detail">
         <div class="project-header">
@@ -68,7 +140,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info">
+            <div class="project-info hidden">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -82,17 +154,24 @@
                         <h3>Role</h3>
                         <p>Logo, Design, UI/UX</p>
                     </div>
+                </div>
+                <div class="project-tags-container">
+                    <h3>Tags</h3>
+                    <div class="project-tags">
+                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
+<span class="project-tag" data-tag="strategy" onclick="window.location.href='../index.html?filter=strategy&filterType=tag'">Strategy</span>
+                    </div>
+                </div>
             </div>
             
             <div class="project-description">
                 <p>Silicon Valley meets Wall Street in Hum's 'capital as a service' business model, designed to help SMBs raise money faster and more easily. A comprehensive rebrand provided 'Capital', as they were known, with a new name, logo, visual identity and website that capture their iconoclastic, AI-driven, ground-levelling proposition.</p>
                 <p>The identity system balances technological innovation with financial expertise, creating a distinctive brand voice in the crowded fintech space. A vibrant color palette and dynamic visual elements reflect Hum's mission to bring energy and accessibility to business funding.</p>
-                <p>As the lead designer overseeing logo, design and UI/UX, I collaborated closely with the Thackway McCord team throughout each phase of the project.</p>
 
                 <div class="project-timeline">
                     <div class="timeline-item">
-                        <h3>Discovery & strategy</h3>
-                        <p>I partnered with strategists Simon Thackway and Jonathan Paisner to kick things off. The project began with extensive stakeholder interviews and market analysis to understand the fintech landscape and Capital's unique positioning. Key insights revealed the need for a brand that could stand out in a crowded market while communicating complex financial offerings in an approachable way.</p>
+                        <h3>Discovery & Strategy</h3>
+                        <p>The project began with extensive stakeholder interviews and market analysis to understand the fintech landscape and Capital's unique positioning. Key insights revealed the need for a brand that could stand out in a crowded market while communicating complex financial offerings in an approachable way.</p>
                         <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_04.png" alt="Hum Capital strategy development" class="timeline-image">
                             <figcaption>Strategic positioning in the fintech landscape</figcaption>
@@ -100,8 +179,8 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Naming development</h3>
-                        <p>Working with creative director Kat McCord and lead designer Bianca Seong, we explored new names. The naming process transformed "Capital" into the more distinctive and ownable "Hum." The new name evokes both technological connectivity and the constant flow of capital—central to the company's value proposition. It also carries connotations of activity, energy, and momentum.</p>
+                        <h3>Naming Development</h3>
+                        <p>The naming process transformed "Capital" into the more distinctive and ownable "Hum." The new name evokes both technological connectivity and the constant flow of capital—central to the company's value proposition. It also carries connotations of activity, energy, and momentum.</p>
                         <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_03.png" alt="Hum Capital naming development" class="timeline-image">
                             <figcaption>Naming exploration and final selection</figcaption>
@@ -109,39 +188,21 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Logo & visual identity</h3>
-                        <p>Bianca Seong executed the logo under Kat McCord's direction while I shaped the broader system. The visual identity system was designed to balance tech innovation with financial credibility. The logo features a distinctive wordmark with custom letterforms that convey both stability and forward momentum. A vibrant color palette of purples, blues, and teals creates a fresh look that stands apart from traditional financial blues and greens.</p>
+                        <h3>Logo & Visual Identity</h3>
+                        <p>The visual identity system was designed to balance tech innovation with financial credibility. The logo features a distinctive wordmark with custom letterforms that convey both stability and forward momentum. A vibrant color palette of purples, blues, and teals creates a fresh look that stands apart from traditional financial blues and greens.</p>
                         <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_02.png" alt="Hum Capital logo design" class="timeline-image">
-                            <figcaption>Logo design showcasing brand identity</figcaption>
+                            <img loading="lazy" src="../images/optimized/hum/Hum_motion1.gif" alt="Hum Capital logo animation" class="timeline-image">
+                            <figcaption>Logo animation showcasing brand energy</figcaption>
                         </figure>
-                        <figure class="timeline-figure">
+                        <div class="image-grid">
+                            <img loading="lazy" src="../images/optimized/hum/Hum_02.png" alt="Hum Capital logo variants" class="timeline-image">
                             <img loading="lazy" src="../images/optimized/hum/Hum_05.png" alt="Hum Capital color palette" class="timeline-image">
-                            <figcaption>Color palette development</figcaption>
-                        </figure>
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>App icon & mobile interface</h3>
-                        <p>I led the design of the Hum mobile experience and app icon, creating a touchpoint that seamlessly extended the brand across platforms. Working with Scyld Bowring, we crafted the app icon to balance recognizability with the technical constraints of mobile interfaces.</p>
-                        <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_11.png" alt="Hum Capital app icon" class="timeline-image">
-                            <figcaption>App icon design on mobile device</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Motion design principles</h3>
-                        <p>I developed a comprehensive motion language for Hum that reinforced their brand values. Working with Scyld Bowring, we created animations that expressed energy, connection, and forward momentum—all critical elements of Hum's positioning in the financial technology marketplace.</p>
-                        <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_08.png" alt="Hum Capital motion design" class="timeline-image">
-                            <figcaption>Motion design principles</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Digital experience design</h3>
-                        <p>I worked with developer Dave Morreale to bring the UI to life. The responsive website design effectively communicates Hum's complex offerings in an accessible way. The user experience guides potential clients through the funding process with clear navigation and compelling visual storytelling. Interactive elements help demonstrate how Hum's technology works to connect businesses with the right capital sources.</p>
+                        <h3>Digital Experience Design</h3>
+                        <p>The responsive website design effectively communicates Hum's complex offerings in an accessible way. The user experience guides potential clients through the funding process with clear navigation and compelling visual storytelling. Interactive elements help demonstrate how Hum's technology works to connect businesses with the right capital sources.</p>
                         <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_08.png" alt="Hum Capital website design" class="timeline-image">
                             <figcaption>Website design showcasing the digital platform</figcaption>
@@ -149,30 +210,17 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Brand application system</h3>
-                        <p>Our design team produced versatile templates and collateral. A comprehensive set of brand applications was developed to ensure consistent implementation across all touchpoints. This included digital templates, presentation decks, social media assets, and print collateral that all work together to reinforce the Hum brand identity.</p>
-                        <figure class="timeline-figure">
+                        <h3>Brand Application System</h3>
+                        <p>A comprehensive set of brand applications was developed to ensure consistent implementation across all touchpoints. This included digital templates, presentation decks, social media assets, and print collateral that all work together to reinforce the Hum brand identity.</p>
+                        <div class="image-grid">
                             <img loading="lazy" src="../images/optimized/hum/Hum_06.png" alt="Hum Capital brand applications" class="timeline-image">
-                            <figcaption>Brand applications across various touchpoints</figcaption>
-                        </figure>
-                        <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_07.png" alt="Hum Capital stationery design" class="timeline-image">
-                            <figcaption>Stationery design system</figcaption>
-                        </figure>
+                        </div>
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Interactive presentations</h3>
-                        <p>I designed interactive presentation templates that helped the Hum team tell their story to investors and clients. These presentations incorporated subtle animations and data visualizations to explain Hum's complex AI-driven matching process in a compelling and understandable way.</p>
-                        <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_05.png" alt="Hum Capital presentations" class="timeline-image">
-                            <figcaption>Interactive presentation design system</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Brand guidelines & design system</h3>
-                        <p>I consolidated the components in a Figma library. A robust design system was developed in Figma with reusable components and clear documentation. The brand guidelines document provides comprehensive rules for logo usage, typography, color application, photography style, and voice and tone to ensure consistent implementation across all brand touchpoints.</p>
+                        <h3>Brand Guidelines & Design System</h3>
+                        <p>A robust design system was developed in Figma with reusable components and clear documentation. The brand guidelines document provides comprehensive rules for logo usage, typography, color application, photography style, and voice and tone to ensure consistent implementation across all brand touchpoints.</p>
                         <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_09.png" alt="Hum Capital brand guidelines" class="timeline-image">
                             <figcaption>Brand guidelines documenting the visual system</figcaption>
@@ -180,25 +228,16 @@
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Digital advertising</h3>
-                        <p>I developed a cohesive digital advertising system that maintained the Hum brand across various platforms while adapting to different format requirements. These ads effectively communicated Hum's value proposition to target audiences while maintaining strong brand recognition.</p>
+                        <h3>Launch & Market Reception</h3>
+                        <p>The phased rollout of the new brand across all channels was carefully coordinated to maximize impact. The rebrand was well-received in the market, helping Hum to secure additional funding and attract new clients. The project won multiple design awards, including Transform North America 2021 Rebrand (Gold), Indigo Awards 2021 Branding (Silver), and Wolda 2021 Rebrand (Gold).</p>
                         <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_10.png" alt="Hum Capital digital advertising" class="timeline-image">
-                            <figcaption>Digital advertising applications</figcaption>
-                        </figure>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h3>Launch & market reception</h3>
-                        <p>Scyld Bowring created energetic 3D assets for the launch. The phased rollout of the new brand across all channels was carefully coordinated to maximize impact. The rebrand was well-received in the market, helping Hum to secure additional funding and attract new clients. The project won multiple design awards, including Transform North America 2021 Rebrand (Gold), Indigo Awards 2021 Branding (Silver), and Wolda 2021 Rebrand (Gold).</p>
-                        <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_09.png" alt="Hum Capital market launch" class="timeline-image">
+                            <img loading="lazy" src="../images/optimized/hum/Hum_10.png" alt="Hum Capital market launch" class="timeline-image">
                             <figcaption>Brand launch campaign and market presence</figcaption>
                         </figure>
                     </div>
                     
                     <div class="timeline-item">
-                        <h3>Project credits</h3>
+                        <h3>Project Credits</h3>
                         <p>Agency: Thackway McCord<br>
                         Client: Hum Capital<br>
                         Role: Logo, Design, UI/UX<br>
@@ -245,6 +284,10 @@
                         </a>
                     </div>
                     <div class="footer-links right-links">
+                        <a href="../museum.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 2v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2zm6.687 13.482c0-.802-.418-1.429-1.109-1.695.528-.264.836-.807.836-1.503 0-1.346-1.312-2.149-2.581-2.149-1.477 0-2.591.925-2.659 2.763h1.645c-.014-.761.271-1.315 1.025-1.315.449 0 .933.272.933.869 0 .754-.816.862-1.567.797v1.28c1.067 0 1.704.067 1.704.985 0 .724-.548 1.048-1.091 1.048-.822 0-1.159-.614-1.188-1.452h-1.634c-.032 1.892 1.114 2.89 2.842 2.89 1.543 0 2.844-.943 2.844-2.518zm4.313 2.518v-7.718h-1.392c-.173 1.154-.995 1.491-2.171 1.459v1.346h1.852v4.913h1.711z"/></svg>
+                            museum
+                        </a>
                         <a href="../contact.html" class="footer-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg>
                             about
@@ -258,53 +301,63 @@
         </div>
     </footer>
 
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Check for saved theme preference or use the system preference
-        const currentTheme = localStorage.getItem('theme') || 
-                          (prefersDarkScheme.matches ? 'dark' : 'light');
-        
-        // Apply the theme
-        if (currentTheme === 'dark') {
-            document.body.setAttribute('data-theme', 'dark');
-            themeToggle.classList.add('dark');
-        }
-        
-        // Toggle theme when clicking the theme toggle
-        themeToggle.addEventListener('click', function() {
-            let theme;
-            if (document.body.getAttribute('data-theme') === 'dark') {
-                document.body.removeAttribute('data-theme');
-                theme = 'light';
-                themeToggle.classList.remove('dark');
-            } else {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check for saved theme preference or use the system preference
+            const currentTheme = localStorage.getItem('theme') || 
+                              (prefersDarkScheme.matches ? 'dark' : 'light');
+            
+            // Apply the theme
+            if (currentTheme === 'dark') {
                 document.body.setAttribute('data-theme', 'dark');
-                theme = 'dark';
                 themeToggle.classList.add('dark');
             }
-            localStorage.setItem('theme', theme);
-        });
-        
-        // Nav category links
-        const navCategories = document.querySelectorAll('nav .filter-category');
-
-        navCategories.forEach(category => {
-            category.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                if (filter === 'portfolio') {
-                    window.location.href = '../index.html';
-                } else if (filter === 'resume') {
-                    window.location.href = '../resume.html';
-                } else if (filter === 'contact') {
-                    window.location.href = '../contact.html';
+            
+            // Toggle theme when clicking the theme toggle
+            themeToggle.addEventListener('click', function() {
+                let theme;
+                if (document.body.getAttribute('data-theme') === 'dark') {
+                    document.body.removeAttribute('data-theme');
+                    theme = 'light';
+                    themeToggle.classList.remove('dark');
+                } else {
+                    document.body.setAttribute('data-theme', 'dark');
+                    theme = 'dark';
+                    themeToggle.classList.add('dark');
                 }
+                localStorage.setItem('theme', theme);
             });
+            
+            // Filter category links to main page with proper filter type
+            const filterCategories = document.querySelectorAll('.filter-category');
+
+            filterCategories.forEach(category => {
+                category.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    const filterType = this.getAttribute('data-filter-type') || 'category';
+                    
+                    // Navigate to index with filter parameters
+                    window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
+                });
+            });
+
+            // Info button toggle for project details
+            const infoToggle = document.getElementById('info-toggle');
+            const projectInfo = document.querySelector('.project-info');
+
+            if (infoToggle && projectInfo) {
+                infoToggle.addEventListener('click', function() {
+                    const isHidden = projectInfo.classList.toggle('hidden');
+                    infoToggle.classList.toggle('open');
+                    // Update ARIA attributes for accessibility
+                    infoToggle.setAttribute('aria-pressed', !isHidden);
+                });
+            }
         });
-    });
     </script>
 </body>
 </html>
