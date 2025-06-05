@@ -6,13 +6,18 @@
       "type": "primary"
     },
     {
-      "id": "digital",
-      "name": "Digital",
+      "id": "design",
+      "name": "Design",
       "type": "primary"
     },
     {
-      "id": "print",
-      "name": "Print",
+      "id": "direction",
+      "name": "Direction",
+      "type": "primary"
+    },
+    {
+      "id": "etc",
+      "name": "Etc",
       "type": "primary"
     }
   ],
@@ -35,6 +40,11 @@
     {
       "id": "strategy",
       "name": "Strategy",
+      "type": "discipline"
+    },
+    {
+      "id": "print",
+      "name": "Print",
       "type": "discipline"
     }
   ],

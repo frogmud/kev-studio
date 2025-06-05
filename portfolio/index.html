@@ -17,10 +17,10 @@
                 <div class="sticky-nav-logo">
                     <span>Kevin Grzejka</span>
                 </div>
-                <ul class="filter-categories">
-                    <li class="filter-category active" data-filter="portfolio" data-filter-type="category">Portfolio</li>
-                    <li class="filter-category" data-filter="resume" data-filter-type="category">Resume</li>
-                    <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
+                <ul class="nav-links">
+                    <li class="nav-link active" data-page="portfolio">Portfolio</li>
+                    <li class="nav-link" data-page="resume">Resume</li>
+                    <li class="nav-link" data-page="contact">Contact</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -36,10 +36,15 @@
         <div class="container">
             <div class="project-controls">
                 <ul class="filter-categories">
-                    <li class="filter-category active" data-filter="all" data-filter-type="category">All</li>
                     <li class="filter-category" data-filter="design" data-filter-type="category">Design</li>
                     <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
                     <li class="filter-category" data-filter="etc" data-filter-type="category">Etc</li>
+                    <li class="filter-divider">|</li>
+                    <li class="filter-category" data-filter="branding" data-filter-type="tag">Branding</li>
+                    <li class="filter-category" data-filter="web" data-filter-type="tag">Web Design</li>
+                    <li class="filter-category" data-filter="animation" data-filter-type="tag">Animation</li>
+                    <li class="filter-category" data-filter="strategy" data-filter-type="tag">Strategy</li>
+                    <li class="filter-category" data-filter="print" data-filter-type="tag">Print</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="view-toggle" id="view-toggle">
@@ -53,7 +58,7 @@
     <main class="container">
         <section id="projects">
             <div class="project-grid">
-                <div class="project-card landscape" data-categories="design">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,animation">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
                     </div>
@@ -61,13 +66,16 @@
                         <h3>Absorb Software</h3>
                         <a href="projects/absorb_software.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag">Design</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
+                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
                         </div>
                         <p>Website & rebrand for learning tech company</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction">
+                <div class="project-card landscape" data-categories="direction" data-tags="web,branding">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/10a-mn8-laptop-4x3-white.png" alt="MN8 Energy">
                     </div>
@@ -75,7 +83,9 @@
                         <h3>MN8 Energy</h3>
                         <a href="projects/mn8_energy.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag">Direction</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
                         </div>
                         <p>Website & guidelines for GS spin-off</p>
                     </div>
@@ -89,7 +99,8 @@
                         <h3>L3Harris</h3>
                         <a href="projects/l3harris.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Direction</span>
+<span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
+<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
 </div>
                         <p>Brand identity for defense merger</p>
                     </div>
@@ -110,7 +121,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/z001_lifepoint_01_heart.gif" alt="Lifepoint Health">
                     </div>
@@ -118,7 +129,9 @@
                         <h3>Lifepoint Health</h3>
                         <a href="projects/lifepoint_health.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag">Direction</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
+                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
                         </div>
                         <p>Branding a national healthcare network</p>
                     </div>
@@ -139,7 +152,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design">
+                <div class="project-card landscape" data-categories="design" data-tags="print,branding">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/04_eyesabove_cards_yg21_grzejka.png" alt="Eyes Above">
                     </div>
@@ -147,7 +160,9 @@
                         <h3>Eyes Above</h3>
                         <a href="projects/eyes_above.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag">Design</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?filter=print&filterType=tag'">Print</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
                         </div>
                         <p>Werewolves & wraiths oh my</p>
                     </div>
@@ -169,7 +184,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design">
+                <div class="project-card landscape" data-categories="design" data-tags="animation">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/01_amso_splash.png" alt="American Social">
                     </div>
@@ -177,7 +192,8 @@
                         <h3>American Social</h3>
                         <a href="projects/american_social.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag">Design</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
+                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
                         </div>
                         <p>Title & end credits</p>
                     </div>
@@ -200,7 +216,7 @@
                 
                 <div class="project-card landscape" data-categories="design" data-tags="branding,strategy">
                     <div class="project-image">
-                        <img loading="lazy" src="images/optimized/lrei/LREI_8_ViewBook.png" alt="LREI Viewbook with tagline 'Out of the classroom and into the world'">
+                        <img loading="lazy" src="images/optimized/lrei/LREI_1_BookFlipCut_0605.gif" alt="LREI Viewbook with tagline 'Out of the classroom and into the world'">
                     </div>
                     <div class="project-content">
                         <h3>LREI Viewbook</h3>
@@ -346,32 +362,41 @@
     
     
     
+    
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const filterCategories = document.querySelectorAll('main .filter-category');
-        const navCategories = document.querySelectorAll('nav .filter-category');
+        const filterCategories = document.querySelectorAll('.filter-category');
+        const navLinks = document.querySelectorAll('.nav-link');
         const projectCards = document.querySelectorAll('.project-card');
         const projectGrid = document.querySelector('.project-grid');
         const viewToggle = document.getElementById('view-toggle');
+        
+        // Function to show all projects
+        function showAllProjects() {
+          projectCards.forEach(card => {
+            card.classList.remove('hidden');
+            setTimeout(() => {
+              card.classList.add('animate-in');
+            }, 10);
+          });
+        }
         
         // Function to filter projects
         function filterProjects(filter, filterType = 'category') {
           // Remove active class from all categories
           filterCategories.forEach(c => c.classList.remove('active'));
           
-          const targetFilter = document.querySelector(`main .filter-category[data-filter="${filter}"]`);
+          // Find and add active class to clicked category if it exists
+          const targetFilter = document.querySelector(`.filter-category[data-filter="${filter}"]`);
           if (targetFilter) {
             targetFilter.classList.add('active');
           }
           
           // Filter projects
-          projectCards.forEach(card => {
-            if (filter === 'all') {
-              card.classList.remove('hidden');
-              setTimeout(() => {
-                card.classList.add('animate-in');
-              }, 10);
-            } else {
+          if (filter === 'all' || !filter) {
+            showAllProjects();
+          } else {
+            projectCards.forEach(card => {
               // For category filtering, check data-categories attribute
               if (filterType === 'category') {
                 const categories = card.getAttribute('data-categories').split(',');
@@ -399,8 +424,8 @@
                   card.classList.remove('animate-in');
                 }
               }
-            }
-          });
+            });
+          }
         }
         
         // Check URL for parameters
@@ -416,9 +441,12 @@
           viewToggle.classList.add('list');
         }
         
+        // Show all projects by default
+        showAllProjects();
+        
         // Apply filter if in URL
         if (filterParam) {
-          // Check if filter exists or default to 'all'
+          // Check if filter exists
           const filterExists = [...filterCategories].some(
             el => el.getAttribute('data-filter') === filterParam
           );
@@ -426,7 +454,8 @@
           if (filterExists) {
             filterProjects(filterParam, filterTypeParam);
           } else {
-            filterProjects('all', 'category');
+            // If filter doesn't exist, show all projects
+            showAllProjects();
             // Update URL to remove invalid filter
             const url = new URL(window.location);
             url.searchParams.delete('filter');
@@ -449,14 +478,25 @@
             window.history.pushState({}, '', url);
           });
         });
-        navCategories.forEach(category => {
-          category.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            if (filter === 'portfolio') {
+        
+        // Handle navigation clicks
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Get the page to navigate to
+            const page = this.getAttribute('data-page');
+            
+            // Navigate to the appropriate page
+            if (page === 'portfolio') {
               window.location.href = 'index.html';
-            } else if (filter === 'resume') {
+            } else if (page === 'resume') {
               window.location.href = 'resume.html';
-            } else if (filter === 'contact') {
+            } else if (page === 'contact') {
               window.location.href = 'contact.html';
             }
           });
@@ -474,6 +514,16 @@
           // Update URL with view parameter without reloading the page
           const url = new URL(window.location);
           url.searchParams.set('view', isListView ? 'list' : 'grid');
+          
+          // Preserve any current filter
+          const currentFilter = document.querySelector('.filter-category.active');
+          if (currentFilter) {
+            const filter = currentFilter.getAttribute('data-filter');
+            const filterType = currentFilter.getAttribute('data-filter-type') || 'category';
+            url.searchParams.set('filter', filter);
+            url.searchParams.set('filterType', filterType);
+          }
+          
           window.history.pushState({}, '', url);
         });
         

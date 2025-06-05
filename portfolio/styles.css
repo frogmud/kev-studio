@@ -166,6 +166,15 @@ h3 {
   padding: 0;
   margin: 0;
   gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.filter-divider {
+  color: var(--border-color);
+  margin: 0 var(--spacing-md);
+  align-self: center;
+  opacity: 0.5;
+  font-weight: 300;
 }
 
 .filter-category {
@@ -182,6 +191,32 @@ h3 {
 }
 
 .filter-category.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--spacing-lg);
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link.active {
   color: var(--primary-color);
   font-weight: 600;
 }
@@ -208,6 +243,7 @@ h3 {
   background-color: var(--light-gray);
   color: var(--dark-gray);
   transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
 }
 
 .project-controls .filter-categories .filter-category:hover {
@@ -219,6 +255,23 @@ h3 {
   background-color: var(--accent-color);
   color: white;
   font-weight: 600;
+  border-color: var(--accent-color);
+}
+
+.project-controls .filter-categories .filter-category[data-filter-type="tag"] {
+  background-color: var(--background-color);
+  border: 1px dashed var(--border-color);
+}
+
+.project-controls .filter-categories .filter-category[data-filter-type="tag"]:hover {
+  background-color: var(--light-gray);
+  border-style: solid;
+}
+
+.project-controls .filter-categories .filter-category[data-filter-type="tag"].active {
+  background-color: var(--accent-color);
+  color: white;
+  border: 1px solid var(--accent-color);
 }
 
 .project-grid {
@@ -285,9 +338,17 @@ h3 {
 /* Always show project details in list view */
 .list-view .project-card .project-tags,
 .list-view .project-card p {
-  display: block;
+  display: flex;
   opacity: 1;
   max-height: initial;
+}
+
+/* Ensure project tags display properly in list view */
+.list-view .project-card .project-tags {
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .project-image {
@@ -547,6 +608,21 @@ h3 {
   background-color: var(--light-gray);
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.project-tag:hover {
+  background-color: var(--border-color);
+  color: var(--primary-color);
+}
+
+/* Project tags in list view always visible */
+.list-view .project-card .project-tags {
+  max-height: 100px;
+  opacity: 1;
+  margin: var(--spacing-xs) 0;
 }
 
 /* Footer Styles */
@@ -931,18 +1007,12 @@ footer {
   }
   
   .list-view .project-card {
-    flex-direction: column;
-    height: auto;
+    grid-template-columns: 200px 1fr; /* Adjust size for tablet */
   }
   
-  .list-view .project-image {
-    flex: 0 0 200px; /* Fixed height in column layout */
-    width: 100%;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .filter-categories {
-    display: none;
+  /* Always keep top navigation visible */
+  .sticky-nav .nav-links {
+    display: flex;
   }
   
   .sticky-nav-content {
@@ -957,6 +1027,31 @@ footer {
   .view-toggles {
     display: flex;
     gap: 8px;
+  }
+  
+  /* Make project controls responsive */
+  .project-controls .filter-categories {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 80%;
+  }
+  
+  .filter-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Stack layout for list view on smaller screens */
+  .list-view .project-card {
+    grid-template-columns: 1fr; /* Single column */
+    gap: var(--spacing-md);
+  }
+  
+  .list-view .project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-height: 200px;
   }
 }
 
@@ -1021,8 +1116,18 @@ footer {
   }
   
   .sticky-nav-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-sm);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    gap: var(--spacing-md);
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
   }
   
   .project-controls {
@@ -1088,6 +1193,24 @@ footer {
     max-height: 50px;
     opacity: 1;
     margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Compact navigation on mobile */
+  .sticky-nav-content {
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .nav-links {
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    padding: var(--spacing-xs);
+  }
+  
+  .sticky-nav-logo span {
+    font-size: 0.9rem;
   }
 }
 
