@@ -274,6 +274,22 @@ h3 {
   border: 1px solid var(--accent-color);
 }
 
+/* Clear filters button */
+#clear-filters {
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 20px;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#clear-filters:hover {
+  background-color: var(--light-gray);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
