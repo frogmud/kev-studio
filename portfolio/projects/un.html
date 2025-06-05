@@ -98,7 +98,6 @@
                 <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
             </ul>
             <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -119,7 +118,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -133,13 +132,7 @@
                         <h3>Role</h3>
                         <p>Design, Logo, Digital, Print</p>
                     </div>
-                </div>
-                <div class="project-tags-container">
-                    <h3>Tags</h3>
-                    <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                    </div>
-                </div>
+            </div>
             </div>
             
             <div class="project-description">
@@ -212,7 +205,7 @@
         </div>
 
         <div class="project-navigation">
-            <a href="tryitout.html" class="nav-link prev">
+            <a href="autonomy_capital.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
@@ -303,19 +296,6 @@
                 }
             });
         });
-
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
     });
     </script>
 </body>

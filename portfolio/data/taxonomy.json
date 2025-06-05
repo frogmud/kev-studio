@@ -46,6 +46,11 @@
       "id": "print",
       "name": "Print",
       "type": "discipline"
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "type": "discipline"
     }
   ],
   "projects": [
@@ -89,7 +94,7 @@
       "id": "onity",
       "title": "Onity",
       "categories": ["digital"],
-      "tags": ["animation"]
+      "tags": ["animation", "motion", "branding"]
     },
     {
       "id": "sylvamo",
@@ -155,7 +160,7 @@
       "id": "tryitout_with_major_league_wiffleball",
       "title": "Try It Out with Major League Wiffleball",
       "categories": ["digital"],
-      "tags": ["web"]
+      "tags": ["web", "branding", "print", "motion"]
     },
     {
       "id": "museum",

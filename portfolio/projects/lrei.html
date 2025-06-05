@@ -95,7 +95,6 @@
                 <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
             </ul>
             <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -119,7 +118,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -133,15 +132,6 @@
                         <h3>Role</h3>
                         <p>Design Lead, Print, Motion</p>
                     </div>
-                </div>
-                <div class="project-tags-container">
-                    <h3>Tags</h3>
-                    <div class="project-tags">
-                        <span class="project-tag" data-tag="design" onclick="window.location.href='../index.html?filter=design&filterType=category'">Design</span>
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-                        <span class="project-tag" data-tag="strategy" onclick="window.location.href='../index.html?filter=strategy&filterType=tag'">Strategy</span>
-                    </div>
-                </div>
             </div>
             
             <div class="project-description">
@@ -221,14 +211,6 @@
                         <figure class="timeline-figure">
                             <div class="timeline-image-container">
                                 <img loading="lazy" src="../images/optimized/lrei/LREI_1_BookFlipCut_0605.gif" alt="LREI viewbook page animation" class="timeline-image">
-                                <picture>
-                                    <source srcset="../images/lrei/static/lrei_viewbook_static_frame20.webp" type="image/webp">
-                                    <img loading="lazy" src="../images/lrei/static/lrei_viewbook_static_frame20.jpg" alt="LREI viewbook detail view" class="timeline-image">
-                                </picture>
-                                <picture>
-                                    <source srcset="../images/lrei/static/lrei_viewbook_static_frame30.webp" type="image/webp">
-                                    <img loading="lazy" src="../images/lrei/static/lrei_viewbook_static_frame30.jpg" alt="LREI viewbook spread" class="timeline-image">
-                                </picture>
                             </div>
                             <figcaption>Final viewbook showing page spreads and flow</figcaption>
                         </figure>
@@ -335,19 +317,6 @@
                 }
             });
         });
-
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
     });
     </script>
 </body>

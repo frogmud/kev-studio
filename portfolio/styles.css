@@ -619,9 +619,35 @@ h3 {
   border: 1px solid transparent;
 }
 
+/* Project detail page tags - ensure visibility in both light and dark modes */
+.project-info .project-tag {
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+[data-theme="dark"] .project-info .project-tag {
+  background-color: var(--light-gray);
+  border-color: var(--border-color);
+  color: var(--primary-color);
+}
+
 .project-tag:hover {
   background-color: var(--border-color);
   color: var(--primary-color);
+}
+
+.project-info .project-tag:hover {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
 }
 
 /* Project tags in list view always visible */
@@ -781,7 +807,29 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.project-tags-container {
   margin-bottom: var(--spacing-lg);
+}
+
+.project-tags-container h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
 }
 
 .metadata-item h3 {

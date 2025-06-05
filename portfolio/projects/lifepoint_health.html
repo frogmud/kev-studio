@@ -97,7 +97,6 @@
                 <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
             </ul>
             <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -118,7 +117,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -132,14 +131,7 @@
                         <h3>Role</h3>
                         <p>Design Lead, Logo, Motion, Environments, Print</p>
                     </div>
-                </div>
-                <div class="project-tags-container">
-                    <h3>Tags</h3>
-                    <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
-                    </div>
-                </div>
+            </div>
             </div>
             
             <div class="project-description">
@@ -175,11 +167,9 @@
                 
                 <h4>Animated Brand Elements</h4>
                 <p>Created a suite of animated brand assets that brought the identity system to life across digital screens in hospital facilities and corporate headquarters.</p>
-                <div class="video-container">
-                    <video controls preload="metadata">
-                        <source src="../videos/lifepoint/03_Lifepoint_AnimatedAssets_YG21_Grzejka.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="image-grid">
+                    <img loading="lazy" src="../images/optimized/lifepoint/z07_DigitalPoster-copy-2.gif" alt="Lifepoint Health digital poster animation" class="timeline-image">
+                    <img loading="lazy" src="../images/optimized/lifepoint/LifepointIphoneMockup.gif" alt="Lifepoint Health mobile animation" class="timeline-image">
                 </div>
               </div>
 <div class="timeline-item">
@@ -195,13 +185,7 @@
                 <img loading="lazy" src="../images/optimized/lifepoint/Billboard_Cycle.gif" alt="Lifepoint Health billboards animation" class="timeline-image">
                 
                 <h4>Brand Guidelines</h4>
-                <p>Created detailed brand guidelines to ensure consistent application across all touchpoints. The guidelines video presentation walked stakeholders through key elements of the identity system.</p>
-                <div class="video-container">
-                    <video controls preload="metadata">
-                        <source src="../videos/lifepoint/06_Lifepoint_Guidelines_YG21_Grzejka.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <p>Created detailed brand guidelines to ensure consistent application across all touchpoints. The guidelines presentation walked stakeholders through key elements of the identity system.</p>
                 
                 <img loading="lazy" src="../images/optimized/lifepoint/LP_Guides_Animated_110422.gif" alt="Lifepoint Health brand guidelines animation" class="timeline-image">
               </div>
@@ -324,19 +308,6 @@ Strategy: Simon Thackway, Jonathan Paisner</p>
                 }
             });
         });
-
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
     });
     </script>
 </body>
