@@ -1425,3 +1425,17 @@ footer {
 .timeline-figure figcaption a:hover {
   text-decoration: underline;
 }
+
+/* Responsive video container */
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: var(--spacing-md) auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
