@@ -236,7 +236,7 @@ ${stats.keyProjects.map(project => `   - ${project.title}: ${project.description
 
 The portfolio showcases Kevin Grzejka's work as a designer from New Jersey, focusing primarily on branding, website design, and animation for corporate clients.
 
-CONTACT: grzejkakevin@gmail.com
+CONTACT: kevin@kev.studio
 
 Downloaded on: ${date}`;
   
@@ -708,7 +708,7 @@ async function createHtmlGallery(images, projects) {
             <div class="footer-content">
                 <p>© ${new Date().getFullYear()} Kevin Grzejka. All rights reserved.</p>
                 <p>Portfolio downloaded from kev.studio on ${new Date().toLocaleDateString()}</p>
-                <p>Contact: <a href="mailto:grzejkakevin@gmail.com">grzejkakevin@gmail.com</a></p>
+                <p>Contact: <a href="mailto:kevin@kev.studio">kevin@kev.studio</a></p>
             </div>
         </div>
     </footer>

@@ -157,7 +157,7 @@ This portfolio contains ${projectDirs.length} projects and ${imageFiles.length} 
 
 ## Contact
 
-grzejkakevin@gmail.com
+kevin@kev.studio
 
 ---
 
