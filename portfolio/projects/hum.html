@@ -118,7 +118,6 @@
                 <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
             </ul>
             <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -139,7 +138,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -157,8 +156,9 @@
                 <div class="project-tags-container">
                     <h3>Tags</h3>
                     <div class="project-tags">
+                        <span class="project-tag" data-tag="digital" onclick="window.location.href='../index.html?filter=digital&filterType=tag'">digital</span>
                         <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="strategy" onclick="window.location.href='../index.html?filter=strategy&filterType=tag'">Strategy</span>
+                        <span class="project-tag" data-tag="strategy" onclick="window.location.href='../index.html?filter=strategy&filterType=tag'">Strategy</span>
                     </div>
                 </div>
             </div>
@@ -343,19 +343,3 @@
             });
         });
 
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
-    });
-    </script>
-</body>
-</html>

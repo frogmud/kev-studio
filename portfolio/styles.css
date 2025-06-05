@@ -938,7 +938,7 @@ footer {
   align-items: center;
 }
 
-.theme-toggle, .view-toggle, .info-toggle {
+.theme-toggle, .view-toggle {
   width: 44px;
   height: 24px;
   background-color: var(--light-gray);
@@ -972,11 +972,6 @@ footer {
 
 .view-toggle.list::before {
   left: calc(100% - 20px);
-}
-
-.info-toggle.open {
-  background-color: var(--primary-color);
-  color: #fff;
 }
 
 .theme-toggle .sun,
