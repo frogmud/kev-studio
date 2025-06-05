@@ -48,6 +48,18 @@ This script:
 - Creates static PNG and WebP versions of these frames
 - Names them with the "_still" suffix
 
+### Video Optimization
+
+For MP4 files used in project pages, run the video still extraction script:
+
+```bash
+node tools/extract-video-stills.js
+```
+
+This script scans the `portfolio/images` directory for `.mp4` files, extracts the
+first frame using `ffmpeg`, and saves PNG and WebP previews in the `optimized/` and
+`webp/` directories.
+
 ## HTML Implementation
 
 ### Standard Images
@@ -66,6 +78,17 @@ For large animations, use this pattern:
 <figure class="timeline-figure">
   <img loading="lazy" src="../images/optimized/project/animation_still.png" alt="Description" class="timeline-image">
   <figcaption><a href="../images/optimized/project/animation.gif" target="_blank">View Animation</a></figcaption>
+</figure>
+```
+
+### Videos with Static Previews
+
+Use the same pattern for MP4 files processed by `extract-video-stills.js`:
+
+```html
+<figure class="timeline-figure">
+  <img loading="lazy" src="../images/optimized/project/video_still.png" alt="Description" class="timeline-image">
+  <figcaption><a href="../images/project/video.mp4" target="_blank">View Video</a></figcaption>
 </figure>
 ```
 
