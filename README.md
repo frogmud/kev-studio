@@ -26,7 +26,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 
 1. Clone this repository: `git clone https://github.com/frogmud/kev-studio.git`
 2. Install dependencies: `npm install`
-3. Run the portfolio: Open `portfolio/index.html` in your browser or use `node serve.js` for local development
+3. Run the portfolio: Open `portfolio/index.html` in your browser or use `npm run serve` for local development
 
 ## Development Commands
 
@@ -38,7 +38,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 - `npm run generate-pages`: Generate project pages
 - `npm run optimize-images`: Convert images to optimized WebP versions
 - `node tools/extract-video-stills.js`: Create preview images for MP4 files
-- `node serve.js`: Run a local development server
+- `npm run serve`: Run a local development server
 
 ## License
 
