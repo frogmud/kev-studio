@@ -96,10 +96,8 @@
                     <a href="../index.html">Kevin Grzejka</a>
                 </div>
                 <ul class="filter-categories">
-                    <!-- Categories will be primary filters -->
-                    <li class="filter-category" data-filter="all" data-filter-type="category">All</li>
-                    <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
-                    <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
+                <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                <li class="filter-category" data-filter="lets-work" data-filter-type="category">About</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -247,8 +245,7 @@
                     </div>
                     <div class="footer-links right-links">
                         <a href="../lets-work-together.html" class="footer-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg>
-                            Let's work together
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg> About
                         </a>
                     </div>
                 </div>
@@ -290,18 +287,19 @@
                 localStorage.setItem('theme', theme);
             });
             
-            // Filter category links to main page with proper filter type
-            const filterCategories = document.querySelectorAll('.filter-category');
+            // Nav category links
+        const navCategories = document.querySelectorAll('nav .filter-category');
 
-            filterCategories.forEach(category => {
-                category.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    const filterType = this.getAttribute('data-filter-type') || 'category';
-                    
-                    // Navigate to index with filter parameters
-                    window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
-                });
+        navCategories.forEach(category => {
+            category.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                if (filter === 'portfolio') {
+                    window.location.href = '../index.html';
+                } else if (filter === 'lets-work') {
+                    window.location.href = '../lets-work-together.html';
+                }
             });
+        });
         });
     </script>
 </body>
