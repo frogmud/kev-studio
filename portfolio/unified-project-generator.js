@@ -118,7 +118,7 @@ async function generateUnifiedProjectPages() {
           contentSection = contentSection.trim();
           const paragraphs = contentSection
             .split('\n\n')
-            .filter(p => p.trim() && !p.includes('©2025') && !p.includes('grzejkakevin@gmail.com'))
+            .filter(p => p.trim() && !p.includes('©2025') && !p.includes('kevin@kev.studio'))
             .map(p => `<p>${p.trim()}</p>`)
             .join('\n');
           

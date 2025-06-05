@@ -38,7 +38,7 @@ A clean, modern portfolio site has been created to showcase Kevin's work:
 
 ## Contact
 
-grzejkakevin@gmail.com
+kevin@kev.studio
 
 ---
 

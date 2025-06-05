@@ -32,7 +32,7 @@ Branding for merger
 ## Fiserv
 [View Project Details](./projects/fiserv/info.md)
 
-## grzejkakevin@gmail.com
+## kevin@kev.studio
 [View Project Details](./projects/grzejkakevin_gmail.com/info.md)
 
 ## Hewitt-Oscar-Party

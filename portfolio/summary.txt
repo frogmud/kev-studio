@@ -45,6 +45,6 @@ We've organized content from kev.studio into a clean, accessible portfolio websi
 2. Run `npm run generate-pages` to regenerate all project pages
 3. Modify styles.css to change the visual appearance
 
-CONTACT: grzejkakevin@gmail.com
+CONTACT: kevin@kev.studio
 
 Last updated: June 2, 2025
