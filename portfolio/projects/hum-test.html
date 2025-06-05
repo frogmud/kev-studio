@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hum Capital Project - Kevin Grzejka Portfolio">
+    <title>Hum Capital Test | Kevin Grzejka Work</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        
+        .section {
+            margin: 40px 0;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 40px;
+        }
+        
+        .section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .image-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav visible">
+        <div class="container">
+            <div class="sticky-nav-content">
+                <div class="sticky-nav-logo">
+                    <a href="../index.html">Kevin Grzejka</a>
+                </div>
+                <ul class="filter-categories">
+                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">Let's work together</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="project-header">
+            <h1>Hum Capital (Test Page)</h1>
+            <p class="tagline">A better way to fund growth</p>
+        </div>
+        
+        <div class="image-wrapper">
+            <img src="../images/optimized/hum/Hum_01.png" alt="Hum Capital branding and logo">
+        </div>
+
+        <div class="project-metadata" style="display: flex; justify-content: space-between; max-width: 400px; margin: 20px 0;">
+            <div>
+                <h3>Year</h3>
+                <p>2021</p>
+            </div>
+            <div>
+                <h3>Client</h3>
+                <p>Hum Capital</p>
+            </div>
+            <div>
+                <h3>Role</h3>
+                <p>Logo, Design, UI/UX</p>
+            </div>
+        </div>
+        
+        <div class="project-description">
+            <p>Silicon Valley meets Wall Street in Hum's 'capital as a service' business model, designed to help SMBs raise money faster and more easily. A comprehensive rebrand provided 'Capital', as they were known, with a new name, logo, visual identity and website that capture their iconoclastic, AI-driven, ground-levelling proposition.</p>
+            <p>The identity system balances technological innovation with financial expertise, creating a distinctive brand voice in the crowded fintech space. A vibrant color palette and dynamic visual elements reflect Hum's mission to bring energy and accessibility to business funding.</p>
+            <p>As the lead designer overseeing logo, design and UI/UX, I collaborated closely with the Thackway McCord team throughout each phase of the project.</p>
+        </div>
+
+        <div class="section">
+            <h2>Discovery & strategy</h2>
+            <p>I partnered with strategists Simon Thackway and Jonathan Paisner to kick things off. The project began with extensive stakeholder interviews and market analysis to understand the fintech landscape and Capital's unique positioning. Key insights revealed the need for a brand that could stand out in a crowded market while communicating complex financial offerings in an approachable way.</p>
+            <div class="image-wrapper">
+                <img src="../images/optimized/hum/Hum_04.png" alt="Hum Capital strategy development">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Naming development</h2>
+            <p>Working with creative director Kat McCord and lead designer Bianca Seong, we explored new names. The naming process transformed "Capital" into the more distinctive and ownable "Hum." The new name evokes both technological connectivity and the constant flow of capital—central to the company's value proposition. It also carries connotations of activity, energy, and momentum.</p>
+            <div class="image-wrapper">
+                <img src="../images/optimized/hum/Hum_03.png" alt="Hum Capital naming development">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Logo & visual identity</h2>
+            <p>Bianca Seong executed the logo under Kat McCord's direction while I shaped the broader system. The visual identity system was designed to balance tech innovation with financial credibility. The logo features a distinctive wordmark with custom letterforms that convey both stability and forward momentum. A vibrant color palette of purples, blues, and teals creates a fresh look that stands apart from traditional financial blues and greens.</p>
+            <div class="image-wrapper">
+                <img src="../images/optimized/hum/Hum_02.png" alt="Hum Capital logo variants">
+            </div>
+        </div>
+
+        <div class="project-navigation" style="display: flex; justify-content: space-between; margin: 40px 0;">
+            <a href="l3harris.html" style="display: flex; align-items: center;">
+                <span style="margin-right: 8px;">←</span> Previous Project
+            </a>
+            <a href="thackway_mccord_pets.html" style="display: flex; align-items: center;">
+                Next Project <span style="margin-left: 8px;">→</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <hr>
+            <div style="display: flex; justify-content: space-between; padding: 20px 0;">
+                <div>
+                    <a href="mailto:grzejkakevin@gmail.com">grzejkakevin@gmail.com</a>
+                </div>
+                <div>
+                    <a href="../lets-work-together.html">About</a>
+                </div>
+            </div>
+            <p>©2025 SITE BY <a href="https://www.google.com/search?q=kevin+grzejka" target="_blank">KEVIN GRZEJKA</a></p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Nav category links
+        const navCategories = document.querySelectorAll('nav .filter-category');
+
+        navCategories.forEach(category => {
+            category.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                if (filter === 'portfolio') {
+                    window.location.href = '../index.html';
+                } else if (filter === 'lets-work') {
+                    window.location.href = '../lets-work-together.html';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
