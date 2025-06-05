@@ -839,8 +839,8 @@ footer {
   font-size: 0.85rem;
   color: var(--medium-gray);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .metadata-item p {

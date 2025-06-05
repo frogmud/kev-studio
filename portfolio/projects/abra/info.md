@@ -1,11 +1,11 @@
 # Abra
 
-Description: Brand refresh and responsive website for global payments company
+Description: Brand consolidation and responsive website for airline conglomerate
 Client: Abra
-Role: Design and development
+Role: Brand design lead
 Year: 2025
 URL: https://kev.studio/Abra
 Page Title: kev.studio - Abra
 
 --- CONTENT ---
-Abra's redesign introduced a bold visual identity paired with a flexible web design system. Modular layouts showcase key product features while maintaining clarity across devices. Interactive prototypes guided animation and transitions, resulting in a dynamic user experience that reflects Abra's innovative approach to digital finance.
+Abra's rebrand united several regional airlines under a single banner while nodding to the heritage of Pan Am. As brand design lead, I worked closely with the Jones & Co. team to craft a flexible identity system and responsive site. Interactive prototypes guided our animation and transition work, ensuring the experience feels modern without revealing sensitive executive details.
