@@ -1,38 +1,35 @@
-# Node.js dependencies
+# Node dependencies
 node_modules/
 
-# Environment files
+# Build files
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Large asset directories - to be managed separately
+all_images_backup/
+archive/
+kev-studio-backup-manual/
+temp_backup/
+
+# Environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# macOS system files
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
-
-# Logs
-logs
-*.log
+# Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Build and output directories
-/dist
-/build
-/out
-/.next
-
-# Temporary files
-.tmp
-.temp
-
-# Editor directories and files
-.idea
-.vscode
-*.swp
-*.swo
+EOL < /dev/null
