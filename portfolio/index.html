@@ -307,6 +307,25 @@
                 </div>
 
                 
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web">
+                    <div class="project-image">
+                        <picture>
+                            <source srcset="images/webp/autonomy_capital/AUTONOMY_Cover.webp" type="image/webp">
+                            <img loading="lazy" src="images/optimized/autonomy_capital/AUTONOMY_Cover.png" alt="Autonomy Capital">
+                        </picture>
+                    </div>
+                    <div class="project-content">
+                        <h3>Autonomy Capital</h3>
+                        <a href="projects/autonomy_capital.html" class="project-link">View project →</a>
+                        <div class="project-tags">
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
+                        </div>
+                        <p>Brand identity for investment firm</p>
+                    </div>
+                </div>
+
                 <div class="project-card landscape" data-categories="digital,print" data-tags="branding,animation">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/un/UN_1.png" alt="United Nations">
@@ -407,8 +426,8 @@
                     card.classList.add('animate-in');
                   }, 10);
                 } else {
-                  card.classList.add('hidden');
                   card.classList.remove('animate-in');
+                  card.classList.add('hidden');
                 }
               }
               // For tag filtering, check data-tags attribute (if it exists)
@@ -420,8 +439,8 @@
                     card.classList.add('animate-in');
                   }, 10);
                 } else {
-                  card.classList.add('hidden');
                   card.classList.remove('animate-in');
+                  card.classList.add('hidden');
                 }
               }
             });

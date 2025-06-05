@@ -328,6 +328,12 @@ h3 {
   padding-bottom: var(--spacing-lg);
 }
 
+/* Override portrait/landscape distinction in list view */
+.list-view .project-card.portrait .project-image,
+.list-view .project-card.landscape .project-image {
+  aspect-ratio: auto;
+}
+
 .list-view .project-card p,
 .list-view .project-card .project-tags {
   max-height: 60px;
@@ -1254,6 +1260,11 @@ footer {
 /* Hidden state for filtering */
 .hidden {
   display: none;
+}
+
+/* Ensure hidden class works in list view */
+.list-view .project-card.hidden {
+  display: none !important;
 }
 
 /* Timeline styles for project pages */
