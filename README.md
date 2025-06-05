@@ -14,17 +14,19 @@ This repository contains the complete portfolio website and tools for Kevin Grze
   - `organize-portfolio.js`: Organize downloaded content
   - `analyze-and-download.js`: Analyze and download portfolio content
   - And more utility scripts
-  
-- **archive/**: Archived files in compressed format
-  - Raw assets from kev.studio
-  - Original project images and information
-  - Reference files and resources
+
+## Branch Structure
+
+- **main**: Primary branch with the latest stable version of the portfolio
+- **pending-assets-and-scripts**: Branch containing utility scripts and tools for portfolio management
+- **optimized-images**: Branch with placeholder for optimized image assets
+- Various feature branches prefixed with `codex/`: Individual feature implementations
 
 ## Getting Started
 
-1. Clone this repository
+1. Clone this repository: `git clone https://github.com/frogmud/kev-studio.git`
 2. Install dependencies: `npm install`
-3. Run the portfolio: Open `portfolio/index.html` in your browser
+3. Run the portfolio: Open `portfolio/index.html` in your browser or use `node serve.js` for local development
 
 ## Development Commands
 
@@ -36,6 +38,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 - `npm run generate-pages`: Generate project pages
 - `npm run optimize-images`: Convert images to optimized WebP versions
 - `node tools/extract-video-stills.js`: Create preview images for MP4 files
+- `node serve.js`: Run a local development server
 
 ## License
 
