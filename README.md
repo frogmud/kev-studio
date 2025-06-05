@@ -46,5 +46,5 @@ This codebase is licensed under MIT, but all design assets and content remain th
 
 ## Contact
 
-Kevin Grzejka: grzejkakevin@gmail.com
+Kevin Grzejka: kevin@kev.studio
 

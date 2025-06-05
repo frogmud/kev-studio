@@ -96,7 +96,7 @@ sample APL code below by alex weiner is here
 
 Programming financial reform
 
-grzejkakevin@gmail.com
+kevin@kev.studio
 
 
 	
