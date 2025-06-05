@@ -3,6 +3,7 @@
 ## Metadata
 Year: 2018
 Client: Major League Wiffleball Tournament
+Agency: Self
 Role: Art direction, brand design, print, motion, ace pitcher
 Categories: Digital
 Tags: Web, Branding
