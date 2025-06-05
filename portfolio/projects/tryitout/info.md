@@ -8,17 +8,15 @@ Categories: Digital
 Tags: Web, Branding
 
 ## Description
-Five adult men play in a wiffleball tournament on Long Island; will branding help give them the edge they need?
-
-The logo itself is a traditional-feeling cursive sports logo, aligned by the identical 't' used at the beginning, middle, and end. Bright green as the team colors works to reflect the feeling of playing ball in the yard.
-
-Despite our branding efforts, we lost in the semi-finals to 16-year olds.
+Tryitout is a semi-professional wiffleball league formed by friends in Brooklyn. As art director, brand designer, motion designer, and ace pitcher, I oversaw the entire look and feel while leading the team on the field. The logo is a traditional-feeling cursive sports mark, aligned by the identical "t" used at the beginning, middle, and end. Bright green reflects the feeling of playing ball in the yard. Despite our branding efforts, we lost in the semi-finals to a squad of 16-year-olds.
 
 ## Timeline
-- **Challenge**: Create an identity for an amateur wiffleball team competing in a tournament
-- **Approach**: Develop a distinctive sports brand with traditional baseball aesthetics
-- **Deliverables**: Logo design, team shirts, custom cards, website graphics
-- **Results**: Enhanced team spirit and cohesion, though ultimately defeated by superior teen athleticism
+- **Brand identity development**: The visual identity process began with exploring typography that could convey both athleticism and a sense of community. The resulting logo features bold, condensed lettering with a distinctive angle suggesting forward momentum, complemented by a palette of primary colors reminiscent of classic baseball design.
+- **Trading card system**: The most distinctive aspect of the brand was the player trading card system. Each participant—Kevin, Dennis, Lats and Leela—received a personalized card with custom stats and photography, reinforcing team identity and creating collectible memorabilia.
+- **Apparel & merchandise**: Jerseys and t-shirts were produced to further establish the league's identity. These items carried the logo and colors consistently, building team spirit and attracting attention.
+- **Digital media & promotion**: We set up a website and social channels to share schedules, results and highlight videos. The digital content mirrored the brand's visual language across all touchpoints.
+- **Game day experience**: Branded scorecards, signage and other materials turned casual park games into more structured events, enhancing the atmosphere for players and spectators.
+- **Impact & community building**: What began as a weekend activity grew into a recognizable brand with its own community, showing how thoughtful design can transform grassroots recreation.
 
 ## Images
 - ![Team Logo Evolution](/images/tryitout/tryitout_05_logoevol-03.gif)
