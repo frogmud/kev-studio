@@ -1428,14 +1428,27 @@ footer {
 
 /* Responsive video container */
 .video-container {
-  width: 100%;
-  max-width: 800px;
-  margin: var(--spacing-md) auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-item .video-container {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: var(--spacing-md);
 }
 
