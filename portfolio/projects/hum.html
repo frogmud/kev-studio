@@ -9,68 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Timeline styles for project pages */
-        .project-timeline {
-            margin: var(--spacing-xl) 0;
-            position: relative;
-            padding-left: 50px;
-        }
-
-        .project-timeline::before {
-            content: '';
-            position: absolute;
-            top: 8px;
-            bottom: 0;
-            left: 8px;
-            width: 0.5px;
-            background-color: #e2e8f0;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -46px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--accent-color);
-            border: 2px solid white;
-            box-shadow: 0 0 0 1px #e2e8f0;
-        }
-
-        .timeline-item h3 {
-            margin-top: 0;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .timeline-item p {
-            margin-bottom: var(--spacing-md);
-        }
-
-        .timeline-figure {
-            margin: var(--spacing-md) 0;
-        }
-
-        .timeline-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        figcaption {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: var(--spacing-xs);
-            font-style: italic;
-        }
-
         .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -86,18 +24,10 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
-            .project-timeline {
-                padding-left: 36px;
-            }
-
-            .timeline-item::before {
-                left: -32px;
-            }
-            
             .image-grid, .image-grid.three-columns {
                 grid-template-columns: 1fr;
             }
@@ -182,13 +112,13 @@
                         <h3>Logo & visual identity</h3>
                         <p>Bianca Seong executed the logo under Kat McCord's direction while I shaped the broader system. The visual identity system was designed to balance tech innovation with financial credibility. The logo features a distinctive wordmark with custom letterforms that convey both stability and forward momentum. A vibrant color palette of purples, blues, and teals creates a fresh look that stands apart from traditional financial blues and greens.</p>
                         <figure class="timeline-figure">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_motion1.gif" alt="Hum Capital logo animation" class="timeline-image">
-                            <figcaption>Logo animation showcasing brand energy</figcaption>
+                            <img loading="lazy" src="../images/optimized/hum/Hum_02.png" alt="Hum Capital logo design" class="timeline-image">
+                            <figcaption>Logo design showcasing brand identity</figcaption>
                         </figure>
-                        <div class="image-grid">
-                            <img loading="lazy" src="../images/optimized/hum/Hum_02.png" alt="Hum Capital logo variants" class="timeline-image">
+                        <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_05.png" alt="Hum Capital color palette" class="timeline-image">
-                        </div>
+                            <figcaption>Color palette development</figcaption>
+                        </figure>
                     </div>
                     
                     <div class="timeline-item">
@@ -221,10 +151,14 @@
                     <div class="timeline-item">
                         <h3>Brand application system</h3>
                         <p>Our design team produced versatile templates and collateral. A comprehensive set of brand applications was developed to ensure consistent implementation across all touchpoints. This included digital templates, presentation decks, social media assets, and print collateral that all work together to reinforce the Hum brand identity.</p>
-                        <div class="image-grid">
+                        <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_06.png" alt="Hum Capital brand applications" class="timeline-image">
+                            <figcaption>Brand applications across various touchpoints</figcaption>
+                        </figure>
+                        <figure class="timeline-figure">
                             <img loading="lazy" src="../images/optimized/hum/Hum_07.png" alt="Hum Capital stationery design" class="timeline-image">
-                        </div>
+                            <figcaption>Stationery design system</figcaption>
+                        </figure>
                     </div>
                     
                     <div class="timeline-item">
