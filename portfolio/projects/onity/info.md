@@ -12,12 +12,14 @@ Year: 2025
 --- CONTENT ---
 Onity provides digital locking systems for hotels and businesses. For this project I created a short logo animation exploring energy flow and simplicity.
 
+Although the overall direction was led by a studio art director, my animation and storyboarding role included shaping the final motion sequence and preparing case study assets—including the brand animation—before leaving the studio midway through the engagement.
+
 --- TIMELINE ---
-### Concept Development
+### Concept development
 Sketched early ideas and built a storyboard for the motion.
 
 ### Animation
 Animated the logo in After Effects and refined timing with the client.
 
-### Early Concepts
+### Early concepts
 Created styleframes and animation tests to explore motion before finalizing.
