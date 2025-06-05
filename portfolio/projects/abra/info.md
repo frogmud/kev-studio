@@ -2,6 +2,7 @@
 
 Description: Brand consolidation and responsive website for airline conglomerate
 Client: Abra
+Agency: Self
 Role: Brand design lead
 Year: 2025
 URL: https://kev.studio/Abra

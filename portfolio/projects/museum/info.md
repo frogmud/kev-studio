@@ -2,6 +2,7 @@
 
 Description: Collection of paintings on canvas and board created with acrylic, watercolor, and oil.
 Client: Personal
+Agency: Self
 Role: Artist
 Year: 2018-2024
 

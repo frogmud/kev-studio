@@ -2,6 +2,7 @@
 
 Description: A short story written by my brother led to a deep dive into character animation.
 Client: Eyes Above
+Agency: Self
 Role: Direction, Illustration, Design, Motion, Game Design
 Year: 2022
 

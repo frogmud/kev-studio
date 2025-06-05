@@ -3,6 +3,7 @@
 ## Metadata
 Year: 2020
 Client: Keeley Gould
+Agency: Thackway McCord
 Role: Design, Motion, Programming
 Categories: Digital
 Tags: Animation
