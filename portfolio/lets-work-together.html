@@ -288,9 +288,9 @@
                 <div class="sticky-nav-logo">
                     <span>Kevin Grzejka</span>
                 </div>
-                <ul class="filter-categories">
-                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
-                    <li class="filter-category active" data-filter="lets-work" data-filter-type="category">Let's work together</li>
+                <ul class="nav-links">
+                    <li class="nav-link" data-page="portfolio">Work</li>
+                    <li class="nav-link active" data-page="lets-work">Let's work together</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -305,7 +305,7 @@
     <main class="container resume-container">
         <div class="resume-header">
             <a href="files/kevin-grzejka-resume-062025.pdf" class="resume-download" download>
-                Download PDF Version
+                Download PDF of resume
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
@@ -315,7 +315,7 @@
         </div>
 
         <section class="resume-section">
-            <h2>Work</h2>
+            <h2>Experience</h2>
             
             <div class="experience-item">
                 <div class="experience-header">
@@ -376,26 +376,26 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3 class="experience-title">Design Intern</h3>
-                        <div class="experience-company"><a href="https://www.thackwaymccord.com" target="_blank">Thackway McCord</a></div>
+                        <h3 class="experience-title">Art Teacher</h3>
+                        <div class="experience-company"><a href="https://pinotspalette.com" target="_blank">Pinot's Palette</a></div>
                     </div>
-                    <div class="experience-date">04/2018 → 07/2018</div>
+                    <div class="experience-date">02/2018 → 09/2018</div>
                 </div>
                 <div class="experience-description">
-                    <p>Assisted with logo designs and presentations for client meetings. Built concept mood boards and gathered visual research. Contributed to digital development of brand identities and helped prepare brand guidelines.</p>
+                    <p>Taught art classes to groups of 20-40 people. Adapted painting techniques for different skill levels while maintaining a fun, creative environment. Guided participants through complex paintings with step-by-step instructions.</p>
                 </div>
             </div>
             
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <h3 class="experience-title">Art Teacher</h3>
-                        <div class="experience-company"><a href="https://oneriverschool.com" target="_blank">One River School</a></div>
+                        <h3 class="experience-title">Digital Designer</h3>
+                        <div class="experience-company"><a href="https://www.thackwaymccord.com" target="_blank">Thackway McCord</a></div>
                     </div>
-                    <div class="experience-date">09/2017 → 04/2018</div>
+                    <div class="experience-date">04/2018 → 07/2018</div>
                 </div>
                 <div class="experience-description">
-                    <p>Developed and taught art curriculum to students ages 5-16. Led digital art classes focused on graphic design, digital illustration, and creative software. Created sample projects and course materials.</p>
+                    <p>Created logo designs and presentations for client meetings. Built concept mood boards and gathered visual research for brand identity projects. Contributed to digital development of brand systems and helped prepare brand guidelines.</p>
                 </div>
             </div>
             
@@ -408,7 +408,20 @@
                     <div class="experience-date">07/2015 → 06/2016</div>
                 </div>
                 <div class="experience-description">
-                    <p>Created and maintained financial document templates and designs. Collaborated with QA team on testing and bug fixes. Supported transition of legacy systems while maintaining document integrity.</p>
+                    <p>Created and maintained financial document templates using APL, C#, and Postscript. Collaborated with QA team on testing and bug fixes. Supported transition of legacy systems while maintaining document integrity and design consistency.</p>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Design Intern</h3>
+                        <div class="experience-company"><a href="https://www.rutgers.edu" target="_blank">Rutgers University</a></div>
+                    </div>
+                    <div class="experience-date">09/2014 → 07/2015</div>
+                </div>
+                <div class="experience-description">
+                    <p>Designed promotional materials for university events and programs. Created digital graphics and layouts for web and print. Collaborated with department staff on visual communications and brand consistency.</p>
                 </div>
             </div>
         </section>
@@ -572,16 +585,16 @@
     <script>
         // Navigation links functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const filterCategories = document.querySelectorAll('.filter-category');
+            const navLinks = document.querySelectorAll('.nav-link');
             
-            filterCategories.forEach(category => {
-              category.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
+            navLinks.forEach(link => {
+              link.addEventListener('click', function() {
+                const page = this.getAttribute('data-page');
                 
-                // Handle navigation based on data-filter value
-                if (filter === 'portfolio') {
+                // Handle navigation based on data-page value
+                if (page === 'portfolio') {
                   window.location.href = 'index.html';
-                } else if (filter === 'lets-work') {
+                } else if (page === 'lets-work') {
                   window.location.href = 'lets-work-together.html';
                 }
               });

@@ -71,9 +71,9 @@
                 <div class="sticky-nav-logo">
                     <a href="../index.html">Kevin Grzejka</a>
                 </div>
-                <ul class="filter-categories">
-                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
-                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">Let's work together</li>
+                <ul class="nav-links">
+                    <li class="nav-link" data-page="portfolio">Work</li>
+                    <li class="nav-link" data-page="lets-work">Let's work together</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -109,6 +109,10 @@
                     <div class="metadata-item">
                         <h3>Role</h3>
                         <p>{{PROJECT_ROLE}}</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Agency</h3>
+                        <p>{{PROJECT_AGENCY}}</p>
                     </div>
                 </div>
             </div>
@@ -203,17 +207,17 @@
                 localStorage.setItem('theme', theme);
             });
             
-            // Filter category links to main page with proper filter type
-            const filterCategories = document.querySelectorAll('.filter-category');
+            // Navigation links to main page and contact page
+            const navLinks = document.querySelectorAll('.nav-link');
 
-            filterCategories.forEach(category => {
-                category.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const page = this.getAttribute('data-page');
                     
-                    // Handle navigation based on data-filter value
-                    if (filter === 'portfolio') {
+                    // Handle navigation based on data-page value
+                    if (page === 'portfolio') {
                         window.location.href = '../index.html';
-                    } else if (filter === 'lets-work') {
+                    } else if (page === 'lets-work') {
                         window.location.href = '../lets-work-together.html';
                     }
                 });
