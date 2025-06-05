@@ -140,7 +140,7 @@ h3 {
 
 .sticky-nav-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -169,10 +169,11 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Right align navigation categories inside the sticky nav */
+/* Center navigation categories inside the sticky nav */
 .sticky-nav .filter-categories {
   margin-left: auto;
-  justify-content: flex-end;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .filter-divider {
@@ -1098,7 +1099,7 @@ footer {
   }
   
   .sticky-nav-content {
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .sticky-nav .theme-toggle {
@@ -1208,7 +1209,7 @@ footer {
   .sticky-nav-content {
     flex-direction: row;
     gap: var(--spacing-sm);
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   

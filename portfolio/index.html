@@ -17,9 +17,9 @@
                 <div class="sticky-nav-logo">
                     <span>Kevin Grzejka</span>
                 </div>
-                <ul class="nav-links">
-                    <li class="nav-link active" data-page="portfolio">Work</li>
-                    <li class="nav-link" data-page="lets-work">Let's work together</li>
+                <ul class="filter-categories">
+                    <li class="filter-category active" data-filter="portfolio" data-filter-type="category">Work</li>
+                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">Let's work together</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -384,9 +384,9 @@
     
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const filterCategories = document.querySelectorAll('.filter-category');
+            const filterCategories = document.querySelectorAll('.project-controls .filter-category');
             const clearFiltersBtn = document.getElementById('clear-filters');
-            const navLinks = document.querySelectorAll('.nav-link');
+            const navCategories = document.querySelectorAll('nav .filter-category');
             const projectCards = document.querySelectorAll('.project-card');
             const projectGrid = document.querySelector('.project-grid');
             const viewToggle = document.getElementById('view-toggle');
@@ -513,21 +513,21 @@
         }
         
         // Handle navigation clicks
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
+        navCategories.forEach(category => {
+          category.addEventListener('click', function() {
+            // Remove active class from all categories
+            navCategories.forEach(c => c.classList.remove('active'));
             
-            // Add active class to clicked link
+            // Add active class to clicked category
             this.classList.add('active');
             
             // Get the page to navigate to
-            const page = this.getAttribute('data-page');
+            const filter = this.getAttribute('data-filter');
             
             // Navigate to the appropriate page
-            if (page === 'portfolio') {
+            if (filter === 'portfolio') {
               window.location.href = 'index.html';
-            } else if (page === 'lets-work') {
+            } else if (filter === 'lets-work') {
               window.location.href = 'lets-work-together.html';
             }
           });

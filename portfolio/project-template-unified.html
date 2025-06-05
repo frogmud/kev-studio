@@ -71,9 +71,9 @@
                 <div class="sticky-nav-logo">
                     <a href="../index.html">Kevin Grzejka</a>
                 </div>
-                <ul class="nav-links">
-                    <li class="nav-link" data-page="portfolio">Work</li>
-                    <li class="nav-link" data-page="lets-work">Let's work together</li>
+                <ul class="filter-categories">
+                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">Let's work together</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -207,17 +207,17 @@
                 localStorage.setItem('theme', theme);
             });
             
-            // Navigation links to main page and contact page
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const page = this.getAttribute('data-page');
+            // Navigation links functionality
+            const navCategories = document.querySelectorAll('nav .filter-category');
+            
+            navCategories.forEach(category => {
+                category.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
                     
-                    // Handle navigation based on data-page value
-                    if (page === 'portfolio') {
+                    // Handle navigation based on data-filter value
+                    if (filter === 'portfolio') {
                         window.location.href = '../index.html';
-                    } else if (page === 'lets-work') {
+                    } else if (filter === 'lets-work') {
                         window.location.href = '../lets-work-together.html';
                     }
                 });
