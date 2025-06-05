@@ -6,7 +6,7 @@
 - [ ] All page titles updated to "Kevin Grzejka" ✅ 
 - [ ] Instagram handles updated to "@kevingrz" throughout the site ✅
 - [ ] All images optimized in the `images/optimized` directory ✅
-- [ ] Convert remaining images to WebP format (currently ~41% of images have WebP alternatives)
+- [x] Convert remaining images to WebP format (increased from 43 to 246 WebP images) ✅
 - [ ] Verify video stills and placeholders for all video content ✅
 - [ ] Check that resume PDF is up-to-date ✅
 - [ ] Ensure all project metadata is accurate ✅
