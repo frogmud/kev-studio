@@ -282,18 +282,24 @@ h3 {
 
 /* Clear filters button */
 #clear-filters {
-  font-weight: 500;
+  font-weight: 400;
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: 20px;
   background-color: var(--background-color);
-  color: var(--primary-color);
-  border: 1px solid var(--border-color);
+  color: var(--medium-gray);
+  border: 1px dashed var(--border-color);
   cursor: pointer;
   transition: var(--transition);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
 }
 
 #clear-filters:hover {
   background-color: var(--light-gray);
+  color: var(--primary-color);
 }
 
 .project-grid {
@@ -1109,6 +1115,12 @@ footer {
   
   .filter-divider {
     display: none;
+  }
+  
+  /* Keep clear filters button visible but adjust position */
+  #clear-filters {
+    margin-left: 0;
+    order: 999; /* Push to the end */
   }
 }
 
