@@ -1,4 +1,4 @@
-# Kevin Grzejka Portfolio
+# Kevin Grzejka Work
 
 This repository contains the complete portfolio website and tools for Kevin Grzejka's design work.
 
