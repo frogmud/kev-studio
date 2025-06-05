@@ -1,0 +1,60 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci --omit=optional
+        
+      - name: Generate project pages
+        run: npm run generate-pages
+        
+      - name: Check if image optimization is needed
+        id: check_images
+        run: |
+          if [[ $(find portfolio/images/optimized -type f | wc -l) -lt 10 ]]; then
+            echo "run_optimization=true" >> $GITHUB_OUTPUT
+          else
+            echo "run_optimization=false" >> $GITHUB_OUTPUT
+          fi
+        
+      - name: Optimize images
+        if: steps.check_images.outputs.run_optimization == 'true'
+        run: npm run optimize-images
+        
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: portfolio
+          
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+        id: deployment

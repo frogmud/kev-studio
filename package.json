@@ -12,7 +12,8 @@
     "kev-studio": "node tools/download-kev-studio.js",
     "generate-pages": "node portfolio/generate-project-pages.js",
     "optimize-images": "node tools/optimize-images.js",
-    "video-stills": "node tools/extract-video-stills.js"
+    "video-stills": "node tools/extract-video-stills.js",
+    "serve": "node serve.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
