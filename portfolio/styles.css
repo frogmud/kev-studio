@@ -1320,6 +1320,7 @@ footer {
   .project-navigation {
     flex-direction: column;
     gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
   }
   
   /* Always show project details on mobile */

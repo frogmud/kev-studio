@@ -52,6 +52,28 @@
             margin-bottom: var(--spacing-md);
         }
 
+        /* Ensure navigation buttons are visible */
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .prev svg {
+            margin-right: 8px;
+        }
+
+        .next svg {
+            margin-left: 8px;
+        }
+
         @media (max-width: 768px) {
             .project-timeline {
                 padding-left: 30px;
