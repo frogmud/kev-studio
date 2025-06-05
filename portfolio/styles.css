@@ -169,6 +169,12 @@ h3 {
   flex-wrap: wrap;
 }
 
+/* Right align navigation categories inside the sticky nav */
+.sticky-nav .filter-categories {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
 .filter-divider {
   color: var(--border-color);
   margin: 0 var(--spacing-md);
