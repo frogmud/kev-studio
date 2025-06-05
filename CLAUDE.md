@@ -14,6 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Update index page: `node portfolio/update-index-page.js`
 - Optimize images: `npm run optimize-images`
 - Fix duplicate tags: `node portfolio/fix-duplicate-tags.js`
+- Extract video stills: `node tools/extract-video-stills.js`
 
 ## Code Style Guidelines
 - Use strict mode (`"use strict"`) at top of each file

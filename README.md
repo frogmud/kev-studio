@@ -35,6 +35,7 @@ This repository contains the complete portfolio website and tools for Kevin Grze
 - `npm run kev-studio`: Download from kev.studio
 - `npm run generate-pages`: Generate project pages
 - `npm run optimize-images`: Convert images to optimized WebP versions
+- `node tools/extract-video-stills.js`: Create preview images for MP4 files
 
 ## License
 

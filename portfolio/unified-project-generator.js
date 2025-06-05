@@ -154,14 +154,23 @@ async function generateUnifiedProjectPages() {
           }
         }
         
-        // Get project tags
-        const projectTagsHtml = projectData.tags && projectData.tags.length > 0 
-          ? projectData.tags.map(tag => {
-              const tagObj = taxonomyData.tags.find(t => t.id === tag);
-              const tagName = tagObj ? tagObj.name : tag;
-              return `<span class="project-tag" data-tag="${tag}" onclick="window.location.href='../index.html?filter=${tag}&filterType=tag'">${tagName}</span>`;
-            }).join('\n')
-          : '';
+        // Build project tags from categories and tags
+        const combinedTags = [
+          ...(projectData.categories || []),
+          ...(projectData.tags || [])
+        ];
+
+        const projectTagsHtml = combinedTags
+          .map(tag => {
+            const tagObj = taxonomyData.tags.find(t => t.id === tag) ||
+                           taxonomyData.categories.find(c => c.id === tag);
+            const tagName = tagObj ? tagObj.name : tag;
+            const filterType = taxonomyData.categories.some(c => c.id === tag)
+              ? 'category'
+              : 'tag';
+            return `<span class="project-tag" data-tag="${tag}" onclick="window.location.href='../index.html?filter=${tag}&filterType=${filterType}'">${tagName}</span>`;
+          })
+          .join('\n');
         
         // Get image path
         let projectImage = '';
