@@ -1,10 +1,10 @@
-# Kevin Grzejka Portfolio
+# Kevin Grzejka Work
 
 ## About
 
 Kevin Grzejka is a designer from New Jersey specializing in brand strategy, web design, and creative direction. This portfolio showcases his work across various industries including healthcare, finance, education, and technology.
 
-## Portfolio Website
+## Work Website
 
 A clean, modern portfolio site has been created to showcase Kevin's work:
 
@@ -24,7 +24,7 @@ A clean, modern portfolio site has been created to showcase Kevin's work:
 
 - `index.html` - Main portfolio page
 - `styles.css` - Centralized styling for all pages
-- `images/` - Portfolio images and animations
+- `images/` - Work images and animations
 - `projects/` - Project detail pages and source information
 - `project-template-updated.html` - Universal template for project pages
 - `generate-project-pages.js` - Script to generate all project pages
@@ -42,4 +42,4 @@ grzejkakevin@gmail.com
 
 ---
 
-Portfolio redesigned on 6/2/2025
+Work redesigned on 6/2/2025
