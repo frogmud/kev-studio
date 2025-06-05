@@ -86,7 +86,6 @@
                 <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
             </ul>
             <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
                 <div class="theme-toggle" id="theme-toggle">
                     <span class="sun">☀️</span>
                     <span class="moon">🌙</span>
@@ -107,7 +106,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -121,14 +120,7 @@
                         <h3>Role</h3>
                         <p>Design Lead, Logo, Motion, Print</p>
                     </div>
-                </div>
-                <div class="project-tags-container">
-                    <h3>Tags</h3>
-                    <div class="project-tags">
-                        <span class="project-tag" data-tag="branding" onclick="window.location.href='../index.html?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='../index.html?filter=animation&filterType=tag'">Animation</span>
-                    </div>
-                </div>
+            </div>
             </div>
             
             <div class="project-description">
@@ -148,12 +140,7 @@
                 
                 <h4>Logo Animation</h4>
                 <p>Developed dynamic animations to bring the new identity to life across digital touchpoints. The paper airplane motif was enhanced through 3D rendering and motion design.</p>
-                <div class="video-container">
-                    <video controls preload="metadata" poster="../images/optimized/sylvamo/Sylvamo_IndigoAwards21_02.gif">
-                        <source src="../videos/sylvamo/02_Sylvamo_LogoAnimation_YG21_Grzejka.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <img loading="lazy" src="../images/optimized/sylvamo/Sylvamo_IndigoAwards21_02.gif" alt="Sylvamo logo animation" class="timeline-image">
               </div>
 <div class="timeline-item">
                 <h3>Visual Identity Development</h3>
@@ -176,12 +163,7 @@
                 
                 <h4>IPO Day Celebration</h4>
                 <p>Created special animated content for Sylvamo's IPO day celebration at the New York Stock Exchange. The animation brought the Sylvamo brand to life in a high-energy sequence celebrating the company's public launch.</p>
-                <div class="video-container">
-                    <video controls preload="metadata">
-                        <source src="../videos/sylvamo/09_Sylvamo_IPODay_YG21_Grzejka.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <img loading="lazy" src="../images/optimized/sylvamo/Sylvamo_IndigoAwards21_09.png" alt="Sylvamo IPO day celebration" class="timeline-image">
               </div>
 <div class="timeline-item">
                 <h3>Environmental & Experiential Design</h3>
@@ -301,19 +283,6 @@ Strategy: Simon Thackway, Jonathan Paisner<br>
                 }
             });
         });
-
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
     });
     </script>
 </body>

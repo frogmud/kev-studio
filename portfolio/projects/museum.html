@@ -18,10 +18,10 @@
         .project-timeline::before {
             content: '';
             position: absolute;
-            top: 8px;
+            top: 0;
             bottom: 0;
-            left: 8px;
-            width: 0.5px;
+            left: 20px;
+            width: 2px;
             background-color: #e2e8f0;
         }
 
@@ -33,14 +33,14 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -46px;
+            left: -50px;
             top: 8px;
-            width: 10px;
-            height: 10px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background-color: var(--accent-color);
-            border: 2px solid white;
-            box-shadow: 0 0 0 1px #e2e8f0;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #e2e8f0;
         }
 
         .timeline-item h3 {
@@ -54,38 +54,39 @@
 
         @media (max-width: 768px) {
             .project-timeline {
-                padding-left: 36px;
+                padding-left: 30px;
             }
 
             .timeline-item::before {
-                left: -32px;
+                left: -30px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- ENHANCED -->
     <!-- Sticky navigation with filter categories -->
     <nav class="sticky-nav visible">
-    <div class="container">
-        <div class="sticky-nav-content">
-            <div class="sticky-nav-logo">
-                <a href="../index.html">Kevin Grzejka</a>
-            </div>
-            <ul class="filter-categories">
-                <li class="filter-category" data-filter="portfolio" data-filter-type="category">Portfolio</li>
-                <li class="filter-category" data-filter="resume" data-filter-type="category">Resume</li>
-                <li class="filter-category" data-filter="contact" data-filter-type="category">Contact</li>
-            </ul>
-            <div class="view-toggles">
-                <div class="info-toggle" id="info-toggle" role="button" aria-label="Toggle project information" aria-pressed="false">i</div>
-                <div class="theme-toggle" id="theme-toggle">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
+        <div class="container">
+            <div class="sticky-nav-content">
+                <div class="sticky-nav-logo">
+                    <a href="../index.html">Kevin Grzejka</a>
+                </div>
+                <ul class="filter-categories">
+                    <!-- Categories will be primary filters -->
+                    <li class="filter-category" data-filter="all" data-filter-type="category">All</li>
+                    <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
+                    <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
+                </ul>
+                <div class="view-toggles">
+                    <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <main class="container project-detail">
         <div class="project-header">
@@ -98,7 +99,7 @@
         </div>
 
         <div class="project-content">
-            <div class="project-info hidden">
+            <div class="project-info">
                 <div class="project-metadata">
                     <div class="metadata-item">
                         <h3>Year</h3>
@@ -112,13 +113,7 @@
                         <h3>Role</h3>
                         <p>Artist</p>
                     </div>
-                </div>
-                <div class="project-tags-container">
-                    <h3>Tags</h3>
-                    <div class="project-tags">
-                        <span class="project-tag" data-tag="print" onclick="window.location.href='../index.html?filter=print&filterType=tag'">print</span>
-                    </div>
-                </div>
+            </div>
             </div>
             
             <div class="project-description">
@@ -130,15 +125,17 @@
             </div>
         </div>
 
+        <!-- This page is a dead project, but we keep it for archive purposes.
+             Navigation links have been adjusted to skip it in the project flow. -->
         <div class="project-navigation">
-            <a href="tryitout_with_major_league_wiffleball.html" class="nav-link prev">
+            <a href="../index.html" class="nav-link prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
-                Previous Project
+                Back to Portfolio
             </a>
-            <a href="tryitout.html" class="nav-link next">
-                Next Project
+            <a href="../index.html" class="nav-link next">
+                Back to Portfolio
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -180,66 +177,50 @@
         </div>
     </footer>
 
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Check for saved theme preference or use the system preference
-        const currentTheme = localStorage.getItem('theme') || 
-                          (prefersDarkScheme.matches ? 'dark' : 'light');
-        
-        // Apply the theme
-        if (currentTheme === 'dark') {
-            document.body.setAttribute('data-theme', 'dark');
-            themeToggle.classList.add('dark');
-        }
-        
-        // Toggle theme when clicking the theme toggle
-        themeToggle.addEventListener('click', function() {
-            let theme;
-            if (document.body.getAttribute('data-theme') === 'dark') {
-                document.body.removeAttribute('data-theme');
-                theme = 'light';
-                themeToggle.classList.remove('dark');
-            } else {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('theme-toggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check for saved theme preference or use the system preference
+            const currentTheme = localStorage.getItem('theme') || 
+                              (prefersDarkScheme.matches ? 'dark' : 'light');
+            
+            // Apply the theme
+            if (currentTheme === 'dark') {
                 document.body.setAttribute('data-theme', 'dark');
-                theme = 'dark';
                 themeToggle.classList.add('dark');
             }
-            localStorage.setItem('theme', theme);
-        });
-        
-        // Nav category links
-        const navCategories = document.querySelectorAll('nav .filter-category');
-
-        navCategories.forEach(category => {
-            category.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                if (filter === 'portfolio') {
-                    window.location.href = '../index.html';
-                } else if (filter === 'resume') {
-                    window.location.href = '../resume.html';
-                } else if (filter === 'contact') {
-                    window.location.href = '../contact.html';
+            
+            // Toggle theme when clicking the theme toggle
+            themeToggle.addEventListener('click', function() {
+                let theme;
+                if (document.body.getAttribute('data-theme') === 'dark') {
+                    document.body.removeAttribute('data-theme');
+                    theme = 'light';
+                    themeToggle.classList.remove('dark');
+                } else {
+                    document.body.setAttribute('data-theme', 'dark');
+                    theme = 'dark';
+                    themeToggle.classList.add('dark');
                 }
+                localStorage.setItem('theme', theme);
+            });
+            
+            // Filter category links to main page with proper filter type
+            const filterCategories = document.querySelectorAll('.filter-category');
+
+            filterCategories.forEach(category => {
+                category.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    const filterType = this.getAttribute('data-filter-type') || 'category';
+                    
+                    // Navigate to index with filter parameters
+                    window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
+                });
             });
         });
-
-        // Info button toggle for project details
-        const infoToggle = document.getElementById('info-toggle');
-        const projectInfo = document.querySelector('.project-info');
-
-        if (infoToggle && projectInfo) {
-            infoToggle.addEventListener('click', function() {
-                const isHidden = projectInfo.classList.toggle('hidden');
-                infoToggle.classList.toggle('open');
-                // Update ARIA attributes for accessibility
-                infoToggle.setAttribute('aria-pressed', !isHidden);
-            });
-        }
-    });
     </script>
 </body>
 </html>
