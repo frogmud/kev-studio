@@ -160,28 +160,30 @@ async function generateUnifiedProjectPages() {
         // Get image path
         let projectImage = '';
         
-        // Map specific projects to their optimized images
+        // Map specific projects to their original (non-optimized) images for hero sections
+        // Using original images for hero sections to maintain high quality
         const imageMap = {
-          'absorb_software': '../images/optimized/absorb/02-absorb-guidelines-wide-blue.png',
-          'mn8_energy': '../images/optimized/mn8/10a-mn8-laptop-4x3-white.png',
-          'l3harris': '../images/optimized/l3h-sign-cover-4x3.jpg',
-          'lifepoint_health': '../images/optimized/lifepoint/Lifepoint_HQSign.png',
-          'amrop': '../images/optimized/amrop/amrop_logo_rgb.svg',
-          'thackway_mccord_pets': '../images/optimized/chocolates/chocolate-hero-v2.jpg',
-          'american_social': '../images/optimized/american_social/01_amso_splash.png',
+          'absorb_software': '../images/absorb/02-absorb-guidelines-wide-blue.png',
+          'mn8_energy': '../images/mn8/10a-mn8-laptop-4x3-white.png',
+          'l3harris': '../images/l3harris/L3H_Cover2.jpg',
+          'lifepoint_health': '../images/lifepoint/10_Lifepoint_HQSign_YG21_Grzejka-copy.png',
+          'amrop': '../images/amrop/amrop_logo_rgb.svg',
+          'thackway_mccord_pets': '../images/chocolates/TM_IndigoAwards21_06.jpg',
+          'american_social': '../images/american_social/01_AMSO_splash.png',
         };
         
         // Check if we have a mapped image for this project
         if (imageMap[projectData.id]) {
           projectImage = imageMap[projectData.id];
         } else {
-          // Check for project-specific folder in optimized images
+          // For hero images, prioritize original high-quality images over optimized versions
+          
+          // First, check for project-specific folder in regular images (non-optimized)
           try {
-            const optimizedProjectDir = path.join(__dirname, 'images', 'optimized', projectData.id);
+            const projectDir = path.join(__dirname, 'images', projectData.id);
             try {
-              await fs.access(optimizedProjectDir);
-              // Folder exists, find first image with proper extension
-              const files = await fs.readdir(optimizedProjectDir);
+              await fs.access(projectDir);
+              const files = await fs.readdir(projectDir);
               const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'];
               
               const imageFile = files.find(file => {
@@ -190,12 +192,12 @@ async function generateUnifiedProjectPages() {
               });
               
               if (imageFile) {
-                projectImage = `../images/optimized/${projectData.id}/${imageFile}`;
+                projectImage = `../images/${projectData.id}/${imageFile}`;
               }
             } catch (error) {
-              // Project folder doesn't exist in optimized, check general optimized folder
-              const optimizedDir = path.join(__dirname, 'images', 'optimized');
-              const files = await fs.readdir(optimizedDir);
+              // Project folder doesn't exist, check general images folder
+              const imagesDir = path.join(__dirname, 'images');
+              const files = await fs.readdir(imagesDir);
               
               const imageFile = files.find(file => {
                 return (file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
@@ -204,21 +206,21 @@ async function generateUnifiedProjectPages() {
               });
               
               if (imageFile) {
-                projectImage = `../images/optimized/${imageFile}`;
+                projectImage = `../images/${imageFile}`;
               }
             }
           } catch (error) {
-            console.log(`Error checking optimized images for ${projectData.id}: ${error.message}`);
+            console.log(`Error checking regular images for ${projectData.id}: ${error.message}`);
           }
           
-          // If still no image, check regular images folder
+          // If no regular image found, check for optimized images as a fallback
           if (!projectImage) {
             try {
-              // Check for project-specific folder in regular images
-              const projectDir = path.join(__dirname, 'images', projectData.id);
+              const optimizedProjectDir = path.join(__dirname, 'images', 'optimized', projectData.id);
               try {
-                await fs.access(projectDir);
-                const files = await fs.readdir(projectDir);
+                await fs.access(optimizedProjectDir);
+                // Folder exists, find first image with proper extension
+                const files = await fs.readdir(optimizedProjectDir);
                 const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'];
                 
                 const imageFile = files.find(file => {
@@ -227,12 +229,12 @@ async function generateUnifiedProjectPages() {
                 });
                 
                 if (imageFile) {
-                  projectImage = `../images/${projectData.id}/${imageFile}`;
+                  projectImage = `../images/optimized/${projectData.id}/${imageFile}`;
                 }
               } catch (error) {
-                // Project folder doesn't exist, check general images folder
-                const imagesDir = path.join(__dirname, 'images');
-                const files = await fs.readdir(imagesDir);
+                // Project folder doesn't exist in optimized, check general optimized folder
+                const optimizedDir = path.join(__dirname, 'images', 'optimized');
+                const files = await fs.readdir(optimizedDir);
                 
                 const imageFile = files.find(file => {
                   return (file.toLowerCase().includes(projectData.id.replace(/_/g, '').toLowerCase()) ||
@@ -241,11 +243,11 @@ async function generateUnifiedProjectPages() {
                 });
                 
                 if (imageFile) {
-                  projectImage = `../images/${imageFile}`;
+                  projectImage = `../images/optimized/${imageFile}`;
                 }
               }
             } catch (error) {
-              console.log(`Error checking regular images for ${projectData.id}: ${error.message}`);
+              console.log(`Error checking optimized images for ${projectData.id}: ${error.message}`);
             }
           }
           
