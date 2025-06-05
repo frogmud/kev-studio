@@ -72,10 +72,8 @@
                     <a href="../index.html">Kevin Grzejka</a>
                 </div>
                 <ul class="filter-categories">
-                    <!-- Categories will be primary filters -->
-                    <li class="filter-category" data-filter="all" data-filter-type="category">All</li>
-                    <li class="filter-category" data-filter="digital" data-filter-type="category">Digital</li>
-                    <li class="filter-category" data-filter="print" data-filter-type="category">Print</li>
+                    <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">Let's work together</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -211,10 +209,13 @@
             filterCategories.forEach(category => {
                 category.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
-                    const filterType = this.getAttribute('data-filter-type') || 'category';
                     
-                    // Navigate to index with filter parameters
-                    window.location.href = `../index.html?filter=${filter}&filterType=${filterType}`;
+                    // Handle navigation based on data-filter value
+                    if (filter === 'portfolio') {
+                        window.location.href = '../index.html';
+                    } else if (filter === 'lets-work') {
+                        window.location.href = '../lets-work-together.html';
+                    }
                 });
             });
 
