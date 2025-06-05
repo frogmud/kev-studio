@@ -1317,10 +1317,13 @@ footer {
     white-space: nowrap;
   }
   
+  /* Keep project navigation horizontal even on mobile */
   .project-navigation {
-    flex-direction: column;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-xl);
+    margin: 3rem 0 !important;
+    width: 100% !important;
   }
   
   /* Always show project details on mobile */
