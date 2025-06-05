@@ -2,6 +2,7 @@
 
 Description: Brand identity and website for a forward-thinking investment firm
 Client: Autonomy Capital
+Agency: Self
 Role: Design, Web, Strategy
 Year: 2025
 

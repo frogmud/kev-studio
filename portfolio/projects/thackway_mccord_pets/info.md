@@ -6,6 +6,7 @@ Page Title: Making QR codes fun! — kev.studio
 Description: Custom QR code illustrations and playful stickers for holiday chocolate bars.
 Year: 2022
 Client: Thackway McCord
+Agency: Thackway McCord
 Role: Art Direction, Design, Illustration, Motion, Programming, Packaging, Promo
 
 --- CONTENT ---
