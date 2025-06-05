@@ -14,11 +14,6 @@
       "id": "direction",
       "name": "Direction",
       "type": "primary"
-    },
-    {
-      "id": "etc",
-      "name": "Etc",
-      "type": "primary"
     }
   ],
   "tags": [

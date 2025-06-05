@@ -34,20 +34,33 @@
     <div class="project-controls-wrapper">
         <div class="container">
             <div class="project-controls">
-                <ul class="filter-categories">
-                    <li class="filter-category" data-filter="design" data-filter-type="category">Design</li>
-                    <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
-                    <li class="filter-category" data-filter="etc" data-filter-type="category">Etc</li>
-                    <li class="filter-divider">|</li>
-                    <li class="filter-category" data-filter="branding" data-filter-type="tag">Branding</li>
-                    <li class="filter-category" data-filter="web" data-filter-type="tag">Web Design</li>
-                    <li class="filter-category" data-filter="animation" data-filter-type="tag">Animation</li>
-                    <li class="filter-category" data-filter="strategy" data-filter-type="tag">Strategy</li>
-                    <li class="filter-category" data-filter="print" data-filter-type="tag">Print</li>
-                    <li id="clear-filters" class="clear-filters"><span>×</span> Clear Filters</li>
-                </ul>
+                <div class="filter-rows">
+                    <ul class="filter-categories primary-filters">
+                        <li class="filter-category" data-filter="design" data-filter-type="category">Design</li>
+                        <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
+                        <li class="filter-divider">|</li>
+                        <li id="sort-options" class="sort-dropdown">
+                            <span>Sort by: </span>
+                            <select id="project-sort">
+                                <option value="default">Default</option>
+                                <option value="name-asc">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
+                                <option value="year-desc">Year (Newest)</option>
+                                <option value="year-asc">Year (Oldest)</option>
+                            </select>
+                        </li>
+                        <li id="clear-filters" class="clear-filters"><span>×</span> Clear Filters</li>
+                    </ul>
+                    <ul class="filter-categories tag-filters hidden">
+                        <li class="filter-category" data-filter="branding" data-filter-type="tag">Branding</li>
+                        <li class="filter-category" data-filter="web" data-filter-type="tag">Web Design</li>
+                        <li class="filter-category" data-filter="animation" data-filter-type="tag">Animation</li>
+                        <li class="filter-category" data-filter="strategy" data-filter-type="tag">Strategy</li>
+                        <li class="filter-category" data-filter="print" data-filter-type="tag">Print</li>
+                    </ul>
+                </div>
                 <div class="view-toggles">
-                    <div class="view-toggle" id="view-toggle">
+                    <div class="view-toggle" id="view-toggle" title="Toggle grid/list view">
                         <span class="grid-icon">▦</span>
                         <span class="list-icon">☰</span>
                     </div>
@@ -58,7 +71,7 @@
     <main class="container">
         <section id="projects">
             <div class="project-grid">
-                <div class="project-card landscape" data-categories="design" data-tags="branding,web,animation">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,animation" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
                     </div>
@@ -75,7 +88,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="web,branding">
+                <div class="project-card landscape" data-categories="direction" data-tags="web,branding" data-year="2022">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/mn8/mn8-mobile-trio-4x3.png" alt="MN8 Energy">
                     </div>
@@ -91,7 +104,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding" data-year="2020">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/l3h-sign-cover-4x3.jpg" alt="L3Harris">
                     </div>
@@ -106,7 +119,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="branding,web">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/abra_plane_8k.png" alt="Abra">
                     </div>
@@ -121,7 +134,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation" data-year="2023">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/z001_lifepoint_01_heart.gif" alt="Lifepoint Health">
                     </div>
@@ -137,7 +150,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="animation">
+                <div class="project-card landscape" data-categories="direction" data-tags="animation" data-year="2025">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/onity_logo_animation.gif" alt="Onity">
                     </div>
@@ -152,7 +165,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="print,branding">
+                <div class="project-card landscape" data-categories="design" data-tags="print,branding" data-year="2019">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/04_eyesabove_cards_yg21_grzejka.png" alt="Eyes Above">
                     </div>
@@ -168,7 +181,7 @@
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/sylvamo_casestudy_logoanimationshort.gif" alt="Sylvamo">
                     </div>
@@ -326,7 +339,7 @@
                     </div>
                 </div>
 
-                <div class="project-card landscape" data-categories="digital,print" data-tags="branding,animation">
+                <div class="project-card landscape" data-categories="digital,print" data-tags="branding,animation" data-year="2018">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/un/UN_1.png" alt="United Nations">
                     </div>
@@ -390,6 +403,7 @@
             const projectCards = document.querySelectorAll('.project-card');
             const projectGrid = document.querySelector('.project-grid');
             const viewToggle = document.getElementById('view-toggle');
+            const projectSort = document.getElementById('project-sort');
         
         // Function to show all projects
         function showAllProjects() {
@@ -412,9 +426,18 @@
             targetFilter.classList.add('active');
           }
           
+          // Show/hide tag filters based on category selection
+          const tagFilters = document.querySelector('.tag-filters');
+          if (filterType === 'category' && (filter === 'design' || filter === 'direction')) {
+            tagFilters.classList.remove('hidden');
+          } else if (filterType === 'category') {
+            tagFilters.classList.add('hidden');
+          }
+          
           // Filter projects
           if (filter === 'all' || !filter) {
             showAllProjects();
+            tagFilters.classList.add('hidden');
           } else {
             projectCards.forEach(card => {
               // For category filtering, check data-categories attribute
@@ -448,11 +471,70 @@
           }
         }
         
+        // Function to sort projects
+        function sortProjects(sortBy) {
+          const projectsArray = Array.from(projectCards);
+          
+          switch(sortBy) {
+            case 'name-asc':
+              projectsArray.sort((a, b) => {
+                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
+                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
+                return titleA.localeCompare(titleB);
+              });
+              break;
+            case 'name-desc':
+              projectsArray.sort((a, b) => {
+                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
+                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
+                return titleB.localeCompare(titleA);
+              });
+              break;
+            case 'year-asc':
+              projectsArray.sort((a, b) => {
+                const yearA = parseInt(a.getAttribute('data-year') || '2020');
+                const yearB = parseInt(b.getAttribute('data-year') || '2020');
+                return yearA - yearB;
+              });
+              break;
+            case 'year-desc':
+              projectsArray.sort((a, b) => {
+                const yearA = parseInt(a.getAttribute('data-year') || '2020');
+                const yearB = parseInt(b.getAttribute('data-year') || '2020');
+                return yearB - yearA;
+              });
+              break;
+            default: // default order (as in HTML)
+              projectsArray.sort((a, b) => {
+                return Array.from(projectGrid.children).indexOf(a) - 
+                       Array.from(projectGrid.children).indexOf(b);
+              });
+          }
+          
+          // Remove all projects from grid
+          projectGrid.innerHTML = '';
+          
+          // Add sorted projects back to grid
+          projectsArray.forEach(card => {
+            projectGrid.appendChild(card);
+          });
+          
+          // Update URL with sort parameter without reloading the page
+          const url = new URL(window.location);
+          if (sortBy !== 'default') {
+            url.searchParams.set('sort', sortBy);
+          } else {
+            url.searchParams.delete('sort');
+          }
+          window.history.pushState({}, '', url);
+        }
+        
         // Check URL for parameters
         const urlParams = new URLSearchParams(window.location.search);
         const filterParam = urlParams.get('filter');
         const filterTypeParam = urlParams.get('filterType') || 'category';
         const viewParam = urlParams.get('view');
+        const sortParam = urlParams.get('sort');
         
         // Initialize view mode from URL or localStorage
         const savedViewMode = localStorage.getItem('viewMode') || 'grid';
@@ -473,6 +555,12 @@
           
           if (filterExists) {
             filterProjects(filterParam, filterTypeParam);
+            
+            // If it's a tag filter, make sure the tag filters row is visible
+            if (filterTypeParam === 'tag') {
+              const tagFilters = document.querySelector('.tag-filters');
+              tagFilters.classList.remove('hidden');
+            }
           } else {
             // If filter doesn't exist, show all projects
             showAllProjects();
@@ -482,6 +570,16 @@
             url.searchParams.delete('filterType');
             window.history.replaceState({}, '', url);
           }
+        } else {
+          // Hide tag filters on initial load if no filter is set
+          const tagFilters = document.querySelector('.tag-filters');
+          tagFilters.classList.add('hidden');
+        }
+        
+        // Apply sort if in URL
+        if (sortParam) {
+          projectSort.value = sortParam;
+          sortProjects(sortParam);
         }
         
         // Add click event to filter categories
@@ -491,10 +589,17 @@
                 const filterType = this.getAttribute('data-filter-type') || 'category';
                 filterProjects(filter, filterType);
             
-            // Update URL with filter parameter without reloading the page
-            const url = new URL(window.location);
-            url.searchParams.set('filter', filter);
-            url.searchParams.set('filterType', filterType);
+                // Update URL with filter parameter without reloading the page
+                const url = new URL(window.location);
+                url.searchParams.set('filter', filter);
+                url.searchParams.set('filterType', filterType);
+                
+                // Preserve sort parameter if exists
+                const currentSort = projectSort.value;
+                if (currentSort !== 'default') {
+                  url.searchParams.set('sort', currentSort);
+                }
+                
                 window.history.pushState({}, '', url);
             });
         });
@@ -504,11 +609,29 @@
             clearFiltersBtn.addEventListener('click', function() {
                 filterCategories.forEach(c => c.classList.remove('active'));
                 showAllProjects();
+                
+                // Hide tag filters when clearing
+                const tagFilters = document.querySelector('.tag-filters');
+                tagFilters.classList.add('hidden');
 
                 const url = new URL(window.location);
                 url.searchParams.delete('filter');
                 url.searchParams.delete('filterType');
+                
+                // Preserve sort parameter if exists
+                const currentSort = projectSort.value;
+                if (currentSort !== 'default') {
+                  url.searchParams.set('sort', currentSort);
+                }
+                
                 window.history.pushState({}, '', url);
+            });
+        }
+        
+        // Add change event to sort dropdown
+        if (projectSort) {
+            projectSort.addEventListener('change', function() {
+                sortProjects(this.value);
             });
         }
         
@@ -553,6 +676,12 @@
             const filterType = currentFilter.getAttribute('data-filter-type') || 'category';
             url.searchParams.set('filter', filter);
             url.searchParams.set('filterType', filterType);
+          }
+          
+          // Preserve sort parameter if exists
+          const currentSort = projectSort.value;
+          if (currentSort !== 'default') {
+            url.searchParams.set('sort', currentSort);
           }
           
           window.history.pushState({}, '', url);
