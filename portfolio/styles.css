@@ -375,6 +375,18 @@ h3 {
   color: var(--primary-color);
 }
 
+[data-theme="dark"] .theme-toggle, 
+[data-theme="dark"] .view-toggle {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle::before, 
+[data-theme="dark"] .view-toggle::before {
+  background-color: var(--background-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 [data-theme="dark"] .sort-dropdown select:hover {
   background-color: var(--border-color);
 }
@@ -1098,7 +1110,7 @@ footer {
 .theme-toggle, .view-toggle {
   width: 44px;
   height: 24px;
-  background-color: var(--light-gray);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 100px;
   position: relative;
   cursor: pointer;
@@ -1110,6 +1122,7 @@ footer {
   font-size: 0.75rem;
   font-weight: 600;
   margin-left: var(--spacing-md);
+  backdrop-filter: blur(2px);
 }
 
 .theme-toggle::before, .view-toggle::before {
@@ -1118,7 +1131,8 @@ footer {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   top: 2px;
   left: 2px;
   transition: var(--transition);
