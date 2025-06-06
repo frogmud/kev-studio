@@ -19,10 +19,10 @@
         .project-timeline::before {
             content: '';
             position: absolute;
-            top: 0;
+            top: 8px;
             bottom: 0;
-            left: 20px;
-            width: 2px;
+            left: 8px;
+            width: 0.5px;
             background-color: #e2e8f0;
         }
 
@@ -34,14 +34,14 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -50px;
+            left: -46px;
             top: 8px;
-            width: 16px;
-            height: 16px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background-color: var(--accent-color);
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px #e2e8f0;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #e2e8f0;
         }
 
         .timeline-item h3 {
@@ -52,6 +52,7 @@
         .timeline-item p {
             margin-bottom: var(--spacing-md);
         }
+        
         .timeline-image {
             max-width: 100%;
             height: auto;
@@ -73,11 +74,11 @@
 
         @media (max-width: 768px) {
             .project-timeline {
-                padding-left: 30px;
+                padding-left: 36px;
             }
 
             .timeline-item::before {
-                left: -30px;
+                left: -32px;
             }
         }
     </style>
