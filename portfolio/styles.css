@@ -322,13 +322,13 @@ h3 {
   justify-content: center;
   gap: 4px;
   font-size: 0.85rem;
-  width: 100%;
+  width: 40%;
   margin-top: 8px;
   box-sizing: border-box;
 }
 
 #clear-filters.full-width {
-  width: 100%;
+  width: 40%;
 }
 
 #clear-filters:hover {
@@ -1359,9 +1359,9 @@ footer {
     min-width: 150px;
   }
   
-  /* Make clear filters button full width on mobile */
+  /* Keep clear filters button at 40% width even on mobile */
   #clear-filters {
-    width: 100%;
+    width: 40%;
     margin: var(--spacing-sm) 0;
   }
   
