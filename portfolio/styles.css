@@ -1716,3 +1716,36 @@ footer {
 [data-theme="dark"] .light-logo {
   display: none; /* Hide black logo in dark mode */
 }
+
+/* Mobile sort dropdown and toggle layout fix */
+@media (max-width: 768px) {
+  .sort-view-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sort-dropdown {
+    flex: 1;
+    min-width: 0;
+    margin-right: var(--spacing-sm);
+  }
+  
+  .sort-dropdown span {
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  .sort-dropdown select {
+    width: auto;
+    min-width: 120px;
+    max-width: 150px;
+  }
+  
+  .view-toggle {
+    flex-shrink: 0;
+    margin-left: var(--spacing-xs);
+  }
+}
