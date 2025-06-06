@@ -254,6 +254,13 @@ h3 {
   width: 100%;
 }
 
+.sort-view-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .tag-filters {
   margin-top: var(--spacing-xs);
 }
@@ -303,19 +310,25 @@ h3 {
 /* Clear filters button */
 #clear-filters {
   font-weight: 400;
-  padding: 0 var(--spacing-md);
-  height: 24px;
+  padding: 8px var(--spacing-md);
   border-radius: 20px;
-  background-color: var(--background-color);
+  background-color: transparent;
   color: var(--medium-gray);
   border: 1px dashed var(--border-color);
   cursor: pointer;
   transition: var(--transition);
-  margin-left: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   font-size: 0.85rem;
+  width: 100%;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+#clear-filters.full-width {
+  width: 100%;
 }
 
 #clear-filters:hover {
@@ -330,6 +343,11 @@ h3 {
   gap: 8px;
   font-size: 0.9rem;
   color: var(--dark-gray);
+}
+
+#sort-options {
+  display: flex;
+  align-items: center;
 }
 
 .sort-dropdown select {
@@ -1182,16 +1200,14 @@ footer {
   }
   
   /* Keep clear filters button visible but adjust position */
-  #clear-filters {
-    margin-left: 0;
-    order: 999; /* Push to the end */
+  /* Adjust sort view row on smaller screens */
+  .sort-view-row {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
   }
   
-  /* Adjust sort dropdown on smaller screens */
-  .sort-dropdown {
-    margin-left: 0;
-    order: 998; /* Place before clear filters */
-    margin-top: var(--spacing-sm);
+  .view-toggle {
+    margin-left: auto;
   }
   
   .sort-dropdown span {
@@ -1343,9 +1359,10 @@ footer {
     min-width: 150px;
   }
   
-  /* Make clear filters button centered on mobile */
+  /* Make clear filters button full width on mobile */
   #clear-filters {
-    margin: var(--spacing-sm) auto;
+    width: 100%;
+    margin: var(--spacing-sm) 0;
   }
   
   /* Adjust view toggle on mobile */

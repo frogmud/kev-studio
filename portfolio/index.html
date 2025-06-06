@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
+    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, storyboarding and print projects.">
     <title>Kevin Grzejka</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +18,8 @@
                     <span>Kevin Grzejka</span>
                 </div>
                 <ul class="filter-categories">
-                    <li class="filter-category active" data-filter="portfolio" data-filter-type="category">Work</li>
-                    <li class="filter-category" data-filter="lets-work" data-filter-type="category">About</li>
+                    <li class="filter-category active" data-filter="work" data-filter-type="category">Work</li>
+                    <li class="filter-category" data-filter="about" data-filter-type="category">About</li>
                 </ul>
                 <div class="view-toggles">
                     <div class="theme-toggle" id="theme-toggle">
@@ -35,35 +35,35 @@
         <div class="container">
             <div class="project-controls">
                 <div class="filter-rows">
-                    <ul class="filter-categories primary-filters">
-                        <li class="filter-category" data-filter="design" data-filter-type="category">Design</li>
-                        <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
-                        <li class="filter-divider">|</li>
-                        <li id="sort-options" class="sort-dropdown">
-                            <span>Sort by: </span>
+                    <div class="sort-view-row">
+                        <div id="sort-options" class="sort-dropdown">
+                            <span>Sort by:</span>
                             <select id="project-sort">
                                 <option value="default">Default</option>
                                 <option value="name-asc">Name (A-Z)</option>
                                 <option value="name-desc">Name (Z-A)</option>
-                                <option value="year-desc">Year (Newest)</option>
+                                <option value="year-desc" selected>Year (Newest)</option>
                                 <option value="year-asc">Year (Oldest)</option>
                             </select>
-                        </li>
-                        <li id="clear-filters" class="clear-filters"><span>×</span> Clear Filters</li>
-                    </ul>
-                    <ul class="filter-categories tag-filters hidden">
+                        </div>
+                        <div class="view-toggle" id="view-toggle" title="Toggle grid/list view">
+                            <span class="grid-icon">▦</span>
+                            <span class="list-icon">☰</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="filter-categories tag-filters">
+                        <li class="filter-category active" data-filter="design" data-filter-type="category">Design</li>
+                        <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
                         <li class="filter-category" data-filter="branding" data-filter-type="tag">Branding</li>
                         <li class="filter-category" data-filter="web" data-filter-type="tag">Web Design</li>
-                        <li class="filter-category" data-filter="animation" data-filter-type="tag">Animation</li>
+                        <li class="filter-category" data-filter="storyboarding" data-filter-type="tag">Storyboarding</li>
                         <li class="filter-category" data-filter="strategy" data-filter-type="tag">Strategy</li>
                         <li class="filter-category" data-filter="print" data-filter-type="tag">Print</li>
+                        <li class="filter-category" data-filter="motion" data-filter-type="tag">Motion</li>
                     </ul>
-                </div>
-                <div class="view-toggles">
-                    <div class="view-toggle" id="view-toggle" title="Toggle grid/list view">
-                        <span class="grid-icon">▦</span>
-                        <span class="list-icon">☰</span>
-                    </div>
+                    
+                    <button id="clear-filters" class="clear-filters full-width"><span>×</span> Reset</button>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
     <main class="container">
         <section id="projects">
             <div class="project-grid">
-                <div class="project-card landscape" data-categories="design" data-tags="branding,web,animation" data-year="2021">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,storyboarding,motion,strategy" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/01_absorb_3d_prism_howto_wide_v2.gif" alt="Absorb Software">
                     </div>
@@ -79,16 +79,18 @@
                         <h3>Absorb Software</h3>
                         <a href="projects/absorb_software.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
-                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
                         </div>
                         <p>Website & rebrand for learning tech company</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="web,branding" data-year="2022">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,storyboarding,print,motion,strategy" data-year="2022">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/mn8/mn8-mobile-trio-4x3.png" alt="MN8 Energy">
                     </div>
@@ -96,15 +98,19 @@
                         <h3>MN8 Energy</h3>
                         <a href="projects/mn8_energy.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
                         </div>
                         <p>Website & guidelines for GS spin-off</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding" data-year="2020">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,storyboarding,print,motion,strategy" data-year="2020">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/l3h-sign-cover-4x3.jpg" alt="L3Harris">
                     </div>
@@ -112,14 +118,19 @@
                         <h3>L3Harris</h3>
                         <a href="projects/l3harris.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
                         <p>Brand identity for defense merger</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="branding,web" data-year="2021">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,motion" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/abra_plane_8k.png" alt="Abra">
                     </div>
@@ -127,14 +138,16 @@
                         <h3>Abra</h3>
                         <a href="projects/abra.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-<span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                        </div>
                         <p>Brand consolidation & website</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation" data-year="2023">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,print,motion,strategy" data-year="2023">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/z001_lifepoint_01_heart.gif" alt="Lifepoint Health">
                     </div>
@@ -142,15 +155,17 @@
                         <h3>Lifepoint Health</h3>
                         <a href="projects/lifepoint_health.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
                         </div>
                         <p>Branding a national healthcare network</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="animation" data-year="2025">
+                <div class="project-card landscape" data-categories="design" data-tags="storyboarding,motion" data-year="2025">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/onity_logo_animation.gif" alt="Onity">
                     </div>
@@ -158,14 +173,15 @@
                         <h3>Onity</h3>
                         <a href="projects/onity.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                        </div>
                         <p>Storyboarding, direction for logo animation</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="print,branding" data-year="2019">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,storyboarding,print,motion,strategy" data-year="2019">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/04_eyesabove_cards_yg21_grzejka.png" alt="Eyes Above">
                     </div>
@@ -173,15 +189,19 @@
                         <h3>Eyes Above</h3>
                         <a href="projects/eyes_above.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-                            <span class="project-tag" data-tag="print" onclick="window.location.href='?filter=print&filterType=tag'">Print</span>
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
                         </div>
                         <p>Werewolves & wraiths oh my</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding,animation" data-year="2021">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,storyboarding,print,motion" data-year="2021">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/sylvamo_casestudy_logoanimationshort.gif" alt="Sylvamo">
                     </div>
@@ -189,15 +209,18 @@
                         <h3>Sylvamo</h3>
                         <a href="projects/sylvamo.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                        </div>
                         <p>Branding for International Paper spinoff</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="animation">
+                <div class="project-card landscape" data-categories="design" data-tags="web,storyboarding">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/01_amso_splash.png" alt="American Social">
                     </div>
@@ -205,14 +228,15 @@
                         <h3>American Social</h3>
                         <a href="projects/american_social.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
                         </div>
                         <p>Title & end credits</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="direction" data-tags="branding">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,storyboarding,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/finseca_renderboomerang.gif" alt="Finseca">
                     </div>
@@ -220,14 +244,17 @@
                         <h3>Finseca</h3>
                         <a href="projects/finseca.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="direction" onclick="window.location.href='?filter=direction&filterType=category'">Direction</span>
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-</div>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
                         <p>Branding for merger</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="branding,strategy">
+                <div class="project-card landscape" data-categories="design" data-tags="print,motion,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/lrei/LREI_1_BookFlipCut_0605.gif" alt="LREI Viewbook with tagline 'Out of the classroom and into the world'">
                     </div>
@@ -235,15 +262,16 @@
                         <h3>LREI Viewbook</h3>
                         <a href="projects/lrei.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="strategy" onclick="window.location.href='?filter=strategy&filterType=tag'">Strategy</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
                         <p>Viewbook</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="design" data-tags="branding,animation">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,storyboarding,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/aiga/aiga_window-2.gif" alt="AIGA Joy">
                     </div>
@@ -251,15 +279,17 @@
                         <h3>Joy with the AIGA</h3>
                         <a href="projects/aiga.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
-</div>
-                        <p>Holiday QR codes and animation</p>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
+                        <p>Holiday QR codes and storyboarding</p>
                     </div>
                 </div>
                 
-                <div class="project-card landscape" data-categories="etc" data-tags="branding,strategy">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/hum_logobadge2.png" alt="Hum">
                     </div>
@@ -267,14 +297,15 @@
                         <h3>A better way to fund growth</h3>
                         <a href="projects/hum.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-<span class="project-tag" data-tag="strategy" onclick="window.location.href='?filter=strategy&filterType=tag'">Strategy</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                        </div>
                         <p>Capital as a service business model</p>
                     </div>
                 </div>
 
-                <div class="project-card landscape" data-categories="digital,print" data-tags="web,strategy">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,print,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/fiserv/DOL_0_Ipad_v4.gif" alt="Fiserv">
                     </div>
@@ -282,14 +313,16 @@
                         <h3>Programming financial reform</h3>
                         <a href="projects/fiserv.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
-<span class="project-tag" data-tag="strategy" onclick="window.location.href='?filter=strategy&filterType=tag'">Strategy</span>
-</div>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
                         <p>Dynamically-generated financial reports</p>
                     </div>
                 </div>
 
-                <div class="project-card landscape" data-categories="print,digital" data-tags="print,strategy">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,storyboarding,print,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/chocolates/TM_IndigoAwards21_01.gif" alt="Thackway McCord Pets">
                     </div>
@@ -297,15 +330,19 @@
                         <h3>Making QR codes fun!</h3>
                         <a href="projects/thackway_mccord_pets.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="print" onclick="window.location.href='?filter=print&filterType=tag'">Print</span>
-                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?filter=strategy&filterType=tag'">Strategy</span>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
                         </div>
                         <p>Chocolate bars with custom QR codes</p>
                     </div>
                 </div>
 
 
-                <div class="project-card landscape" data-categories="etc" data-tags="web">
+                <div class="project-card landscape" data-categories="direction" data-tags="branding,web,print,motion,strategy">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/tryitout_2_shirt.jpg" alt="Try It Out with Major League Wiffleball">
                     </div>
@@ -313,14 +350,19 @@
                         <h3>Try It Out with Major League Wiffleball</h3>
                         <a href="projects/tryitout_with_major_league_wiffleball.html" class="project-link">View project →</a>
                         <div class="project-tags">
-<span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
-</div>
+                            <span class="project-tag" data-tag="direction" onclick="window.location.href='?categories=direction'">Direction</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
+                            <span class="project-tag" data-tag="motion" onclick="window.location.href='?tags=motion'">Motion</span>
+                            <span class="project-tag" data-tag="strategy" onclick="window.location.href='?tags=strategy'">Strategy</span>
+                        </div>
                         <p>Sports branding for wiffle ball team</p>
                     </div>
                 </div>
 
                 
-                <div class="project-card landscape" data-categories="design" data-tags="branding,web">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,web,storyboarding">
                     <div class="project-image">
                         <picture>
                             <source srcset="images/webp/autonomy_capital/AUTONOMY_9.webp" type="image/webp">
@@ -331,15 +373,16 @@
                         <h3>Autonomy Capital</h3>
                         <a href="projects/autonomy_capital.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="design" onclick="window.location.href='?filter=design&filterType=category'">Design</span>
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-                            <span class="project-tag" data-tag="web" onclick="window.location.href='?filter=web&filterType=tag'">Web Design</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="web" onclick="window.location.href='?tags=web'">Web Design</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
                         </div>
                         <p>Brand identity for investment firm</p>
                     </div>
                 </div>
 
-                <div class="project-card landscape" data-categories="digital,print" data-tags="branding,animation" data-year="2018">
+                <div class="project-card landscape" data-categories="design" data-tags="branding,storyboarding,print" data-year="2018">
                     <div class="project-image">
                         <img loading="lazy" src="images/optimized/un/UN_1.png" alt="United Nations">
                     </div>
@@ -347,8 +390,10 @@
                         <h3>United Nations</h3>
                         <a href="projects/un.html" class="project-link">View project →</a>
                         <div class="project-tags">
-                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?filter=branding&filterType=tag'">Branding</span>
-                            <span class="project-tag" data-tag="animation" onclick="window.location.href='?filter=animation&filterType=tag'">Animation</span>
+                            <span class="project-tag" data-tag="design" onclick="window.location.href='?categories=design'">Design</span>
+                            <span class="project-tag" data-tag="branding" onclick="window.location.href='?tags=branding'">Branding</span>
+                            <span class="project-tag" data-tag="storyboarding" onclick="window.location.href='?tags=storyboarding'">Storyboarding</span>
+                            <span class="project-tag" data-tag="print" onclick="window.location.href='?tags=print'">Print</span>
                         </div>
                         <p>Morning Minga diplomatic initiative</p>
                     </div>
@@ -375,7 +420,11 @@
                         </a>
                     </div>
                     <div class="footer-links right-links">
-                        <a href="lets-work-together.html" class="footer-link">
+                        <a href="index.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg>
+                            Work
+                        </a>
+                        <a href="about.html" class="footer-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg>
                             About
                         </a>
@@ -395,146 +444,82 @@
     
     
     
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterCategories = document.querySelectorAll('.project-controls .filter-category');
-            const clearFiltersBtn = document.getElementById('clear-filters');
-            const navCategories = document.querySelectorAll('nav .filter-category');
-            const projectCards = document.querySelectorAll('.project-card');
-            const projectGrid = document.querySelector('.project-grid');
-            const viewToggle = document.getElementById('view-toggle');
-            const projectSort = document.getElementById('project-sort');
         
-        // Function to show all projects
-        function showAllProjects() {
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterCategories = document.querySelectorAll('.filter-category');
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectGrid = document.querySelector('.project-grid');
+        const viewToggle = document.getElementById('view-toggle');
+        
+        // Track active filters
+        const activeFilters = {
+          category: [],
+          tag: []
+        };
+        
+        // Function to apply filters based on current active filters
+        function applyFilters() {
           projectCards.forEach(card => {
-            card.classList.remove('hidden');
-            setTimeout(() => {
-              card.classList.add('animate-in');
-            }, 10);
+            // If no filters are active, show all cards
+            if (activeFilters.category.length === 0 && activeFilters.tag.length === 0) {
+              card.classList.remove('hidden');
+              setTimeout(() => {
+                card.classList.add('animate-in');
+              }, 10);
+              return;
+            }
+            
+            const cardCategories = card.getAttribute('data-categories').split(',');
+            const cardTags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').split(',') : [];
+            
+            // Check if card matches ANY of the active category filters
+            const matchesCategory = activeFilters.category.length === 0 || 
+                                 activeFilters.category.some(filter => cardCategories.includes(filter));
+            
+            // Check if card matches ANY of the active tag filters
+            const matchesTag = activeFilters.tag.length === 0 || 
+                            activeFilters.tag.some(filter => cardTags.includes(filter));
+            
+            // Show card if it matches the category filters AND tag filters
+            if (matchesCategory && matchesTag) {
+              card.classList.remove('hidden');
+              setTimeout(() => {
+                card.classList.add('animate-in');
+              }, 10);
+            } else {
+              card.classList.add('hidden');
+              card.classList.remove('animate-in');
+            }
           });
         }
         
-        // Function to filter projects
-        function filterProjects(filter, filterType = 'category') {
-          // Remove active class from all categories
-          filterCategories.forEach(c => c.classList.remove('active'));
-          
-          // Find and add active class to clicked category if it exists
-          const targetFilter = document.querySelector(`.filter-category[data-filter="${filter}"]`);
-          if (targetFilter) {
-            targetFilter.classList.add('active');
-          }
-          
-          // Show/hide tag filters based on category selection
-          const tagFilters = document.querySelector('.tag-filters');
-          if (filterType === 'category' && (filter === 'design' || filter === 'direction')) {
-            tagFilters.classList.remove('hidden');
-          } else if (filterType === 'category') {
-            tagFilters.classList.add('hidden');
-          }
-          
-          // Filter projects
-          if (filter === 'all' || !filter) {
-            showAllProjects();
-            tagFilters.classList.add('hidden');
-          } else {
-            projectCards.forEach(card => {
-              // For category filtering, check data-categories attribute
-              if (filterType === 'category') {
-                const categories = card.getAttribute('data-categories').split(',');
-                
-                if (categories.includes(filter)) {
-                  card.classList.remove('hidden');
-                  setTimeout(() => {
-                    card.classList.add('animate-in');
-                  }, 10);
-                } else {
-                  card.classList.remove('animate-in');
-                  card.classList.add('hidden');
-                }
-              }
-              // For tag filtering, check data-tags attribute (if it exists)
-              else if (filterType === 'tag') {
-                const tags = card.getAttribute('data-tags');
-                if (tags && tags.split(',').includes(filter)) {
-                  card.classList.remove('hidden');
-                  setTimeout(() => {
-                    card.classList.add('animate-in');
-                  }, 10);
-                } else {
-                  card.classList.remove('animate-in');
-                  card.classList.add('hidden');
-                }
-              }
-            });
-          }
-        }
-        
-        // Function to sort projects
-        function sortProjects(sortBy) {
-          const projectsArray = Array.from(projectCards);
-          
-          switch(sortBy) {
-            case 'name-asc':
-              projectsArray.sort((a, b) => {
-                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
-                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
-                return titleA.localeCompare(titleB);
-              });
-              break;
-            case 'name-desc':
-              projectsArray.sort((a, b) => {
-                const titleA = a.querySelector('h3').textContent.trim().toLowerCase();
-                const titleB = b.querySelector('h3').textContent.trim().toLowerCase();
-                return titleB.localeCompare(titleA);
-              });
-              break;
-            case 'year-asc':
-              projectsArray.sort((a, b) => {
-                const yearA = parseInt(a.getAttribute('data-year') || '2020');
-                const yearB = parseInt(b.getAttribute('data-year') || '2020');
-                return yearA - yearB;
-              });
-              break;
-            case 'year-desc':
-              projectsArray.sort((a, b) => {
-                const yearA = parseInt(a.getAttribute('data-year') || '2020');
-                const yearB = parseInt(b.getAttribute('data-year') || '2020');
-                return yearB - yearA;
-              });
-              break;
-            default: // default order (as in HTML)
-              projectsArray.sort((a, b) => {
-                return Array.from(projectGrid.children).indexOf(a) - 
-                       Array.from(projectGrid.children).indexOf(b);
-              });
-          }
-          
-          // Remove all projects from grid
-          projectGrid.innerHTML = '';
-          
-          // Add sorted projects back to grid
-          projectsArray.forEach(card => {
-            projectGrid.appendChild(card);
-          });
-          
-          // Update URL with sort parameter without reloading the page
+        // Function to update URL with current filters
+        function updateURL() {
           const url = new URL(window.location);
-          if (sortBy !== 'default') {
-            url.searchParams.set('sort', sortBy);
-          } else {
-            url.searchParams.delete('sort');
+          
+          // Clear existing parameters
+          url.searchParams.delete('categories');
+          url.searchParams.delete('tags');
+          
+          // Add category filters to URL
+          if (activeFilters.category.length > 0) {
+            url.searchParams.set('categories', activeFilters.category.join(','));
           }
+          
+          // Add tag filters to URL
+          if (activeFilters.tag.length > 0) {
+            url.searchParams.set('tags', activeFilters.tag.join(','));
+          }
+          
           window.history.pushState({}, '', url);
         }
         
         // Check URL for parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const filterParam = urlParams.get('filter');
-        const filterTypeParam = urlParams.get('filterType') || 'category';
+        const categoriesParam = urlParams.get('categories');
+        const tagsParam = urlParams.get('tags');
         const viewParam = urlParams.get('view');
-        const sortParam = urlParams.get('sort');
         
         // Initialize view mode from URL or localStorage
         const savedViewMode = localStorage.getItem('viewMode') || 'grid';
@@ -543,116 +528,77 @@
           viewToggle.classList.add('list');
         }
         
-        // Show all projects by default
-        showAllProjects();
-        
-        // Apply filter if in URL
-        if (filterParam) {
-          // Check if filter exists
-          const filterExists = [...filterCategories].some(
-            el => el.getAttribute('data-filter') === filterParam
-          );
+        // Initialize with default filter - only design selected
+        if (!categoriesParam && !tagsParam) {
+          activeFilters.category = ['design'];
           
-          if (filterExists) {
-            filterProjects(filterParam, filterTypeParam);
-            
-            // If it's a tag filter, make sure the tag filters row is visible
-            if (filterTypeParam === 'tag') {
-              const tagFilters = document.querySelector('.tag-filters');
-              tagFilters.classList.remove('hidden');
-            }
-          } else {
-            // If filter doesn't exist, show all projects
-            showAllProjects();
-            // Update URL to remove invalid filter
-            const url = new URL(window.location);
-            url.searchParams.delete('filter');
-            url.searchParams.delete('filterType');
-            window.history.replaceState({}, '', url);
+          // Add active class to design filter
+          const designFilter = document.querySelector('.filter-category[data-filter="design"]');
+          
+          if (designFilter) designFilter.classList.add('active');
+        }
+        // Apply filters from URL if present
+        else {
+          if (categoriesParam) {
+            const categories = categoriesParam.split(',');
+            categories.forEach(category => {
+              const categoryEl = document.querySelector(`.filter-category[data-filter="${category}"][data-filter-type="category"]`);
+              if (categoryEl) {
+                categoryEl.classList.add('active');
+                activeFilters.category.push(category);
+              }
+            });
           }
-        } else {
-          // Hide tag filters on initial load if no filter is set
-          const tagFilters = document.querySelector('.tag-filters');
-          tagFilters.classList.add('hidden');
+          
+          if (tagsParam) {
+            const tags = tagsParam.split(',');
+            tags.forEach(tag => {
+              const tagEl = document.querySelector(`.filter-category[data-filter="${tag}"][data-filter-type="tag"]`);
+              if (tagEl) {
+                tagEl.classList.add('active');
+                activeFilters.tag.push(tag);
+              }
+            });
+          }
         }
         
-        // Apply sort if in URL
-        if (sortParam) {
-          projectSort.value = sortParam;
-          sortProjects(sortParam);
-        }
+        // Apply initial filters
+        applyFilters();
         
         // Add click event to filter categories
         filterCategories.forEach(category => {
-            category.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                const filterType = this.getAttribute('data-filter-type') || 'category';
-                filterProjects(filter, filterType);
-            
-                // Update URL with filter parameter without reloading the page
-                const url = new URL(window.location);
-                url.searchParams.set('filter', filter);
-                url.searchParams.set('filterType', filterType);
-                
-                // Preserve sort parameter if exists
-                const currentSort = projectSort.value;
-                if (currentSort !== 'default') {
-                  url.searchParams.set('sort', currentSort);
-                }
-                
-                window.history.pushState({}, '', url);
-            });
-        });
-
-        // Clear all filters
-        if (clearFiltersBtn) {
-            clearFiltersBtn.addEventListener('click', function() {
-                filterCategories.forEach(c => c.classList.remove('active'));
-                showAllProjects();
-                
-                // Hide tag filters when clearing
-                const tagFilters = document.querySelector('.tag-filters');
-                tagFilters.classList.add('hidden');
-
-                const url = new URL(window.location);
-                url.searchParams.delete('filter');
-                url.searchParams.delete('filterType');
-                
-                // Preserve sort parameter if exists
-                const currentSort = projectSort.value;
-                if (currentSort !== 'default') {
-                  url.searchParams.set('sort', currentSort);
-                }
-                
-                window.history.pushState({}, '', url);
-            });
-        }
-        
-        // Add change event to sort dropdown
-        if (projectSort) {
-            projectSort.addEventListener('change', function() {
-                sortProjects(this.value);
-            });
-        }
-        
-        // Handle navigation clicks
-        navCategories.forEach(category => {
           category.addEventListener('click', function() {
-            // Remove active class from all categories
-            navCategories.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked category
-            this.classList.add('active');
-            
-            // Get the page to navigate to
             const filter = this.getAttribute('data-filter');
+            const filterType = this.getAttribute('data-filter-type') || 'category';
             
-            // Navigate to the appropriate page
-            if (filter === 'portfolio') {
+            // Handle navigation based on data-filter value
+            if (filter === 'work') {
               window.location.href = 'index.html';
-            } else if (filter === 'lets-work') {
-              window.location.href = 'lets-work-together.html';
+              return;
+            } else if (filter === 'about') {
+              window.location.href = 'about.html';
+              return;
             }
+            
+            // Toggle the clicked filter (including design and direction)
+            if (this.classList.contains('active')) {
+              // Remove from active filters
+              this.classList.remove('active');
+              const index = activeFilters[filterType].indexOf(filter);
+              if (index > -1) {
+                activeFilters[filterType].splice(index, 1);
+              }
+            } else {
+              // Add to active filters
+              this.classList.add('active');
+              activeFilters[filterType].push(filter);
+            }
+            
+            // Apply filters
+            applyFilters();
+            
+            // Update URL with filter parameters
+            updateURL();
           });
         });
         
@@ -668,24 +614,73 @@
           // Update URL with view parameter without reloading the page
           const url = new URL(window.location);
           url.searchParams.set('view', isListView ? 'list' : 'grid');
-          
-          // Preserve any current filter
-          const currentFilter = document.querySelector('.filter-category.active');
-          if (currentFilter) {
-            const filter = currentFilter.getAttribute('data-filter');
-            const filterType = currentFilter.getAttribute('data-filter-type') || 'category';
-            url.searchParams.set('filter', filter);
-            url.searchParams.set('filterType', filterType);
-          }
-          
-          // Preserve sort parameter if exists
-          const currentSort = projectSort.value;
-          if (currentSort !== 'default') {
-            url.searchParams.set('sort', currentSort);
-          }
-          
           window.history.pushState({}, '', url);
         });
+        
+        // Add sorting functionality
+        const projectSort = document.getElementById('project-sort');
+        if (projectSort) {
+          // Apply initial sort from URL or localStorage, default to year-desc (newest)
+          const savedSort = localStorage.getItem('sortBy') || 'year-desc';
+          const sortParam = urlParams.get('sort') || savedSort;
+          if (sortParam && projectSort.querySelector(`option[value="${sortParam}"]`)) {
+            projectSort.value = sortParam;
+            applySorting(sortParam);
+          } else {
+            // Default to Year (Newest) if no sort is specified
+            projectSort.value = 'year-desc';
+            applySorting('year-desc');
+          }
+          
+          // Add event listener for sort changes
+          projectSort.addEventListener('change', function() {
+            const sortValue = this.value;
+            applySorting(sortValue);
+            
+            // Save preference to localStorage
+            localStorage.setItem('sortBy', sortValue);
+            
+            // Update URL with sort parameter without reloading the page
+            const url = new URL(window.location);
+            url.searchParams.set('sort', sortValue);
+            window.history.pushState({}, '', url);
+          });
+        }
+        
+        // Function to apply sorting to project cards
+        function applySorting(sortValue) {
+          const cards = Array.from(projectCards);
+          
+          // Sort the cards based on the selected sort option
+          cards.sort((a, b) => {
+            if (sortValue === 'default') {
+              return 0; // No sorting, maintain original order
+            } else if (sortValue === 'name-asc') {
+              const nameA = a.querySelector('h3').textContent.trim().toLowerCase();
+              const nameB = b.querySelector('h3').textContent.trim().toLowerCase();
+              return nameA.localeCompare(nameB);
+            } else if (sortValue === 'name-desc') {
+              const nameA = a.querySelector('h3').textContent.trim().toLowerCase();
+              const nameB = b.querySelector('h3').textContent.trim().toLowerCase();
+              return nameB.localeCompare(nameA);
+            } else if (sortValue.startsWith('year')) {
+              const yearA = a.getAttribute('data-year') || '0';
+              const yearB = b.getAttribute('data-year') || '0';
+              return sortValue === 'year-desc' ? 
+                parseInt(yearB) - parseInt(yearA) : 
+                parseInt(yearA) - parseInt(yearB);
+            }
+            return 0;
+          });
+          
+          // Reorder the cards in the DOM
+          const projectGrid = document.querySelector('.project-grid');
+          if (projectGrid) {
+            cards.forEach(card => {
+              projectGrid.appendChild(card);
+            });
+          }
+        }
         
         // Make project cards clickable
         projectCards.forEach(card => {
@@ -751,6 +746,33 @@
           }
           localStorage.setItem('theme', theme);
         });
+        
+        // Clear filters functionality
+        const clearFiltersButton = document.getElementById('clear-filters');
+        if (clearFiltersButton) {
+          clearFiltersButton.addEventListener('click', function() {
+            // Reset to show all projects
+            activeFilters.category = [];
+            activeFilters.tag = [];
+            
+            // Remove active class from all filters
+            filterCategories.forEach(c => {
+              const filter = c.getAttribute('data-filter');
+              if (filter !== 'work') {
+                c.classList.remove('active');
+              }
+            });
+            
+            // Apply filters to show all projects
+            applyFilters();
+            
+            // Update URL - clear all filter parameters
+            const url = new URL(window.location);
+            url.searchParams.delete('categories');
+            url.searchParams.delete('tags');
+            window.history.pushState({}, '', url);
+          });
+        }
       });
     </script>
 </body>
