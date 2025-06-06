@@ -8,6 +8,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="favicon/k-fav-bigger.ico" type="image/x-icon">
+
+<style>
+/* Logo visibility fix */
+.logo-link .dark-logo {
+  display: none !important;
+}
+
+.logo-link .light-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .dark-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .light-logo {
+  display: none !important;
+}
+</style>
 </head>
 <body>
     <header class="project-header">

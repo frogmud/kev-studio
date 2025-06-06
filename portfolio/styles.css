@@ -1672,3 +1672,33 @@ footer {
   max-width: 800px;
   margin-bottom: var(--spacing-md);
 }
+
+/* Logo styles for light/dark mode */
+.sticky-nav-logo .logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Show/hide logos based on theme */
+/* Only black logo is shown in light mode, white logo in dark mode */
+.dark-logo {
+  display: none; /* White logo hidden by default */
+}
+
+.light-logo {
+  display: block; /* Black logo shown by default */
+}
+
+[data-theme="dark"] .dark-logo {
+  display: block; /* Show white logo in dark mode */
+}
+
+[data-theme="dark"] .light-logo {
+  display: none; /* Hide black logo in dark mode */
+}

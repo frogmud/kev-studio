@@ -63,6 +63,25 @@
             }
         }
     </style>
+
+<style>
+/* Logo visibility fix */
+.logo-link .dark-logo {
+  display: none !important;
+}
+
+.logo-link .light-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .dark-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .light-logo {
+  display: none !important;
+}
+</style>
 </head>
 <body>
     <!-- Sticky navigation with filter categories -->
@@ -70,8 +89,11 @@
         <div class="container">
             <div class="sticky-nav-content">
                 <div class="sticky-nav-logo">
-                    <a href="../index.html">Kevin Grzejka</a>
-                </div>
+                <a href="index.html" class="logo-link">
+                    <img src="images/kpfp-black.svg" alt="Kevin Grzejka" class="logo light-logo" width="40" height="40">
+                    <img src="images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="40" height="40">
+                </a>
+            </div>
                 <ul class="filter-categories">
                     <li class="filter-category" data-filter="all">All</li>
                     <li class="filter-category" data-filter="branding">Branding</li>

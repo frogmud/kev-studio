@@ -28,8 +28,8 @@
       "type": "discipline"
     },
     {
-      "id": "animation",
-      "name": "Animation",
+      "id": "storyboarding",
+      "name": "Storyboarding",
       "type": "discipline"
     },
     {
@@ -52,122 +52,110 @@
     {
       "id": "un",
       "title": "United Nations",
-      "categories": ["digital", "print"],
-      "tags": ["branding"]
+      "categories": ["design"],
+      "tags": ["branding", "animation", "print"]
     },
     {
       "id": "absorb_software",
       "title": "Absorb Software",
-      "categories": ["digital"],
-      "tags": ["branding", "web", "animation"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "motion", "strategy"]
     },
     {
       "id": "mn8_energy",
       "title": "MN8 Energy",
-      "categories": ["digital"],
-      "tags": ["web", "branding"]
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
     },
     {
       "id": "eyes_above",
       "title": "Eyes Above",
-      "categories": ["print"],
-      "tags": ["print", "branding"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
     },
     {
       "id": "abra",
       "title": "Abra",
-      "categories": ["digital"],
-      "tags": ["branding", "web"]
+      "categories": ["design"],
+      "tags": ["branding", "web", "motion"]
     },
     {
       "id": "lifepoint_health",
       "title": "Lifepoint Health",
-      "categories": ["digital"],
-      "tags": ["branding", "animation"]
+      "categories": ["direction"],
+      "tags": ["branding", "print", "motion", "strategy"]
     },
     {
       "id": "onity",
       "title": "Onity",
-      "categories": ["digital"],
-      "tags": ["animation", "motion", "branding"]
+      "categories": ["design"],
+      "tags": ["animation", "motion"]
     },
     {
       "id": "sylvamo",
       "title": "Sylvamo",
-      "categories": ["digital"],
-      "tags": ["branding", "animation"]
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion"]
     },
     {
       "id": "american_social",
       "title": "American Social",
-      "categories": ["digital"],
-      "tags": ["animation"]
+      "categories": ["design"],
+      "tags": ["web", "animation"]
     },
     {
       "id": "finseca",
       "title": "Finseca",
-      "categories": ["digital"],
-      "tags": ["branding"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "strategy"]
     },
     {
       "id": "lrei",
       "title": "LREI Viewbook",
-      "categories": ["print"],
-      "tags": ["print"]
+      "categories": ["design"],
+      "tags": ["print", "motion", "strategy"]
     },
     {
       "id": "aiga",
       "title": "Joy with the AIGA",
-      "categories": ["digital", "print"],
-      "tags": ["branding", "animation"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "strategy"]
     },
     {
       "id": "fiserv",
       "title": "Programming financial reform",
-      "categories": ["digital", "print"],
-      "tags": ["web", "strategy"]
+      "categories": ["design"],
+      "tags": ["branding", "print", "strategy"]
     },
     {
       "id": "l3harris",
       "title": "L3Harris",
-      "categories": ["digital"],
-      "tags": ["branding"]
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
     },
     {
       "id": "hum",
       "title": "A better way to fund growth",
-      "categories": ["digital"],
-      "tags": ["branding", "strategy"]
+      "categories": ["design"],
+      "tags": ["branding", "web"]
     },
     {
       "id": "thackway_mccord_pets",
       "title": "Making QR codes fun!",
-      "categories": ["print", "digital"],
-      "tags": ["print", "web"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "print", "strategy"]
     },
     {
       "id": "tryitout_with_major_league_wiffleball",
       "title": "Try It Out with Major League Wiffleball",
-      "categories": ["digital"],
-      "tags": ["web", "branding", "print", "motion"]
-    },
-    {
-      "id": "museum",
-      "title": "Museum",
-      "categories": ["print"],
-      "tags": ["print"]
-    },
-    {
-      "id": "tryitout",
-      "title": "Tryitout",
-      "categories": ["digital"],
-      "tags": ["web"]
+      "categories": ["direction"],
+      "tags": ["branding", "web", "print", "motion", "strategy"]
     },
     {
       "id": "autonomy_capital",
       "title": "Autonomy Capital",
-      "categories": ["digital"],
-      "tags": ["branding", "web"]
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation"]
     }
   ]
 }
