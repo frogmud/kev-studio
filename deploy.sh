@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Deployment script for kevingrzejka.com
+# Simple deployment script for kevingrzejka.com
 # Usage: ./deploy.sh
 
-SOURCE_DIR="$(dirname "$0")/deploy-ready"
-DESTINATION="kg@kevingrzejka.com:/home/kg/kevingrzejka.com/"
+SOURCE_DIR="/Users/kevin/Desktop/WEBSITES/PORTFOLIO/deploy-ready"
+DESTINATION="your-username@your-server.com:/path/to/www/kevingrzejka.com/"
 
 # Ensure source directory exists
 if [ ! -d "$SOURCE_DIR" ]; then
