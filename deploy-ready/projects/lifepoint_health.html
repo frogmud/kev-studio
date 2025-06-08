@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- ENHANCED -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Design portfolio of Kevin Grzejka showcasing branding, web design, animation and print projects.">
+    <title>Kevin Grzejka</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../favicon/k-fav-bigger.ico" type="image/x-icon">
+    <style>
+        /* Timeline styles for project pages */
+        .project-timeline {
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            bottom: 0;
+            left: 8px;
+            width: 0.5px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-item p {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .timeline-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .image-grid img {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 36px;
+            }
+
+            .timeline-item::before {
+                left: -32px;
+            }
+        }
+    </style>
+
+<style>
+/* Logo visibility fix */
+.logo-link .dark-logo {
+  display: none !important;
+}
+
+.logo-link .light-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .dark-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .light-logo {
+  display: none !important;
+}
+</style>
+</head>
+<body>
+    <!-- Sticky navigation with filter categories -->
+    <nav class="sticky-nav visible">
+    <div class="container">
+        <div class="sticky-nav-content">
+            <div class="sticky-nav-logo">
+            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">☰</button>
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/kpfp-black.svg" alt="Kevin Grzejka" class="logo light-logo" width="40" height="40">
+                    <img src="../images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="40" height="40">
+                </a>
+            </div>
+            <ul class="filter-categories">
+                <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                <li class="filter-category" data-filter="about" data-filter-type="category">About</li>
+            </ul>
+            <div class="view-toggles">
+                <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">◐</span>
+                        <span class="moon">◑</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div id="mobile-menu">
+        <button id="mobile-menu-close" aria-label="Close">×</button>
+    </div>
+
+    <main class="container project-detail">
+        <div class="project-header">
+            <h1>Lifepoint Health</h1>
+            <p class="tagline">Great care lives here.</p>
+        </div>
+        
+        <div class="project-hero">
+            <img loading="lazy" src="../images/optimized/lifepoint/10_Lifepoint_HQSign_YG21_Grzejka-copy.png" alt="Lifepoint Health">
+        </div>
+
+        <div class="project-content">
+            <div class="project-info">
+                <div class="project-metadata">
+                    <div class="metadata-item">
+                        <h3>Year</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Client</h3>
+                        <p>Lifepoint Health</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Role</h3>
+                        <p>Design Lead, Logo, Motion, Environments, Print</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Agency</h3>
+                        <p>Thackway McCord</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-description">
+                <p>Lifepoint Health is a national healthcare provider operating in 89 communities across the United States. The network is deeply connected to the towns it serves, where hospitals are as vital to local infrastructure as roads and schools.</p>
+                <p>Working closely with creative director Kat McCord, strategist Simon Thackway, and the wider Thackway McCord team, I guided the branding effort from discovery through rollout.</p>
+                <p>The heart motif created the foundation for a flexible identity system applied through a palette of clean white and vibrant colors. A rigorously developed library of crop configurations originates from the dot motif. The identity system needed to be immediately recognizable while also accommodating diverse healthcare facilities across the country.</p>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                <h3>Discovery & analysis</h3>
+                <p>As design lead, I partnered with the strategy team to conduct extensive research across stakeholders, patients, and healthcare professionals. We audited existing brand assets across numerous facilities to uncover challenges and inconsistencies in the system.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/HQ.png" alt="Lifepoint Health headquarters" class="timeline-image">
+                <img loading="lazy" src="../images/optimized/lifepoint/Leaflet.png" alt="Lifepoint Health leaflet design" class="timeline-image">
+              </div>
+<div class="timeline-item">
+                <h3>Brand strategy development</h3>
+                <p>Together with designers Bianca Seong and Fuchen Kuang, I crafted a unified brand platform that accommodated both corporate and local market needs. We developed messaging hierarchies and tone of voice guidelines that supported Lifepoint's positioning as a leader in community healthcare.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/05_Lifepoint_Leaflets_YG21_Grzejka.png" alt="Lifepoint Health brochure designs" class="timeline-image">
+                <img loading="lazy" src="../images/optimized/lifepoint/Shuttle_BG.png" alt="Lifepoint Health shuttle bus branding" class="timeline-image">
+              </div>
+<div class="timeline-item">
+                <h3>Visual identity system</h3>
+                <p>Designed a comprehensive visual identity including logo, typography, color palette, and supportive graphic elements. Our flexible system could be implemented across diverse facilities while maintaining brand cohesion.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/Icons.png" alt="Lifepoint Health icon system" class="timeline-image">
+              </div>
+<div class="timeline-item">
+                <h3>Digital experience design</h3>
+                <p>As lead designer I oversaw the redesign of the corporate website and digital touchpoints. We developed user-friendly tools that enhanced patient experience while showcasing Lifepoint's services and expertise.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/Web_Scroll_Laptop_16x9.gif" alt="Lifepoint Health website scrolling animation" class="timeline-image">
+                <div class="image-grid">
+                    <img loading="lazy" src="../images/optimized/lifepoint/z07_DigitalPoster-copy-2.gif" alt="Lifepoint Health digital poster animation" class="timeline-image">
+                    <img loading="lazy" src="../images/optimized/lifepoint/z07_DigitalSign-copy-2.gif" alt="Lifepoint Health digital signage animation" class="timeline-image">
+                </div>
+                
+              </div>
+<div class="timeline-item">
+                <h3>Environmental application</h3>
+                <p>Guiding the environmental design effort, I created signage systems, wayfinding, and environmental graphics for hospitals and healthcare facilities. This cohesive approach to physical spaces improved navigation while reinforcing brand recognition.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/Hospital_BigSign-2023.jpg" alt="Lifepoint Health hospital sign" class="timeline-image">
+                <img loading="lazy" src="../images/optimized/lifepoint/Lifepoint_HospitalWall.jpg" alt="Lifepoint Health hospital wall signage" class="timeline-image">
+                <img loading="lazy" src="../images/optimized/lifepoint/Wall_Elevator.png" alt="Lifepoint Health environmental graphics" class="timeline-image">
+              </div>
+<div class="timeline-item">
+                <h3>Implementation & rollout</h3>
+                <p>Developed comprehensive guidelines and asset management systems, coordinating phased implementation across multiple facilities and providing training and support for marketing teams throughout the network.</p>
+                <img loading="lazy" src="../images/optimized/lifepoint/Billboard_Cycle.gif" alt="Lifepoint Health billboards animation" class="timeline-image">
+                
+                <h4>Brand guidelines</h4>
+                <p>Created detailed brand guidelines to ensure consistent application across all touchpoints. My video presentation walked stakeholders through key elements of the identity system.</p>
+                <div class="video-container">
+                    <video controls preload="metadata">
+                        <source src="../videos/lifepoint/06_Lifepoint_Guidelines_YG21_Grzejka.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+              </div>
+<div class="timeline-item">
+                <h3>Mobile & digital presence</h3>
+                <p>Extended the brand identity into mobile applications and digital signage, creating a consistent patient experience across all touchpoints. Animated assets were designed for use in digital displays throughout hospital facilities.</p>
+                <div class="image-grid">
+                    <img loading="lazy" src="../images/optimized/lifepoint/LifepointIphoneMockup.gif" alt="Lifepoint Health mobile app animation" class="timeline-image">
+                    <img loading="lazy" src="../images/optimized/lifepoint/z03_Lifepoint_Watch_YG21_Grzejka.gif" alt="Lifepoint Health smartwatch app animation" class="timeline-image">
+                </div>
+                
+              </div>
+<div class="timeline-item">
+                <h3>Agency: Thackway McCord</h3>
+                <p>Creative Direction: Kat McCord<br>
+Design: Kevin Grzejka, Bianca Seong, Fuchen Kuang<br>
+Strategy: Simon Thackway, Jonathan Paisner</p>
+              </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-navigation">
+            <a href="abra.html" class="nav-link prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Previous Project
+            </a>
+            <a href="onity.html" class="nav-link next">
+                Next Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <hr class="footer-divider">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-links">
+                        <a href="mailto:kevin@kev.studio" class="footer-link">kevin@kev.studio</a>
+                        <a href="https://instagram.com/k_gosh" class="footer-link social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @k_gosh
+                        </a>
+                        <a href="https://dribbble.com/kevingrz" class="footer-link social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg>
+                            @kevingrz
+                        </a>
+                    </div>
+                    <div class="footer-links right-links">
+                        <a href="../about.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg> About
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>©2025 SITE BY <a href="https://www.google.com/search?q=kevin+grzejka" class="copyright-link" target="_blank">KEVIN GRZEJKA</a></p>
+            </div>
+        </div>
+    </footer>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById("menu-toggle-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileClose = document.getElementById("mobile-menu-close");
+            if (menuToggle && mobileMenu) {
+                const navClone = document.querySelector("nav .filter-categories").cloneNode(true);
+                const togglesClone = document.querySelector(".view-toggles").cloneNode(true);
+                mobileMenu.appendChild(navClone);
+                mobileMenu.appendChild(togglesClone);
+                menuToggle.addEventListener("click", () => document.body.classList.add("menu-open"));
+                if (mobileClose) mobileClose.addEventListener("click", () => document.body.classList.remove("menu-open"));
+            }
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use the system preference
+        const currentTheme = localStorage.getItem('theme') || 
+                          (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        // Apply the theme
+        if (currentTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            themeToggle.classList.add('dark');
+        }
+        
+        // Toggle theme when clicking the theme toggle
+        themeToggle.addEventListener('click', function() {
+            let theme;
+            if (document.body.getAttribute('data-theme') === 'dark') {
+                document.body.removeAttribute('data-theme');
+                theme = 'light';
+                themeToggle.classList.remove('dark');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                theme = 'dark';
+                themeToggle.classList.add('dark');
+            }
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Nav category links
+        const navCategories = document.querySelectorAll('nav .filter-category');
+
+        navCategories.forEach(category => {
+            category.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                if (filter === 'portfolio') {
+                    window.location.href = '../index.html';
+                } else if (filter === 'about') {
+                    window.location.href = '../about.html';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

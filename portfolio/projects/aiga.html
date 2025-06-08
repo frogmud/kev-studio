@@ -181,6 +181,7 @@
     <div class="container">
         <div class="sticky-nav-content">
             <div class="sticky-nav-logo">
+            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">☰</button>
                 <a href="../index.html" class="logo-link">
                     <img src="../images/kpfp-black.svg" alt="Kevin Grzejka" class="logo light-logo" width="40" height="40">
                     <img src="../images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="40" height="40">
@@ -199,6 +200,9 @@
         </div>
     </div>
 </nav>
+    <div id="mobile-menu">
+        <button id="mobile-menu-close" aria-label="Close">×</button>
+    </div>
 
     <main class="container project-detail">
         <div class="project-header">
@@ -352,6 +356,17 @@
 
         <script>
     document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById("menu-toggle-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileClose = document.getElementById("mobile-menu-close");
+            if (menuToggle && mobileMenu) {
+                const navClone = document.querySelector("nav .filter-categories").cloneNode(true);
+                const togglesClone = document.querySelector(".view-toggles").cloneNode(true);
+                mobileMenu.appendChild(navClone);
+                mobileMenu.appendChild(togglesClone);
+                menuToggle.addEventListener("click", () => document.body.classList.add("menu-open"));
+                if (mobileClose) mobileClose.addEventListener("click", () => document.body.classList.remove("menu-open"));
+            }
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');

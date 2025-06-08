@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- ENHANCED -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LREI Viewbook - Kevin Grzejka Portfolio">
+    <title>Kevin Grzejka</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../favicon/k-fav-bigger.ico" type="image/x-icon">
+    <style>
+        /* Timeline styles with rendering optimizations */
+        .project-timeline {
+            margin: 3rem 0;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .project-timeline::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            bottom: 0;
+            left: 8px;
+            width: 0.5px;
+            background-color: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-color, #0070f3);
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px #e2e8f0;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .image-container {
+            max-width: 800px;
+            margin: 1.5rem auto;
+        }
+
+        .timeline-image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .project-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .prev svg {
+            margin-right: 8px;
+        }
+
+        .next svg {
+            margin-left: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .project-timeline {
+                padding-left: 36px;
+            }
+
+            .timeline-item::before {
+                left: -32px;
+            }
+            
+            .timeline-image-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+<style>
+/* Logo visibility fix */
+.logo-link .dark-logo {
+  display: none !important;
+}
+
+.logo-link .light-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .dark-logo {
+  display: block !important;
+}
+
+[data-theme="dark"] .logo-link .light-logo {
+  display: none !important;
+}
+</style>
+</head>
+<body>
+    <!-- Sticky navigation with filter categories -->
+    <nav class="sticky-nav visible">
+    <div class="container">
+        <div class="sticky-nav-content">
+            <div class="sticky-nav-logo">
+            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">☰</button>
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/kpfp-black.svg" alt="Kevin Grzejka" class="logo light-logo" width="40" height="40">
+                    <img src="../images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="40" height="40">
+                </a>
+            </div>
+            <ul class="filter-categories">
+                <li class="filter-category" data-filter="portfolio" data-filter-type="category">Work</li>
+                <li class="filter-category" data-filter="about" data-filter-type="category">About</li>
+            </ul>
+            <div class="view-toggles">
+                <div class="theme-toggle" id="theme-toggle">
+                        <span class="sun">◐</span>
+                        <span class="moon">◑</span>
+                    </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div id="mobile-menu">
+        <button id="mobile-menu-close" aria-label="Close">×</button>
+    </div>
+
+    <main class="container project-detail">
+        <div class="project-header">
+            <h1>LREI</h1>
+            <p class="tagline">Viewbook highlighting the 15-year journey at Little Red School House & Elisabeth Irwin High School (LREI)</p>
+        </div>
+        
+        <div class="project-hero">
+            <picture>
+                <source srcset="../images/optimized/lrei/LREI_2_ViewBook.png" type="image/png">
+                <img loading="eager" src="../images/optimized/lrei/LREI_2_ViewBook.png" alt="LREI Viewbook with tagline 'Out of the classroom and into the world'" class="hero-image" style="max-width: 100%; height: auto;">
+            </picture>
+        </div>
+
+        <div class="project-content">
+            <div class="project-info">
+                <div class="project-metadata">
+                    <div class="metadata-item">
+                        <h3>Year</h3>
+                        <p>2018</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Client</h3>
+                        <p>LREI</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Agency</h3>
+                        <p>Thackway McCord</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h3>Role</h3>
+                        <p>Design Lead, Print, Motion</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-description">
+                <p>LREI is a progressive, independent school in New York City serving students from pre-K through 12th grade. As design lead at Thackway McCord, I guided the creation of a compact, visually rich viewbook to help prospective families understand the full scope of the LREI experience. The aim was to capture the school's distinctive philosophy and the vibrancy of its community across all age groups.</p>
+                <p>Working under creative director Kat McCord, I curated content from a Flickr archive of 5,000+ photos, emphasizing authentic student engagement, creativity, and milestones across the 15-year educational journey. My role included content curation, layout design, narrative structure, and production management—ensuring every spread brought LREI's values and approach to life.</p>
+                <p>The finished, pocket-sized viewbook balanced dynamic photography with concise, accessible text, showcasing classroom moments, arts, athletics, and community service. With a print run of 10,000 copies, the viewbook quickly became a cornerstone of LREI's admissions and recruitment materials, praised for both its storytelling and design craft.</p>
+
+                <div class="project-timeline">
+                    <div class="timeline-item">
+                        <h3>Discovery & research</h3>
+                        <p>Partnered with the Thackway McCord team to immerse in LREI's culture through interviews with faculty, parents, and students. The goal: distill 15 years of progressive education into a format that would resonate with prospective families.</p>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_9_Analog.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_9_Analog.png" alt="LREI research and planning materials" style="max-width: 100%; height: auto;">
+                            </picture>
+                            <figcaption>Early planning process showing image selection and content mapping</figcaption>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Content curation</h3>
+                        <p>Curated thousands of archival images, selecting authentic moments that represented student engagement and the school's holistic approach. Ensured all age groups and key transitions were included.</p>
+                        <div class="timeline-image-container">
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_2_ViewBook.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_2_ViewBook.png" alt="LREI viewbook image curation" style="max-width: 100%; height: auto;">
+                            </picture>
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_3_ViewBook.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_3_ViewBook.png" alt="LREI viewbook layout development" style="max-width: 100%; height: auto;">
+                            </picture>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Design concept</h3>
+                        <p>Developed a compact, parent-friendly format emphasizing narrative flow. Balanced immersive photography with concise copy blocks that highlighted LREI's progressive pedagogy and sense of community.</p>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_5_ViewBook.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_5_ViewBook.png" alt="LREI viewbook design concept" style="max-width: 100%; height: auto;">
+                            </picture>
+                            <figcaption>Viewbook design featuring engaging student photography and clean layouts</figcaption>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Visual storytelling</h3>
+                        <p>Structured the viewbook as a thematic journey, not just a grade-level progression. Each spread focused on an aspect of student life—from academics to arts and community service—communicating the holistic nature of LREI's education.</p>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_6_ViewBook.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_6_ViewBook.png" alt="LREI viewbook visual storytelling" style="max-width: 100%; height: auto;">
+                            </picture>
+                            <figcaption>Thematic spreads highlighting different aspects of the LREI experience</figcaption>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Production & refinement</h3>
+                        <p>Oversaw production, working closely with printers to select paper stock and finishing details. Refined layouts and imagery to create a premium, durable piece.</p>
+                        <div class="image-container">
+                            <picture>
+                                <source srcset="../images/webp/lrei/LREI_8_ViewBook.webp" type="image/webp">
+                                <img loading="lazy" src="../images/optimized/lrei/LREI_8_ViewBook.png" alt="LREI viewbook production details" style="max-width: 100%; height: auto;">
+                            </picture>
+                            <figcaption>Production refinements showing paper selection and binding details</figcaption>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Final outcome</h3>
+                        <p>The result was a visually compelling viewbook that quickly became LREI's key recruitment tool, distributed at open houses and admissions events. The project demonstrates how thoughtful content curation and design can distill a complex educational journey into a format that resonates with families.</p>
+                        <div class="image-container">
+                            <img loading="lazy" src="../images/optimized/lrei/LREI_1_BookFlipCut_0605.gif" alt="LREI viewbook page animation" style="max-width: 100%; height: auto; margin: 0 auto;">
+                            <figcaption>Final viewbook showing page spreads and flow</figcaption>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3>Impact & legacy</h3>
+                        <p>Years after its launch, the LREI viewbook continues to be used as an effective recruiting piece. My leadership showcases how strategic design and narrative thinking can encapsulate the essence of a school's experience and values.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Agency & credits</h3>
+                        <p>Agency: Thackway McCord<br>
+                        Client: LREI<br>
+                        Role: Design lead, print, motion<br>
+                        Creative direction: Kat McCord</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-navigation">
+            <a href="finseca.html" class="nav-link prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Previous Project
+            </a>
+            <a href="aiga.html" class="nav-link next">
+                Next Project
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <hr class="footer-divider">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-links">
+                        <a href="mailto:kevin@kev.studio" class="footer-link">kevin@kev.studio</a>
+                        <a href="https://instagram.com/k_gosh" class="footer-link social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @k_gosh
+                        </a>
+                        <a href="https://dribbble.com/kevingrz" class="footer-link social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg>
+                            @kevingrz
+                        </a>
+                    </div>
+                    <div class="footer-links right-links">
+                        <a href="../about.html" class="footer-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-.001 5.75c.69 0 1.251.56 1.251 1.25s-.561 1.25-1.251 1.25-1.249-.56-1.249-1.25.559-1.25 1.249-1.25zm2.001 12.25h-4v-1c.484-.179 1-.201 1-.735v-4.467c0-.534-.516-.618-1-.797v-1h3v6.265c0 .535.517.558 1 .735v.999z"/></svg> About
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>©2025 SITE BY <a href="https://www.google.com/search?q=kevin+grzejka" class="copyright-link" target="_blank">KEVIN GRZEJKA</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById("menu-toggle-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileClose = document.getElementById("mobile-menu-close");
+            if (menuToggle && mobileMenu) {
+                const navClone = document.querySelector("nav .filter-categories").cloneNode(true);
+                const togglesClone = document.querySelector(".view-toggles").cloneNode(true);
+                mobileMenu.appendChild(navClone);
+                mobileMenu.appendChild(togglesClone);
+                menuToggle.addEventListener("click", () => document.body.classList.add("menu-open"));
+                if (mobileClose) mobileClose.addEventListener("click", () => document.body.classList.remove("menu-open"));
+            }
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Check for saved theme preference or use the system preference
+        const currentTheme = localStorage.getItem('theme') || 
+                          (prefersDarkScheme.matches ? 'dark' : 'light');
+        
+        // Apply the theme
+        if (currentTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            themeToggle.classList.add('dark');
+        }
+        
+        // Toggle theme when clicking the theme toggle
+        themeToggle.addEventListener('click', function() {
+            let theme;
+            if (document.body.getAttribute('data-theme') === 'dark') {
+                document.body.removeAttribute('data-theme');
+                theme = 'light';
+                themeToggle.classList.remove('dark');
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                theme = 'dark';
+                themeToggle.classList.add('dark');
+            }
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Nav category links
+        const navCategories = document.querySelectorAll('nav .filter-category');
+
+        navCategories.forEach(category => {
+            category.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                if (filter === 'portfolio') {
+                    window.location.href = '../index.html';
+                } else if (filter === 'about') {
+                    window.location.href = '../about.html';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
