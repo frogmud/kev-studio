@@ -29,59 +29,7 @@ async function updateHtmlFiles(directoryPath) {
           modified = true;
         }
         
-        // Update or add favicon link
-        const faviconRegex = /<link rel="shortcut icon".*?>/;
-        let faviconPath;
-        
-        // Determine favicon path based on file location
-        if (filePath.includes('/projects/')) {
-          faviconPath = '../favicon/k-fav-bigger.ico';
-        } else {
-          faviconPath = 'favicon/k-fav-bigger.ico';
-        }
-        
-        const faviconLink = `<link rel="shortcut icon" href="${faviconPath}" type="image/x-icon">`;
-        
-        if (faviconRegex.test(content)) {
-          content = content.replace(faviconRegex, faviconLink);
-          modified = true;
-        } else {
-          // Add favicon link if not present (after the last link tag in head)
-          const linkTagsRegex = /<link.*?>/g;
-          let lastLinkMatch;
-          let lastLinkMatchIndex = -1;
-          let match;
-          
-          while ((match = linkTagsRegex.exec(content)) !== null) {
-            lastLinkMatch = match;
-            lastLinkMatchIndex = match.index + match[0].length;
-          }
-          
-          if (lastLinkMatchIndex !== -1) {
-            const beforeLastLink = content.substring(0, lastLinkMatchIndex);
-            const afterLastLink = content.substring(lastLinkMatchIndex);
-            content = beforeLastLink + '\n    ' + faviconLink + afterLastLink;
-            modified = true;
-          } else {
-            // No link tags found, add after meta tags
-            const metaTagsRegex = /<meta.*?>/g;
-            let lastMetaMatch;
-            let lastMetaMatchIndex = -1;
-            let match;
-            
-            while ((match = metaTagsRegex.exec(content)) !== null) {
-              lastMetaMatch = match;
-              lastMetaMatchIndex = match.index + match[0].length;
-            }
-            
-            if (lastMetaMatchIndex !== -1) {
-              const beforeLastMeta = content.substring(0, lastMetaMatchIndex);
-              const afterLastMeta = content.substring(lastMetaMatchIndex);
-              content = beforeLastMeta + '\n    ' + faviconLink + afterLastMeta;
-              modified = true;
-            }
-          }
-        }
+        // Favicon handling removed
         
         // Write back changes if modified
         if (modified) {

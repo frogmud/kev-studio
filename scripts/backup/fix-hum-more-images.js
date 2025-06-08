@@ -76,11 +76,6 @@ async function addMoreHumImages() {
               </div>`
     );
 
-    // 6. Fix favicon path
-    htmlContent = htmlContent.replace(
-      /<link rel="shortcut icon" href="favicon\/k-fav-bigger.ico" type="image\/x-icon">/,
-      `<link rel="shortcut icon" href="../favicon/k-fav-bigger.ico" type="image/x-icon">`
-    );
 
     // Save the updated HTML back to the file
     await fs.writeFile(projectPath, htmlContent, 'utf8');
