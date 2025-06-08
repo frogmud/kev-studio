@@ -15,8 +15,15 @@ async function updateYears() {
     try {
       const info = await fs.readFile(infoPath, 'utf8');
       const match = info.match(/Year:\s*(\d{4})/);
-      if (!match) continue;
+      if (!match) {
+        console.warn(`No year found for ${entry.name}`);
+        continue;
+      }
       const year = match[1];
+      if (!/^\d{4}$/.test(year)) {
+        console.warn(`Invalid year '${year}' for ${entry.name}`);
+        continue;
+      }
 
       const href = `projects/${entry.name}.html`;
       const idx = html.indexOf(href);
@@ -36,10 +43,12 @@ async function updateYears() {
         newOpenTag = openTag.replace(/"\s*>$/, `" data-year="${year}">`);
       }
       html = html.slice(0, divStart) + newOpenTag + html.slice(tagEnd + 1);
+      console.log(`Updated ${entry.name}.html to year ${year}`);
     } catch {}
   }
 
   await fs.writeFile(indexPath, html);
+  console.log('Year attributes synced successfully.');
 }
 
 updateYears().catch(err => console.error(err));

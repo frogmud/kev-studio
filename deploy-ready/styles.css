@@ -1764,8 +1764,11 @@ footer {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
+}
+.menu-toggle svg {
+  width: 24px;
+  height: 24px;
 }
 
 #mobile-menu {
@@ -1794,5 +1797,20 @@ footer {
 
 body.menu-open #mobile-menu {
   transform: translateX(0);
+}
+
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1990;
+}
+
+body.menu-open #menu-overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 }

@@ -635,7 +635,13 @@
                     <img src="images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="30" height="30">
                 </a>
             </div>
-            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">☰</button>
+            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">
+                <svg viewBox="0 0 100 80" width="24" height="24" aria-hidden="true">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </button>
                 <ul class="filter-categories">
                     <li class="filter-category" data-filter="work" data-filter-type="category">Work</li>
                     <li class="filter-category active" data-filter="about" data-filter-type="category">About</li>
@@ -653,6 +659,7 @@
     <div id="mobile-menu">
         <button id="mobile-menu-close" aria-label="Close">×</button>
     </div>
+    <div id="menu-overlay"></div>
 
     <main class="container resume-container">
 
@@ -1034,20 +1041,7 @@
     <script>
         // Navigation links functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const navCategories = document.querySelectorAll('nav .filter-category');
-            const menuToggle = document.getElementById('menu-toggle-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileClose = document.getElementById('mobile-menu-close');
-
-            if (menuToggle && mobileMenu) {
-                const navClone = document.querySelector('nav .filter-categories').cloneNode(true);
-                const togglesClone = document.querySelector('.view-toggles').cloneNode(true);
-                mobileMenu.appendChild(navClone);
-                mobileMenu.appendChild(togglesClone);
-                menuToggle.addEventListener('click', () => document.body.classList.add('menu-open'));
-                if (mobileClose) mobileClose.addEventListener('click', () => document.body.classList.remove('menu-open'));
-            }
-            
+            const navCategories = document.querySelectorAll('nav .filter-category');            
             navCategories.forEach(category => {
               category.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
@@ -1179,5 +1173,6 @@
             }
         });
     </script>
+    <script src="mobile-menu.js"></script>
 </body>
 </html>
