@@ -38,9 +38,9 @@
             </div>
             <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">
                 <svg viewBox="0 0 100 80" width="24" height="24" aria-hidden="true">
-                    <rect width="100" height="10"></rect>
-                    <rect y="30" width="100" height="10"></rect>
-                    <rect y="60" width="100" height="10"></rect>
+                    <rect width="100" height="10" rx="5"></rect>
+                    <rect y="30" width="100" height="10" rx="5"></rect>
+                    <rect y="60" width="100" height="10" rx="5"></rect>
                 </svg>
             </button>
                 <ul class="filter-categories">
@@ -59,6 +59,46 @@
 
     <div id="mobile-menu">
         <button id="mobile-menu-close" aria-label="Close">×</button>
+        
+        <!-- Main navigation links -->
+        <div class="mobile-main-nav">
+            <a href="index.html" class="mobile-nav-link active">Work</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+        </div>
+        
+        <!-- Theme toggle -->
+        <div class="view-toggles">
+            <div class="theme-toggle" id="mobile-theme-toggle">
+                <span class="sun">◐</span>
+                <span class="moon">◑</span>
+            </div>
+        </div>
+        
+        <!-- Filter tags -->
+        <div class="mobile-filters">
+            <h3>Filter by:</h3>
+            <ul class="filter-categories tag-filters">
+                <li class="filter-category active" data-filter="design" data-filter-type="category">Design</li>
+                <li class="filter-category" data-filter="direction" data-filter-type="category">Direction</li>
+                <li class="filter-category" data-filter="branding" data-filter-type="tag">Branding</li>
+                <li class="filter-category" data-filter="web" data-filter-type="tag">Web Design</li>
+                <li class="filter-category" data-filter="storyboarding" data-filter-type="tag">Storyboarding</li>
+                <li class="filter-category" data-filter="strategy" data-filter-type="tag">Strategy</li>
+                <li class="filter-category" data-filter="print" data-filter-type="tag">Print</li>
+                <li class="filter-category" data-filter="motion" data-filter-type="tag">Motion</li>
+            </ul>
+            <div class="sort-options">
+                <h3>Sort by:</h3>
+                <select id="mobile-project-sort" class="mobile-sort">
+                    <option value="default">Default</option>
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="year-desc" selected>Year (Newest)</option>
+                    <option value="year-asc">Year (Oldest)</option>
+                </select>
+            </div>
+            <button class="clear-filters mobile-clear-filters"><span>×</span> Reset all filters</button>
+        </div>
     </div>
     <div id="menu-overlay"></div>
 
@@ -482,21 +522,6 @@
           const projectCards = document.querySelectorAll('.project-card');
           const projectGrid = document.querySelector('.project-grid');
           const viewToggle = document.getElementById('view-toggle');
-          const menuToggle = document.getElementById('menu-toggle-btn');
-          const mobileMenu = document.getElementById('mobile-menu');
-          const mobileClose = document.getElementById('mobile-menu-close');
-
-          if (menuToggle && mobileMenu) {
-            const navClone = document.querySelector('.sticky-nav .filter-categories').cloneNode(true);
-            const togglesClone = document.querySelector('.view-toggles').cloneNode(true);
-            mobileMenu.appendChild(navClone);
-            mobileMenu.appendChild(togglesClone);
-            const controls = document.querySelector('.project-controls-wrapper');
-            if (controls) mobileMenu.appendChild(controls.cloneNode(true));
-
-            menuToggle.addEventListener('click', () => document.body.classList.add('menu-open'));
-            if (mobileClose) mobileClose.addEventListener('click', () => document.body.classList.remove('menu-open'));
-          }
         
         // Track active filters
         const activeFilters = {
@@ -690,7 +715,35 @@
             const url = new URL(window.location);
             url.searchParams.set('sort', sortValue);
             window.history.pushState({}, '', url);
+            
+            // Sync with mobile sort if it exists
+            const mobileSortDropdown = document.getElementById('mobile-project-sort');
+            if (mobileSortDropdown) {
+              mobileSortDropdown.value = sortValue;
+            }
           });
+          
+          // Handle mobile sort dropdown if it exists
+          const mobileSortDropdown = document.getElementById('mobile-project-sort');
+          if (mobileSortDropdown) {
+            mobileSortDropdown.addEventListener('change', function() {
+              const sortValue = this.value;
+              applySorting(sortValue);
+              
+              // Save preference to localStorage
+              localStorage.setItem('sortBy', sortValue);
+              
+              // Update URL with sort parameter without reloading the page
+              const url = new URL(window.location);
+              url.searchParams.set('sort', sortValue);
+              window.history.pushState({}, '', url);
+              
+              // Sync with main sort dropdown
+              if (projectSort) {
+                projectSort.value = sortValue;
+              }
+            });
+          }
         }
         
         // Function to apply sorting to project cards
@@ -771,6 +824,7 @@
         
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
         const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
         
         // Check for saved theme preference or use the system preference
@@ -781,48 +835,68 @@
         if (currentTheme === 'dark') {
           document.body.setAttribute('data-theme', 'dark');
           themeToggle.classList.add('dark');
+          if (mobileThemeToggle) mobileThemeToggle.classList.add('dark');
         }
         
-        // Toggle theme when clicking the theme toggle
-        themeToggle.addEventListener('click', function() {
+        // Toggle theme function
+        function toggleTheme() {
           let theme;
           if (document.body.getAttribute('data-theme') === 'dark') {
             document.body.removeAttribute('data-theme');
             theme = 'light';
             themeToggle.classList.remove('dark');
+            if (mobileThemeToggle) mobileThemeToggle.classList.remove('dark');
           } else {
             document.body.setAttribute('data-theme', 'dark');
             theme = 'dark';
             themeToggle.classList.add('dark');
+            if (mobileThemeToggle) mobileThemeToggle.classList.add('dark');
           }
           localStorage.setItem('theme', theme);
-        });
+        }
         
-        // Clear filters functionality
+        // Toggle theme when clicking the theme toggle
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // Mobile theme toggle
+        if (mobileThemeToggle) {
+          mobileThemeToggle.addEventListener('click', toggleTheme);
+        }
+        
+        // Function to clear all filters
+        function clearAllFilters() {
+          // Reset to show all projects
+          activeFilters.category = [];
+          activeFilters.tag = [];
+          
+          // Remove active class from all filters
+          filterCategories.forEach(c => {
+            const filter = c.getAttribute('data-filter');
+            if (filter !== 'work') {
+              c.classList.remove('active');
+            }
+          });
+          
+          // Apply filters to show all projects
+          applyFilters();
+          
+          // Update URL - clear all filter parameters
+          const url = new URL(window.location);
+          url.searchParams.delete('categories');
+          url.searchParams.delete('tags');
+          window.history.pushState({}, '', url);
+        }
+        
+        // Clear filters functionality - main button
         const clearFiltersButton = document.getElementById('clear-filters');
         if (clearFiltersButton) {
-          clearFiltersButton.addEventListener('click', function() {
-            // Reset to show all projects
-            activeFilters.category = [];
-            activeFilters.tag = [];
-            
-            // Remove active class from all filters
-            filterCategories.forEach(c => {
-              const filter = c.getAttribute('data-filter');
-              if (filter !== 'work') {
-                c.classList.remove('active');
-              }
-            });
-            
-            // Apply filters to show all projects
-            applyFilters();
-            
-            // Update URL - clear all filter parameters
-            const url = new URL(window.location);
-            url.searchParams.delete('categories');
-            url.searchParams.delete('tags');
-            window.history.pushState({}, '', url);
-          });
+          clearFiltersButton.addEventListener('click', clearAllFilters);
+        }
+        
+        // Clear filters functionality - mobile button
+        const mobileClearFiltersButton = document.querySelector('.mobile-clear-filters');
+        if (mobileClearFiltersButton) {
+          mobileClearFiltersButton.addEventListener('click', clearAllFilters);
         }
       });
     </script>

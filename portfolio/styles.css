@@ -1323,8 +1323,24 @@ footer {
   .sticky-nav-content {
     flex-direction: row;
     gap: var(--spacing-sm);
-    justify-content: center;
+    justify-content: space-between; /* Changed to space-between */
     align-items: center;
+  }
+  
+  /* Mobile nav structure adjustments */
+  .sticky-nav .filter-categories,
+  .sticky-nav .view-toggles {
+    display: none; /* Hide main navigation on mobile */
+  }
+  
+  .project-controls-wrapper {
+    display: none; /* Hide filter controls on mobile */
+  }
+  
+  .sticky-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
   }
   
   .nav-links {
@@ -1743,32 +1759,36 @@ footer {
     min-width: 120px;
     max-width: 150px;
   }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .sticky-nav .filter-categories,
-  .sticky-nav .view-toggles,
-  .project-controls-wrapper {
-    display: none;
-  }
   
-.view-toggle {
+  .view-toggle {
     flex-shrink: 0;
     margin-left: var(--spacing-xs);
+  }
 }
 
 /* Mobile menu styles */
 .menu-toggle {
-  display: none;
+  display: none; /* Hidden by default */
   background: none;
   border: none;
   cursor: pointer;
+  padding: 5px;
 }
 .menu-toggle svg {
   width: 24px;
   height: 24px;
+  fill: var(--primary-color); /* Use theme color */
+  transition: fill 0.3s ease;
+}
+[data-theme="dark"] .menu-toggle svg {
+  fill: var(--primary-color); /* Update for dark mode */
+}
+
+/* Show hamburger menu button on mobile only */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 }
 
 #mobile-menu {
@@ -1785,6 +1805,18 @@ footer {
   z-index: 2000;
   padding: var(--spacing-lg);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Only show on mobile screens */
+@media (min-width: 769px) {
+  #mobile-menu, 
+  #menu-overlay,
+  .menu-toggle {
+    display: none !important;
+  }
 }
 
 #mobile-menu-close {
@@ -1793,6 +1825,104 @@ footer {
   font-size: 1.5rem;
   cursor: pointer;
   margin-bottom: var(--spacing-md);
+  align-self: flex-end;
+  color: var(--primary-color);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#mobile-menu-close:hover {
+  background-color: var(--light-gray);
+  color: var(--accent-color);
+}
+
+.mobile-main-nav {
+  display: flex;
+  gap: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  width: 100%;
+}
+
+.mobile-nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.mobile-nav-link.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.mobile-nav-link:hover {
+  color: var(--accent-color);
+}
+
+#mobile-menu .filter-categories {
+  margin: var(--spacing-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+#mobile-menu .filter-category {
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  margin: 0;
+}
+
+#mobile-menu .tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+#mobile-menu .tag-filters .filter-category {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mobile-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-md);
+}
+
+.mobile-filters h3 {
+  font-size: 0.9rem;
+  margin: var(--spacing-sm) 0;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.mobile-sort {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.mobile-clear-filters {
+  margin-top: var(--spacing-md);
+  width: 100%;
 }
 
 body.menu-open #mobile-menu {
