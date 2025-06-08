@@ -76,8 +76,6 @@ Your deployed website will have this clean structure:
 ├── 404.html
 ├── styles.css
 ├── .htaccess
-├── favicon/
-│   └── k-fav-bigger.ico
 ├── images/
 │   └── (all image assets)
 ├── videos/

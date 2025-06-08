@@ -8,7 +8,6 @@
     <title>Kevin Grzejka</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="shortcut icon" href="../favicon/k-fav-bigger.ico" type="image/x-icon">
     <style>
         /* Timeline styles for project pages */
         .project-timeline {
@@ -158,6 +157,13 @@
     <div class="container">
         <div class="sticky-nav-content">
             <div class="sticky-nav-logo">
+            <button id="menu-toggle-btn" class="menu-toggle" aria-label="Menu">
+                <svg viewBox="0 0 100 80" width="24" height="24" aria-hidden="true">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </button>
                 <a href="../index.html" class="logo-link">
                     <img src="../images/kpfp-black.svg" alt="Kevin Grzejka" class="logo light-logo" width="40" height="40">
                     <img src="../images/kpfp-white.svg" alt="Kevin Grzejka" class="logo dark-logo" width="40" height="40">
@@ -176,6 +182,10 @@
         </div>
     </div>
 </nav>
+    <div id="mobile-menu">
+        <button id="mobile-menu-close" aria-label="Close">×</button>
+    </div>
+    <div id="menu-overlay"></div>
 
     <main class="container project-detail">
         <div class="project-header">
@@ -385,5 +395,6 @@
         });
     });
     </script>
+    <script src="../mobile-menu.js"></script>
 </body>
 </html>

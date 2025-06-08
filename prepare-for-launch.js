@@ -30,7 +30,6 @@ async function prepareForLaunch() {
     
     // List of directories to copy
     const directoriesToCopy = [
-      'favicon',
       'images',
       'videos',
       'projects',
@@ -112,7 +111,6 @@ Redirect 301 /lets-work-together.html /about.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Grzejka</title>
-    <link rel="shortcut icon" href="favicon/k-fav-bigger.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="theme-light">
