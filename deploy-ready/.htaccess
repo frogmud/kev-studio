@@ -1,0 +1,11 @@
+# Enable directory browsing
+Options +Indexes
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect 404 errors to custom page
+ErrorDocument 404 /404.html
+
+# Redirect old URLs to new URLs
+Redirect 301 /lets-work-together.html /about.html

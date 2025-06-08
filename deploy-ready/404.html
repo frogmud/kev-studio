@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Grzejka</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <a href="index.html" class="logo">Kevin Grzejka</a>
+            </div>
+            <div class="navigation">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html" class="nav-link active">Work</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <div class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+                    <span id="toggle-emoji">☀</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-container" style="text-align: center; padding: 100px 20px;">
+            <h1>404 - Page Not Found</h1>
+            <p>The page you're looking for does not exist.</p>
+            <div style="margin-top: 40px;">
+                <a href="index.html" class="button">Return to Portfolio</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Theme toggle functionality
+        const toggleBtn = document.getElementById('theme-toggle');
+        const emoji = document.getElementById('toggle-emoji');
+        const body = document.body;
+        
+        // Check for saved theme preference or use device preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.setAttribute('data-theme', savedTheme);
+            emoji.innerText = savedTheme === 'dark' ? '☾' : '☀';
+        } else {
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            body.setAttribute('data-theme', prefersDarkMode ? 'dark' : 'light');
+            emoji.innerText = prefersDarkMode ? '☾' : '☀';
+        }
+        
+        toggleBtn.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            emoji.innerText = newTheme === 'dark' ? '☾' : '☀';
+        });
+    </script>
+</body>
+</html>
