@@ -1,0 +1,52 @@
+/* Mobile navigation for project pages */
+
+/* Hide hamburger on project pages */
+/* Super aggressive selector to hide the menu toggle on ALL screens, not just mobile */
+.menu-toggle,
+#menu-toggle-btn,
+[id="menu-toggle-btn"],
+button[id="menu-toggle-btn"],
+.sticky-nav-logo .menu-toggle,
+.sticky-nav .menu-toggle,
+.hidden-on-mobile {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Add mobile next project navigation */
+.mobile-next-project {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background: var(--accent-color, #f05d23);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.mobile-next-project:hover {
+    transform: scale(1.1);
+}
+
+.mobile-next-project svg {
+    stroke: white;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .mobile-next-project {
+    background: var(--accent-color, #f05d23);
+}

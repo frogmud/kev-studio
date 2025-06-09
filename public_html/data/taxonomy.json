@@ -1,0 +1,161 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "All",
+      "type": "primary"
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "type": "primary"
+    },
+    {
+      "id": "direction",
+      "name": "Direction",
+      "type": "primary"
+    }
+  ],
+  "tags": [
+    {
+      "id": "branding",
+      "name": "Branding",
+      "type": "discipline"
+    },
+    {
+      "id": "web",
+      "name": "Web Design",
+      "type": "discipline"
+    },
+    {
+      "id": "storyboarding",
+      "name": "Storyboarding",
+      "type": "discipline"
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy",
+      "type": "discipline"
+    },
+    {
+      "id": "print",
+      "name": "Print",
+      "type": "discipline"
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "type": "discipline"
+    }
+  ],
+  "projects": [
+    {
+      "id": "un",
+      "title": "United Nations",
+      "categories": ["design"],
+      "tags": ["branding", "animation", "print"]
+    },
+    {
+      "id": "absorb_software",
+      "title": "Absorb Software",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "motion", "strategy"]
+    },
+    {
+      "id": "mn8_energy",
+      "title": "MN8 Energy",
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
+    },
+    {
+      "id": "eyes_above",
+      "title": "Eyes Above",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
+    },
+    {
+      "id": "abra",
+      "title": "Abra",
+      "categories": ["design"],
+      "tags": ["branding", "web", "motion"]
+    },
+    {
+      "id": "lifepoint_health",
+      "title": "Lifepoint Health",
+      "categories": ["direction"],
+      "tags": ["branding", "print", "motion", "strategy"]
+    },
+    {
+      "id": "onity",
+      "title": "Onity",
+      "categories": ["design"],
+      "tags": ["animation", "motion"]
+    },
+    {
+      "id": "sylvamo",
+      "title": "Sylvamo",
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion"]
+    },
+    {
+      "id": "american_social",
+      "title": "American Social",
+      "categories": ["design"],
+      "tags": ["web", "animation"]
+    },
+    {
+      "id": "finseca",
+      "title": "Finseca",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "strategy"]
+    },
+    {
+      "id": "lrei",
+      "title": "LREI Viewbook",
+      "categories": ["design"],
+      "tags": ["print", "motion", "strategy"]
+    },
+    {
+      "id": "aiga",
+      "title": "Joy with the AIGA",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "strategy"]
+    },
+    {
+      "id": "fiserv",
+      "title": "Fiserv",
+      "categories": ["design"],
+      "tags": ["branding", "print", "strategy"]
+    },
+    {
+      "id": "l3harris",
+      "title": "L3Harris",
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation", "print", "motion", "strategy"]
+    },
+    {
+      "id": "hum",
+      "title": "Hum Capital",
+      "categories": ["design"],
+      "tags": ["branding", "web"]
+    },
+    {
+      "id": "thackway_mccord_pets",
+      "title": "Making QR codes fun!",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "animation", "print", "strategy"]
+    },
+    {
+      "id": "tryitout_with_major_league_wiffleball",
+      "title": "Try It Out with Major League Wiffleball",
+      "categories": ["direction"],
+      "tags": ["branding", "web", "print", "motion", "strategy"]
+    },
+    {
+      "id": "autonomy_capital",
+      "title": "Autonomy Capital",
+      "categories": ["design"],
+      "tags": ["branding", "web", "animation"]
+    }
+  ]
+}
