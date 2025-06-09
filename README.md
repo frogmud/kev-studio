@@ -1,6 +1,6 @@
-# Kevin Grzejka Portfolio
+# kev.studio
 
-This repository contains the production-ready portfolio website for Kevin Grzejka's design work.
+This repository contains the production-ready portfolio website for Kevin Grzejka's design work at https://kev.studio.
 
 ## Repository Structure
 
