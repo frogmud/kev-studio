@@ -46,5 +46,5 @@ All design assets and content remain the property of Kevin Grzejka.
 
 ## Contact
 
-Kevin Grzejka: kevin@kev.studio
+Kevin Grzejka: grzejkakevin@gmail.com
 
