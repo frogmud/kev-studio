@@ -1,48 +1,48 @@
-# Kevin Grzejka Work
+# Kevin Grzejka Portfolio
 
-This repository contains the complete portfolio website and tools for Kevin Grzejka's design work.
+This repository contains the production-ready portfolio website for Kevin Grzejka's design work.
 
 ## Repository Structure
 
-- **portfolio/**: Main portfolio website
+- **public_html/**: Production-ready website files
   - Clean, responsive design showcasing projects
   - Dedicated project pages with detailed information
   - Resume and contact information
-  
-- **tools/**: Utility scripts for managing the portfolio
-  - `download-portfolio.js`: Download content from kev.studio
-  - `organize-portfolio.js`: Organize downloaded content
-  - `analyze-and-download.js`: Analyze and download portfolio content
-  - And more utility scripts
+  - Optimized images and assets
 
-## Branch Structure
+## Deployment Instructions
 
-- **main**: Primary branch with the latest stable version of the portfolio
-- **pending-assets-and-scripts**: Branch containing utility scripts and tools for portfolio management
-- **optimized-images**: Branch with placeholder for optimized image assets
-- Various feature branches prefixed with `codex/`: Individual feature implementations
+1. The production-ready files are in the `public_html` directory
+2. To deploy:
+   - Upload the contents of the `public_html` directory to your web server
+   - Make sure to maintain the directory structure
+   - No build step is required as this is a static site
 
-## Getting Started
+## Local Development
 
-1. Clone this repository: `git clone https://github.com/frogmud/kev-studio.git`
-2. Install dependencies: `npm install`
-3. Run the portfolio: Open `portfolio/index.html` in your browser or use `npm run serve` for local development
+To test locally:
+- Open any HTML file directly in a browser
+- Use browser developer tools for debugging
 
-## Development Commands
+## File Organization
 
-- `npm start` or `npm run download`: Run portfolio downloader
-- `npm run organize`: Organize downloaded content
-- `npm run analyze`: Analyze and download portfolio
-- `npm run direct`: Direct download
-- `npm run kev-studio`: Download from kev.studio
-- `npm run generate-pages`: Generate project pages
-- `npm run optimize-images`: Convert images to optimized WebP versions
-- `node tools/extract-video-stills.js`: Create preview images for MP4 files
-- `node serve.js`: Run a local development server
+- `/public_html` - Production-ready files
+  - HTML files at the root
+  - `/images` - All image assets
+  - `/videos` - Video content
+  - `/projects` - Project pages
+  - `/files` - Downloadable files like resume
+  - `/data` - Data files for the site
+
+## Notes
+
+- This is a static HTML/CSS/JS site without build tools
+- Optimized images are already included in the appropriate formats
+- Mobile responsive design is included
 
 ## License
 
-This codebase is licensed under MIT, but all design assets and content remain the property of Kevin Grzejka.
+All design assets and content remain the property of Kevin Grzejka.
 
 ## Contact
 
