@@ -42,7 +42,9 @@ To test locally:
 
 ## License
 
-All design assets and content remain the property of Kevin Grzejka.
+**This website is NOT open source.** All design work, case studies, content, and code remain the property of Kevin Grzejka. This repository exists solely for portfolio deployment purposes.
+
+The case studies and design work showcased here are proprietary client work and personal projects. Reproduction, modification, or distribution is strictly prohibited without explicit permission.
 
 ## Contact
 
