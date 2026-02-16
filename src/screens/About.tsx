@@ -1,4 +1,4 @@
-import { Box, Typography, Chip, Stack, Paper, Button } from '@mui/material';
+import { Box, Typography, Chip, Stack, Paper, Button, useTheme } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import BrushIcon from '@mui/icons-material/Brush';
@@ -20,6 +20,10 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function About() {
   const about = getAbout();
+  const theme = useTheme();
+  const pfpSrc = theme.palette.mode === 'dark'
+    ? '/assets/kevin-pfp-dark-mode.png'
+    : '/assets/kevin-pfp-light-mode.png';
 
   const sections = [
     { id: 'bio', title: 'Bio' },
@@ -32,7 +36,7 @@ export function About() {
   const infobox = (
     <Box>
       {/* Profile image */}
-      {about.image ? (
+      {pfpSrc ? (
         <Box
           sx={{
             width: '100%',
@@ -44,7 +48,7 @@ export function About() {
         >
           <Box
             component="img"
-            src={about.image}
+            src={pfpSrc}
             alt={about.name}
             sx={{
               width: '100%',

@@ -8,7 +8,7 @@ export const about: AboutProfile = {
   location: 'New Jersey',
   description:
     'Creative director and designer based in New Jersey.',
-  image: '/assets/kevin-pfp.png',
+  image: '',
   links: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kevingrzejka', icon: 'LinkedIn' },
     { label: 'Dribbble', url: 'https://dribbble.com/kevingrz', icon: 'Brush' },
@@ -17,13 +17,12 @@ export const about: AboutProfile = {
     { label: 'Artstation', url: 'https://www.artstation.com/kevgrz', icon: 'Palette' },
   ],
   skills: [
-    'Brand Strategy',
-    'Visual Identity',
+    'Product Design',
+    'Art Direction',
+    'Brand & Identity',
     'Motion Design',
     'Web Design',
-    'Art Direction',
-    'Storyboarding',
-    'Print Design',
+    'Cross-functional Leadership',
   ],
   experience: [
     {
