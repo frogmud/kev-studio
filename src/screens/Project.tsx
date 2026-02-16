@@ -10,7 +10,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import { getProject, getRelatedProjects } from '../data';
-import { WikiLayout, SectionAnchor, SectionHeader, Breadcrumbs, ProjectCard, Blockquote, SeeAlso } from '../components';
+import { WikiLayout, SectionAnchor, SectionHeader, Breadcrumbs, Blockquote, SeeAlso } from '../components';
 import { tokens, getDisciplineColor } from '../theme';
 
 export function Project() {
