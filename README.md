@@ -1,6 +1,7 @@
 # kev.studio
 
-Design portfolio for Kevin Grzejka — 17 projects spanning product design, art direction, branding, web design, and motion.
+Design portfolio for Kevin Grzejka
+17 projects spanning product design, art direction, branding, web design, and motion.
 
 **https://kev.studio**
 
