@@ -32,7 +32,7 @@ export const neverDieGuy: Project = {
       id: 'ecosystem',
       title: 'Ecosystem',
       content:
-        'Companion site at neverdie.fun with 15 browser tools and an NPC lore wiki. Shared design token system across four production sites with 76+ Figma frames generated via MCP.',
+        'Companion site at dumgorf.net with 15 browser tools and an NPC lore wiki. Shared design token system across four production sites with 76+ Figma frames generated via MCP.',
     },
   ],
   images: [

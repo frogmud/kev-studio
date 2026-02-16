@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { BrowserRouter, Routes, Route, Link as RouterLink } from 'react-router-dom';
-import { ThemeProvider, CssBaseline, Box, Typography, Link } from '@mui/material';
+import { ThemeProvider, CssBaseline, Box, Typography } from '@mui/material';
 import { darkTheme, lightTheme, tokens } from './theme';
 import { Header } from './components';
 import { Home, Project, About, Gallery } from './screens';
@@ -15,22 +15,12 @@ function SiteFooter() {
         mt: 8,
         borderTop: `1px solid ${tokens.colors.border}`,
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
       }}
     >
-      <Typography
-        component={RouterLink}
-        to="/"
-        variant="body2"
-        sx={{ color: tokens.colors.text.secondary, textDecoration: 'none', '&:hover': { color: tokens.colors.text.primary } }}
-      >
-        kev.studio
-      </Typography>
       <Typography variant="body2" sx={{ color: tokens.colors.text.muted }}>
-        <Link href="https://kgrz.design" rel="me noopener" target="_blank" underline="hover" sx={{ color: tokens.colors.text.secondary }}>kgrz.design</Link>
-        {' / '}
-        <Link href="https://neverdie.fun" rel="me noopener" target="_blank" underline="hover" sx={{ color: tokens.colors.text.secondary }}>neverdie.fun</Link>
+        &copy; {new Date().getFullYear()} Kevin Grzejka
       </Typography>
     </Box>
   );
