@@ -35,9 +35,11 @@ export function Home() {
     { id: 'direction', label: 'Direction' },
   ];
 
+  const hiddenDisciplines: Discipline[] = ['Print', 'Storyboarding'];
   const disciplines = Object.entries(disciplineCounts)
     .sort(([, a], [, b]) => b - a)
-    .map(([name]) => name as Discipline);
+    .map(([name]) => name as Discipline)
+    .filter((d) => !hiddenDisciplines.includes(d));
 
   return (
     <Box sx={{ maxWidth: 1200, mx: 'auto', px: { xs: 2, md: 4 }, py: 4 }}>

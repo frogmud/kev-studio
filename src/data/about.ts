@@ -4,10 +4,10 @@ export const about: AboutProfile = {
   slug: 'kevin-grzejka',
   name: 'Kevin Grzejka',
   category: 'about',
-  title: 'Creative Director & Designer',
+  title: 'Product Designer',
   location: 'New Jersey',
   description:
-    'Creative director and designer based in New Jersey.',
+    'Product designer based in New Jersey.',
   image: '',
   links: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kevingrzejka', icon: 'LinkedIn' },

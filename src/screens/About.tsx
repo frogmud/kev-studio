@@ -37,25 +37,33 @@ export function About() {
     <Box>
       {/* Profile image */}
       {pfpSrc ? (
-        <Box
-          sx={{
-            width: '100%',
-            borderRadius: 1,
-            mb: 2,
-            bgcolor: tokens.colors.background.elevated,
-            overflow: 'hidden',
-          }}
-        >
+        <>
           <Box
-            component="img"
-            src={pfpSrc}
-            alt={about.name}
             sx={{
               width: '100%',
-              display: 'block',
+              borderRadius: 1,
+              mb: 0.5,
+              bgcolor: tokens.colors.background.elevated,
+              overflow: 'hidden',
             }}
-          />
-        </Box>
+          >
+            <Box
+              component="img"
+              src={pfpSrc}
+              alt={about.name}
+              sx={{
+                width: '100%',
+                display: 'block',
+              }}
+            />
+          </Box>
+          <Typography
+            variant="caption"
+            sx={{ color: tokens.colors.text.muted, display: 'block', mb: 2 }}
+          >
+            Photo by Alex Rivera
+          </Typography>
+        </>
       ) : (
         <Box
           sx={{

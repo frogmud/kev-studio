@@ -1,5 +1,5 @@
 import { Box, Typography, IconButton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { tokens } from '../theme';
@@ -10,6 +10,13 @@ interface HeaderProps {
 }
 
 export function Header({ isDark, onToggleTheme }: HeaderProps) {
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isWorkActive = pathname === '/' || pathname.startsWith('/work');
+  const isGalleryActive = pathname === '/gallery';
+  const isAboutActive = pathname === '/about';
+
   return (
     <Box
       component="header"
@@ -56,7 +63,7 @@ export function Header({ isDark, onToggleTheme }: HeaderProps) {
           component={Link}
           to="/"
           sx={{
-            color: tokens.colors.text.secondary,
+            color: isWorkActive ? tokens.colors.text.primary : tokens.colors.text.secondary,
             textDecoration: 'none',
             '&:hover': { color: tokens.colors.text.primary },
           }}
@@ -67,7 +74,7 @@ export function Header({ isDark, onToggleTheme }: HeaderProps) {
           component={Link}
           to="/gallery"
           sx={{
-            color: tokens.colors.text.secondary,
+            color: isGalleryActive ? tokens.colors.text.primary : tokens.colors.text.secondary,
             textDecoration: 'none',
             '&:hover': { color: tokens.colors.text.primary },
           }}
@@ -78,7 +85,7 @@ export function Header({ isDark, onToggleTheme }: HeaderProps) {
           component={Link}
           to="/about"
           sx={{
-            color: tokens.colors.text.secondary,
+            color: isAboutActive ? tokens.colors.text.primary : tokens.colors.text.secondary,
             textDecoration: 'none',
             '&:hover': { color: tokens.colors.text.primary },
           }}
