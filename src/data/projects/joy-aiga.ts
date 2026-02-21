@@ -10,7 +10,7 @@ export const joyAiga: Project = {
   summary: 'Interactive holiday wrapping paper blending print and digital',
   description:
     'A 2021 holiday wrapping paper design centered on "joy," integrating functional QR codes customized into festive motifs while maintaining scannability. Created custom domain joyjoyjoyjoyjoy.com with Lottie animations.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Strategy'],
   categories: ['direction'],
   year: 2021,
   featured: false,

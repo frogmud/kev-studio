@@ -11,7 +11,7 @@ export const sylvamo: Project = {
   summary: 'Branding for International Paper spinoff',
   description:
     'International Paper spun off their global papers business as Sylvamo, creating one of the world\'s largest producers of uncoated papers. The new company needed an identity from scratch.',
-  disciplines: ['Design', 'Branding', 'Web Design', 'Storyboarding', 'Print', 'Motion'],
+  disciplines: ['Design', 'Branding', 'Websites', 'Storyboarding', 'Print', 'Motion'],
   categories: ['design'],
   year: 2021,
   featured: true,

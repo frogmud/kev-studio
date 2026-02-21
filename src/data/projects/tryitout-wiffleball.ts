@@ -10,7 +10,7 @@ export const tryitoutWiffleball: Project = {
   summary: 'Brand identity for a recreational sports tournament',
   description:
     'A semi-professional wiffleball league by NJ friends, transformed from casual activity into a competitive venture. Balanced the playful, grassroots nature with a professional-looking identity system that embraces DIY spirit.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Print', 'Motion', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Print', 'Motion', 'Strategy'],
   categories: ['direction'],
   year: 2019,
   featured: false,

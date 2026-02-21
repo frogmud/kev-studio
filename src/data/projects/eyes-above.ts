@@ -9,7 +9,7 @@ export const eyesAbove: Project = {
   summary: 'Werewolves & wraiths oh my',
   description:
     'A personal worldbuilding project exploring gothic horror through illustration, writing, and interactive media. Equal parts sketchbook and story bible.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
   categories: ['direction'],
   year: 2023,
   featured: true,

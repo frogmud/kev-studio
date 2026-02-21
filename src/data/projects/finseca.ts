@@ -11,7 +11,7 @@ export const finseca: Project = {
   summary: 'Rebranding and digital experience for a financial security association',
   description:
     'Finseca was established in 2020 through the merger of AALU and GAMA International. Created a cohesive brand identity with a shield icon symbolizing protection and a double-F mark representing the merger.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Strategy'],
   categories: ['direction'],
   year: 2020,
   featured: false,

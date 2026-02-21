@@ -11,7 +11,7 @@ export const qrCodesFun: Project = {
   summary: 'Custom QR code illustrations for holiday chocolate bars',
   description:
     'Holiday gift project transforming functional QR codes into engaging pet portraits, each linking to a personalized digital experience. Hand-drawn illustrations maintain scannability while serving as the packaging\'s primary visual element.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Print', 'Motion', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Print', 'Motion', 'Strategy'],
   categories: ['direction'],
   year: 2021,
   featured: false,

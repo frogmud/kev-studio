@@ -21,7 +21,7 @@ export const about: AboutProfile = {
     'Art Direction',
     'Brand & Identity',
     'Motion Design',
-    'Web Design',
+    'Websites',
     'Cross-functional Leadership',
   ],
   experience: [

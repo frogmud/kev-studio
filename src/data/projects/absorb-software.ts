@@ -10,7 +10,7 @@ export const absorbSoftware: Project = {
   summary: 'Website & rebrand for learning tech company',
   description:
     'Absorb Software needed a complete brand refresh to match their evolution from scrappy startup to enterprise learning management leader. The rebrand touched everything from visual identity to digital presence.',
-  disciplines: ['Direction', 'Branding', 'Web Design', 'Storyboarding', 'Motion', 'Strategy'],
+  disciplines: ['Direction', 'Branding', 'Websites', 'Storyboarding', 'Motion', 'Strategy', 'Product'],
   categories: ['direction'],
   year: 2024,
   featured: true,

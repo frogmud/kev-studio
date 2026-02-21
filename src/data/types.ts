@@ -4,11 +4,12 @@ export type Discipline =
   | 'Design'
   | 'Direction'
   | 'Branding'
-  | 'Web Design'
+  | 'Websites'
   | 'Motion'
   | 'Storyboarding'
   | 'Strategy'
-  | 'Print';
+  | 'Print'
+  | 'Product';
 
 export interface PortfolioEntity {
   slug: string;

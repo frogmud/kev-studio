@@ -9,7 +9,7 @@ export const neverDieGuy: Project = {
   summary: 'Roguelike dice combat game (work in progress)',
   description:
     'A Balatro-inspired roguelike where you throw dice at a 3D globe. Built with React 19, Three.js, and a custom combat engine. Includes a companion tools site, NPC lore wiki, and a shared design system across four production sites.',
-  disciplines: ['Direction', 'Design', 'Branding', 'Web Design', 'Motion', 'Strategy'],
+  disciplines: ['Direction', 'Design', 'Branding', 'Websites', 'Motion', 'Strategy', 'Product'],
   categories: ['direction'],
   year: 2026,
   featured: true,

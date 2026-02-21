@@ -11,7 +11,7 @@ export const l3harris: Project = {
   summary: 'Brand identity for defense merger',
   description:
     'L3 Technologies and Harris Corporation merged to form the sixth-largest defense contractor in the US. The new brand needed to honor both legacies while signaling a bold new chapter.',
-  disciplines: ['Design', 'Branding', 'Web Design', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
+  disciplines: ['Design', 'Branding', 'Websites', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
   categories: ['design'],
   year: 2019,
   featured: true,

@@ -11,7 +11,7 @@ export const mn8Energy: Project = {
   summary: 'Website & guidelines for GS spin-off',
   description:
     'When Goldman Sachs spun off their renewable energy portfolio into MN8 Energy, they needed a brand that could stand on its own while maintaining institutional credibility.',
-  disciplines: ['Design', 'Branding', 'Web Design', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
+  disciplines: ['Design', 'Branding', 'Websites', 'Storyboarding', 'Print', 'Motion', 'Strategy'],
   categories: ['design'],
   year: 2023,
   featured: true,

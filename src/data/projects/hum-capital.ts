@@ -11,7 +11,7 @@ export const humCapital: Project = {
   summary: 'Brand identity for AI-driven capital fundraising platform',
   description:
     'Fintech company connecting growth-stage businesses with capital through an AI-driven Intelligent Capital Market (ICM) platform. Collaborated on brand identity and digital experience reflecting an innovative approach to capital fundraising.',
-  disciplines: ['Design', 'Branding', 'Web Design'],
+  disciplines: ['Design', 'Branding', 'Websites', 'Product'],
   categories: ['design'],
   year: 2021,
   featured: false,
